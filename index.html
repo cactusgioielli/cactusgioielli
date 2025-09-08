@@ -323,6 +323,59 @@
         padding: 1.5rem;
       }
     }
+    @media (max-width: 600px) {
+      .timeline {
+        padding-left: 18px;
+      }
+      .about-team {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+      }
+      .about-team-member {
+        width: 90%;
+        max-width: 300px;
+      }
+      .contact-info {
+        font-size: 0.97rem;
+        padding: 1.1rem 0.5rem;
+      }
+      .contact-hours table {
+        font-size: 0.93rem;
+      }
+      .contact-hours th, .contact-hours td {
+        white-space: normal !important;
+        word-break: break-word;
+        padding: 0.25em 0.3em;
+      }
+      .contact-hours table {
+        table-layout: fixed;
+      }
+      .contact-hours th {
+        font-size: 1em;
+      }
+      .contact-hours td {
+        font-size: 0.98em;
+      }
+      /* Migliora i bottoni della home */
+      #home .tab-content a[onclick*="showTab('gallery')"],
+      #home .tab-content a[onclick*="showTab('composizioni')"] {
+        font-size: 1.08rem !important;
+        font-weight: 700 !important;
+        letter-spacing: 0.5px;
+        padding: 1.1em 1.2em !important;
+        background: #04996c !important;
+        color: #fff !important;
+        border: 2px solid #065f46;
+        box-shadow: 0 2px 8px rgba(6,95,70,0.13);
+        text-shadow: 0 1px 2px #065f4633;
+      }
+      #home .tab-content a[onclick*="showTab('gallery')"]:hover,
+      #home .tab-content a[onclick*="showTab('composizioni')"]:hover {
+        background: #065f46 !important;
+        color: #fff !important;
+      }
+    }
     /* --- Estetica avanzata --- */
     /* Social icons modern style */
     .footer-social {
@@ -453,31 +506,1574 @@
         width: 90%;
         max-width: 300px;
       }
-    }
-    .contact-flex {
-      display: flex;
-      gap: 2.5rem;
-      justify-content: space-between;
-      align-items: flex-start;
-      flex-wrap: wrap;
-    }
-    .contact-details {
-      flex: 1 1 220px;
-      min-width: 220px;
-      max-width: 340px;
-    }
-    .contact-hours {
-      flex: 1 1 220px;
-      min-width: 220px;
-      max-width: 340px;
-    }
-    @media (max-width: 800px) {
-      .contact-flex {
-        flex-direction: column;
-        gap: 1.5rem;
+      .contact-info {
+        font-size: 0.97rem;
+        padding: 1.1rem 0.5rem;
       }
-      .contact-details, .contact-hours {
-        max-width: 100%;
+      .contact-hours table {
+        font-size: 0.93rem;
+      }
+      .contact-hours th, .contact-hours td {
+        white-space: normal !important;
+        word-break: break-word;
+        padding: 0.25em 0.3em;
+      }
+      .contact-hours table {
+        table-layout: fixed;
+      }
+      .contact-hours th {
+        font-size: 1em;
+      }
+      .contact-hours td {
+        font-size: 0.98em;
+      }
+      /* Migliora i bottoni della home */
+      #home .tab-content a[onclick*="showTab('gallery')"],
+      #home .tab-content a[onclick*="showTab('composizioni')"] {
+        font-size: 1.08rem !important;
+        font-weight: 700 !important;
+        letter-spacing: 0.5px;
+        padding: 1.1em 1.2em !important;
+        background: #04996c !important;
+        color: #fff !important;
+        border: 2px solid #065f46;
+        box-shadow: 0 2px 8px rgba(6,95,70,0.13);
+        text-shadow: 0 1px 2px #065f4633;
+      }
+      #home .tab-content a[onclick*="showTab('gallery')"]:hover,
+      #home .tab-content a[onclick*="showTab('composizioni')"]:hover {
+        background: #065f46 !important;
+        color: #fff !important;
+      }
+    }
+    /* --- Estetica avanzata --- */
+    /* Social icons modern style */
+    .footer-social {
+      margin-top: 0.5rem;
+      display: flex;
+      justify-content: center;
+      gap: 1.2rem;
+    }
+    .footer-social a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: #e0f2f1;
+      color: #065f46;
+      border-radius: 50%;
+      width: 2.2rem;
+      height: 2.2rem;
+      font-size: 1.3rem;
+      transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+      box-shadow: 0 1px 6px rgba(6,95,70,0.08);
+      text-decoration: none;
+    }
+    .footer-social a:hover {
+      background: #065f46;
+      color: #e0f2f1;
+      box-shadow: 0 2px 12px rgba(6,95,70,0.18);
+    }
+    /* Timeline Chi Siamo */
+    .timeline {
+      margin: 2.5rem auto 1.5rem auto;
+      max-width: 700px;
+      position: relative;
+      padding-left: 30px;
+      border-left: 3px solid #e0f2f1;
+    }
+    .timeline-event {
+      margin-bottom: 2.2rem;
+      position: relative;
+    }
+    .timeline-event:last-child {
+      margin-bottom: 0;
+    }
+    .timeline-dot {
+      position: absolute;
+      left: -13px;
+      top: 0.2rem;
+      width: 18px;
+      height: 18px;
+      background: #065f46;
+      border: 3px solid #e0f2f1;
+      border-radius: 50%;
+      z-index: 2;
+      box-shadow: 0 2px 8px rgba(6,95,70,0.13);
+    }
+    .timeline-content {
+      background: #f0fdf4;
+      border-radius: 0.7rem;
+      padding: 1.1rem 1.3rem;
+      box-shadow: 0 2px 8px rgba(6,95,70,0.07);
+      margin-left: 1.5rem;
+      position: relative;
+    }
+    .timeline-year {
+      font-weight: bold;
+      color: #04996c;
+      font-size: 1.1rem;
+      margin-bottom: 0.3rem;
+      display: block;
+    }
+    .timeline-content p {
+      margin: 0.2rem 0 0 0;
+      font-size: 1.07rem;
+      color: #065f46;
+    }
+    .about-team {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      justify-content: center;
+      margin-top: 2.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .about-team-member {
+      background: #e0f2f1;
+      border-radius: 1rem;
+      box-shadow: 0 2px 8px rgba(6,95,70,0.07);
+      padding: 1.2rem 1.1rem 1rem 1.1rem;
+      text-align: center;
+      width: 170px;
+      min-width: 140px;
+      max-width: 200px;
+      flex: 1 1 140px;
+    }
+    .about-team-member img {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 0.7rem;
+      border: 2.5px solid #065f46;
+      background: #fff;
+    }
+    .about-team-member .name {
+      font-weight: 600;
+      color: #065f46;
+      margin-bottom: 0.2rem;
+      font-size: 1.08rem;
+    }
+    .about-team-member .role {
+      font-size: 0.97rem;
+      color: #04996c;
+      margin-bottom: 0.2rem;
+    }
+    .about-team-member .desc {
+      font-size: 0.93rem;
+      color: #1f2937;
+    }
+    @media (max-width: 600px) {
+      .timeline {
+        padding-left: 18px;
+      }
+      .about-team {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+      }
+      .about-team-member {
+        width: 90%;
+        max-width: 300px;
+      }
+      .contact-info {
+        font-size: 0.97rem;
+        padding: 1.1rem 0.5rem;
+      }
+      .contact-hours table {
+        font-size: 0.93rem;
+      }
+      .contact-hours th, .contact-hours td {
+        white-space: normal !important;
+        word-break: break-word;
+        padding: 0.25em 0.3em;
+      }
+      .contact-hours table {
+        table-layout: fixed;
+      }
+      .contact-hours th {
+        font-size: 1em;
+      }
+      .contact-hours td {
+        font-size: 0.98em;
+      }
+      /* Migliora i bottoni della home */
+      #home .tab-content a[onclick*="showTab('gallery')"],
+      #home .tab-content a[onclick*="showTab('composizioni')"] {
+        font-size: 1.08rem !important;
+        font-weight: 700 !important;
+        letter-spacing: 0.5px;
+        padding: 1.1em 1.2em !important;
+        background: #04996c !important;
+        color: #fff !important;
+        border: 2px solid #065f46;
+        box-shadow: 0 2px 8px rgba(6,95,70,0.13);
+        text-shadow: 0 1px 2px #065f4633;
+      }
+      #home .tab-content a[onclick*="showTab('gallery')"]:hover,
+      #home .tab-content a[onclick*="showTab('composizioni')"]:hover {
+        background: #065f46 !important;
+        color: #fff !important;
+      }
+    }
+    /* --- Estetica avanzata --- */
+    /* Social icons modern style */
+    .footer-social {
+      margin-top: 0.5rem;
+      display: flex;
+      justify-content: center;
+      gap: 1.2rem;
+    }
+    .footer-social a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: #e0f2f1;
+      color: #065f46;
+      border-radius: 50%;
+      width: 2.2rem;
+      height: 2.2rem;
+      font-size: 1.3rem;
+      transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+      box-shadow: 0 1px 6px rgba(6,95,70,0.08);
+      text-decoration: none;
+    }
+    .footer-social a:hover {
+      background: #065f46;
+      color: #e0f2f1;
+      box-shadow: 0 2px 12px rgba(6,95,70,0.18);
+    }
+    /* Timeline Chi Siamo */
+    .timeline {
+      margin: 2.5rem auto 1.5rem auto;
+      max-width: 700px;
+      position: relative;
+      padding-left: 30px;
+      border-left: 3px solid #e0f2f1;
+    }
+    .timeline-event {
+      margin-bottom: 2.2rem;
+      position: relative;
+    }
+    .timeline-event:last-child {
+      margin-bottom: 0;
+    }
+    .timeline-dot {
+      position: absolute;
+      left: -13px;
+      top: 0.2rem;
+      width: 18px;
+      height: 18px;
+      background: #065f46;
+      border: 3px solid #e0f2f1;
+      border-radius: 50%;
+      z-index: 2;
+      box-shadow: 0 2px 8px rgba(6,95,70,0.13);
+    }
+    .timeline-content {
+      background: #f0fdf4;
+      border-radius: 0.7rem;
+      padding: 1.1rem 1.3rem;
+      box-shadow: 0 2px 8px rgba(6,95,70,0.07);
+      margin-left: 1.5rem;
+      position: relative;
+    }
+    .timeline-year {
+      font-weight: bold;
+      color: #04996c;
+      font-size: 1.1rem;
+      margin-bottom: 0.3rem;
+      display: block;
+    }
+    .timeline-content p {
+      margin: 0.2rem 0 0 0;
+      font-size: 1.07rem;
+      color: #065f46;
+    }
+    .about-team {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      justify-content: center;
+      margin-top: 2.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .about-team-member {
+      background: #e0f2f1;
+      border-radius: 1rem;
+      box-shadow: 0 2px 8px rgba(6,95,70,0.07);
+      padding: 1.2rem 1.1rem 1rem 1.1rem;
+      text-align: center;
+      width: 170px;
+      min-width: 140px;
+      max-width: 200px;
+      flex: 1 1 140px;
+    }
+    .about-team-member img {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 0.7rem;
+      border: 2.5px solid #065f46;
+      background: #fff;
+    }
+    .about-team-member .name {
+      font-weight: 600;
+      color: #065f46;
+      margin-bottom: 0.2rem;
+      font-size: 1.08rem;
+    }
+    .about-team-member .role {
+      font-size: 0.97rem;
+      color: #04996c;
+      margin-bottom: 0.2rem;
+    }
+    .about-team-member .desc {
+      font-size: 0.93rem;
+      color: #1f2937;
+    }
+    @media (max-width: 600px) {
+      .timeline {
+        padding-left: 18px;
+      }
+      .about-team {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+      }
+      .about-team-member {
+        width: 90%;
+        max-width: 300px;
+      }
+      .contact-info {
+        font-size: 0.97rem;
+        padding: 1.1rem 0.5rem;
+      }
+      .contact-hours table {
+        font-size: 0.93rem;
+      }
+      .contact-hours th, .contact-hours td {
+        white-space: normal !important;
+        word-break: break-word;
+        padding: 0.25em 0.3em;
+      }
+      .contact-hours table {
+        table-layout: fixed;
+      }
+      .contact-hours th {
+        font-size: 1em;
+      }
+      .contact-hours td {
+        font-size: 0.98em;
+      }
+      /* Migliora i bottoni della home */
+      #home .tab-content a[onclick*="showTab('gallery')"],
+      #home .tab-content a[onclick*="showTab('composizioni')"] {
+        font-size: 1.08rem !important;
+        font-weight: 700 !important;
+        letter-spacing: 0.5px;
+        padding: 1.1em 1.2em !important;
+        background: #04996c !important;
+        color: #fff !important;
+        border: 2px solid #065f46;
+        box-shadow: 0 2px 8px rgba(6,95,70,0.13);
+        text-shadow: 0 1px 2px #065f4633;
+      }
+      #home .tab-content a[onclick*="showTab('gallery')"]:hover,
+      #home .tab-content a[onclick*="showTab('composizioni')"]:hover {
+        background: #065f46 !important;
+        color: #fff !important;
+      }
+    }
+    /* --- Estetica avanzata --- */
+    /* Social icons modern style */
+    .footer-social {
+      margin-top: 0.5rem;
+      display: flex;
+      justify-content: center;
+      gap: 1.2rem;
+    }
+    .footer-social a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: #e0f2f1;
+      color: #065f46;
+      border-radius: 50%;
+      width: 2.2rem;
+      height: 2.2rem;
+      font-size: 1.3rem;
+      transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+      box-shadow: 0 1px 6px rgba(6,95,70,0.08);
+      text-decoration: none;
+    }
+    .footer-social a:hover {
+      background: #065f46;
+      color: #e0f2f1;
+      box-shadow: 0 2px 12px rgba(6,95,70,0.18);
+    }
+    /* Timeline Chi Siamo */
+    .timeline {
+      margin: 2.5rem auto 1.5rem auto;
+      max-width: 700px;
+      position: relative;
+      padding-left: 30px;
+      border-left: 3px solid #e0f2f1;
+    }
+    .timeline-event {
+      margin-bottom: 2.2rem;
+      position: relative;
+    }
+    .timeline-event:last-child {
+      margin-bottom: 0;
+    }
+    .timeline-dot {
+      position: absolute;
+      left: -13px;
+      top: 0.2rem;
+      width: 18px;
+      height: 18px;
+      background: #065f46;
+      border: 3px solid #e0f2f1;
+      border-radius: 50%;
+      z-index: 2;
+      box-shadow: 0 2px 8px rgba(6,95,70,0.13);
+    }
+    .timeline-content {
+      background: #f0fdf4;
+      border-radius: 0.7rem;
+      padding: 1.1rem 1.3rem;
+      box-shadow: 0 2px 8px rgba(6,95,70,0.07);
+      margin-left: 1.5rem;
+      position: relative;
+    }
+    .timeline-year {
+      font-weight: bold;
+      color: #04996c;
+      font-size: 1.1rem;
+      margin-bottom: 0.3rem;
+      display: block;
+    }
+    .timeline-content p {
+      margin: 0.2rem 0 0 0;
+      font-size: 1.07rem;
+      color: #065f46;
+    }
+    .about-team {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      justify-content: center;
+      margin-top: 2.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .about-team-member {
+      background: #e0f2f1;
+      border-radius: 1rem;
+      box-shadow: 0 2px 8px rgba(6,95,70,0.07);
+      padding: 1.2rem 1.1rem 1rem 1.1rem;
+      text-align: center;
+      width: 170px;
+      min-width: 140px;
+      max-width: 200px;
+      flex: 1 1 140px;
+    }
+    .about-team-member img {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 0.7rem;
+      border: 2.5px solid #065f46;
+      background: #fff;
+    }
+    .about-team-member .name {
+      font-weight: 600;
+      color: #065f46;
+      margin-bottom: 0.2rem;
+      font-size: 1.08rem;
+    }
+    .about-team-member .role {
+      font-size: 0.97rem;
+      color: #04996c;
+      margin-bottom: 0.2rem;
+    }
+    .about-team-member .desc {
+      font-size: 0.93rem;
+      color: #1f2937;
+    }
+    @media (max-width: 600px) {
+      .timeline {
+        padding-left: 18px;
+      }
+      .about-team {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+      }
+      .about-team-member {
+        width: 90%;
+        max-width: 300px;
+      }
+      .contact-info {
+        font-size: 0.97rem;
+        padding: 1.1rem 0.5rem;
+      }
+      .contact-hours table {
+        font-size: 0.93rem;
+      }
+      .contact-hours th, .contact-hours td {
+        white-space: normal !important;
+        word-break: break-word;
+        padding: 0.25em 0.3em;
+      }
+      .contact-hours table {
+        table-layout: fixed;
+      }
+      .contact-hours th {
+        font-size: 1em;
+      }
+      .contact-hours td {
+        font-size: 0.98em;
+      }
+      /* Migliora i bottoni della home */
+      #home .tab-content a[onclick*="showTab('gallery')"],
+      #home .tab-content a[onclick*="showTab('composizioni')"] {
+        font-size: 1.08rem !important;
+        font-weight: 700 !important;
+        letter-spacing: 0.5px;
+        padding: 1.1em 1.2em !important;
+        background: #04996c !important;
+        color: #fff !important;
+        border: 2px solid #065f46;
+        box-shadow: 0 2px 8px rgba(6,95,70,0.13);
+        text-shadow: 0 1px 2px #065f4633;
+      }
+      #home .tab-content a[onclick*="showTab('gallery')"]:hover,
+      #home .tab-content a[onclick*="showTab('composizioni')"]:hover {
+        background: #065f46 !important;
+        color: #fff !important;
+      }
+    }
+    /* --- Estetica avanzata --- */
+    /* Social icons modern style */
+    .footer-social {
+      margin-top: 0.5rem;
+      display: flex;
+      justify-content: center;
+      gap: 1.2rem;
+    }
+    .footer-social a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: #e0f2f1;
+      color: #065f46;
+      border-radius: 50%;
+      width: 2.2rem;
+      height: 2.2rem;
+      font-size: 1.3rem;
+      transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+      box-shadow: 0 1px 6px rgba(6,95,70,0.08);
+      text-decoration: none;
+    }
+    .footer-social a:hover {
+      background: #065f46;
+      color: #e0f2f1;
+      box-shadow: 0 2px 12px rgba(6,95,70,0.18);
+    }
+    /* Timeline Chi Siamo */
+    .timeline {
+      margin: 2.5rem auto 1.5rem auto;
+      max-width: 700px;
+      position: relative;
+      padding-left: 30px;
+      border-left: 3px solid #e0f2f1;
+    }
+    .timeline-event {
+      margin-bottom: 2.2rem;
+      position: relative;
+    }
+    .timeline-event:last-child {
+      margin-bottom: 0;
+    }
+    .timeline-dot {
+      position: absolute;
+      left: -13px;
+      top: 0.2rem;
+      width: 18px;
+      height: 18px;
+      background: #065f46;
+      border: 3px solid #e0f2f1;
+      border-radius: 50%;
+      z-index: 2;
+      box-shadow: 0 2px 8px rgba(6,95,70,0.13);
+    }
+    .timeline-content {
+      background: #f0fdf4;
+      border-radius: 0.7rem;
+      padding: 1.1rem 1.3rem;
+      box-shadow: 0 2px 8px rgba(6,95,70,0.07);
+      margin-left: 1.5rem;
+      position: relative;
+    }
+    .timeline-year {
+      font-weight: bold;
+      color: #04996c;
+      font-size: 1.1rem;
+      margin-bottom: 0.3rem;
+      display: block;
+    }
+    .timeline-content p {
+      margin: 0.2rem 0 0 0;
+      font-size: 1.07rem;
+      color: #065f46;
+    }
+    .about-team {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      justify-content: center;
+      margin-top: 2.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .about-team-member {
+      background: #e0f2f1;
+      border-radius: 1rem;
+      box-shadow: 0 2px 8px rgba(6,95,70,0.07);
+      padding: 1.2rem 1.1rem 1rem 1.1rem;
+      text-align: center;
+      width: 170px;
+      min-width: 140px;
+      max-width: 200px;
+      flex: 1 1 140px;
+    }
+    .about-team-member img {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 0.7rem;
+      border: 2.5px solid #065f46;
+      background: #fff;
+    }
+    .about-team-member .name {
+      font-weight: 600;
+      color: #065f46;
+      margin-bottom: 0.2rem;
+      font-size: 1.08rem;
+    }
+    .about-team-member .role {
+      font-size: 0.97rem;
+      color: #04996c;
+      margin-bottom: 0.2rem;
+    }
+    .about-team-member .desc {
+      font-size: 0.93rem;
+      color: #1f2937;
+    }
+    @media (max-width: 600px) {
+      .timeline {
+        padding-left: 18px;
+      }
+      .about-team {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+      }
+      .about-team-member {
+        width: 90%;
+        max-width: 300px;
+      }
+      .contact-info {
+        font-size: 0.97rem;
+        padding: 1.1rem 0.5rem;
+      }
+      .contact-hours table {
+        font-size: 0.93rem;
+      }
+      .contact-hours th, .contact-hours td {
+        white-space: normal !important;
+        word-break: break-word;
+        padding: 0.25em 0.3em;
+      }
+      .contact-hours table {
+        table-layout: fixed;
+      }
+      .contact-hours th {
+        font-size: 1em;
+      }
+      .contact-hours td {
+        font-size: 0.98em;
+      }
+      /* Migliora i bottoni della home */
+      #home .tab-content a[onclick*="showTab('gallery')"],
+      #home .tab-content a[onclick*="showTab('composizioni')"] {
+        font-size: 1.08rem !important;
+        font-weight: 700 !important;
+        letter-spacing: 0.5px;
+        padding: 1.1em 1.2em !important;
+        background: #04996c !important;
+        color: #fff !important;
+        border: 2px solid #065f46;
+        box-shadow: 0 2px 8px rgba(6,95,70,0.13);
+        text-shadow: 0 1px 2px #065f4633;
+      }
+      #home .tab-content a[onclick*="showTab('gallery')"]:hover,
+      #home .tab-content a[onclick*="showTab('composizioni')"]:hover {
+        background: #065f46 !important;
+        color: #fff !important;
+      }
+    }
+    /* --- Estetica avanzata --- */
+    /* Social icons modern style */
+    .footer-social {
+      margin-top: 0.5rem;
+      display: flex;
+      justify-content: center;
+      gap: 1.2rem;
+    }
+    .footer-social a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: #e0f2f1;
+      color: #065f46;
+      border-radius: 50%;
+      width: 2.2rem;
+      height: 2.2rem;
+      font-size: 1.3rem;
+      transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+      box-shadow: 0 1px 6px rgba(6,95,70,0.08);
+      text-decoration: none;
+    }
+    .footer-social a:hover {
+      background: #065f46;
+      color: #e0f2f1;
+      box-shadow: 0 2px 12px rgba(6,95,70,0.18);
+    }
+    /* Timeline Chi Siamo */
+    .timeline {
+      margin: 2.5rem auto 1.5rem auto;
+      max-width: 700px;
+      position: relative;
+      padding-left: 30px;
+      border-left: 3px solid #e0f2f1;
+    }
+    .timeline-event {
+      margin-bottom: 2.2rem;
+      position: relative;
+    }
+    .timeline-event:last-child {
+      margin-bottom: 0;
+    }
+    .timeline-dot {
+      position: absolute;
+      left: -13px;
+      top: 0.2rem;
+      width: 18px;
+      height: 18px;
+      background: #065f46;
+      border: 3px solid #e0f2f1;
+      border-radius: 50%;
+      z-index: 2;
+      box-shadow: 0 2px 8px rgba(6,95,70,0.13);
+    }
+    .timeline-content {
+      background: #f0fdf4;
+      border-radius: 0.7rem;
+      padding: 1.1rem 1.3rem;
+      box-shadow: 0 2px 8px rgba(6,95,70,0.07);
+      margin-left: 1.5rem;
+      position: relative;
+    }
+    .timeline-year {
+      font-weight: bold;
+      color: #04996c;
+      font-size: 1.1rem;
+      margin-bottom: 0.3rem;
+      display: block;
+    }
+    .timeline-content p {
+      margin: 0.2rem 0 0 0;
+      font-size: 1.07rem;
+      color: #065f46;
+    }
+    .about-team {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      justify-content: center;
+      margin-top: 2.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .about-team-member {
+      background: #e0f2f1;
+      border-radius: 1rem;
+      box-shadow: 0 2px 8px rgba(6,95,70,0.07);
+      padding: 1.2rem 1.1rem 1rem 1.1rem;
+      text-align: center;
+      width: 170px;
+      min-width: 140px;
+      max-width: 200px;
+      flex: 1 1 140px;
+    }
+    .about-team-member img {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 0.7rem;
+      border: 2.5px solid #065f46;
+      background: #fff;
+    }
+    .about-team-member .name {
+      font-weight: 600;
+      color: #065f46;
+      margin-bottom: 0.2rem;
+      font-size: 1.08rem;
+    }
+    .about-team-member .role {
+      font-size: 0.97rem;
+      color: #04996c;
+      margin-bottom: 0.2rem;
+    }
+    .about-team-member .desc {
+      font-size: 0.93rem;
+      color: #1f2937;
+    }
+    @media (max-width: 600px) {
+      .timeline {
+        padding-left: 18px;
+      }
+      .about-team {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+      }
+      .about-team-member {
+        width: 90%;
+        max-width: 300px;
+      }
+      .contact-info {
+        font-size: 0.97rem;
+        padding: 1.1rem 0.5rem;
+      }
+      .contact-hours table {
+        font-size: 0.93rem;
+      }
+      .contact-hours th, .contact-hours td {
+        white-space: normal !important;
+        word-break: break-word;
+        padding: 0.25em 0.3em;
+      }
+      .contact-hours table {
+        table-layout: fixed;
+      }
+      .contact-hours th {
+        font-size: 1em;
+      }
+      .contact-hours td {
+        font-size: 0.98em;
+      }
+      /* Migliora i bottoni della home */
+      #home .tab-content a[onclick*="showTab('gallery')"],
+      #home .tab-content a[onclick*="showTab('composizioni')"] {
+        font-size: 1.08rem !important;
+        font-weight: 700 !important;
+        letter-spacing: 0.5px;
+        padding: 1.1em 1.2em !important;
+        background: #04996c !important;
+        color: #fff !important;
+        border: 2px solid #065f46;
+        box-shadow: 0 2px 8px rgba(6,95,70,0.13);
+        text-shadow: 0 1px 2px #065f4633;
+      }
+      #home .tab-content a[onclick*="showTab('gallery')"]:hover,
+      #home .tab-content a[onclick*="showTab('composizioni')"]:hover {
+        background: #065f46 !important;
+        color: #fff !important;
+      }
+    }
+    /* --- Estetica avanzata --- */
+    /* Social icons modern style */
+    .footer-social {
+      margin-top: 0.5rem;
+      display: flex;
+      justify-content: center;
+      gap: 1.2rem;
+    }
+    .footer-social a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: #e0f2f1;
+      color: #065f46;
+      border-radius: 50%;
+      width: 2.2rem;
+      height: 2.2rem;
+      font-size: 1.3rem;
+      transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+      box-shadow: 0 1px 6px rgba(6,95,70,0.08);
+      text-decoration: none;
+    }
+    .footer-social a:hover {
+      background: #065f46;
+      color: #e0f2f1;
+      box-shadow: 0 2px 12px rgba(6,95,70,0.18);
+    }
+    /* Timeline Chi Siamo */
+    .timeline {
+      margin: 2.5rem auto 1.5rem auto;
+      max-width: 700px;
+      position: relative;
+      padding-left: 30px;
+      border-left: 3px solid #e0f2f1;
+    }
+    .timeline-event {
+      margin-bottom: 2.2rem;
+      position: relative;
+    }
+    .timeline-event:last-child {
+      margin-bottom: 0;
+    }
+    .timeline-dot {
+      position: absolute;
+      left: -13px;
+      top: 0.2rem;
+      width: 18px;
+      height: 18px;
+      background: #065f46;
+      border: 3px solid #e0f2f1;
+      border-radius: 50%;
+      z-index: 2;
+      box-shadow: 0 2px 8px rgba(6,95,70,0.13);
+    }
+    .timeline-content {
+      background: #f0fdf4;
+      border-radius: 0.7rem;
+      padding: 1.1rem 1.3rem;
+      box-shadow: 0 2px 8px rgba(6,95,70,0.07);
+      margin-left: 1.5rem;
+      position: relative;
+    }
+    .timeline-year {
+      font-weight: bold;
+      color: #04996c;
+      font-size: 1.1rem;
+      margin-bottom: 0.3rem;
+      display: block;
+    }
+    .timeline-content p {
+      margin: 0.2rem 0 0 0;
+      font-size: 1.07rem;
+      color: #065f46;
+    }
+    .about-team {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      justify-content: center;
+      margin-top: 2.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .about-team-member {
+      background: #e0f2f1;
+      border-radius: 1rem;
+      box-shadow: 0 2px 8px rgba(6,95,70,0.07);
+      padding: 1.2rem 1.1rem 1rem 1.1rem;
+      text-align: center;
+      width: 170px;
+      min-width: 140px;
+      max-width: 200px;
+      flex: 1 1 140px;
+    }
+    .about-team-member img {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 0.7rem;
+      border: 2.5px solid #065f46;
+      background: #fff;
+    }
+    .about-team-member .name {
+      font-weight: 600;
+      color: #065f46;
+      margin-bottom: 0.2rem;
+      font-size: 1.08rem;
+    }
+    .about-team-member .role {
+      font-size: 0.97rem;
+      color: #04996c;
+      margin-bottom: 0.2rem;
+    }
+    .about-team-member .desc {
+      font-size: 0.93rem;
+      color: #1f2937;
+    }
+    @media (max-width: 600px) {
+      .timeline {
+        padding-left: 18px;
+      }
+      .about-team {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+      }
+      .about-team-member {
+        width: 90%;
+        max-width: 300px;
+      }
+      .contact-info {
+        font-size: 0.97rem;
+        padding: 1.1rem 0.5rem;
+      }
+      .contact-hours table {
+        font-size: 0.93rem;
+      }
+      .contact-hours th, .contact-hours td {
+        white-space: normal !important;
+        word-break: break-word;
+        padding: 0.25em 0.3em;
+      }
+      .contact-hours table {
+        table-layout: fixed;
+      }
+      .contact-hours th {
+        font-size: 1em;
+      }
+      .contact-hours td {
+        font-size: 0.98em;
+      }
+      /* Migliora i bottoni della home */
+      #home .tab-content a[onclick*="showTab('gallery')"],
+      #home .tab-content a[onclick*="showTab('composizioni')"] {
+        font-size: 1.08rem !important;
+        font-weight: 700 !important;
+        letter-spacing: 0.5px;
+        padding: 1.1em 1.2em !important;
+        background: #04996c !important;
+        color: #fff !important;
+        border: 2px solid #065f46;
+        box-shadow: 0 2px 8px rgba(6,95,70,0.13);
+        text-shadow: 0 1px 2px #065f4633;
+      }
+      #home .tab-content a[onclick*="showTab('gallery')"]:hover,
+      #home .tab-content a[onclick*="showTab('composizioni')"]:hover {
+        background: #065f46 !important;
+        color: #fff !important;
+      }
+    }
+    /* --- Estetica avanzata --- */
+    /* Social icons modern style */
+    .footer-social {
+      margin-top: 0.5rem;
+      display: flex;
+      justify-content: center;
+      gap: 1.2rem;
+    }
+    .footer-social a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: #e0f2f1;
+      color: #065f46;
+      border-radius: 50%;
+      width: 2.2rem;
+      height: 2.2rem;
+      font-size: 1.3rem;
+      transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+      box-shadow: 0 1px 6px rgba(6,95,70,0.08);
+      text-decoration: none;
+    }
+    .footer-social a:hover {
+      background: #065f46;
+      color: #e0f2f1;
+      box-shadow: 0 2px 12px rgba(6,95,70,0.18);
+    }
+    /* Timeline Chi Siamo */
+    .timeline {
+      margin: 2.5rem auto 1.5rem auto;
+      max-width: 700px;
+      position: relative;
+      padding-left: 30px;
+      border-left: 3px solid #e0f2f1;
+    }
+    .timeline-event {
+      margin-bottom: 2.2rem;
+      position: relative;
+    }
+    .timeline-event:last-child {
+      margin-bottom: 0;
+    }
+    .timeline-dot {
+      position: absolute;
+      left: -13px;
+      top: 0.2rem;
+      width: 18px;
+      height: 18px;
+      background: #065f46;
+      border: 3px solid #e0f2f1;
+      border-radius: 50%;
+      z-index: 2;
+      box-shadow: 0 2px 8px rgba(6,95,70,0.13);
+    }
+    .timeline-content {
+      background: #f0fdf4;
+      border-radius: 0.7rem;
+      padding: 1.1rem 1.3rem;
+      box-shadow: 0 2px 8px rgba(6,95,70,0.07);
+      margin-left: 1.5rem;
+      position: relative;
+    }
+    .timeline-year {
+      font-weight: bold;
+      color: #04996c;
+      font-size: 1.1rem;
+      margin-bottom: 0.3rem;
+      display: block;
+    }
+    .timeline-content p {
+      margin: 0.2rem 0 0 0;
+      font-size: 1.07rem;
+      color: #065f46;
+    }
+    .about-team {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      justify-content: center;
+      margin-top: 2.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .about-team-member {
+      background: #e0f2f1;
+      border-radius: 1rem;
+      box-shadow: 0 2px 8px rgba(6,95,70,0.07);
+      padding: 1.2rem 1.1rem 1rem 1.1rem;
+      text-align: center;
+      width: 170px;
+      min-width: 140px;
+      max-width: 200px;
+      flex: 1 1 140px;
+    }
+    .about-team-member img {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 0.7rem;
+      border: 2.5px solid #065f46;
+      background: #fff;
+    }
+    .about-team-member .name {
+      font-weight: 600;
+      color: #065f46;
+      margin-bottom: 0.2rem;
+      font-size: 1.08rem;
+    }
+    .about-team-member .role {
+      font-size: 0.97rem;
+      color: #04996c;
+      margin-bottom: 0.2rem;
+    }
+    .about-team-member .desc {
+      font-size: 0.93rem;
+      color: #1f2937;
+    }
+    @media (max-width: 600px) {
+      .timeline {
+        padding-left: 18px;
+      }
+      .about-team {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+      }
+      .about-team-member {
+        width: 90%;
+        max-width: 300px;
+      }
+      .contact-info {
+        font-size: 0.97rem;
+        padding: 1.1rem 0.5rem;
+      }
+      .contact-hours table {
+        font-size: 0.93rem;
+      }
+      .contact-hours th, .contact-hours td {
+        white-space: normal !important;
+        word-break: break-word;
+        padding: 0.25em 0.3em;
+      }
+      .contact-hours table {
+        table-layout: fixed;
+      }
+      .contact-hours th {
+        font-size: 1em;
+      }
+      .contact-hours td {
+        font-size: 0.98em;
+      }
+      /* Migliora i bottoni della home */
+      #home .tab-content a[onclick*="showTab('gallery')"],
+      #home .tab-content a[onclick*="showTab('composizioni')"] {
+        font-size: 1.08rem !important;
+        font-weight: 700 !important;
+        letter-spacing: 0.5px;
+        padding: 1.1em 1.2em !important;
+        background: #04996c !important;
+        color: #fff !important;
+        border: 2px solid #065f46;
+        box-shadow: 0 2px 8px rgba(6,95,70,0.13);
+        text-shadow: 0 1px 2px #065f4633;
+      }
+      #home .tab-content a[onclick*="showTab('gallery')"]:hover,
+      #home .tab-content a[onclick*="showTab('composizioni')"]:hover {
+        background: #065f46 !important;
+        color: #fff !important;
+      }
+    }
+    /* --- Estetica avanzata --- */
+    /* Social icons modern style */
+    .footer-social {
+      margin-top: 0.5rem;
+      display: flex;
+      justify-content: center;
+      gap: 1.2rem;
+    }
+    .footer-social a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: #e0f2f1;
+      color: #065f46;
+      border-radius: 50%;
+      width: 2.2rem;
+      height: 2.2rem;
+      font-size: 1.3rem;
+      transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+      box-shadow: 0 1px 6px rgba(6,95,70,0.08);
+      text-decoration: none;
+    }
+    .footer-social a:hover {
+      background: #065f46;
+      color: #e0f2f1;
+      box-shadow: 0 2px 12px rgba(6,95,70,0.18);
+    }
+    /* Timeline Chi Siamo */
+    .timeline {
+      margin: 2.5rem auto 1.5rem auto;
+      max-width: 700px;
+      position: relative;
+      padding-left: 30px;
+      border-left: 3px solid #e0f2f1;
+    }
+    .timeline-event {
+      margin-bottom: 2.2rem;
+      position: relative;
+    }
+    .timeline-event:last-child {
+      margin-bottom: 0;
+    }
+    .timeline-dot {
+      position: absolute;
+      left: -13px;
+      top: 0.2rem;
+      width: 18px;
+      height: 18px;
+      background: #065f46;
+      border: 3px solid #e0f2f1;
+      border-radius: 50%;
+      z-index: 2;
+      box-shadow: 0 2px 8px rgba(6,95,70,0.13);
+    }
+    .timeline-content {
+      background: #f0fdf4;
+      border-radius: 0.7rem;
+      padding: 1.1rem 1.3rem;
+      box-shadow: 0 2px 8px rgba(6,95,70,0.07);
+      margin-left: 1.5rem;
+      position: relative;
+    }
+    .timeline-year {
+      font-weight: bold;
+      color: #04996c;
+      font-size: 1.1rem;
+      margin-bottom: 0.3rem;
+      display: block;
+    }
+    .timeline-content p {
+      margin: 0.2rem 0 0 0;
+      font-size: 1.07rem;
+      color: #065f46;
+    }
+    .about-team {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      justify-content: center;
+      margin-top: 2.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .about-team-member {
+      background: #e0f2f1;
+      border-radius: 1rem;
+      box-shadow: 0 2px 8px rgba(6,95,70,0.07);
+      padding: 1.2rem 1.1rem 1rem 1.1rem;
+      text-align: center;
+      width: 170px;
+      min-width: 140px;
+      max-width: 200px;
+      flex: 1 1 140px;
+    }
+    .about-team-member img {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 0.7rem;
+      border: 2.5px solid #065f46;
+      background: #fff;
+    }
+    .about-team-member .name {
+      font-weight: 600;
+      color: #065f46;
+      margin-bottom: 0.2rem;
+      font-size: 1.08rem;
+    }
+    .about-team-member .role {
+      font-size: 0.97rem;
+      color: #04996c;
+      margin-bottom: 0.2rem;
+    }
+    .about-team-member .desc {
+      font-size: 0.93rem;
+      color: #1f2937;
+    }
+    @media (max-width: 600px) {
+      .timeline {
+        padding-left: 18px;
+      }
+      .about-team {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+      }
+      .about-team-member {
+        width: 90%;
+        max-width: 300px;
+      }
+      .contact-info {
+        font-size: 0.97rem;
+        padding: 1.1rem 0.5rem;
+      }
+      .contact-hours table {
+        font-size: 0.93rem;
+      }
+      .contact-hours th, .contact-hours td {
+        white-space: normal !important;
+        word-break: break-word;
+        padding: 0.25em 0.3em;
+      }
+      .contact-hours table {
+        table-layout: fixed;
+      }
+      .contact-hours th {
+        font-size: 1em;
+      }
+      .contact-hours td {
+        font-size: 0.98em;
+      }
+      /* Migliora i bottoni della home */
+      #home .tab-content a[onclick*="showTab('gallery')"],
+      #home .tab-content a[onclick*="showTab('composizioni')"] {
+        font-size: 1.08rem !important;
+        font-weight: 700 !important;
+        letter-spacing: 0.5px;
+        padding: 1.1em 1.2em !important;
+        background: #04996c !important;
+        color: #fff !important;
+        border: 2px solid #065f46;
+        box-shadow: 0 2px 8px rgba(6,95,70,0.13);
+        text-shadow: 0 1px 2px #065f4633;
+      }
+      #home .tab-content a[onclick*="showTab('gallery')"]:hover,
+      #home .tab-content a[onclick*="showTab('composizioni')"]:hover {
+        background: #065f46 !important;
+        color: #fff !important;
+      }
+    }
+    /* --- Estetica avanzata --- */
+    /* Social icons modern style */
+    .footer-social {
+      margin-top: 0.5rem;
+      display: flex;
+      justify-content: center;
+      gap: 1.2rem;
+    }
+    .footer-social a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: #e0f2f1;
+      color: #065f46;
+      border-radius: 50%;
+      width: 2.2rem;
+      height: 2.2rem;
+      font-size: 1.3rem;
+      transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+      box-shadow: 0 1px 6px rgba(6,95,70,0.08);
+      text-decoration: none;
+    }
+    .footer-social a:hover {
+      background: #065f46;
+      color: #e0f2f1;
+      box-shadow: 0 2px 12px rgba(6,95,70,0.18);
+    }
+    /* Timeline Chi Siamo */
+    .timeline {
+      margin: 2.5rem auto 1.5rem auto;
+      max-width: 700px;
+      position: relative;
+      padding-left: 30px;
+      border-left: 3px solid #e0f2f1;
+    }
+    .timeline-event {
+      margin-bottom: 2.2rem;
+      position: relative;
+    }
+    .timeline-event:last-child {
+      margin-bottom: 0;
+    }
+    .timeline-dot {
+      position: absolute;
+      left: -13px;
+      top: 0.2rem;
+      width: 18px;
+      height: 18px;
+      background: #065f46;
+      border: 3px solid #e0f2f1;
+      border-radius: 50%;
+      z-index: 2;
+      box-shadow: 0 2px 8px rgba(6,95,70,0.13);
+    }
+    .timeline-content {
+      background: #f0fdf4;
+      border-radius: 0.7rem;
+      padding: 1.1rem 1.3rem;
+      box-shadow: 0 2px 8px rgba(6,95,70,0.07);
+      margin-left: 1.5rem;
+      position: relative;
+    }
+    .timeline-year {
+      font-weight: bold;
+      color: #04996c;
+      font-size: 1.1rem;
+      margin-bottom: 0.3rem;
+      display: block;
+    }
+    .timeline-content p {
+      margin: 0.2rem 0 0 0;
+      font-size: 1.07rem;
+      color: #065f46;
+    }
+    .about-team {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      justify-content: center;
+      margin-top: 2.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .about-team-member {
+      background: #e0f2f1;
+      border-radius: 1rem;
+      box-shadow: 0 2px 8px rgba(6,95,70,0.07);
+      padding: 1.2rem 1.1rem 1rem 1.1rem;
+      text-align: center;
+      width: 170px;
+      min-width: 140px;
+      max-width: 200px;
+      flex: 1 1 140px;
+    }
+    .about-team-member img {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 0.7rem;
+      border: 2.5px solid #065f46;
+      background: #fff;
+    }
+    .about-team-member .name {
+      font-weight: 600;
+      color: #065f46;
+      margin-bottom: 0.2rem;
+      font-size: 1.08rem;
+    }
+    .about-team-member .role {
+      font-size: 0.97rem;
+      color: #04996c;
+      margin-bottom: 0.2rem;
+    }
+    .about-team-member .desc {
+      font-size: 0.93rem;
+      color: #1f2937;
+    }
+    @media (max-width: 600px) {
+      .timeline {
+        padding-left: 18px;
+      }
+      .about-team {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+      }
+      .about-team-member {
+        width: 90%;
+        max-width: 300px;
+      }
+      .contact-info {
+        font-size: 0.97rem;
+        padding: 1.1rem 0.5rem;
+      }
+      .contact-hours table {
+        font-size: 0.93rem;
+      }
+      .contact-hours th, .contact-hours td {
+        white-space: normal !important;
+        word-break: break-word;
+        padding: 0.25em 0.3em;
+      }
+      .contact-hours table {
+        table-layout: fixed;
+      }
+      .contact-hours th {
+        font-size: 1em;
+      }
+      .contact-hours td {
+        font-size: 0.98em;
+      }
+      /* Migliora i bottoni della home */
+      #home .tab-content a[onclick*="showTab('gallery')"],
+      #home .tab-content a[onclick*="showTab('composizioni')"] {
+        font-size: 1.08rem !important;
+        font-weight: 700 !important;
+        letter-spacing: 0.5px;
+        padding: 1.1em 1.2em !important;
+        background: #04996c !important;
+        color: #fff !important;
+        border: 2px solid #065f46;
+        box-shadow: 0 2px 8px rgba(6,95,70,0.13);
+        text-shadow: 0 1px 2px #065f4633;
+      }
+      #home .tab-content a[onclick*="showTab('gallery')"]:hover,
+      #home .tab-content a[onclick*="showTab('composizioni')"]:hover {
+        background: #065f46 !important;
+        color: #fff !important;
       }
     }
   </style>
