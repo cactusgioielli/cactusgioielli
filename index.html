@@ -2163,48 +2163,6 @@
         font-size: 1.08rem !important;
         white-space: normal !important;
       }
-      #home .tab-content div[style*="position:relative"][style*="max-width:900px"] {
-        /* Centra il box bianco nella foto anche su mobile */
-        display: flex !important;
-        justify-content: center !important;
-        align-items: center !important;
-        min-height: 320px !important;
-        /* Evita che il box bianco tocchi il bordo inferiore della foto */
-        padding-bottom: 0 !important;
-      }
-      #home .tab-content div[style*="background: rgba(255,255,255,0.90);"] {
-        margin-top: 1.2rem !important;
-        margin-bottom: 1.2rem !important;
-        max-width: 98vw !important;
-        width: 98vw !important;
-        left: 50% !important;
-        transform: translateX(-50%) !important;
-        position: relative !important;
-        box-sizing: border-box !important;
-      }
-      .hero-buttons {
-        flex-direction: column;
-        align-items: center;
-        gap: 0.7em;
-        width: 100%;
-        max-width: 98vw;
-        margin-left: auto;
-        margin-right: auto;
-      }
-      .hero-btn {
-        width: 100%;
-        min-width: 0;
-        max-width: 98vw;
-        font-size: 1.05rem;
-        justify-content: flex-start;
-        text-align: left;
-        padding-left: 1.1em;
-        padding-right: 1.1em;
-        margin-left: auto;
-        margin-right: auto;
-        white-space: normal;
-        box-sizing: border-box;
-      }
     }
     /* --- Estetica avanzata --- */
     /* Social icons modern style */
@@ -2339,6 +2297,48 @@
       .contact-info {
         font-size: 0.97rem;
         padding: 1.1rem 0.5rem;
+      }
+      .contact-hours table {
+        font-size: 0.93rem;
+      }
+      .contact-hours th, .contact-hours td {
+        white-space: normal !important;
+        word-break: break-word;
+        padding: 0.25em 0.3em;
+      }
+      .contact-hours table {
+        table-layout: fixed;
+      }
+      .contact-hours th {
+        font-size: 1em;
+      }
+      .contact-hours td {
+        font-size: 0.98em;
+      }
+      /* Migliora i bottoni della home */
+      #home .tab-content a[onclick*="showTab('gallery')"],
+      #home .tab-content a[onclick*="showTab('composizioni')"] {
+        font-size: 1.08rem !important;
+        font-weight: 700 !important;
+        letter-spacing: 0.5px;
+        padding: 1.1em 1.2em !important;
+        background: #04996c !important;
+        color: #fff !important;
+        border: 2px solid #065f46;
+        box-shadow: 0 2px 8px rgba(6,95,70,0.13);
+        text-shadow: 0 1px 2px #065f4633;
+      }
+      #home .tab-content a[onclick*="showTab('gallery')"]:hover,
+      #home .tab-content a[onclick*="showTab('composizioni')"]:hover {
+        background: #065f46 !important;
+        color: #fff !important;
+      }
+      #home .tab-content div[style*="margin-top:1.5rem"] {
+        flex-wrap: wrap !important;
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 0.7em !important;
+        width: 100
       }
       .contact-hours table {
         font-size: 0.93rem;
@@ -6425,7 +6425,9 @@
     </div>
   </div>
   <footer>
-    <p>2025 Azienda Agricola Cactus.</p>
+    <p>Seguici su <a href="https://www.facebook.com/profile.php?id=100042208278203" target="_blank">Facebook</a> , 
+      <a href="https://www.instagram.com/cactusgioielli/" target="_blank">Instagram</a> e
+      <a href="https://www.tiktok.com/@cactusgioiellislr?_t=ZN-8zj3FqLPa58&_r=1" target="_blank">Tiktok</a>.
     <div class="footer-social">
       <a href="https://www.facebook.com/profile.php?id=100042208278203" target="_blank" aria-label="Facebook">
         <!-- Facebook SVG -->
@@ -6438,15 +6440,10 @@
       <a href="https://www.tiktok.com/@cactusgioiellislr?_t=ZN-8zj3FqLPa58&_r=1" target="_blank" aria-label="Facebook">
         <!-- Tiktok SVG -->
          <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2c1.19 0 2.39 0 3.58 0 .26 1.52 1.34 2.78 2.78 3.25.55.19 1.14.25 1.72.27v3.46c-1.14-.04-2.29-.34-3.29-.92-.46-.27-.87-.6-1.25-.96-.01 2.64.01 5.28-.01 7.91-.04 1.26-.48 2.54-1.31 3.5-.86 1.02-2.13 1.67-3.43 1.84-1.2.17-2.46-.07-3.51-.66-1.05-.58-1.89-1.54-2.33-2.66-.49-1.22-.55-2.64-.17-3.91.39-1.31 1.29-2.47 2.49-3.14 1.12-.63 2.48-.84 3.76-.62v3.51c-.59-.19-1.29-.13-1.82.21-.52.33-.89.91-.94 1.53-.08.66.19 1.36.7 1.79.55.48 1.39.62 2.06.33.61-.26 1.01-.87 1.1-1.52.02-2.64.01-5.29.01-7.93V2z"/></svg>  
-  </div>
-    <p>
-      Seguici su 
-      <a href="https://www.facebook.com/profile.php?id=100042208278203" target="_blank">Facebook</a> , 
-      <a href="https://www.instagram.com/cactusgioielli/" target="_blank">Instagram</a> e
-      <a href="https://www.tiktok.com/@cactusgioiellislr?_t=ZN-8zj3FqLPa58&_r=1" target="_blank">Tiktok</a>.
-    </p>
+      </a>
+</div>
+
+<p>© 2025 Azienda Agricola Cactus.</p>
   </footer>
 </body>
 </html>
-
-
