@@ -55,7 +55,6 @@ header {
   box-shadow: 0 4px 24px rgba(6,95,70,0.07);
   padding: 2rem 1rem;
 }
-
 /* HEADER BASE */
 header {
   position: relative;
@@ -66,14 +65,12 @@ header {
   box-shadow: 0 4px 24px rgba(6,95,70,0.07);
   padding: 2rem 1rem;
 }
-
 /* LOGO */
 .logo-container {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
 .logo-container img {
   height: 320px;
   width: 88vw;
@@ -84,7 +81,6 @@ header {
   background: #fff;
   filter: brightness(1.08) saturate(1.15);
 }
-
 /* DESCRIZIONE */
 .header-desc {
   font-family: "Inter", serif;
@@ -94,7 +90,6 @@ header {
   line-height: 1.4;
   padding: 0 1rem;
 }
-
 /* --- BARRA DI RICERCA --- */
 #search-form {
   position: absolute;
@@ -105,7 +100,6 @@ header {
   align-items: center;
   gap: 0.4rem;
 }
-
 #search-input {
   padding: 0.55rem 1.1rem;
   border-radius: 1.2rem;
@@ -119,11 +113,9 @@ header {
   color: #065f46;
   box-shadow: 0 1px 6px rgba(6,95,70,0.08);
 }
-
 #search-input:focus {
   border-color: #065f46;
 }
-
 #search-form button {
   background: #04996c;
   border: none;
@@ -137,11 +129,9 @@ header {
   cursor: pointer;
   transition: background 0.2s;
 }
-
 #search-form button:hover {
   background: #065f46;
 }
-
 /* --- RESPONSIVE: SU MOBILE LA BARRA SALE SOPRA IL LOGO --- */
 @media (max-width: 768px) {
   #search-form {
@@ -149,18 +139,14 @@ header {
     justify-content: center;
     margin-bottom: 1rem;
   }
-
   #search-input {
     width: 90%;
     max-width: 400px;
   }
-
   header {
     padding-top: 1.5rem;
   }
 }
-
-
     .tabs {
       display: flex;
       gap: 1rem;
@@ -1039,10 +1025,8 @@ header {
         resetGallerySearch();
       }
     }
-
     let galleryImages = [];
     let currentIndex = 0;
-
     function updateModalCounter() {
       const counter = document.getElementById('modal-counter');
       if (galleryImages.length > 0 && typeof currentIndex === 'number') {
@@ -1052,7 +1036,6 @@ header {
         counter.style.display = 'none';
       }
     }
-
     function openModal(src) {
       // Trova la gallery di appartenenza (Cactacee, Succulente, Composizioni)
       let imgEl = null;
@@ -1085,7 +1068,6 @@ header {
       history.pushState({lightbox: true}, '', '#lightbox');
       updateModalCounter();
     }
-
     function showModalImage() {
       const modalImg = document.getElementById('modal-img');
       if (galleryImages[currentIndex]) {
@@ -1094,7 +1076,6 @@ header {
       }
       updateModalCounter();
     }
-
     function closeModal() {
       document.getElementById('image-modal').classList.remove('active');
       document.removeEventListener('keydown', handleModalKey);
@@ -1105,19 +1086,16 @@ header {
       // Nascondi il contatore
       document.getElementById('modal-counter').style.display = 'none';
     }
-
     function prevImage(e) {
       if (e) e.stopPropagation();
       currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
       showModalImage();
     }
-
     function nextImage(e) {
       if (e) e.stopPropagation();
       currentIndex = (currentIndex + 1) % galleryImages.length;
       showModalImage();
     }
-
     function handleModalKey(e) {
       if (e.key === 'ArrowLeft') prevImage();
       if (e.key === 'ArrowRight') nextImage();
@@ -1130,7 +1108,6 @@ header {
       }
       showTab('home'); // Mostra la scheda Home all'avvio
     };
-
     // Gestisci il tasto indietro del browser per chiudere il lightbox
     window.addEventListener('popstate', function(event) {
       const modal = document.getElementById('image-modal');
@@ -1139,7 +1116,6 @@ header {
         document.removeEventListener('keydown', handleModalKey);
       }
     });
-
     // Gestione click fuori dal popup per chiudere e tornare indietro
     window.addEventListener('DOMContentLoaded', () => {
       const modal = document.getElementById('image-modal');
@@ -1159,9 +1135,7 @@ header {
       document.querySelector('.gallery-grasse').style.display = (cat === 'grasse') ? '' : 'none';
       document.querySelector('.gallery-succulente').style.display = (cat === 'succulente') ? '' : 'none';
       document.querySelector('.gallery-composizione').style.display = (cat === 'composizione') ? '' : 'none';
-
     }
-
     function searchGallery() {
       const query = document.getElementById('search-input').value.trim().toLowerCase();
       // Navigazione automatica tra le sezioni principali
@@ -1210,7 +1184,6 @@ header {
       // Default: filtra nella sezione attuale e mostra messaggio se nessun risultato
       filterGalleryImages(query, true);
     }
-
     function filterGalleryImages(query, showError) {
       let found = false;
       document.querySelectorAll('.gallery:visible, .gallery[style*="display: block"], .gallery:not([style*="display: none"])').forEach(gallery => {
@@ -1243,7 +1216,6 @@ header {
         }
       });
     }
-
     function resetGallerySearch() {
       document.querySelectorAll('.gallery img').forEach(img => {
         img.style.display = '';
@@ -1264,7 +1236,6 @@ header {
                  alt="Logo Azienda Agricola Cactus">
           </a>
         </div>
-      
         <!-- Barra di ricerca -->
         <form id="search-form" onsubmit="event.preventDefault(); searchGallery();">
           <input id="search-input" type="text" placeholder="Cerca" />
@@ -1275,14 +1246,11 @@ header {
             </svg>
           </button>
         </form>
-      
         <p class="header-desc">
           Produzione e distribuzione all'ingrosso di cactacee e succulente di alta qualità,
           con la realizzazione di eleganti composizioni personalizzate.
         </p>
       </header>
-      
-
     <div class="tabs">
       <button class="tab-button" id="home-btn" onclick="showTab('home')">
   <img src="./IMMAGINI/icons8-casa-48.png" alt="home" style="width:16px; height:16px; vertical-align:middle;"> Home</button>
@@ -1295,7 +1263,6 @@ header {
       <button class="tab-button" id="location-btn" onclick="showTab('location')">
        <img src="./IMMAGINI/indirizzo.png" alt="indirizzo" style="width:16px; height:18px; vertical-align:middle;"> Indirizzo</button>
     </div>
-
     <div id="home" class="tab-content">
       <div style="text-align:center;position:relative;">
         <!-- Hero immagine e testo già esistente -->
@@ -1348,7 +1315,6 @@ header {
                   </svg>
                   Galleria Foto
                 </a>
-               
               </div>
             </div>
           </div>
@@ -1406,7 +1372,6 @@ header {
         </div>
       </div>
     </div>
-
     <div id="about" class="tab-content">
       <p>
         Siamo un'azienda agricola specializzata nella coltivazione e distribuzione di piante grasse e succulente. 
@@ -1523,7 +1488,6 @@ header {
         <img src="./IMMAGINI/COMPOSIZIONE_7.jpg" alt="Composizione 7" onclick="openModal(this.src)" />
       </div>
     </div>
-
     <div id="composizioni" class="tab-content">
       <div class="gallery">
         <img src="./IMMAGINI/COMPOSIZIONE_1.jpeg" alt="Composizione 1" onclick="openModal(this.src)" />
@@ -1535,7 +1499,6 @@ header {
         <img src="./IMMAGINI/COMPOSIZIONE_7.jpg" alt="Composizione 7" onclick="openModal(this.src)" />
       </div>
     </div>
-
     <div id="contact" class="tab-content">
       <div class="contact-info contact-flex">
         <div class="contact-details">
@@ -1620,7 +1583,6 @@ header {
         </div>
       </div>
     </div>
-
     <div id="location" class="tab-content">
       <div class="contact-info">
         <h2>Dove trovarci</h2>
@@ -1660,7 +1622,6 @@ header {
   <div class="footer-logo">
     <img src="./IMMAGINI/LOGO_PNG.png" alt="Logo Cactus Gioielli">
   </div>
-
 <!-- Link utili -->
 <div>
   <h3>Link utili</h3>
@@ -1702,13 +1663,10 @@ header {
     </li>
   </ul>
 </div>
-
-
     <!-- Contatti -->
     <div>
       <h3>Contatti</h3>
       <ul style="list-style: none; padding: 0; margin: 0;">
-
         <!-- Telefono -->
         <li style="margin-bottom: 10px;">
           <strong>
@@ -1733,7 +1691,6 @@ header {
             </span>
           </div>
         </li>
-
         <!-- Email -->
         <li>
           <strong>
@@ -1752,7 +1709,6 @@ header {
             </a>
           </div>
         </li>
-
       </ul>
     </div>
     <!-- Social -->
@@ -1789,7 +1745,6 @@ header {
    </div>
  </div>
 </div>
-
   <div class="footer-bottom">
     © 2025 Azienda Agricola Cactus Gioielli · Tutti i diritti riservati.
   </div>
@@ -1805,4 +1760,3 @@ header {
 </script>
 </body>
 </html>
-
