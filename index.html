@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -8,7 +9,7 @@
   <link rel="icon" href="./IMMAGINI/favicon-16x16.png" type="image/x-icon">
   <link rel="shortcut icon" href="./IMMAGINI/favicon-16x16.png" type="image/x-icon">
   <link rel="apple-touch-icon" href="./IMMAGINI/Logo512x512.png">
-    <style>
+  <style>
     body {
       font-family: 'Inter', sans-serif;
       background: #ffffff;
@@ -16,21 +17,25 @@
       padding: 0;
       color: #1f2937;
     }
+
     .container {
       max-width: 1000px;
       margin: auto;
       padding: 2rem;
-      padding-bottom: 5rem; /* Spazio per il footer */
+      padding-bottom: 5rem;
+      /* Spazio per il footer */
     }
+
     header {
-  position: relative;
-  text-align: center;
-  margin-bottom: 2rem;
-  background-color: #e6e6e6;
-  border-radius: 0 0 1.5rem 1.5rem;
-  box-shadow: 0 4px 24px rgba(6,95,70,0.07);
-  padding: 2rem 1rem;
-}
+      position: relative;
+      text-align: center;
+      margin-bottom: 2rem;
+      background-color: #e6e6e6;
+      border-radius: 0 0 1.5rem 1.5rem;
+      box-shadow: 0 4px 24px rgba(6, 95, 70, 0.07);
+      padding: 2rem 1rem;
+    }
+
     header h1 {
       font-size: 3rem;
       color: #065f46;
@@ -39,6 +44,7 @@
       border-bottom: 3px solid #065f46;
       display: inline-block;
     }
+
     header p {
       margin-top: 0.75rem;
       font-size: 1.2rem;
@@ -46,108 +52,123 @@
       color: #065f46cc;
       font-style: italic;
     }
+
     /* --- Header --- */
-header {
-  position: relative;
-  text-align: center;
-  margin-bottom: 2rem;
-  background-color: #e6e6e6;
-  border-radius: 0 0 1.5rem 1.5rem;
-  box-shadow: 0 4px 24px rgba(6,95,70,0.07);
-  padding: 2rem 1rem;
-}
-/* HEADER BASE */
-header {
-  position: relative;
-  text-align: center;
-  margin-bottom: 2rem;
-  background-color: #e6e6e6;
-  border-radius: 0 0 1.5rem 1.5rem;
-  box-shadow: 0 4px 24px rgba(6,95,70,0.07);
-  padding: 2rem 1rem;
-}
-/* LOGO */
-.logo-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.logo-container img {
-  height: 320px;
-  width: 88vw;
-  max-width: 1050px;
-  object-fit: contain;
-  border-radius: 1.5em;
-  box-shadow: 0 8px 32px rgba(6,95,70,0.13);
-  background: #fff;
-  filter: brightness(1.08) saturate(1.15);
-}
-/* DESCRIZIONE */
-.header-desc {
-  font-family: "Inter", serif;
-  font-size: 1rem;
-  color: #065f46;
-  margin-top: 0.8rem;
-  line-height: 1.4;
-  padding: 0 1rem;
-}
-/* --- BARRA DI RICERCA --- */
-#search-form {
-  position: absolute;
-  top: 1.8rem;
-  right: 2.5rem;
-  z-index: 10;
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
-}
-#search-input {
-  padding: 0.55rem 1.1rem;
-  border-radius: 1.2rem;
-  border: 1.5px solid #04996c;
-  font-size: 1rem;
-  outline: none;
-  transition: border 0.2s;
-  width: 200px;
-  max-width: 40vw;
-  background: #f0fdf4;
-  color: #065f46;
-  box-shadow: 0 1px 6px rgba(6,95,70,0.08);
-}
-#search-input:focus {
-  border-color: #065f46;
-}
-#search-form button {
-  background: #04996c;
-  border: none;
-  color: #fff;
-  border-radius: 50%;
-  width: 2.2rem;
-  height: 2.2rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: background 0.2s;
-}
-#search-form button:hover {
-  background: #065f46;
-}
-/* --- RESPONSIVE: SU MOBILE LA BARRA SALE SOPRA IL LOGO --- */
-@media (max-width: 768px) {
-  #search-form {
-    position: static; /* niente più assoluto */
-    justify-content: center;
-    margin-bottom: 1rem;
-  }
-  #search-input {
-    width: 90%;
-    max-width: 400px;
-  }
-  header {
-    padding-top: 1.5rem;
-  }
-}
+    header {
+      position: relative;
+      text-align: center;
+      margin-bottom: 2rem;
+      background-color: #e6e6e6;
+      border-radius: 0 0 1.5rem 1.5rem;
+      box-shadow: 0 4px 24px rgba(6, 95, 70, 0.07);
+      padding: 2rem 1rem;
+    }
+
+    /* HEADER BASE */
+    header {
+      position: relative;
+      text-align: center;
+      margin-bottom: 2rem;
+      background-color: #e6e6e6;
+      border-radius: 0 0 1.5rem 1.5rem;
+      box-shadow: 0 4px 24px rgba(6, 95, 70, 0.07);
+      padding: 2rem 1rem;
+    }
+
+    /* LOGO */
+    .logo-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .logo-container img {
+      height: 320px;
+      width: 88vw;
+      max-width: 1050px;
+      object-fit: contain;
+      border-radius: 1.5em;
+      box-shadow: 0 8px 32px rgba(6, 95, 70, 0.13);
+      background: #fff;
+      filter: brightness(1.08) saturate(1.15);
+    }
+
+    /* DESCRIZIONE */
+    .header-desc {
+      font-family: "Inter", serif;
+      font-size: 1rem;
+      color: #065f46;
+      margin-top: 0.8rem;
+      line-height: 1.4;
+      padding: 0 1rem;
+    }
+
+    /* --- BARRA DI RICERCA --- */
+    #search-form {
+      position: absolute;
+      top: 1.8rem;
+      right: 2.5rem;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    #search-input {
+      padding: 0.55rem 1.1rem;
+      border-radius: 1.2rem;
+      border: 1.5px solid #04996c;
+      font-size: 1rem;
+      outline: none;
+      transition: border 0.2s;
+      width: 200px;
+      max-width: 40vw;
+      background: #f0fdf4;
+      color: #065f46;
+      box-shadow: 0 1px 6px rgba(6, 95, 70, 0.08);
+    }
+
+    #search-input:focus {
+      border-color: #065f46;
+    }
+
+    #search-form button {
+      background: #04996c;
+      border: none;
+      color: #fff;
+      border-radius: 50%;
+      width: 2.2rem;
+      height: 2.2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    #search-form button:hover {
+      background: #065f46;
+    }
+
+    /* --- RESPONSIVE: SU MOBILE LA BARRA SALE SOPRA IL LOGO --- */
+    @media (max-width: 768px) {
+      #search-form {
+        position: static;
+        /* niente più assoluto */
+        justify-content: center;
+        margin-bottom: 1rem;
+      }
+
+      #search-input {
+        width: 90%;
+        max-width: 400px;
+      }
+
+      header {
+        padding-top: 1.5rem;
+      }
+    }
+
     .tabs {
       display: flex;
       gap: 1rem;
@@ -155,10 +176,11 @@ header {
       justify-content: center;
       background: #f0fdf4;
       border-radius: 0.75rem;
-      box-shadow: 0 2px 8px rgba(6,95,70,0.06);
+      box-shadow: 0 2px 8px rgba(6, 95, 70, 0.06);
       padding: 0.5rem 0.5rem 0.5rem 0.5rem;
       margin-bottom: 2.5rem;
     }
+
     .tab-button {
       background: #e0f2f1;
       border: 1px solid #065f46;
@@ -170,25 +192,37 @@ header {
       transition: background 0.3s ease, color 0.3s ease;
       letter-spacing: 0.5px;
       font-size: 1.05rem;
-      box-shadow: 0 1px 4px rgba(6,95,70,0.04);
+      box-shadow: 0 1px 4px rgba(6, 95, 70, 0.04);
     }
+
     .tab-button.active,
     .tab-button:hover {
       background: #065f46;
       color: white;
     }
+
     .tab-content {
       display: none;
       animation: fadeIn 0.3s ease-in-out;
     }
+
     .tab-content.active {
       display: block;
       animation: fadeInUp 0.5s;
     }
+
     @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(20px);}
-      to { opacity: 1; transform: translateY(0);}
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
+
     .gallery-categories {
       display: flex;
       gap: 1rem;
@@ -196,6 +230,7 @@ header {
       margin-bottom: 1.5rem;
       flex-wrap: wrap;
     }
+
     .gallery-category-btn {
       background: #e0f2f1;
       color: #065f46;
@@ -207,60 +242,71 @@ header {
       transition: background 0.2s, color 0.2s;
       font-size: 1rem;
     }
+
     .gallery-category-btn.active,
     .gallery-category-btn:hover {
       background: #065f46;
       color: #fff;
     }
+
     .gallery {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
       gap: 1.5rem;
       align-items: stretch;
     }
+
     .gallery img {
       width: 100%;
       height: 240px;
       object-fit: cover;
       border-radius: 0.75rem;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
       cursor: pointer;
       transition: transform 0.3s ease, box-shadow 0.3s;
-      box-shadow: 0 2px 12px rgba(6,95,70,0.08);
+      box-shadow: 0 2px 12px rgba(6, 95, 70, 0.08);
       background: #f0fdf4;
       display: block;
     }
+
     .gallery img:hover {
       transform: scale(1.08) rotate(-1deg);
-      box-shadow: 0 8px 32px rgba(6,95,70,0.18);
+      box-shadow: 0 8px 32px rgba(6, 95, 70, 0.18);
       filter: brightness(1.08);
     }
+
     .contact-info {
       background: linear-gradient(120deg, #f0fdf4 80%, #e0f2f1 100%);
       border: 1.5px solid #e0f2f1;
-      box-shadow: 0 2px 16px rgba(6,95,70,0.07);
+      box-shadow: 0 2px 16px rgba(6, 95, 70, 0.07);
       border-radius: 1.2rem;
       padding: 2.2rem 2rem;
-      max-width: 750px; /* aumentato da 600px */
+      max-width: 750px;
+      /* aumentato da 600px */
       margin: auto;
       font-size: 1.1rem;
       color: #065f46;
     }
+
     .contact-info h2 {
       margin-top: 0;
       font-size: 1.75rem;
     }
+
     .contact-info p {
       margin: 0.5rem 0;
     }
+
     .contact-info a {
       color: #065f46;
       text-decoration: none;
       font-weight: 600;
     }
+
     .contact-info a:hover {
       text-decoration: underline;
     }
+
     .loading-overlay {
       position: fixed;
       top: 0;
@@ -276,10 +322,12 @@ header {
       color: #065f46;
       font-weight: bold;
     }
+
     #about p {
       font-size: 1.2rem;
       line-height: 1.6;
     }
+
     .modal {
       display: none;
       position: fixed;
@@ -292,9 +340,11 @@ header {
       align-items: center;
       z-index: 2000;
     }
+
     .modal.active {
       display: flex;
     }
+
     .modal-content-wrapper {
       position: relative;
       display: flex;
@@ -303,6 +353,7 @@ header {
       width: 100vw;
       height: 100vh;
     }
+
     .modal-img {
       max-width: 90vw;
       max-height: 90vh;
@@ -310,11 +361,12 @@ header {
       display: block;
       margin: auto;
       z-index: 1;
-      box-shadow: 0 4px 24px rgba(0,0,0,0.3);
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
       background: #fff;
     }
+
     .modal-btn {
-      background: rgba(255,255,255,0.8);
+      background: rgba(255, 255, 255, 0.8);
       border: none;
       font-size: 2.5rem;
       color: #065f46;
@@ -327,22 +379,26 @@ header {
       top: 50%;
       transform: translateY(-50%);
       z-index: 2;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
     }
+
     .modal-btn.left {
       left: 10vw;
     }
+
     .modal-btn.right {
       right: 10vw;
     }
+
     .modal-btn:active {
       background: #e0f2f1;
     }
+
     .modal-close-btn {
       position: absolute;
       top: 2.5vh;
       right: 3vw;
-      background: rgba(255,255,255,0.9);
+      background: rgba(255, 255, 255, 0.9);
       border: none;
       font-size: 2.2rem;
       color: #065f46;
@@ -354,42 +410,50 @@ header {
       display: flex;
       align-items: center;
       justify-content: center;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
       transition: background 0.2s;
     }
+
     .modal-close-btn:hover {
       background: #e0f2f1;
     }
+
     ::-webkit-scrollbar {
       width: 12px;
       background: #e0f2f1;
       border-radius: 8px;
     }
+
     ::-webkit-scrollbar-thumb {
       background: linear-gradient(135deg, #04996c 0%, #065f46 100%);
       border-radius: 8px;
       min-height: 40px;
       border: 3px solid #e0f2f1;
-      box-shadow: 0 2px 8px rgba(6,95,70,0.13);
+      box-shadow: 0 2px 8px rgba(6, 95, 70, 0.13);
       transition: background 0.3s;
     }
+
     ::-webkit-scrollbar-thumb:hover {
       background: linear-gradient(135deg, #065f46 0%, #04996c 100%);
     }
+
     ::-webkit-scrollbar-corner {
       background: #e0f2f1;
     }
+
     /* Firefox */
     html {
       scrollbar-width: thin;
       scrollbar-color: #04996c #e0f2f1;
     }
-     /* Footer complesso */
+
+    /* Footer complesso */
     footer {
       background: #065f46;
       color: #f0f0f0;
       padding: 3rem 1rem;
     }
+
     .footer-container {
       max-width: 1200px;
       margin: 0 auto;
@@ -397,28 +461,35 @@ header {
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: 2rem;
     }
+
     .footer-container h3 {
       margin-bottom: 1rem;
       color: #fff;
     }
+
     .footer-container ul {
       list-style: none;
     }
+
     .footer-container ul li {
       margin-bottom: 0.5rem;
     }
+
     .footer-container ul li a {
       color: #f0f0f0;
       text-decoration: none;
     }
+
     .footer-container ul li a:hover {
       color: #007B5E;
     }
+
     .footer-social {
       display: flex;
       gap: 1rem;
       margin-top: 1rem;
     }
+
     .footer-social a {
       display: inline-block;
       width: 32px;
@@ -430,85 +501,108 @@ header {
       color: #f0f0f0;
       transition: background .3s;
     }
+
     .footer-social a:hover {
       background: #007B5E;
     }
+
     .footer-logo {
-  text-align: center;
-  margin-top: 30px;
-  }
-.footer-logo img {
-  max-width: 2000px; /* 👈 dimensione controllata */
-  height: 200px;
-  filter: brightness(0.95);
-  transition: transform 0.3s ease;
-}
-.footer-logo img:hover {
-  transform: scale(1.05);
-}
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .footer-logo img {
+      max-width: 2000px;
+      /* 👈 dimensione controllata */
+      height: 200px;
+      filter: brightness(0.95);
+      transition: transform 0.3s ease;
+    }
+
+    .footer-logo img:hover {
+      transform: scale(1.05);
+    }
+
     .footer-bottom {
       text-align: center;
       margin-top: 2rem;
       font-size: 0.9rem;
       color: #aaa;
     }
+
     @media (max-width: 768px) {
       header h1 {
         font-size: 2rem;
       }
+
       header p {
         font-size: 1rem;
       }
+
       .tabs {
         flex-wrap: wrap;
         gap: 0.5rem;
       }
+
       .tab-button {
         padding: 0.5rem 1rem;
         font-size: 0.9rem;
       }
+
       .gallery {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       }
+
       .contact-info {
         font-size: 1rem;
         padding: 1.5rem;
       }
     }
+
     @media (max-width: 600px) {
       .timeline {
         padding-left: 18px;
       }
+
       .about-team {
         flex-direction: column;
         align-items: center;
         gap: 1rem;
       }
+
       .about-team-member {
         width: 90%;
         max-width: 300px;
       }
+
       .contact-info {
         font-size: 0.97rem;
         padding: 1.1rem 0.5rem;
       }
+
       .contact-hours table {
         font-size: 0.93rem;
       }
-      .contact-hours th, .contact-hours td {
+
+      .contact-hours th,
+      .contact-hours td {
         white-space: normal !important;
         word-break: break-word;
         padding: 0.25em 0.3em;
       }
+
       .contact-hours table {
         table-layout: fixed;
       }
+
       .contact-hours th {
         font-size: 1em;
       }
+
       .contact-hours td {
         font-size: 0.98em;
       }
+
       /* Migliora i bottoni della home */
       #home .tab-content a[onclick*="showTab('gallery')"],
       #home .tab-content a[onclick*="showTab('composizioni')"] {
@@ -519,14 +613,16 @@ header {
         background: #04996c !important;
         color: #fff !important;
         border: 2px solid #065f46;
-        box-shadow: 0 2px 8px rgba(6,95,70,0.13);
+        box-shadow: 0 2px 8px rgba(6, 95, 70, 0.13);
         text-shadow: 0 1px 2px #065f4633;
       }
+
       #home .tab-content a[onclick*="showTab('gallery')"]:hover,
       #home .tab-content a[onclick*="showTab('composizioni')"]:hover {
         background: #065f46 !important;
         color: #fff !important;
       }
+
       #home .tab-content div[style*="margin-top:1.5rem"] {
         flex-wrap: wrap !important;
         flex-direction: column !important;
@@ -535,6 +631,7 @@ header {
         width: 100% !important;
         box-sizing: border-box !important;
       }
+
       #home .tab-content a[onclick*="showTab('gallery')"],
       #home .tab-content a[onclick*="showTab('composizioni')"] {
         width: 100% !important;
@@ -552,12 +649,14 @@ header {
         padding-left: 0.5em !important;
         padding-right: 0.5em !important;
       }
+
       /* Bottoni hero uno sopra l'altro su mobile */
       #home .tab-content div[style*="margin-top:1.5rem"][style*="display:flex"] {
         flex-direction: column !important;
         gap: 0.8em !important;
         align-items: stretch !important;
       }
+
       #home .tab-content div[style*="margin-top:1.5rem"][style*="display:flex"] a {
         width: 100% !important;
         justify-content: center !important;
@@ -565,6 +664,7 @@ header {
         font-size: 1.08rem !important;
         white-space: normal !important;
       }
+
       #home .tab-content div[style*="position:relative"][style*="max-width:900px"] {
         /* Centra il box bianco nella foto anche su mobile */
         display: flex !important;
@@ -574,6 +674,7 @@ header {
         /* Evita che il box bianco tocchi il bordo inferiore della foto */
         padding-bottom: 0 !important;
       }
+
       #home .tab-content div[style*="background: rgba(255,255,255,0.90);"] {
         margin-top: 1.2rem !important;
         margin-bottom: 1.2rem !important;
@@ -584,6 +685,7 @@ header {
         position: relative !important;
         box-sizing: border-box !important;
       }
+
       .hero-buttons {
         flex-direction: column;
         align-items: center;
@@ -593,6 +695,7 @@ header {
         margin-left: auto;
         margin-right: auto;
       }
+
       .hero-btn {
         width: 100%;
         min-width: 0;
@@ -608,6 +711,7 @@ header {
         box-sizing: border-box;
       }
     }
+
     /* --- Estetica avanzata --- */
     /* Social icons modern style */
     /* Timeline Chi Siamo */
@@ -618,13 +722,16 @@ header {
       padding-left: 30px;
       border-left: 3px solid #e0f2f1;
     }
+
     .timeline-event {
       margin-bottom: 2.2rem;
       position: relative;
     }
+
     .timeline-event:last-child {
       margin-bottom: 0;
     }
+
     .timeline-dot {
       position: absolute;
       left: -13px;
@@ -635,16 +742,18 @@ header {
       border: 3px solid #e0f2f1;
       border-radius: 50%;
       z-index: 2;
-      box-shadow: 0 2px 8px rgba(6,95,70,0.13);
+      box-shadow: 0 2px 8px rgba(6, 95, 70, 0.13);
     }
+
     .timeline-content {
       background: #f0fdf4;
       border-radius: 0.7rem;
       padding: 1.1rem 1.3rem;
-      box-shadow: 0 2px 8px rgba(6,95,70,0.07);
+      box-shadow: 0 2px 8px rgba(6, 95, 70, 0.07);
       margin-left: 1.5rem;
       position: relative;
     }
+
     .timeline-year {
       font-weight: bold;
       color: #04996c;
@@ -652,11 +761,13 @@ header {
       margin-bottom: 0.3rem;
       display: block;
     }
+
     .timeline-content p {
       margin: 0.2rem 0 0 0;
       font-size: 1.07rem;
       color: #065f46;
     }
+
     .about-team {
       display: flex;
       flex-wrap: wrap;
@@ -665,10 +776,11 @@ header {
       margin-top: 2.5rem;
       margin-bottom: 1.5rem;
     }
+
     .about-team-member {
       background: #e0f2f1;
       border-radius: 1rem;
-      box-shadow: 0 2px 8px rgba(6,95,70,0.07);
+      box-shadow: 0 2px 8px rgba(6, 95, 70, 0.07);
       padding: 1.2rem 1.1rem 1rem 1.1rem;
       text-align: center;
       width: 170px;
@@ -676,6 +788,7 @@ header {
       max-width: 200px;
       flex: 1 1 140px;
     }
+
     .about-team-member img {
       width: 70px;
       height: 70px;
@@ -685,55 +798,69 @@ header {
       border: 2.5px solid #065f46;
       background: #fff;
     }
+
     .about-team-member .name {
       font-weight: 600;
       color: #065f46;
       margin-bottom: 0.2rem;
       font-size: 1.08rem;
     }
+
     .about-team-member .role {
       font-size: 0.97rem;
       color: #04996c;
       margin-bottom: 0.2rem;
     }
+
     .about-team-member .desc {
       font-size: 0.93rem;
       color: #1f2937;
     }
+
     @media (max-width: 600px) {
       .timeline {
         padding-left: 18px;
       }
+
       .about-team {
         flex-direction: column;
         align-items: center;
         gap: 1rem;
       }
+
       .about-team-member {
         width: 90%;
         max-width: 300px;
       }
+
       .contact-info {
         font-size: 0.97rem;
         padding: 1.1rem 0.5rem;
       }
+
       .contact-hours table {
         font-size: 0.93rem;
       }
-      .contact-hours th, .contact-hours td {
+
+      .contact-hours th,
+      .contact-hours td {
         white-space: normal !important;
         word-break: break-word;
         padding: 0.25em 0.3em;
       }
+
       .contact-hours table {
         table-layout: fixed;
       }
+
       .contact-hours th {
         font-size: 1em;
       }
+
       .contact-hours td {
         font-size: 0.98em;
       }
+
       /* Migliora i bottoni della home */
       #home .tab-content a[onclick*="showTab('gallery')"],
       #home .tab-content a[onclick*="showTab('composizioni')"] {
@@ -744,14 +871,16 @@ header {
         background: #04996c !important;
         color: #fff !important;
         border: 2px solid #065f46;
-        box-shadow: 0 2px 8px rgba(6,95,70,0.13);
+        box-shadow: 0 2px 8px rgba(6, 95, 70, 0.13);
         text-shadow: 0 1px 2px #065f4633;
       }
+
       #home .tab-content a[onclick*="showTab('gallery')"]:hover,
       #home .tab-content a[onclick*="showTab('composizioni')"]:hover {
         background: #065f46 !important;
         color: #fff !important;
       }
+
       #home .tab-content div[style*="margin-top:1.5rem"] {
         flex-wrap: wrap !important;
         flex-direction: column !important;
@@ -760,6 +889,7 @@ header {
         width: 100% !important;
         box-sizing: border-box !important;
       }
+
       #home .tab-content a[onclick*="showTab('gallery')"],
       #home .tab-content a[onclick*="showTab('composizioni')"] {
         width: 100% !important;
@@ -777,12 +907,14 @@ header {
         padding-left: 0.5em !important;
         padding-right: 0.5em !important;
       }
+
       /* Bottoni hero uno sopra l'altro su mobile */
       #home .tab-content div[style*="margin-top:1.5rem"][style*="display:flex"] {
         flex-direction: column !important;
         gap: 0.8em !important;
         align-items: stretch !important;
       }
+
       #home .tab-content div[style*="margin-top:1.5rem"][style*="display:flex"] a {
         width: 100% !important;
         justify-content: center !important;
@@ -791,6 +923,7 @@ header {
         white-space: normal !important;
       }
     }
+
     .hero-buttons {
       margin-top: 1.5rem;
       display: flex;
@@ -798,6 +931,7 @@ header {
       flex-wrap: wrap;
       justify-content: center;
     }
+
     .hero-btn {
       background: #065f46;
       color: #fff;
@@ -806,7 +940,7 @@ header {
       font-size: 1.05rem;
       font-weight: 600;
       text-decoration: none;
-      box-shadow: 0 2px 8px rgba(6,95,70,0.09);
+      box-shadow: 0 2px 8px rgba(6, 95, 70, 0.09);
       transition: background 0.2s, transform 0.2s;
       white-space: nowrap;
       display: inline-flex;
@@ -820,18 +954,24 @@ header {
       max-width: 100%;
       text-align: center;
     }
+
     .hero-btn.secondary {
       background: #04996c;
       border-color: #04996c;
     }
-    .hero-btn:hover, .hero-btn:focus {
+
+    .hero-btn:hover,
+    .hero-btn:focus {
       background: #04996c;
       color: #fff;
     }
-    .hero-btn.secondary:hover, .hero-btn.secondary:focus {
+
+    .hero-btn.secondary:hover,
+    .hero-btn.secondary:focus {
       background: #065f46;
       color: #fff;
     }
+
     /* Timeline Chi Siamo */
     .timeline {
       margin: 2.5rem auto 1.5rem auto;
@@ -840,13 +980,16 @@ header {
       padding-left: 30px;
       border-left: 3px solid #e0f2f1;
     }
+
     .timeline-event {
       margin-bottom: 2.2rem;
       position: relative;
     }
+
     .timeline-event:last-child {
       margin-bottom: 0;
     }
+
     .timeline-dot {
       position: absolute;
       left: -13px;
@@ -857,16 +1000,18 @@ header {
       border: 3px solid #e0f2f1;
       border-radius: 50%;
       z-index: 2;
-      box-shadow: 0 2px 8px rgba(6,95,70,0.13);
+      box-shadow: 0 2px 8px rgba(6, 95, 70, 0.13);
     }
+
     .timeline-content {
       background: #f0fdf4;
       border-radius: 0.7rem;
       padding: 1.1rem 1.3rem;
-      box-shadow: 0 2px 8px rgba(6,95,70,0.07);
+      box-shadow: 0 2px 8px rgba(6, 95, 70, 0.07);
       margin-left: 1.5rem;
       position: relative;
     }
+
     .timeline-year {
       font-weight: bold;
       color: #04996c;
@@ -874,11 +1019,13 @@ header {
       margin-bottom: 0.3rem;
       display: block;
     }
+
     .timeline-content p {
       margin: 0.2rem 0 0 0;
       font-size: 1.07rem;
       color: #065f46;
     }
+
     .about-team {
       display: flex;
       flex-wrap: wrap;
@@ -887,10 +1034,11 @@ header {
       margin-top: 2.5rem;
       margin-bottom: 1.5rem;
     }
+
     .about-team-member {
       background: #e0f2f1;
       border-radius: 1rem;
-      box-shadow: 0 2px 8px rgba(6,95,70,0.07);
+      box-shadow: 0 2px 8px rgba(6, 95, 70, 0.07);
       padding: 1.2rem 1.1rem 1rem 1.1rem;
       text-align: center;
       width: 170px;
@@ -898,6 +1046,7 @@ header {
       max-width: 200px;
       flex: 1 1 140px;
     }
+
     .about-team-member img {
       width: 70px;
       height: 70px;
@@ -907,55 +1056,69 @@ header {
       border: 2.5px solid #065f46;
       background: #fff;
     }
+
     .about-team-member .name {
       font-weight: 600;
       color: #065f46;
       margin-bottom: 0.2rem;
       font-size: 1.08rem;
     }
+
     .about-team-member .role {
       font-size: 0.97rem;
       color: #04996c;
       margin-bottom: 0.2rem;
     }
+
     .about-team-member .desc {
       font-size: 0.93rem;
       color: #1f2937;
     }
+
     @media (max-width: 600px) {
       .timeline {
         padding-left: 18px;
       }
+
       .about-team {
         flex-direction: column;
         align-items: center;
         gap: 1rem;
       }
+
       .about-team-member {
         width: 90%;
         max-width: 300px;
       }
+
       .contact-info {
         font-size: 0.97rem;
         padding: 1.1rem 0.5rem;
       }
+
       .contact-hours table {
         font-size: 0.93rem;
       }
-      .contact-hours th, .contact-hours td {
+
+      .contact-hours th,
+      .contact-hours td {
         white-space: normal !important;
         word-break: break-word;
         padding: 0.25em 0.3em;
       }
+
       .contact-hours table {
         table-layout: fixed;
       }
+
       .contact-hours th {
         font-size: 1em;
       }
+
       .contact-hours td {
         font-size: 0.98em;
       }
+
       /* Migliora i bottoni della home */
       #home .tab-content a[onclick*="showTab('gallery')"],
       #home .tab-content a[onclick*="showTab('composizioni')"] {
@@ -966,14 +1129,16 @@ header {
         background: #04996c !important;
         color: #fff !important;
         border: 2px solid #065f46;
-        box-shadow: 0 2px 8px rgba(6,95,70,0.13);
+        box-shadow: 0 2px 8px rgba(6, 95, 70, 0.13);
         text-shadow: 0 1px 2px #065f4633;
       }
+
       #home .tab-content a[onclick*="showTab('gallery')"]:hover,
       #home .tab-content a[onclick*="showTab('composizioni')"]:hover {
         background: #065f46 !important;
         color: #fff !important;
       }
+
       #home .tab-content div[style*="margin-top:1.5rem"] {
         flex-wrap: wrap !important;
         flex-direction: column !important;
@@ -982,6 +1147,7 @@ header {
         width: 100% !important;
         box-sizing: border-box !important;
       }
+
       #home .tab-content a[onclick*="showTab('gallery')"],
       #home .tab-content a[onclick*="showTab('composizioni')"] {
         width: 100% !important;
@@ -999,12 +1165,14 @@ header {
         padding-left: 0.5em !important;
         padding-right: 0.5em !important;
       }
+
       /* Bottoni hero uno sopra l'altro su mobile */
       #home .tab-content div[style*="margin-top:1.5rem"][style*="display:flex"] {
         flex-direction: column !important;
         gap: 0.8em !important;
         align-items: stretch !important;
       }
+
       #home .tab-content div[style*="margin-top:1.5rem"][style*="display:flex"] a {
         width: 100% !important;
         justify-content: center !important;
@@ -1066,7 +1234,7 @@ header {
       document.getElementById('image-modal').classList.add('active');
       document.addEventListener('keydown', handleModalKey);
       // Aggiungi stato alla history per abilitare il tasto indietro
-      history.pushState({lightbox: true}, '', '#lightbox');
+      history.pushState({ lightbox: true }, '', '#lightbox');
       updateModalCounter();
     }
     function showModalImage() {
@@ -1110,7 +1278,7 @@ header {
       showTab('home'); // Mostra la scheda Home all'avvio
     };
     // Gestisci il tasto indietro del browser per chiudere il lightbox
-    window.addEventListener('popstate', function(event) {
+    window.addEventListener('popstate', function (event) {
       const modal = document.getElementById('image-modal');
       if (modal && modal.classList.contains('active')) {
         modal.classList.remove('active');
@@ -1122,7 +1290,7 @@ header {
       const modal = document.getElementById('image-modal');
       const modalContent = document.getElementById('modal-content-wrapper');
       if (modal) {
-        modal.addEventListener('mousedown', function(e) {
+        modal.addEventListener('mousedown', function (e) {
           // Se il click è fuori dal popup centrale (foto e frecce)
           if (!modalContent.contains(e.target)) {
             closeModal();
@@ -1176,7 +1344,7 @@ header {
           }
           setTimeout(() => {
             // Scrolla e apri la foto
-            foundImg.scrollIntoView({behavior: 'smooth', block: 'center'});
+            foundImg.scrollIntoView({ behavior: 'smooth', block: 'center' });
             openModal(foundImg.src);
           }, 200);
           return;
@@ -1227,48 +1395,56 @@ header {
     }
   </script>
 </head>
+
 <body>
   <div class="container">
     <header>
-        <!-- Logo -->
-        <div class="logo-container">
-          <a href="#" onclick="showTab('home'); return false;">
-            <img src="./IMMAGINI/LOGO_BG_BIANCO.png"
-                 alt="Logo Azienda Agricola Cactus">
-          </a>
-        </div>
-        <!-- Barra di ricerca -->
-        <form id="search-form" onsubmit="event.preventDefault(); searchGallery();">
-          <input id="search-input" type="text" placeholder="Cerca" />
-          <button type="submit">
-            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
-                 stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-              <circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
-            </svg>
-          </button>
-        </form>
-        <p class="header-desc">
-          Produzione e distribuzione all'ingrosso di cactacee e succulente di alta qualità,
-          con la realizzazione di eleganti composizioni personalizzate.
-        </p>
-      </header>
+      <!-- Logo -->
+      <div class="logo-container">
+        <a href="#" onclick="showTab('home'); return false;">
+          <img src="./IMMAGINI/LOGO_BG_BIANCO.png" alt="Logo Azienda Agricola Cactus">
+        </a>
+      </div>
+      <!-- Barra di ricerca -->
+      <form id="search-form" onsubmit="event.preventDefault(); searchGallery();">
+        <input id="search-input" type="text" placeholder="Cerca" />
+        <button type="submit">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" viewBox="0 0 24 24">
+            <circle cx="11" cy="11" r="7" />
+            <line x1="21" y1="21" x2="16.65" y2="16.65" />
+          </svg>
+        </button>
+      </form>
+      <p class="header-desc">
+        Produzione e distribuzione all'ingrosso di cactacee e succulente di alta qualità,
+        con la realizzazione di eleganti composizioni personalizzate.
+      </p>
+    </header>
     <div class="tabs">
       <button class="tab-button" id="home-btn" onclick="showTab('home')">
-  <img src="./IMMAGINI/icons8-casa-48.png" alt="home" style="width:16px; height:16px; vertical-align:middle;"> Home</button>
+        <img src="./IMMAGINI/icons8-casa-48.png" alt="home" style="width:16px; height:16px; vertical-align:middle;">
+        Home</button>
       <button class="tab-button" id="about-btn" onclick="showTab('about')">
-  <img src="./IMMAGINI/utente.png" alt="chisiamo" style="width:16px; height:16px; vertical-align:middle;"> Chi siamo</button>
+        <img src="./IMMAGINI/utente.png" alt="chisiamo" style="width:16px; height:16px; vertical-align:middle;"> Chi
+        siamo</button>
       <button class="tab-button" id="gallery-btn" onclick="showTab('gallery')">
-  <img src="./IMMAGINI/icons8-cactus-32.png" alt="piante" style="width:16px; height:18px; vertical-align:middle;"> Galleria</button>
+        <img src="./IMMAGINI/icons8-cactus-32.png" alt="piante" style="width:16px; height:18px; vertical-align:middle;">
+        Galleria</button>
       <button class="tab-button" id="contact-btn" onclick="showTab('contact')">
-  <img src="./IMMAGINI/telefono.png" alt="contatti" style="width:16px; height:18px; vertical-align:middle;"> Contatti</button>
+        <img src="./IMMAGINI/telefono.png" alt="contatti" style="width:16px; height:18px; vertical-align:middle;">
+        Contatti</button>
       <button class="tab-button" id="location-btn" onclick="showTab('location')">
-       <img src="./IMMAGINI/indirizzo.png" alt="indirizzo" style="width:16px; height:18px; vertical-align:middle;"> Indirizzo</button>
+        <img src="./IMMAGINI/indirizzo.png" alt="indirizzo" style="width:16px; height:18px; vertical-align:middle;">
+        Indirizzo</button>
     </div>
     <div id="home" class="tab-content">
       <div style="text-align:center;position:relative;">
         <!-- Hero immagine e testo già esistente -->
-        <div style="position:relative;display:inline-block;width:100%;max-width:900px;overflow:hidden;border-radius:1.5rem;box-shadow:0 8px 32px rgba(6,95,70,0.13);margin-bottom:2.2rem;">
-          <img src="./IMMAGINI/HOME.jpg" alt="Azienda Agricola Cactus - panoramica" style="width:100%;height:520px;object-fit:cover;filter:brightness(0.93) saturate(1.08);transition:transform 0.5s;display:block;">
+        <div
+          style="position:relative;display:inline-block;width:100%;max-width:900px;overflow:hidden;border-radius:1.5rem;box-shadow:0 8px 32px rgba(6,95,70,0.13);margin-bottom:2.2rem;">
+          <img src="./IMMAGINI/HOME.jpg" alt="Azienda Agricola Cactus - panoramica"
+            style="width:100%;height:520px;object-fit:cover;filter:brightness(0.93) saturate(1.08);transition:transform 0.5s;display:block;">
           <div style="
             position:absolute;
             left:0;top:0;width:100%;height:100%;
@@ -1279,8 +1455,13 @@ header {
             pointer-events:none;
             ">
             <!-- Badge -->
-            <span style="position:absolute;top:1.3rem;left:1.3rem;background:#04996c;color:#fff;font-weight:700;font-size:1.08rem;padding:0.5em 1.2em;border-radius:1.2em;box-shadow:0 2px 8px rgba(4,153,108,0.13);display:inline-flex;align-items:center;gap:0.5em;z-index:2;">
-              <svg width="1.2em" height="1.2em" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8 12l2 2 4-4"/></svg>
+            <span
+              style="position:absolute;top:1.3rem;left:1.3rem;background:#04996c;color:#fff;font-weight:700;font-size:1.08rem;padding:0.5em 1.2em;border-radius:1.2em;box-shadow:0 2px 8px rgba(4,153,108,0.13);display:inline-flex;align-items:center;gap:0.5em;z-index:2;">
+              <svg width="1.2em" height="1.2em" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="10" />
+                <path d="M8 12l2 2 4-4" />
+              </svg>
               Da oltre 30 anni
             </span>
             <div style="
@@ -1298,7 +1479,9 @@ header {
               pointer-events:auto;
               margin-top:2.5rem;
             ">
-              <h2 style="color:#065f46;margin-bottom:0.7rem;text-shadow:none;font-size:2.1rem;font-weight:700;letter-spacing:1px;">Cosa facciamo?</h2>
+              <h2
+                style="color:#065f46;margin-bottom:0.7rem;text-shadow:none;font-size:2.1rem;font-weight:700;letter-spacing:1px;">
+                Cosa facciamo?</h2>
               <p style="font-size:1.18rem;max-width:500px;margin:auto;text-shadow:none;">
                 Coltiviamo e distribuiamo con passione piante cactacee, succulente e composizioni uniche.<br>
                 Da oltre 30 anni portiamo il verde nelle case e nei giardini di tutta la Campania e oltre.
@@ -1307,75 +1490,98 @@ header {
               <div class="hero-buttons">
                 <a href="#" onclick="showTab('gallery');return false;" class="hero-btn">
                   <!-- Icona cactus -->
-                  <sv width="1.1em" height="1.1em" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-                    <path d="M12 22V10"/>
-                    <path d="M7 14V10a5 5 0 0 1 10 0v4"/>
-                    <path d="M5 22V17"/>
-                    <path d="M19 22V17"/>
-                    <path d="M7 19h10"/>
-                  </svg>
-                  Galleria foto
+                  <sv width="1.1em" height="1.1em" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                    <path d="M12 22V10" />
+                    <path d="M7 14V10a5 5 0 0 1 10 0v4" />
+                    <path d="M5 22V17" />
+                    <path d="M19 22V17" />
+                    <path d="M7 19h10" />
+                    </svg>
+                    Galleria foto
                 </a>
               </div>
             </div>
           </div>
         </div>
         <!-- NOVITÀ: Sezione "Perché scegliere noi?" -->
-        <div style="margin:2.5rem auto 2.5rem auto;max-width:900px;display:flex;gap:2.5rem;justify-content:center;flex-wrap:wrap;">
-          <div style="background:#f0fdf4;border-radius:1.2rem;box-shadow:0 2px 16px rgba(6,95,70,0.08);padding:2rem 1.5rem 1.5rem 1.5rem;flex:1 1 220px;min-width:220px;max-width:270px;text-align:center;transition:transform 0.22s, box-shadow 0.22s;cursor:pointer;border:1.5px solid #e0f2f1;">
-            <svg fill="none" stroke="#04996c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" style="margin-bottom:0.7em;width:2.1em;height:2.1em;">
-              <path d="M12 2l2 7h7l-5.5 4 2 7-5.5-4-5.5 4 2-7L3 9h7z"/>
+        <div
+          style="margin:2.5rem auto 2.5rem auto;max-width:900px;display:flex;gap:2.5rem;justify-content:center;flex-wrap:wrap;">
+          <div
+            style="background:#f0fdf4;border-radius:1.2rem;box-shadow:0 2px 16px rgba(6,95,70,0.08);padding:2rem 1.5rem 1.5rem 1.5rem;flex:1 1 220px;min-width:220px;max-width:270px;text-align:center;transition:transform 0.22s, box-shadow 0.22s;cursor:pointer;border:1.5px solid #e0f2f1;">
+            <svg fill="none" stroke="#04996c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              viewBox="0 0 24 24" style="margin-bottom:0.7em;width:2.1em;height:2.1em;">
+              <path d="M12 2l2 7h7l-5.5 4 2 7-5.5-4-5.5 4 2-7L3 9h7z" />
             </svg>
             <div style="font-weight:700;color:#065f46;font-size:1.18rem;margin-bottom:0.4em;">Qualità garantita</div>
-            <div style="color:#1f2937;font-size:1.05rem;">Solo le migliori piante, coltivate con cura e attenzione.</div>
+            <div style="color:#1f2937;font-size:1.05rem;">Solo le migliori piante, coltivate con cura e attenzione.
+            </div>
           </div>
-          <div style="background:#f0fdf4;border-radius:1.2rem;box-shadow:0 2px 16px rgba(6,95,70,0.08);padding:2rem 1.5rem 1.5rem 1.5rem;flex:1 1 220px;min-width:220px;max-width:270px;text-align:center;transition:transform 0.22s, box-shadow 0.22s;cursor:pointer;border:1.5px solid #e0f2f1;">
-            <svg fill="none" stroke="#04996c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" style="margin-bottom:0.7em;width:2.1em;height:2.1em;">
-              <circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>
+          <div
+            style="background:#f0fdf4;border-radius:1.2rem;box-shadow:0 2px 16px rgba(6,95,70,0.08);padding:2rem 1.5rem 1.5rem 1.5rem;flex:1 1 220px;min-width:220px;max-width:270px;text-align:center;transition:transform 0.22s, box-shadow 0.22s;cursor:pointer;border:1.5px solid #e0f2f1;">
+            <svg fill="none" stroke="#04996c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              viewBox="0 0 24 24" style="margin-bottom:0.7em;width:2.1em;height:2.1em;">
+              <circle cx="12" cy="12" r="10" />
+              <path d="M12 6v6l4 2" />
             </svg>
-            <div style="font-weight:700;color:#065f46;font-size:1.18rem;margin-bottom:0.4em;">Esperienza & Passione</div>
-            <div style="color:#1f2937;font-size:1.05rem;">Da generazioni trasmettiamo la nostra passione per il verde.</div>
+            <div style="font-weight:700;color:#065f46;font-size:1.18rem;margin-bottom:0.4em;">Esperienza & Passione
+            </div>
+            <div style="color:#1f2937;font-size:1.05rem;">Da generazioni trasmettiamo la nostra passione per il verde.
+            </div>
           </div>
-          <div style="background:#f0fdf4;border-radius:1.2rem;box-shadow:0 2px 16px rgba(6,95,70,0.08);padding:2rem 1.5rem 1.5rem 1.5rem;flex:1 1 220px;min-width:220px;max-width:270px;text-align:center;transition:transform 0.22s, box-shadow 0.22s;cursor:pointer;border:1.5px solid #e0f2f1;">
-            <svg fill="none" stroke="#04996c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" style="margin-bottom:0.7em;width:2.1em;height:2.1em;">
-              <rect x="2" y="7" width="20" height="14" rx="4" ry="4"/><path d="M16 3v4"/><path d="M8 3v4"/>
+          <div
+            style="background:#f0fdf4;border-radius:1.2rem;box-shadow:0 2px 16px rgba(6,95,70,0.08);padding:2rem 1.5rem 1.5rem 1.5rem;flex:1 1 220px;min-width:220px;max-width:270px;text-align:center;transition:transform 0.22s, box-shadow 0.22s;cursor:pointer;border:1.5px solid #e0f2f1;">
+            <svg fill="none" stroke="#04996c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              viewBox="0 0 24 24" style="margin-bottom:0.7em;width:2.1em;height:2.1em;">
+              <rect x="2" y="7" width="20" height="14" rx="4" ry="4" />
+              <path d="M16 3v4" />
+              <path d="M8 3v4" />
             </svg>
-            <div style="font-weight:700;color:#065f46;font-size:1.18rem;margin-bottom:0.4em;">Servizio personalizzato</div>
+            <div style="font-weight:700;color:#065f46;font-size:1.18rem;margin-bottom:0.4em;">Servizio personalizzato
+            </div>
             <div style="color:#1f2937;font-size:1.05rem;">Consulenza e composizioni su misura per ogni esigenza.</div>
           </div>
         </div>
         <!-- ...esistente: box Cactacee/Succulente/Composizioni... -->
         <div style="margin-top:2.5rem;display:flex;flex-wrap:wrap;justify-content:center;gap:2.5rem;">
-          <div style="flex:1 1 220px;max-width:320px;background:#e0f2f1;border-radius:1rem;padding:1.2rem;box-shadow:0 2px 8px rgba(6,95,70,0.07);transition:box-shadow 0.2s,background 0.2s;cursor:pointer;"
+          <div
+            style="flex:1 1 220px;max-width:320px;background:#e0f2f1;border-radius:1rem;padding:1.2rem;box-shadow:0 2px 8px rgba(6,95,70,0.07);transition:box-shadow 0.2s,background 0.2s;cursor:pointer;"
             onclick="showTab('gallery'); showGalleryCategory('grasse', document.querySelector('.gallery-category-btn'));">
             <h3 style="color:#04996c;margin-top:0;font-size:1.25rem;letter-spacing:0.5px;">Cactacee</h3>
             <p style="margin:0;">Ampia selezione di cactacee per collezionisti e appassionati.</p>
           </div>
-          <div style="flex:1 1 220px;max-width:320px;background:#e0f2f1;border-radius:1rem;padding:1.2rem;box-shadow:0 2px 8px rgba(6,95,70,0.07);transition:box-shadow 0.2s,background 0.2s;cursor:pointer;"
+          <div
+            style="flex:1 1 220px;max-width:320px;background:#e0f2f1;border-radius:1rem;padding:1.2rem;box-shadow:0 2px 8px rgba(6,95,70,0.07);transition:box-shadow 0.2s,background 0.2s;cursor:pointer;"
             onclick="showTab('gallery'); showGalleryCategory('succulente', document.querySelectorAll('.gallery-category-btn')[1]);">
             <h3 style="color:#04996c;margin-top:0;font-size:1.25rem;letter-spacing:0.5px;">Succulente</h3>
             <p style="margin:0;">Le migliori varietà di piante succulente, resistenti e decorative.</p>
           </div>
-          <div style="flex:1 1 220px;max-width:320px;background:#e0f2f1;border-radius:1rem;padding:1.2rem;box-shadow:0 2px 8px rgba(6,95,70,0.07);transition:box-shadow 0.2s,background 0.2s;cursor:pointer;"
-             onclick="showTab('gallery'); showGalleryCategory('composizione', document.querySelectorAll('.gallery-category-btn')[2]);">
+          <div
+            style="flex:1 1 220px;max-width:320px;background:#e0f2f1;border-radius:1rem;padding:1.2rem;box-shadow:0 2px 8px rgba(6,95,70,0.07);transition:box-shadow 0.2s,background 0.2s;cursor:pointer;"
+            onclick="showTab('gallery'); showGalleryCategory('composizione', document.querySelectorAll('.gallery-category-btn')[2]);">
             <h3 style="color:#04996c;margin-top:0;font-size:1.25rem;letter-spacing:0.5px;">Composizioni</h3>
             <p style="margin:0;">Composizioni personalizzate per eventi, regali e arredamento green.</p>
-         </div>
+          </div>
         </div>
         <!-- NOVITÀ: Citazione finale -->
         <div style="margin:2.5rem auto 0 auto;max-width:600px;text-align:center;">
-          <blockquote style="font-style:italic;color:#04996c;font-size:1.15rem;background:#f0fdf4;border-radius:1em;padding:1.2em 1.5em;box-shadow:0 2px 8px rgba(6,95,70,0.07);margin:0;">
-            <svg width="1.5em" height="1.5em" fill="none" stroke="#04996c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" style="vertical-align:middle;margin-right:0.5em;">
-              <path d="M9 17c0-4.418 3.582-8 8-8"/><path d="M9 17c0-2.209 1.791-4 4-4"/><circle cx="9" cy="17" r="1"/>
+          <blockquote
+            style="font-style:italic;color:#04996c;font-size:1.15rem;background:#f0fdf4;border-radius:1em;padding:1.2em 1.5em;box-shadow:0 2px 8px rgba(6,95,70,0.07);margin:0;">
+            <svg width="1.5em" height="1.5em" fill="none" stroke="#04996c" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" viewBox="0 0 24 24" style="vertical-align:middle;margin-right:0.5em;">
+              <path d="M9 17c0-4.418 3.582-8 8-8" />
+              <path d="M9 17c0-2.209 1.791-4 4-4" />
+              <circle cx="9" cy="17" r="1" />
             </svg>
-            "Ogni pianta è un piccolo miracolo della natura. Prenditene cura, e ti ricompenserà con bellezza e serenità."
+            "Ogni pianta è un piccolo miracolo della natura. Prenditene cura, e ti ricompenserà con bellezza e
+            serenità."
           </blockquote>
         </div>
       </div>
     </div>
     <div id="about" class="tab-content">
       <p>
-        Siamo un'azienda agricola specializzata nella coltivazione e distribuzione di piante grasse e succulente. 
+        Siamo un'azienda agricola specializzata nella coltivazione e distribuzione di piante grasse e succulente.
         La nostra missione è fornire prodotti di alta qualità, coltivati con passione e rispetto per l'ambiente.
       </p>
       <div class="timeline">
@@ -1383,14 +1589,16 @@ header {
           <div class="timeline-dot"></div>
           <div class="timeline-content">
             <span class="timeline-year">1990</span>
-            <p>Nasce l'Azienda Agricola Cactus, fondata dalla famiglia Gioielli con l'obiettivo di portare la passione per le piante grasse in tutta la Campania.</p>
+            <p>Nasce l'Azienda Agricola Cactus, fondata dalla famiglia Gioielli con l'obiettivo di portare la passione
+              per le piante grasse in tutta la Campania.</p>
           </div>
         </div>
         <div class="timeline-event">
           <div class="timeline-dot"></div>
           <div class="timeline-content">
             <span class="timeline-year">2005</span>
-            <p>Espansione della produzione e introduzione di nuove varietà di succulente, ampliando la clientela anche fuori regione.</p>
+            <p>Espansione della produzione e introduzione di nuove varietà di succulente, ampliando la clientela anche
+              fuori regione.</p>
           </div>
         </div>
         <div class="timeline-event">
@@ -1429,18 +1637,21 @@ header {
         </div>
       </div>
       <p>
-        Con anni di esperienza nel settore, ci impegniamo a soddisfare le esigenze dei nostri clienti, offrendo 
+        Con anni di esperienza nel settore, ci impegniamo a soddisfare le esigenze dei nostri clienti, offrendo
         una vasta gamma di piante uniche e servizi personalizzati.
       </p>
     </div>
     <div id="gallery" class="tab-content">
       <div class="gallery-categories">
         <button class="gallery-category-btn active" onclick="showGalleryCategory('grasse', this)">
-        <img src="./IMMAGINI/icons8-cactus-32.png" alt="home" style="width:16px; height:16px; vertical-align:middle;"> Cactacee</button>
+          <img src="./IMMAGINI/icons8-cactus-32.png" alt="home" style="width:16px; height:16px; vertical-align:middle;">
+          Cactacee</button>
         <button class="gallery-category-btn" onclick="showGalleryCategory('succulente', this)">
-        <img src="./IMMAGINI/icons8-cactus-32.png" alt="home" style="width:16px; height:16px; vertical-align:middle;"> Succulente</button>
-               <button class="gallery-category-btn" onclick="showGalleryCategory('composizione', this)">
-                <img src="./IMMAGINI/icons8-pianta-da-vaso-16.png" alt="home" style="width:16px; height:16px; vertical-align:middle;"> Composizioni</button>
+          <img src="./IMMAGINI/icons8-cactus-32.png" alt="home" style="width:16px; height:16px; vertical-align:middle;">
+          Succulente</button>
+        <button class="gallery-category-btn" onclick="showGalleryCategory('composizione', this)">
+          <img src="./IMMAGINI/icons8-pianta-da-vaso-16.png" alt="home"
+            style="width:16px; height:16px; vertical-align:middle;"> Composizioni</button>
       </div>
       <div class="gallery gallery-grasse">
         <img src="./IMMAGINI/CACTACEA_1.jpeg" alt="Euphorbia Trigona" onclick="openModal(this.src)" />
@@ -1506,8 +1717,10 @@ header {
           <h2>Contatti</h2>
           <p style="display:flex;gap:0.7em;flex-wrap:wrap;align-items:center;">
             <strong>
-              <svg style="vertical-align:middle;margin-right:0.3em;" width="1.1em" height="1.1em" fill="none" stroke="#04996c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-                <path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.72 19.72 0 0 1 3.08 5.18 2 2 0 0 1 5 3h3a2 2 0 0 1 2 1.72c.13.81.36 1.6.68 2.34a2 2 0 0 1-.45 2.11l-1.27 1.27a16 16 0 0 0 6.29 6.29l1.27-1.27a2 2 0 0 1 2.11-.45c.74.32 1.53.55 2.34.68A2 2 0 0 1 22 16.92z"/>
+              <svg style="vertical-align:middle;margin-right:0.3em;" width="1.1em" height="1.1em" fill="none"
+                stroke="#04996c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2A19.72 19.72 0 0 1 3.08 5.18 2 2 0 0 1 5 3h3a2 2 0 0 1 2 1.72c.13.81.36 1.6.68 2.34a2 2 0 0 1-.45 2.11l-1.27 1.27a16 16 0 0 0 6.29 6.29l1.27-1.27a2 2 0 0 1 2.11-.45c.74.32 1.53.55 2.34.68A2 2 0 0 1 22 16.92z" />
               </svg>
               Telefono:
             </strong>
@@ -1520,37 +1733,47 @@ header {
           </p>
           <p>
             <strong>
-              <svg style="vertical-align:middle;margin-right:0.3em;" width="1.1em" height="1.1em" fill="none" stroke="#04996c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-                <path d="M4 4h16v16H4z" fill="#fff" stroke="none"/><path d="M22 6l-10 7L2 6"/><rect x="2" y="6" width="20" height="12" rx="2" ry="2"/>
+              <svg style="vertical-align:middle;margin-right:0.3em;" width="1.1em" height="1.1em" fill="none"
+                stroke="#04996c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                <path d="M4 4h16v16H4z" fill="#fff" stroke="none" />
+                <path d="M22 6l-10 7L2 6" />
+                <rect x="2" y="6" width="20" height="12" rx="2" ry="2" />
               </svg>
               Email:
             </strong>
-            <a href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCKCGDchJtjJWHDdZKPFvbklxvLJjfHxRtgNlttjzZVfXDkKFrRqwwHlPlGFZRfRVRGzWzwL" style="margin-left:0.3em;">cactus.gioielli@gmail.com</a>
+            <a href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCKCGDchJtjJWHDdZKPFvbklxvLJjfHxRtgNlttjzZVfXDkKFrRqwwHlPlGFZRfRVRGzWzwL"
+              style="margin-left:0.3em;">cactus.gioielli@gmail.com</a>
           </p>
           <p>
             <strong>
-              <svg style="vertical-align:middle;margin-right:0.3em;" width="1.1em" height="1.1em" fill="none" stroke="#04996c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-                <path d="M21 10.5c0 7.5-9 12-9 12s-9-4.5-9-12a9 9 0 1 1 18 0z"/>
-                <circle cx="12" cy="10.5" r="3"/>
+              <svg style="vertical-align:middle;margin-right:0.3em;" width="1.1em" height="1.1em" fill="none"
+                stroke="#04996c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                <path d="M21 10.5c0 7.5-9 12-9 12s-9-4.5-9-12a9 9 0 1 1 18 0z" />
+                <circle cx="12" cy="10.5" r="3" />
               </svg>
               Indirizzo:
             </strong>
-            <a href="#" style="color:#065f46; text-decoration:underline; cursor:pointer; margin-left:0.3em;" onclick="showTab('location'); return false;">
+            <a href="#" style="color:#065f46; text-decoration:underline; cursor:pointer; margin-left:0.3em;"
+              onclick="showTab('location'); return false;">
               Via Madonna del Pantano 16, 80014 Giugliano in Campania (NA)
             </a>
           </p>
         </div>
         <div class="contact-hours">
           <strong style="display:inline-flex;align-items:center;">
-            <svg style="vertical-align:middle;margin-right:0.3em;" width="1.1em" height="1.1em" fill="none" stroke="#04996c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-              <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+            <svg style="vertical-align:middle;margin-right:0.3em;" width="1.1em" height="1.1em" fill="none"
+              stroke="#04996c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="10" />
+              <polyline points="12 6 12 12 16 14" />
             </svg>
             Orari di apertura:
           </strong>
           <table style="width:100%;margin-top:0.5rem;border-collapse:collapse;font-size:1rem;">
             <tr>
-              <th style="text-align:left;padding:0.3rem 0.5rem;border-bottom:1px solid #e0f2f1;white-space:nowrap;">Giorno</th>
-              <th style="text-align:left;padding:0.3rem 0.5rem;border-bottom:1px solid #e0f2f1;white-space:nowrap;">Orario</th>
+              <th style="text-align:left;padding:0.3rem 0.5rem;border-bottom:1px solid #e0f2f1;white-space:nowrap;">
+                Giorno</th>
+              <th style="text-align:left;padding:0.3rem 0.5rem;border-bottom:1px solid #e0f2f1;white-space:nowrap;">
+                Orario</th>
             </tr>
             <tr>
               <td style="padding:0.3rem 0.5rem;white-space:nowrap;"><strong>Lunedì:</strong></td>
@@ -1588,20 +1811,17 @@ header {
       <div class="contact-info">
         <h2>Dove trovarci</h2>
         <p>
-          <svg style="vertical-align:middle;margin-right:0.3em;" width="1.1em" height="1.1em" fill="none" stroke="#04996c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-            <path d="M21 10.5c0 7.5-9 12-9 12s-9-4.5-9-12a9 9 0 1 1 18 0z"/>
-            <circle cx="12" cy="10.5" r="3"/>
+          <svg style="vertical-align:middle;margin-right:0.3em;" width="1.1em" height="1.1em" fill="none"
+            stroke="#04996c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+            <path d="M21 10.5c0 7.5-9 12-9 12s-9-4.5-9-12a9 9 0 1 1 18 0z" />
+            <circle cx="12" cy="10.5" r="3" />
           </svg>
           <strong>Indirizzo:</strong> Via Madonna del Pantano 16, 80014 Giugliano in Campania (NA)
         </p>
         <div style="margin-top: 1.5rem;">
-          <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d299.31898841540316!2d14.0495521!3d40.9265752!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x133b1bbff49971f7%3A0x13dd634f8f9e48d3!2sAzienda%20Agricola%20Cactus%20Gioielli!5e1!3m2!1sit!2sit!4v1694276350000!5m2!1sit!2sit" 
-            width="100%" 
-            height="300" 
-            style="border:0;" 
-            allowfullscreen="" 
-            loading="lazy" 
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d299.31898841540316!2d14.0495521!3d40.9265752!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x133b1bbff49971f7%3A0x13dd634f8f9e48d3!2sAzienda%20Agricola%20Cactus%20Gioielli!5e1!3m2!1sit!2sit!4v1694276350000!5m2!1sit!2sit"
+            width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
             referrerpolicy="no-referrer-when-downgrade">
           </iframe>
         </div>
@@ -1613,126 +1833,125 @@ header {
       <button class="modal-close-btn" onclick="closeModal()" aria-label="Chiudi">&times;</button>
       <button class="modal-btn left" onclick="prevImage(event)" aria-label="Precedente">&#8592;</button>
       <img id="modal-img" class="modal-img" src="" alt="Immagine ingrandita" />
-      <div id="modal-counter" style="position:absolute;bottom:2.5vh;left:50%;transform:translateX(-50%);background:rgba(255,255,255,0.85);color:#065f46;font-weight:600;padding:0.3em 1.1em;border-radius:1.2em;font-size:1.1rem;box-shadow:0 2px 8px rgba(6,95,70,0.09);z-index:5;pointer-events:none;user-select:none;min-width:60px;text-align:center;letter-spacing:1px;display:none;"></div>
+      <div id="modal-counter"
+        style="position:absolute;bottom:2.5vh;left:50%;transform:translateX(-50%);background:rgba(255,255,255,0.85);color:#065f46;font-weight:600;padding:0.3em 1.1em;border-radius:1.2em;font-size:1.1rem;box-shadow:0 2px 8px rgba(6,95,70,0.09);z-index:5;pointer-events:none;user-select:none;min-width:60px;text-align:center;letter-spacing:1px;display:none;">
+      </div>
       <button class="modal-btn right" onclick="nextImage(event)" aria-label="Successiva">&#8594;</button>
     </div>
   </div>
   <footer>
-  <div class="footer-container">
-<!-- Logo -->
-  <div class="footer-logo">
-    <img src="./IMMAGINI/LOGO_PNG.png" alt="Logo Cactus Gioielli">
-  </div>
-<!-- Link utili -->
-<div>
-  <h3>Link utili</h3>
-  <ul style="list-style: none; padding: 0; margin: 0;">
-    <li>
-      <a href="#" onclick="scrollToTop(); showTab('about'); return false;">
-        <img src="./IMMAGINI/utente.png" alt="Chi siamo" 
-             style="width:16px; height:16px; vertical-align:middle; margin-right:6px; filter: invert(45%) sepia(72%) saturate(400%) hue-rotate(120deg) brightness(90%);">
-        Chi siamo
-      </a>
-    </li>
-    <li>
-      <a href="#" onclick="scrollToTop(); showTab('gallery'); return false;">
-        <img src="./IMMAGINI/icons8-cactus-32.png" alt="Galleria Foto" 
-             style="width:16px; height:18px; vertical-align:middle; margin-right:6px; filter: invert(45%) sepia(72%) saturate(400%) hue-rotate(120deg) brightness(90%);">
-        Galleria foto
-      </a>
-    </li>
-    <li>
-      <a href="#" onclick="scrollToTop(); showTab('contact'); return false;">
-        <img src="./IMMAGINI/telefono.png" alt="Contatti" 
-             style="width:16px; height:18px; vertical-align:middle; margin-right:6px; filter: invert(45%) sepia(72%) saturate(400%) hue-rotate(120deg) brightness(90%);">
-        Contatti
-      </a>
-    </li>
-    <li>
-      <a href="#" onclick="scrollToTop(); showTab('location'); return false;">
-        <img src="./IMMAGINI/indirizzo.png" alt="Dove Siamo" 
-             style="width:16px; height:18px; vertical-align:middle; margin-right:6px; filter: invert(45%) sepia(72%) saturate(400%) hue-rotate(120deg) brightness(90%);">
-        Dove trovarci
-      </a>
-    </li>
-    <li>
-      <a href="#" onclick="scrollToTop(); return false;">
-        <img src="./IMMAGINI/frecciasu.png" alt="Torna Su" 
-             style="width:16px; height:18px; vertical-align:middle; margin-right:6px; filter: invert(45%) sepia(72%) saturate(400%) hue-rotate(120deg) brightness(90%);">
-        Torna su
-      </a>
-    </li>
-  </ul>
-</div>
-    <!-- Contatti -->
-    <div>
-      <h3>Contatti</h3>
-      <ul style="list-style: none; padding: 0; margin: 0;">
-        <!-- Telefono -->
-        <li style="margin-bottom: 10px;">
-          <strong>
-            <svg style="vertical-align: middle; margin-right: 0.3em;"
-                 width="1.1em" height="1.1em" fill="none" stroke="#04996c"
-                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                 viewBox="0 0 24 24">
-              <path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.72 19.72 0 0 1 3.08 5.18 
+    <div class="footer-container">
+      <!-- Logo -->
+      <div class="footer-logo">
+        <img src="./IMMAGINI/LOGO_PNG.png" alt="Logo Cactus Gioielli">
+      </div>
+      <!-- Link utili -->
+      <div>
+        <h3>Link utili</h3>
+        <ul style="list-style: none; padding: 0; margin: 0;">
+          <li>
+            <a href="#" onclick="scrollToTop(); showTab('about'); return false;">
+              <img src="./IMMAGINI/utente.png" alt="Chi siamo"
+                style="width:16px; height:16px; vertical-align:middle; margin-right:6px; filter: invert(45%) sepia(72%) saturate(400%) hue-rotate(120deg) brightness(90%);">
+              Chi siamo
+            </a>
+          </li>
+          <li>
+            <a href="#" onclick="scrollToTop(); showTab('gallery'); return false;">
+              <img src="./IMMAGINI/icons8-cactus-32.png" alt="Galleria Foto"
+                style="width:16px; height:18px; vertical-align:middle; margin-right:6px; filter: invert(45%) sepia(72%) saturate(400%) hue-rotate(120deg) brightness(90%);">
+              Galleria foto
+            </a>
+          </li>
+          <li>
+            <a href="#" onclick="scrollToTop(); showTab('contact'); return false;">
+              <img src="./IMMAGINI/telefono.png" alt="Contatti"
+                style="width:16px; height:18px; vertical-align:middle; margin-right:6px; filter: invert(45%) sepia(72%) saturate(400%) hue-rotate(120deg) brightness(90%);">
+              Contatti
+            </a>
+          </li>
+          <li>
+            <a href="#" onclick="scrollToTop(); showTab('location'); return false;">
+              <img src="./IMMAGINI/indirizzo.png" alt="Dove Siamo"
+                style="width:16px; height:18px; vertical-align:middle; margin-right:6px; filter: invert(45%) sepia(72%) saturate(400%) hue-rotate(120deg) brightness(90%);">
+              Dove trovarci
+            </a>
+          </li>
+          <li>
+            <a href="#" onclick="scrollToTop(); return false;">
+              <img src="./IMMAGINI/frecciasu.png" alt="Torna Su"
+                style="width:16px; height:18px; vertical-align:middle; margin-right:6px; filter: invert(45%) sepia(72%) saturate(400%) hue-rotate(120deg) brightness(90%);">
+              Torna su
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!-- Contatti -->
+      <div>
+        <h3>Contatti</h3>
+        <ul style="list-style: none; padding: 0; margin: 0;">
+          <!-- Telefono -->
+          <li style="margin-bottom: 10px;">
+            <strong>
+              <svg style="vertical-align: middle; margin-right: 0.3em;" width="1.1em" height="1.1em" fill="none"
+                stroke="#04996c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.72 19.72 0 0 1 3.08 5.18 
                        2 2 0 0 1 5 3h3a2 2 0 0 1 2 1.72c.13.81.36 1.6.68 2.34
                        a2 2 0 0 1-.45 2.11l-1.27 1.27a16 16 0 0 0 6.29 6.29
                        l1.27-1.27a2 2 0 0 1 2.11-.45c.74.32 1.53.55 2.34.68
-                       A2 2 0 0 1 22 16.92z"/>
+                       A2 2 0 0 1 22 16.92z" />
+              </svg>
+              Telefono:
+            </strong>
+            <div style="margin-top: 4px;">
+              <span style="display: block; white-space: nowrap;">
+                <span style="font-weight: bold; color: #04996c;">Francesco:</span> +39 333 211 7337
+              </span>
+              <span style="display: block; white-space: nowrap; margin-top: 6px;">
+                <span style="font-weight: bold; color: #04996c;">Vincenzo:</span> +39 335 150 4792
+              </span>
+            </div>
+          </li>
+          <!-- Email -->
+          <li>
+            <strong>
+              <svg style="vertical-align: middle; margin-right: 0.3em;" width="1.1em" height="1.1em" fill="none"
+                stroke="#04996c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4
+                       c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2zm0 0l8 7 8-7" />
+              </svg>
+              Email:
+            </strong>
+            <div style="margin-top: 4px;">
+              <a href="mailto:cactus.gioielli@gmail.com" style="color: #ddd; text-decoration: none;">
+                cactus.gioielli@gmail.com
+              </a>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <!-- Social -->
+      <div>
+        <h3>Seguici sui social</h3>
+        <div class="footer-social">
+          <!-- TikTok -->
+          <a href="https://www.tiktok.com/@cactusgioielli" target="_blank" aria-label="TikTok">
+            <svg width="29" height="33" fill="#04996c" viewBox="0 0 24 24">
+              <path
+                d="M12 2c1.19 0 2.39 0 3.58 0 .26 1.52 1.34 2.78 2.78 3.25.55.19 1.14.25 1.72.27v3.46c-1.14-.04-2.29-.34-3.29-.92-.46-.27-.87-.6-1.25-.96-.01 2.64.01 5.28-.01 7.91-.04 1.26-.48 2.54-1.31 3.5-.86 1.02-2.13 1.67-3.43 1.84-1.2.17-2.46-.07-3.51-.66-1.05-.58-1.89-1.54-2.33-2.66-.49-1.22-.55-2.64-.17-3.91.39-1.31 1.29-2.47 2.49-3.14 1.12-.63 2.48-.84 3.76-.62v3.51c-.59-.19-1.29-.13-1.82.21-.52.33-.89.91-.94 1.53-.08.66.19 1.36.7 1.79.55.48 1.39.62 2.06.33.61-.26 1.01-.87 1.1-1.52.02-2.64.01-5.29.01-7.93V2z" />
             </svg>
-            Telefono:
-          </strong>
-          <div style="margin-top: 4px;">
-            <span style="display: block; white-space: nowrap;">
-              <span style="font-weight: bold; color: #04996c;">Francesco:</span> +39 333 211 7337
-            </span>
-            <span style="display: block; white-space: nowrap; margin-top: 6px;">
-              <span style="font-weight: bold; color: #04996c;">Vincenzo:</span> +39 335 150 4792
-            </span>
-          </div>
-        </li>
-        <!-- Email -->
-        <li>
-          <strong>
-            <svg style="vertical-align: middle; margin-right: 0.3em;"
-                 width="1.1em" height="1.1em" fill="none" stroke="#04996c"
-                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                 viewBox="0 0 24 24">
-              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4
-                       c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2zm0 0l8 7 8-7"/>
+          </a>
+          <!-- Facebook -->
+          <a href="https://www.facebook.com/share/1PHiXwUpu2/?mibextid=wwXIfr" target="_blank" aria-label="Facebook">
+            <svg width="31" height="35" fill="#04996c" viewBox="0 0 24 24">
+              <path d="M17.525 8.998h-3.025v-1.5c0-.729.486-.899.828-.899h2.172v-3.6l-2.997-.012
+                 c-3.338 0-4.003 2.5-4.003 4.099v1.912h-2v3.001h2v7.001h4v-7.001h2.5l.5-3.001z" />
             </svg>
-            Email:
-          </strong>
-          <div style="margin-top: 4px;">
-            <a href="mailto:cactus.gioielli@gmail.com" style="color: #ddd; text-decoration: none;">
-              cactus.gioielli@gmail.com
-            </a>
-          </div>
-        </li>
-      </ul>
-    </div>
-    <!-- Social -->
-    <div>
-  <h3>Seguici sui social</h3>
-  <div class="footer-social">
-    <!-- TikTok -->
-    <a href="https://www.tiktok.com/@cactusgioielli" target="_blank" aria-label="TikTok">
-      <svg width="29" height="33" fill="#04996c" viewBox="0 0 24 24">
-        <path d="M12 2c1.19 0 2.39 0 3.58 0 .26 1.52 1.34 2.78 2.78 3.25.55.19 1.14.25 1.72.27v3.46c-1.14-.04-2.29-.34-3.29-.92-.46-.27-.87-.6-1.25-.96-.01 2.64.01 5.28-.01 7.91-.04 1.26-.48 2.54-1.31 3.5-.86 1.02-2.13 1.67-3.43 1.84-1.2.17-2.46-.07-3.51-.66-1.05-.58-1.89-1.54-2.33-2.66-.49-1.22-.55-2.64-.17-3.91.39-1.31 1.29-2.47 2.49-3.14 1.12-.63 2.48-.84 3.76-.62v3.51c-.59-.19-1.29-.13-1.82.21-.52.33-.89.91-.94 1.53-.08.66.19 1.36.7 1.79.55.48 1.39.62 2.06.33.61-.26 1.01-.87 1.1-1.52.02-2.64.01-5.29.01-7.93V2z"/>
-      </svg>
-    </a>
-    <!-- Facebook -->
-    <a href="https://www.facebook.com/share/1PHiXwUpu2/?mibextid=wwXIfr" target="_blank" aria-label="Facebook">
-      <svg width="31" height="35" fill="#04996c" viewBox="0 0 24 24">
-        <path d="M17.525 8.998h-3.025v-1.5c0-.729.486-.899.828-.899h2.172v-3.6l-2.997-.012
-                 c-3.338 0-4.003 2.5-4.003 4.099v1.912h-2v3.001h2v7.001h4v-7.001h2.5l.5-3.001z"/>
-      </svg>
-    </a>
-    <!-- Instagram -->
-    <a href="https://www.instagram.com/cactusgioielli" target="_blank" aria-label="Instagram">
-      <svg width="25" height="30" fill="#04996c" viewBox="0 0 24 24">
-        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.334 3.608 1.308.974.974 1.246 2.241 
+          </a>
+          <!-- Instagram -->
+          <a href="https://www.instagram.com/cactusgioielli" target="_blank" aria-label="Instagram">
+            <svg width="25" height="30" fill="#04996c" viewBox="0 0 24 24">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.334 3.608 1.308.974.974 1.246 2.241 
                  1.308 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.334 2.633-1.308 
                  3.608-.974.974-2.241 1.246-3.608 1.308-1.266.058-1.688.07-4.85.07s-3.584-.012-4.85-.07
                  c-1.276-.058-2.687-.334-3.678-1.325-.991-.991-1.267-2.402-1.325-3.678-.058-1.28-.07-1.688
@@ -1740,25 +1959,24 @@ header {
                  3.678-1.325 1.28-.058 1.688-.07 4.947-.07zm0 5.838a6.162 6.162 0 1 0 0 12.324 
                  6.162 6.162 0 0 0 0-12.324zm0 10.162a3.999 3.999 0 1 1 0-7.998 
                  3.999 3.999 0 0 1 0 7.998zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 
-                 1.44 1.44 0 0 0 0-2.881z"/>
-      </svg>
-     </a>
-   </div>
- </div>
-</div>
-  <div class="footer-bottom">
-    © 2025 Azienda Agricola Cactus Gioielli · Tutti i diritti riservati.
-  </div>
-</footer>
-<!-- Script per scroll automatico -->
-<script>
-  function scrollToTop() {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
-  }
-</script>
+                 1.44 1.44 0 0 0 0-2.881z" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © 2025 Azienda Agricola Cactus Gioielli · Tutti i diritti riservati.
+    </div>
+  </footer>
+  <!-- Script per scroll automatico -->
+  <script>
+    function scrollToTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    }
+  </script>
 </body>
 </html>
-
