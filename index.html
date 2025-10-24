@@ -1301,10 +1301,32 @@
   transition: transform 0.4s ease, opacity 0.4s ease;
 }
 
+#cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  max-height: 50%;
+  background: #065f46;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* verticale */
+  align-items: center;    /* orizzontale */
+  padding: 2rem 1rem;
+  box-shadow: 0 -4px 20px rgba(0,0,0,0.2);
+  z-index: 9999;
+  text-align: center;
+  font-size: 1rem;
+  overflow-y: auto; /* permette scroll se il testo è lungo */
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
 #cookie-banner p {
   margin: 0 0 1.5rem 0;
   line-height: 1.5;
-  word-wrap: break-word; /* va a capo automaticamente */
+  word-wrap: break-word;
+  text-align: center; /* centra il testo orizzontalmente */
 }
 
 /* Pulsante coerente con lo stile del sito */
@@ -1327,7 +1349,7 @@
 /* MOBILE ADJUSTMENT */
 @media (max-width: 600px) {
   #cookie-banner {
-    max-height: 40%; /* leggermente meno altezza su mobile */
+    max-height: 40%; 
     padding: 1.5rem 1rem;
     font-size: 0.95rem;
   }
