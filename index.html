@@ -1280,47 +1280,62 @@
             }
         }
 
-        #cookie-banner {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            max-height: 50%;
-            /* occupa metà pagina */
-            background: #065f46;
-            color: #fff;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 2rem 1rem;
-            box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.2);
-            z-index: 9999;
-            text-align: center;
-            font-size: 1rem;
-            transition: transform 0.4s ease, opacity 0.4s ease;
-        }
+       #cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  max-height: 50%; /* occupa metà pagina su desktop */
+  background: #065f46;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1rem;
+  box-shadow: 0 -4px 20px rgba(0,0,0,0.2);
+  z-index: 9999;
+  text-align: center;
+  font-size: 1rem;
+  overflow-y: auto; /* permette scroll se il testo è lungo */
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
 
-        #cookie-banner p {
-            margin: 0 0 1.5rem 0;
-            line-height: 1.5;
-        }
+#cookie-banner p {
+  margin: 0 0 1.5rem 0;
+  line-height: 1.5;
+  word-wrap: break-word; /* va a capo automaticamente */
+}
 
-        #cookie-banner button {
-            background: #04b77b;
-            border: none;
-            color: white;
-            font-weight: 600;
-            padding: 0.7rem 1.6rem;
-            border-radius: 10px;
-            cursor: pointer;
-            font-size: 1rem;
-            transition: background 0.3s ease;
-        }
+/* Pulsante coerente con lo stile del sito */
+#cookie-banner button {
+  background: #04b77b;
+  border: none;
+  color: white;
+  font-weight: 600;
+  padding: 0.7rem 1.6rem;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
 
-        #cookie-banner button:hover {
-            background: #04996c;
-        }
+#cookie-banner button:hover {
+  background: #04996c;
+}
+
+/* MOBILE ADJUSTMENT */
+@media (max-width: 600px) {
+  #cookie-banner {
+    max-height: 40%; /* leggermente meno altezza su mobile */
+    padding: 1.5rem 1rem;
+    font-size: 0.95rem;
+  }
+
+  #cookie-banner p {
+    font-size: 0.95rem;
+  }
+}
     </style>
     <script>
         function showTab(tab) {
