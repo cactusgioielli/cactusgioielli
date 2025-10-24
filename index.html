@@ -1280,66 +1280,74 @@
             }
         }
 
-      #cookie-banner {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  max-height: 50%;
-  background: #065f46;
-  color: #fff;
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* centra verticalmente */
-  align-items: center;     /* centra orizzontalmente */
-  padding: 2rem 1rem;
-  box-shadow: 0 -4px 20px rgba(0,0,0,0.2);
-  z-index: 9999;
-  text-align: center;       /* centra il testo */
-  overflow-y: auto;         /* permette scroll se il testo è lungo */
-}
+        /* --- Cookie Banner --- */
+        #cookie-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 50%;
+            /* metà pagina */
+            background: #065f46;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            /* centra verticalmente */
+            align-items: center;
+            /* centra orizzontalmente */
+            padding: 2rem 1rem;
+            box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.2);
+            z-index: 9999;
+            text-align: center;
+            overflow-y: auto;
+        }
 
-#cookie-banner p {
-  margin: 0 0 1.5rem 0;
-  line-height: 1.5;
-  word-wrap: break-word;
-  max-width: 90%;           /* non troppo largo su mobile */
-}
+        #cookie-banner p {
+            margin: 0 0 1.5rem 0;
+            line-height: 1.5;
+            word-wrap: break-word;
+            max-width: 90%;
+            font-size: 1rem;
+        }
 
-#cookie-banner button {
-  background: #04b77b;
-  border: none;
-  color: white;
-  font-weight: 600;
-  padding: 0.7rem 1.6rem;
-  border-radius: 10px;
-  cursor: pointer;
-  font-size: 1rem;
-  transition: background 0.3s ease;
-  min-width: 120px;          /* rende il bottone più consistente su mobile */
-}
+        #cookie-banner button {
+            background: #04b77b;
+            border: none;
+            color: #fff;
+            font-weight: 600;
+            padding: 0.8rem 1.8rem;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 1rem;
+            min-width: 140px;
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
 
-#cookie-banner button:hover {
-  background: #04996c;
-}
+        #cookie-banner button:hover {
+            background: #04996c;
+            transform: scale(1.05);
+        }
 
-/* MOBILE ADJUSTMENT */
-@media (max-width: 600px) {
-  #cookie-banner {
-    max-height: 40%;
-    padding: 1.5rem 1rem;
-  }
+        /* Mobile adjustments */
+        @media (max-width: 600px) {
+            #cookie-banner {
+                height: 50%;
+                /* mantiene metà pagina anche su mobile */
+                padding: 1.5rem 1rem;
+            }
 
-  #cookie-banner p {
-    font-size: 0.95rem;
-  }
+            #cookie-banner p {
+                font-size: 0.95rem;
+            }
 
-  #cookie-banner button {
-    width: 80%;             /* occupa quasi tutta la larghezza su mobile */
-    text-align: center;
-  }
-}
-
+            #cookie-banner button {
+                width: 80%;
+                /* bottone largo e centrato */
+                text-align: center;
+                min-width: auto;
+            }
+        }
     </style>
     <script>
         function showTab(tab) {
@@ -2134,7 +2142,7 @@
                     <li>
                         <button id="reset-cookies" class="hero-btn secondary">Ripristina Cookies</button>
 
-                </li>
+                    </li>
                 </ul>
             </div>
             <!-- Contatti -->
@@ -2267,19 +2275,22 @@
     </script>
 
     <script>
+        // --- JavaScript base ---
         const banner = document.getElementById('cookie-banner');
-        const acceptBtn = document.getElementById('accept-cookies');
+        const btn = document.getElementById('accept-cookies');
 
-        if (!localStorage.getItem('cookiesAccepted')) {
-            banner.style.display = 'flex';
-        } else {
-            banner.style.display = 'none';
-        }
-
-        acceptBtn.addEventListener('click', () => {
+        btn.addEventListener('click', () => {
             localStorage.setItem('cookiesAccepted', 'true');
             banner.style.display = 'none';
         });
+
+        // Controllo all'apertura pagina
+        window.addEventListener('load', () => {
+            if (localStorage.getItem('cookiesAccepted') === 'true') {
+                banner.style.display = 'none';
+            }
+        });
+
     </script>
 
 
@@ -2288,4 +2299,3 @@
 </body>
 
 </html>
-
