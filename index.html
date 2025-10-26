@@ -2257,30 +2257,32 @@
 
 
   <script>
-    // Mostra o nasconde il banner
-    const banner = document.getElementById('cookie-banner');
-    const acceptBtn = document.getElementById('accept-cookies');
+        // Mostra o nasconde il banner
+        const banner = document.getElementById('cookie-banner');
+        const acceptBtn = document.getElementById('accept-cookies');
 
-    if (localStorage.getItem('cookiesAccepted')) {
-      banner.style.display = 'none';
-    }
+        if (localStorage.getItem('cookiesAccepted')) {
+            banner.style.display = 'none';
+        }
 
-    acceptBtn.addEventListener('click', () => {
-      banner.style.opacity = '0';
-      localStorage.setItem('cookiesAccepted', 'true');
-    });
+        acceptBtn.addEventListener('click', () => {
+            banner.style.opacity = '0';
+             setTimeout(() => (banner.style.display = 'none'), 0);
+            localStorage.setItem('cookiesAccepted', 'true');
+        });
 
-    const resetBtn = document.getElementById('reset-cookies');
-    resetBtn.addEventListener('click', () => {
-      localStorage.removeItem('cookiesAccepted');
-      overlay.style.display = 'flex'; // mostra subito l'overlay
-    });
+        const resetBtn = document.getElementById('reset-cookies');
+        resetBtn.addEventListener('click', () => {
+            localStorage.removeItem('cookiesAccepted');
+            overlay.style.display = 'flex'; // mostra subito l'overlay
+        });
 
 
-  </script>
+    </script>
 
 
 </body>
 
 </html>
+
 
