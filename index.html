@@ -30,7 +30,7 @@
       position: relative;
       text-align: center;
       margin-bottom: 2rem;
-      background-color: #e6e6e6;
+      background-color: #ffffff;
       border-radius: 0 0 1.5rem 1.5rem;
       box-shadow: 0 4px 24px rgba(6, 95, 70, 0.07);
       padding: 2rem 1rem;
@@ -51,28 +51,6 @@
       font-weight: 500;
       color: #065f46cc;
       font-style: italic;
-    }
-
-    /* --- Header --- */
-    header {
-      position: relative;
-      text-align: center;
-      margin-bottom: 2rem;
-      background-color: #e6e6e6;
-      border-radius: 0 0 1.5rem 1.5rem;
-      box-shadow: 0 4px 24px rgba(6, 95, 70, 0.07);
-      padding: 2rem 1rem;
-    }
-
-    /* HEADER BASE */
-    header {
-      position: relative;
-      text-align: center;
-      margin-bottom: 2rem;
-      background-color: #e6e6e6;
-      border-radius: 0 0 1.5rem 1.5rem;
-      box-shadow: 0 4px 24px rgba(6, 95, 70, 0.07);
-      padding: 2rem 1rem;
     }
 
     /* LOGO */
@@ -1311,75 +1289,78 @@
       }
     }
 
-    /* BANNER */
-  #cookie-banner {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    max-height: 50%;
-    background: #065f46;
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem 1rem;
-    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.2);
-    z-index: 9999;
-    text-align: center;
-    overflow-y: auto;
-  }
-
-  #cookie-banner p {
-    margin: 0 0 1.5rem 0;
-    line-height: 1.5;
-    word-wrap: break-word;
-    max-width: 90%;
-  }
-
-  /* CONTAINER BOTTONI */
-  #cookie-buttons {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem; /* spazio tra i bottoni */
-    width: 100%;
-    max-width: 220px; /* larghezza massima dei bottoni */
-  }
-
-  #cookie-buttons button {
-    background: #04b77b;
-    border: none;
-    color: white;
-    font-weight: 600;
-    padding: 0.7rem 1.6rem;
-    border-radius: 10px;
-    cursor: pointer;
-    font-size: 1rem;
-    width: 100%; /* bottone prende tutta la larghezza del container */
-    text-align: center;
-  }
-
-  #cookie-buttons button:hover {
-    background: #04996c;
-  }
-
-  /* MOBILE ADJUSTMENT */
-  @media (max-width: 600px) {
     #cookie-banner {
-      max-height: 40%;
-      padding: 1.5rem 1rem;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      max-height: 50%;
+      background: #065f46;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      /* centra verticalmente */
+      align-items: center;
+      /* centra orizzontalmente */
+      padding: 2rem 1rem;
+      box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.2);
+      z-index: 9999;
+      text-align: center;
+      /* centra il testo */
+      overflow-y: auto;
+      /* permette scroll se il testo è lungo */
     }
 
     #cookie-banner p {
-      font-size: 0.95rem;
+      margin: 0 0 1.5rem 0;
+      line-height: 1.5;
+      word-wrap: break-word;
+      max-width: 90%;
+      /* non troppo largo su mobile */
     }
 
-    #cookie-buttons {
-      max-width: 180px;
+    #cookie-banner button {
+      background: #04b77b;
+      border: none;
+      color: white;
+      font-weight: 600;
+      padding: 0.7rem 1.6rem;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background 0.3s ease;
+      min-width: 120px;
+      /* rende il bottone più consistente su mobile */
     }
-  }
+
+    #cookie-banner button:hover {
+      background: #04996c;
+    }
+
+    /* MOBILE ADJUSTMENT */
+    @media (max-width: 600px) {
+      #cookie-banner {
+        max-height: 40%;
+        padding: 1.5rem 1rem;
+      }
+
+      #cookie-banner p {
+        font-size: 0.95rem;
+        text-align: center;
+        /* CENTRATO */
+        margin: 0 0 1rem 0;
+        /* margine inferiore più piccolo */
+      }
+
+      #cookie-banner button {
+        width: 80%;
+        /* occupa quasi tutta la larghezza */
+        margin: 0.5rem auto;
+        /* centra i bottoni */
+        text-align: center;
+      }
+    }
   </style>
   <script>
     function showTab(tab) {
@@ -2262,35 +2243,41 @@
     }
   </script>
   <!-- BANNER COOKIE -->
-<div id="cookie-banner">
-  <p>
-    Questo sito utilizza cookie tecnici per il corretto funzionamento. Nessun dato di profilazione viene
-    raccolto. Scorrere in basso per ripristinare le preferenze sui cookie.
-    <a href="cookiepolicy.html" style="color:#fff; text-decoration:underline;">Cliccare qui</a> o il pulsante in basso
-    per maggiori informazioni:
-  </p>
-
-  <div id="cookie-buttons">
-    <button id="accept-cookies">Accetta</button>
+  <div id="cookie-banner">
+    <p>
+      Questo sito utilizza cookie tecnici per il corretto funzionamento. Nessun dato di profilazione viene
+      raccolto. Scorrere in basso per ripristinare le preferenze sui cookie.
+      <a href="cookiepolicy.html" style="color:#fff; text-decoration:underline;">Cliccare qui</a> o il pulsante in basso
+      per
+      maggiori informazioni:
+    </p>
+    <button id="accept-cookies">Accetta</button> <br>
     <button id="policy-cookies" onclick="window.location.href='cookiepolicy.html'">Politica sui cookie</button>
   </div>
-</div>
 
-<script>
-  const banner = document.getElementById('cookie-banner');
-  const acceptBtn = document.getElementById('accept-cookies');
 
-  // Nasconde subito il banner se già accettato
-  if (localStorage.getItem('cookiesAccepted')) {
-    banner.style.display = 'none';
-  }
+  <script>
+    // Mostra o nasconde il banner
+    const banner = document.getElementById('cookie-banner');
+    const acceptBtn = document.getElementById('accept-cookies');
 
-  // Accetta cookie: sparisce subito
-  acceptBtn.addEventListener('click', () => {
-    banner.style.display = 'none'; // sparisce immediatamente
-    localStorage.setItem('cookiesAccepted', 'true');
-  });
-</script>
+    if (localStorage.getItem('cookiesAccepted')) {
+      banner.style.display = 'none';
+    }
+
+    acceptBtn.addEventListener('click', () => {
+      banner.style.opacity = '0';
+      localStorage.setItem('cookiesAccepted', 'true');
+    });
+
+    const resetBtn = document.getElementById('reset-cookies');
+    resetBtn.addEventListener('click', () => {
+      localStorage.removeItem('cookiesAccepted');
+      overlay.style.display = 'flex'; // mostra subito l'overlay
+    });
+
+
+  </script>
 
 
 </body>
