@@ -1369,11 +1369,17 @@
 
       #cookie-banner p {
         font-size: 0.95rem;
+        text-align: center;
+        /* CENTRATO */
+        margin: 0 0 1rem 0;
+        /* margine inferiore più piccolo */
       }
 
       #cookie-banner button {
         width: 80%;
-        /* occupa quasi tutta la larghezza su mobile */
+        /* occupa quasi tutta la larghezza */
+        margin: 0.5rem auto;
+        /* centra i bottoni */
         text-align: center;
       }
     }
@@ -2283,7 +2289,7 @@
 
     acceptBtn.addEventListener('click', () => {
       banner.style.opacity = '0';
-      setTimeout(() => (banner.style.display = 'none'), 0);
+      setTimeout(() => (banner.style.display = 'none'), 500);
       localStorage.setItem('cookiesAccepted', 'true');
     });
 
