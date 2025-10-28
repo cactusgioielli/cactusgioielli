@@ -271,3 +271,22 @@ resetBtn.addEventListener('click', () => {
     localStorage.removeItem('cookiesAccepted');
     overlay.style.display = 'flex'; // mostra subito l'overlay
 });
+function scrollToTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    }
+    /* 
+        _.-=-._       
+      o~`  '  `~o     
+     /    .-=-.  \    
+    |    /  _  \  |   
+    |   |  ( )  | |   By. Alessandro Gioielli :)
+     \   \     /  /    
+      `~-'`---'`-~'     
+         |  |  |        
+         |  |  |        
+       __|  |  |__      
+      (___/   \___)
+ */
