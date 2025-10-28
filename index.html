@@ -12,6 +12,7 @@
   <!-- AGGIUNTA STYLE ESTERNO -->
   <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
   <div class="container">
     <header>
@@ -43,8 +44,7 @@
         Home</button>
       <button class="tab-button" id="about-btn" onclick="showTab('about')">
         <img src="./IMMAGINI/utente.png" alt="chisiamo" style="width:16px; height:16px; vertical-align:middle;">
-        Chi
-        siamo</button>
+        Chi siamo</button>
       <button class="tab-button" id="gallery-btn" onclick="showTab('gallery')">
         <img src="./IMMAGINI/icons8-cactus-32.png" alt="piante" style="width:16px; height:18px; vertical-align:middle;">
         Galleria</button>
@@ -55,7 +55,7 @@
         <img src="./IMMAGINI/indirizzo.png" alt="indirizzo" style="width:16px; height:18px; vertical-align:middle;">
         Indirizzo</button>
     </div>
-
+    <!-- SEZIONE NOVITA' & SLIDESHOW -->
     <div id="home" class="tab-content">
       <section class="novita-section">
         <h1 class="novita-titolo">Novità</h1>
@@ -88,9 +88,8 @@
             border-radius:1.5rem;
             display:flex;flex-direction:column;justify-content:center;align-items:center;
             color:#fff;
-            pointer-events:none;
-            ">
-            <!-- Badge -->
+            pointer-events:none; ">
+            <!-- BADGE: DA OLTRE 30 ANNI -->
             <span
               style="position:absolute;top:1.3rem;left:1.3rem;background:#04996c;color:#fff;font-weight:700;font-size:1.08rem;padding:0.5em 1.2em;border-radius:1.2em;box-shadow:0 2px 8px rgba(4,153,108,0.13);display:inline-flex;align-items:center;gap:0.5em;z-index:2;">
               <svg width="1.2em" height="1.2em" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"
@@ -113,28 +112,19 @@
               flex-direction: column;
               align-items: center;
               pointer-events:auto;
-              margin-top:2.5rem;
-            ">
-              <h2
-                style="color:#065f46;margin-bottom:0.7rem;text-shadow:none;font-size:2.1rem;font-weight:700;letter-spacing:1px;">
-                Cosa facciamo?</h2>
+              margin-top:2.5rem; ">
+              <h2 style="color:#065f46;margin-bottom:0.7rem;text-shadow:none;font-size:2.1rem;font-weight:700;letter-spacing:1px;">
+                Cosa facciamo? </h2>
               <p style="font-size:1.18rem;max-width:500px;margin:auto;text-shadow:none;">
-                Coltiviamo e distribuiamo con passione piante cactacee, succulente e composizioni
-                uniche.<br>
-                Da oltre 30 anni portiamo il verde nelle case e nei giardini di tutta la Campania e
-                oltre.
-              </p>
+                Coltiviamo e distribuiamo con passione piante cactacee, succulente e composizioni uniche.<br>
+                Da oltre 30 anni portiamo il verde nelle case e nei giardini di tutta la Campania e oltre. </p>
               <!-- Sostituisci il vecchio div dei bottoni con questo -->
               <div class="hero-buttons">
                 <a href="#" onclick="showTab('gallery');return false;" class="hero-btn">
                   <!-- Icona cactus -->
                   <sv width="1.1em" height="1.1em" fill="none" stroke="currentColor" stroke-width="2"
                     stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-                    <path d="M12 22V10" />
-                    <path d="M7 14V10a5 5 0 0 1 10 0v4" />
-                    <path d="M5 22V17" />
-                    <path d="M19 22V17" />
-                    <path d="M7 19h10" />
+                  <path d="M12 22V10" /> <path d="M7 14V10a5 5 0 0 1 10 0v4" /> <path d="M5 22V17" /> <path d="M19 22V17" /> <path d="M7 19h10" />
                     </svg>
                     Galleria foto
                 </a>
@@ -151,10 +141,8 @@
               viewBox="0 0 24 24" style="margin-bottom:0.7em;width:2.1em;height:2.1em;">
               <path d="M12 2l2 7h7l-5.5 4 2 7-5.5-4-5.5 4 2-7L3 9h7z" />
             </svg>
-            <div style="font-weight:700;color:#065f46;font-size:1.18rem;margin-bottom:0.4em;">Qualità
-              garantita</div>
-            <div style="color:#1f2937;font-size:1.05rem;">Solo le migliori piante, coltivate con cura e
-              attenzione.
+            <div style="font-weight:700;color:#065f46;font-size:1.18rem;margin-bottom:0.4em;">Qualità garantita</div>
+            <div style="color:#1f2937;font-size:1.05rem;">Solo le migliori piante, coltivate con cura e attenzione.
             </div>
           </div>
           <div
@@ -164,11 +152,9 @@
               <circle cx="12" cy="12" r="10" />
               <path d="M12 6v6l4 2" />
             </svg>
-            <div style="font-weight:700;color:#065f46;font-size:1.18rem;margin-bottom:0.4em;">Esperienza &
-              Passione
+            <div style="font-weight:700;color:#065f46;font-size:1.18rem;margin-bottom:0.4em;">Esperienza & Passione
             </div>
-            <div style="color:#1f2937;font-size:1.05rem;">Da generazioni trasmettiamo la nostra passione per
-              il verde.
+            <div style="color:#1f2937;font-size:1.05rem;">Da generazioni trasmettiamo la nostra passione per il verde.
             </div>
           </div>
           <div
@@ -179,11 +165,9 @@
               <path d="M16 3v4" />
               <path d="M8 3v4" />
             </svg>
-            <div style="font-weight:700;color:#065f46;font-size:1.18rem;margin-bottom:0.4em;">Servizio
-              personalizzato
+            <div style="font-weight:700;color:#065f46;font-size:1.18rem;margin-bottom:0.4em;">Servizio personalizzato
             </div>
-            <div style="color:#1f2937;font-size:1.05rem;">Consulenza e composizioni su misura per ogni
-              esigenza.</div>
+            <div style="color:#1f2937;font-size:1.05rem;">Consulenza e composizioni su misura per ogni esigenza.</div>
           </div>
         </div>
         <!-- ...esistente: box Cactacee/Succulente/Composizioni... -->
@@ -217,17 +201,15 @@
               <path d="M9 17c0-2.209 1.791-4 4-4" />
               <circle cx="9" cy="17" r="1" />
             </svg>
-            "Ogni pianta è un piccolo miracolo della natura. Prenditene cura, e ti ricompenserà con bellezza
-            e
-            serenità."
+            "Ogni pianta è un piccolo miracolo della natura. Prenditene cura, e ti ricompenserà con bellezza e serenità."
           </blockquote>
         </div>
       </div>
     </div>
+    <!-- CHI SIAMO -->
     <div id="about" class="tab-content">
       <p>
-        Siamo un'azienda agricola specializzata nella coltivazione e distribuzione di piante grasse e
-        succulente.
+        Siamo un'azienda agricola specializzata nella coltivazione e distribuzione di piante grasse e succulente.
         La nostra missione è fornire prodotti di alta qualità, coltivati con passione e rispetto per l'ambiente.
       </p>
       <div class="timeline">
@@ -235,18 +217,15 @@
           <div class="timeline-dot"></div>
           <div class="timeline-content">
             <span class="timeline-year">1990</span>
-            <p>Nasce l'Azienda Agricola Cactus, fondata dalla famiglia Gioielli con l'obiettivo di portare
-              la passione
-              per le piante grasse in tutta la Campania.</p>
+            <p>Nasce l'Azienda Agricola Cactus, fondata dalla famiglia Gioielli
+               con l'obiettivo di portare la passione  per le piante grasse in tutta la Campania.</p>
           </div>
         </div>
         <div class="timeline-event">
           <div class="timeline-dot"></div>
           <div class="timeline-content">
             <span class="timeline-year">2005</span>
-            <p>Espansione della produzione e introduzione di nuove varietà di succulente, ampliando la
-              clientela anche
-              fuori regione.</p>
+            <p>Espansione della produzione e introduzione di nuove varietà di succulente, ampliando la clientela anche fuori regione.</p>
           </div>
         </div>
         <div class="timeline-event">
@@ -270,8 +249,7 @@
           <img src="https://ui-avatars.com/api/?name=PG&background=e0f2f1&color=065f46" alt="Pasquale Gioielli" />
           <div class="name">Pasquale Gioielli</div>
           <div class="role">Fondatore</div>
-          <div class="desc">Esperto coltivatore, anima storica dell’azienda e punto di riferimento per la
-            qualità.</div>
+          <div class="desc">Esperto coltivatore, anima storica dell’azienda e punto di riferimento per la qualità.</div>
         </div>
         <div class="about-team-member">
           <img src="https://ui-avatars.com/api/?name=F%26V+G&background=e0f2f1&color=065f46" alt="Francesco Gioielli" />
@@ -287,10 +265,11 @@
         </div>
       </div>
       <p>
-        Con anni di esperienza nel settore, ci impegniamo a soddisfare le esigenze dei nostri clienti, offrendo
-        una vasta gamma di piante uniche e servizi personalizzati.
+        Con anni di esperienza nel settore, ci impegniamo a soddisfare le esigenze dei nostri clienti, 
+        offrendo una vasta gamma di piante uniche e servizi personalizzati.
       </p>
     </div>
+    <!-- GALLERIA IMMAGINI -->
     <div id="gallery" class="tab-content">
       <div class="gallery-categories">
         <button class="gallery-category-btn active" onclick="showGalleryCategory('grasse', this)">
@@ -350,6 +329,7 @@
         <img src="./IMMAGINI/COMPOSIZIONE_7.jpg" alt="Composizione 7" onclick="openModal(this.src)" />
       </div>
     </div>
+    <!-- CONTATTI -->
     <div id="contact" class="tab-content">
       <div class="contact-info contact-flex">
         <div class="contact-details">
@@ -446,6 +426,7 @@
         </div>
       </div>
     </div>
+    <!-- INDIRIZZO -->
     <div id="location" class="tab-content">
       <div class="contact-info">
         <h2>Dove trovarci</h2>
@@ -478,6 +459,7 @@
       <button class="modal-btn right" onclick="nextImage(event)" aria-label="Successiva">&#8594;</button>
     </div>
   </div>
+  <!-- FOOTER -->
   <footer>
     <div class="footer-container">
       <!-- Logo -->
@@ -616,28 +598,17 @@
         <option value="index-en.html">🇬🇧 English</option>
       </select>
     </div>
-
     <div class="footer-bottom">
       © 2025 Azienda Agricola Cactus Gioielli · Tutti i diritti riservati.
     </div>
   </footer>
-  <!-- Script per scroll automatico -->
-  <script>
-    function scrollToTop() {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
-    }
-  </script>
   <!-- BANNER COOKIE -->
   <div id="cookie-banner">
     <p>
-      Questo sito utilizza cookie tecnici per il corretto funzionamento. Nessun dato di profilazione viene
-      raccolto. Scorrere in basso per ripristinare le preferenze sui cookie.
-      <a href="cookiepolicy.html" style="color:#fff; text-decoration:underline;">Cliccare qui</a> o il pulsante in basso
-      per
-      maggiori informazioni:
+      Questo sito utilizza cookie tecnici per il corretto funzionamento. 
+      Nessun dato di profilazione viene raccolto. Scorrere in basso per ripristinare le preferenze sui cookie.
+      <a href="cookiepolicy.html" style="color:#fff; text-decoration:underline;">Cliccare qui</a> 
+      o il pulsante in basso per maggiori informazioni:
     </p>
     <div class="cookies-button">
       <button id="accept-cookies">Accetta</button>
