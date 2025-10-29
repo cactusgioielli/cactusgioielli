@@ -47,7 +47,7 @@
                 Home</button>
             <button class="tab-button" id="about-btn" onclick="showTab('about')">
                 <img src="./IMMAGINI/utente.png" alt="chisiamo" style="width:16px; height:16px; vertical-align:middle;">
-                About us</button>
+                Who we are</button>
             <button class="tab-button" id="gallery-btn" onclick="showTab('gallery')">
                 <img src="./IMMAGINI/icons8-cactus-32.png" alt="piante"
                     style="width:16px; height:18px; vertical-align:middle;">
@@ -83,11 +83,10 @@
                     <button class="slide-btn next">&#10095;</button>
                 </div>
             </section>
-            <!-- INIZIO SEZIONE INNOVATION -->
+            <!-- FINE SEZIONE INNOVATION -->
 
             <!-- INIZIO SEZIONE "WHAT WE DO" -->
             <div style="text-align:center;position:relative;">
-                <!-- Hero immagine e testo già esistente -->
                 <div
                     style="position:relative;display:inline-block;width:100%;max-width:900px;overflow:hidden;border-radius:1.5rem;box-shadow:0 8px 32px rgba(6,95,70,0.13);margin-bottom:2.2rem;">
                     <img src="./IMMAGINI/HOME.jpg" alt="Azienda Agricola Cactus - panoramica"
@@ -101,7 +100,7 @@
             color:#fff;
             pointer-events:none;
             ">
-                        <!-- Badge -->
+                        <!-- BADGE FOR OVER 30 YEARS -->
                         <span
                             style="position:absolute;top:1.3rem;left:1.3rem;background:#04996c;color:#fff;font-weight:700;font-size:1.08rem;padding:0.5em 1.2em;border-radius:1.2em;box-shadow:0 2px 8px rgba(4,153,108,0.13);display:inline-flex;align-items:center;gap:0.5em;z-index:2;">
                             <svg width="1.2em" height="1.2em" fill="none" stroke="#fff" stroke-width="2"
@@ -134,7 +133,7 @@
                                 For over 30 years, we've been bringing greenery to homes and gardens throughout Campania
                                 and beyond.
                             </p>
-                            <!-- Sostituisci il vecchio div dei bottoni con questo -->
+                            <!-- SOSTITUZIONE DIV -->
                             <div class="hero-buttons">
                                 <a href="#" onclick="showTab('gallery');return false;" class="hero-btn">
                                     <!-- Icona cactus -->
@@ -202,7 +201,6 @@
                             need.</div>
                     </div>
                 </div>
-                <!-- ...esistente: box Cactacee/Succulente/Composizioni... -->
                 <div style="margin-top:2.5rem;display:flex;flex-wrap:wrap;justify-content:center;gap:2.5rem;">
                     <div style="flex:1 1 220px;max-width:320px;background:#e0f2f1;border-radius:1rem;padding:1.2rem;box-shadow:0 2px 8px rgba(6,95,70,0.07);transition:box-shadow 0.2s,background 0.2s;cursor:pointer;"
                         onclick="showTab('gallery'); showGalleryCategory('grasse', document.querySelector('.gallery-category-btn'));">
@@ -220,7 +218,7 @@
                         <p style="margin:0;">Customized arrangements for events, gifts, and green decor.</p>
                     </div>
                 </div>
-                <!-- NOVITÀ: Citazione finale -->
+                <!-- CITAZIONE FINALE -->
                 <div style="margin:2.5rem auto 0 auto;max-width:600px;text-align:center;">
                     <blockquote
                         style="font-style:italic;color:#04996c;font-size:1.15rem;background:#f0fdf4;border-radius:1em;padding:1.2em 1.5em;box-shadow:0 2px 8px rgba(6,95,70,0.07);margin:0;">
@@ -237,9 +235,9 @@
                 </div>
             </div>
         </div>
-        <!-- INIZIO SEZIONE QUADRATINI DESCRITTIVI -->
+        <!-- FINE SEZIONE QUADRATINI DESCRITTIVI -->
 
-        <!-- INIZIO SEZIONE CHI SIAMO -->
+        <!-- INIZIO SEZIONE ABOUT US -->
         <div id="about" class="tab-content">
             <p>
                 We are a farm specializing in the cultivation and distribution of succulent plants.
@@ -310,7 +308,7 @@
                 offering a wide range of unique plants and personalized services.
             </p>
         </div>
-        <!-- FINE SEZIONE CHI SIAMO -->
+        <!-- FINE SEZIONE ABOUT US -->
 
         <!-- INIZIO SEZIONE GALLERY -->
         <div id="gallery" class="tab-content">
@@ -329,7 +327,7 @@
                     Compositions</button>
             </div>
             
-            <div class="gallery gallery-grasse">
+            <div class="gallery gallery-grasse">                            <!-- SEZIONE GALLERIA CACTACEE-->
                 <img src="./IMMAGINI/CACTACEA_1.jpeg" alt="Euphorbia Trigona" onclick="openModal(this.src)" />
                 <img src="./IMMAGINI/CACTACEA_3.jpg" alt="Piante Cactacee 3" onclick="openModal(this.src)" />
                 <img src="./IMMAGINI/CACTACEA_4.jpg" alt="Piante Cactacee 4" onclick="openModal(this.src)" />
@@ -355,7 +353,7 @@
                 <img src="./IMMAGINI/CACTACEA_24.jpg" alt="Piante Cactacee 24" onclick="openModal(this.src)" />
                 <img src="./IMMAGINI/CACTACEA_25.jpg" alt="Piante Cactacee 25" onclick="openModal(this.src)" />
             </div>
-            <div class="gallery gallery-succulente" style="display:none;">
+            <div class="gallery gallery-succulente" style="display:none;">   <!-- SEZIONE GALLERIA SUCCULENTE -->
                 <img src="./IMMAGINI/SUCCULENTE_1.jpg" alt="Piante Succulente 1" onclick="openModal(this.src)" />
                 <img src="./IMMAGINI/SUCCULENTE_2.png" alt="Piante Succulente 2" onclick="openModal(this.src)" />
                 <img src="./IMMAGINI/SUCCULENTE_3.jpg" alt="Piante Succulente 3" onclick="openModal(this.src)" />
@@ -366,7 +364,7 @@
                 <img src="./IMMAGINI/SUCCULENTE_8.jpg" alt="Piante Succulente 8" onclick="openModal(this.src)" />
                 <img src="./IMMAGINI/SUCCULENTE_9.jpg" alt="Piante Succulente 9" onclick="openModal(this.src)" />
             </div>
-            <div class="gallery gallery-composizione" style="display:none;">
+            <div class="gallery gallery-composizione" style="display:none;"> <!-- SEZIONE GALLERIA COMPOSIZIONI -->
                 <img src="./IMMAGINI/COMPOSIZIONE_1.jpeg" alt="Composizione 1" onclick="openModal(this.src)" />
                 <img src="./IMMAGINI/COMPOSIZIONE_2.png" alt="Composizione 2" onclick="openModal(this.src)" />
                 <img src="./IMMAGINI/COMPOSIZIONE_3.jpeg" alt="Composizione 3" onclick="openModal(this.src)" />
@@ -517,7 +515,7 @@
             <button class="modal-btn right" onclick="nextImage(event)" aria-label="Successiva">&#8594;</button>
         </div>
     </div>
-    <!-- INIZIO SEZIONE ADDRESS -->
+    <!-- FINE SEZIONE ADDRESS -->
 
     <!-- INIZIO SEZIONE FOOTER -->
     <footer>
@@ -526,7 +524,7 @@
             <div class="footer-logo">
                 <img src="./IMMAGINI/LOGO_PNG.png" alt="Logo Cactus Gioielli">
             </div>
-            <!-- Link utili -->
+            <!-- LINK UTILI -->
             <div>
                 <h3>Useful links</h3>
                 <ul style="list-style: none; padding: 0; margin: 0;">
@@ -534,7 +532,7 @@
                         <a href="#" onclick="scrollToTop(); showTab('about'); return false;">
                             <img src="./IMMAGINI/utente.png" alt="Chi siamo"
                                 style="width:16px; height:16px; vertical-align:middle; margin-right:6px; filter: invert(45%) sepia(72%) saturate(400%) hue-rotate(120deg) brightness(90%);">
-                           About us
+                            Who we are
                         </a>
                     </li>
                     <li>
@@ -565,17 +563,18 @@
                             Back to top
                         </a>
                     </li>
-                    <li>
+                    <!-- FINE LINK UTILI -->
+                    <li> <!-- RESET COOKIES -->
                         <button id="reset-cookies" class="hero-btn secondary">Reset Cookies</button>
 
                     </li>
                 </ul>
             </div>
-            <!-- Contatti -->
+            <!-- CONTATTI -->
             <div>
                 <h3>Contact</h3>
                 <ul style="list-style: none; padding: 0; margin: 0;">
-                    <!-- Telefono -->
+                    <!-- TELEFONO -->
                     <li style="margin-bottom: 10px;">
                         <strong>
                             <svg style="vertical-align: middle; margin-right: 0.3em;" width="1.1em" height="1.1em"
@@ -598,7 +597,8 @@
                             </span>
                         </div>
                     </li>
-                    <!-- Email -->
+                    <!-- FINE TELEFONO -->
+                    <!-- EMAIL -->
                     <li>
                         <strong>
                             <svg style="vertical-align: middle; margin-right: 0.3em;" width="1.1em" height="1.1em"
@@ -617,18 +617,19 @@
                     </li>
                 </ul>
             </div>
-            <!-- Social -->
+                     <!-- FINE EMAIL -->
+            <!-- FOOTER: SOCIAL -->
             <div>
                 <h3>Follow us on social media</h3>
                 <div class="footer-social">
-                    <!-- TikTok -->
+                    <!-- TIKTOK -->
                     <a href="https://www.tiktok.com/@cactusgioielli" target="_blank" aria-label="TikTok">
                         <svg width="29" height="33" fill="#04996c" viewBox="0 0 24 24">
                             <path
                                 d="M12 2c1.19 0 2.39 0 3.58 0 .26 1.52 1.34 2.78 2.78 3.25.55.19 1.14.25 1.72.27v3.46c-1.14-.04-2.29-.34-3.29-.92-.46-.27-.87-.6-1.25-.96-.01 2.64.01 5.28-.01 7.91-.04 1.26-.48 2.54-1.31 3.5-.86 1.02-2.13 1.67-3.43 1.84-1.2.17-2.46-.07-3.51-.66-1.05-.58-1.89-1.54-2.33-2.66-.49-1.22-.55-2.64-.17-3.91.39-1.31 1.29-2.47 2.49-3.14 1.12-.63 2.48-.84 3.76-.62v3.51c-.59-.19-1.29-.13-1.82.21-.52.33-.89.91-.94 1.53-.08.66.19 1.36.7 1.79.55.48 1.39.62 2.06.33.61-.26 1.01-.87 1.1-1.52.02-2.64.01-5.29.01-7.93V2z" />
                         </svg>
                     </a>
-                    <!-- Facebook -->
+                    <!-- FACEBOOK -->
                     <a href="https://www.facebook.com/share/1PHiXwUpu2/?mibextid=wwXIfr" target="_blank"
                         aria-label="Facebook">
                         <svg width="31" height="35" fill="#04996c" viewBox="0 0 24 24">
@@ -636,7 +637,7 @@
                  c-3.338 0-4.003 2.5-4.003 4.099v1.912h-2v3.001h2v7.001h4v-7.001h2.5l.5-3.001z" />
                         </svg>
                     </a>
-                    <!-- Instagram -->
+                    <!-- INSTAGRAM -->
                     <a href="https://www.instagram.com/cactusgioielli" target="_blank" aria-label="Instagram">
                         <svg width="25" height="30" fill="#04996c" viewBox="0 0 24 24">
                             <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.334 3.608 1.308.974.974 1.246 2.241
@@ -701,4 +702,3 @@
        __|  |  |__      
       (___/   \___)
  -->
-
