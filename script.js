@@ -271,12 +271,22 @@ resetBtn.addEventListener('click', () => {
     localStorage.removeItem('cookiesAccepted');
     overlay.style.display = 'flex'; // mostra subito l'overlay
 });
+// Funzione per scrollare a una posizione specifica (non in cima)
+function scrollToPosition(position) {
+  window.scrollTo({
+    top: 470,   // posizione in pixel desiderata
+    behavior: 'smooth'
+  });
+}
+
+// Funzione per scrollare fino in cima
 function scrollToTop() {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
-    }
+  window.scrollTo({
+    top: 0,          // in cima
+    behavior: 'smooth'
+  });
+}
+
     // Selettore lingua che mantiene la pagina corrente
             document.addEventListener("DOMContentLoaded", function () {
                 const select = document.querySelector(".footer-language-dropdown select");
