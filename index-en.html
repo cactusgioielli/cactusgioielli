@@ -15,14 +15,13 @@
 
 <body>
     <div class="container">
-        <header> <!-- HEADER -->
-            <!-- Logo -->
+        <!-- INIZIO SEZIONE HEADER -->
+        <header> 
             <div class="logo-container">
                 <a href="#" onclick="showTab('home'); return false;">
                     <img src="./IMMAGINI/LOGO_BG_BIANCO.png" alt="Logo Azienda Agricola Cactus">
                 </a>
             </div>
-            <!-- Barra di ricerca -->
             <form id="search-form" onsubmit="event.preventDefault(); searchGallery();">
                 <input id="search-input" type="text" placeholder="Search" />
                 <button type="submit">
@@ -37,7 +36,10 @@
                 Production and wholesale distribution of high-quality cacti and succulents,
                 creating elegant, customized compositions.
             </p>
-        </header> <!-- TABS -->
+        </header> 
+        <!-- FINE SEZIONE HEADER -->
+        
+        <!-- INIZIO SEZIONE TABS -->
         <div class="tabs">
             <button class="tab-button" id="home-btn" onclick="showTab('home')">
                 <img src="./IMMAGINI/icons8-casa-48.png" alt="home"
@@ -45,7 +47,7 @@
                 Home</button>
             <button class="tab-button" id="about-btn" onclick="showTab('about')">
                 <img src="./IMMAGINI/utente.png" alt="chisiamo" style="width:16px; height:16px; vertical-align:middle;">
-                 About us</button>
+                Who we are</button>
             <button class="tab-button" id="gallery-btn" onclick="showTab('gallery')">
                 <img src="./IMMAGINI/icons8-cactus-32.png" alt="piante"
                     style="width:16px; height:18px; vertical-align:middle;">
@@ -59,7 +61,9 @@
                     style="width:16px; height:18px; vertical-align:middle;">
                 Address</button>
         </div>
-        <!-- INNOVATION -->
+        <!-- FINE SEZIONE TABS -->
+
+        <!-- INIZIO SEZIONE INNOVATION -->
         <div id="home" class="tab-content">
             <section class="novita-section">
                 <h1 class="novita-titolo">Innovation</h1>
@@ -79,6 +83,9 @@
                     <button class="slide-btn next">&#10095;</button>
                 </div>
             </section>
+            <!-- INIZIO SEZIONE INNOVATION -->
+
+            <!-- INIZIO SEZIONE "WHAT WE DO" -->
             <div style="text-align:center;position:relative;">
                 <!-- Hero immagine e testo già esistente -->
                 <div
@@ -145,7 +152,10 @@
                         </div>
                     </div>
                 </div>
-                <!-- NOVITÀ: Sezione "Perché scegliere noi?" -->
+                <!-- FINE SEZIONE "WHAT WE DO" -->
+
+
+                <!-- INIZIO SEZIONE QUADRATINI DESCRITTIVI -->
                 <div
                     style="margin:2.5rem auto 2.5rem auto;max-width:900px;display:flex;gap:2.5rem;justify-content:center;flex-wrap:wrap;">
                     <div
@@ -227,6 +237,9 @@
                 </div>
             </div>
         </div>
+        <!-- INIZIO SEZIONE QUADRATINI DESCRITTIVI -->
+
+        <!-- INIZIO SEZIONE CHI SIAMO -->
         <div id="about" class="tab-content">
             <p>
                 We are a farm specializing in the cultivation and distribution of succulent plants.
@@ -297,6 +310,9 @@
                 offering a wide range of unique plants and personalized services.
             </p>
         </div>
+        <!-- FINE SEZIONE CHI SIAMO -->
+
+        <!-- INIZIO SEZIONE GALLERY -->
         <div id="gallery" class="tab-content">
             <div class="gallery-categories">
                 <button class="gallery-category-btn active" onclick="showGalleryCategory('grasse', this)">
@@ -312,6 +328,7 @@
                         style="width:16px; height:16px; vertical-align:middle;">
                     Compositions</button>
             </div>
+            
             <div class="gallery gallery-grasse">
                 <img src="./IMMAGINI/CACTACEA_1.jpeg" alt="Euphorbia Trigona" onclick="openModal(this.src)" />
                 <img src="./IMMAGINI/CACTACEA_3.jpg" alt="Piante Cactacee 3" onclick="openModal(this.src)" />
@@ -359,6 +376,9 @@
                 <img src="./IMMAGINI/COMPOSIZIONE_7.jpg" alt="Composizione 7" onclick="openModal(this.src)" />
             </div>
         </div>
+        <!-- FINE SEZIONE GALLERY -->
+
+        <!-- INIZIO SEZIONE CONTATTI -->
         <div id="contact" class="tab-content">
             <div class="contact-info contact-flex">
                 <div class="contact-details">
@@ -461,6 +481,9 @@
                 </div>
             </div>
         </div>
+         <!-- FINE SEZIONE CONTACT -->
+
+         <!-- INIZIO SEZIONE ADDRESS -->
         <div id="location" class="tab-content">
             <div class="contact-info">
                 <h2>Where to find us</h2>
@@ -494,6 +517,9 @@
             <button class="modal-btn right" onclick="nextImage(event)" aria-label="Successiva">&#8594;</button>
         </div>
     </div>
+    <!-- INIZIO SEZIONE ADDRESS -->
+
+    <!-- INIZIO SEZIONE FOOTER -->
     <footer>
         <div class="footer-container">
             <!-- Logo -->
@@ -508,7 +534,7 @@
                         <a href="#" onclick="scrollToTop(); showTab('about'); return false;">
                             <img src="./IMMAGINI/utente.png" alt="Chi siamo"
                                 style="width:16px; height:16px; vertical-align:middle; margin-right:6px; filter: invert(45%) sepia(72%) saturate(400%) hue-rotate(120deg) brightness(90%);">
-                            About us
+                            Who we are
                         </a>
                     </li>
                     <li>
@@ -639,7 +665,10 @@
             © 2025 Azienda Agricola Cactus Gioielli · All rights reserved.
         </div>
     </footer>
-    <!-- BANNER COOKIE -->
+    <!-- FINE SEZIONE FOOTER -->
+
+
+    <!-- INIZIO SEZIONE BANNER COOKIE -->
     <div id="cookie-banner">
         <p>
             This site uses technical cookies for proper functioning.
@@ -652,6 +681,9 @@
             <button id="policy-cookies" onclick="window.location.href='cookiepolicy-en.html'">Cookie Policy</button>
         </div>
     </div>
+    <!-- FINE SEZIONE BANNER COOKIE -->
+
+    
     <!-- AGGIUNTA SCRIPT.JS -->
     <script src="./script.js"></script>
 </body>
