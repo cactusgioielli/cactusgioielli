@@ -277,6 +277,24 @@ function scrollToTop() {
         behavior: 'smooth'
       });
     }
+            // Selettore lingua che mantiene la pagina corrente
+            document.addEventListener("DOMContentLoaded", function () {
+                const select = document.querySelector(".footer-language-dropdown select");
+                if (!select) return;
+
+                // Determina la lingua in base al nome file corrente
+                const path = window.location.pathname; // es: /index-en.html
+                if (path.includes("index-en.html")) {
+                    select.value = "index-en.html";
+                } else {
+                    select.value = "index.html";
+                }
+
+                // Quando l'utente cambia lingua
+                select.addEventListener("change", function () {
+                    location.href = this.value;
+                });
+            });
     /* 
         _.-=-._       
       o~`  '  `~o     
