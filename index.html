@@ -15,14 +15,13 @@
 
 <body>
   <div class="container">
+    <!-- INIZIO SEZIONE HEADER -->
     <header>
-      <!-- Logo -->
       <div class="logo-container">
         <a href="#" onclick="showTab('home'); return false;">
           <img src="./IMMAGINI/LOGO_BG_BIANCO.png" alt="Logo Azienda Agricola Cactus">
         </a>
       </div>
-      <!-- Barra di ricerca -->
       <form id="search-form" onsubmit="event.preventDefault(); searchGallery();">
         <input id="search-input" type="text" placeholder="Cerca" />
         <button type="submit">
@@ -38,6 +37,9 @@
         con la realizzazione di eleganti composizioni personalizzate.
       </p>
     </header>
+    <!-- FINE SEZIONE HEADER -->
+
+    <!-- INIZIO SEZIONE TABS -->
     <div class="tabs">
       <button class="tab-button" id="home-btn" onclick="showTab('home')">
         <img src="./IMMAGINI/icons8-casa-48.png" alt="home" style="width:16px; height:16px; vertical-align:middle;">
@@ -55,7 +57,9 @@
         <img src="./IMMAGINI/indirizzo.png" alt="indirizzo" style="width:16px; height:18px; vertical-align:middle;">
         Indirizzo</button>
     </div>
-    <!-- SEZIONE NOVITA' & SLIDESHOW -->
+    <!-- FINE SEZIONE TABS -->
+
+    <!-- INIZIO SEZIONE NOVITA' & SLIDESHOW -->
     <div id="home" class="tab-content">
       <section class="novita-section">
         <h1 class="novita-titolo">Novità</h1>
@@ -75,6 +79,9 @@
           <button class="slide-btn next">&#10095;</button>
         </div>
       </section>
+      <!-- FINE SEZIONE NOVITA' & SLIDESHOW -->
+
+      <!-- INIZIO SEZIONE "COSA FACCIAMO?" -->
       <div style="text-align:center;position:relative;">
         <!-- Hero immagine e testo già esistente -->
         <div
@@ -132,7 +139,9 @@
             </div>
           </div>
         </div>
-        <!-- NOVITÀ: Sezione "Perché scegliere noi?" -->
+        <!-- FINE SEZIONE "COSA FACCIAMO?" -->
+
+        <!-- INIZIO SEZIONE QUADRATI DESCRITTIVI -->
         <div
           style="margin:2.5rem auto 2.5rem auto;max-width:900px;display:flex;gap:2.5rem;justify-content:center;flex-wrap:wrap;">
           <div
@@ -170,7 +179,6 @@
             <div style="color:#1f2937;font-size:1.05rem;">Consulenza e composizioni su misura per ogni esigenza.</div>
           </div>
         </div>
-        <!-- ...esistente: box Cactacee/Succulente/Composizioni... -->
         <div style="margin-top:2.5rem;display:flex;flex-wrap:wrap;justify-content:center;gap:2.5rem;">
           <div
             style="flex:1 1 220px;max-width:320px;background:#e0f2f1;border-radius:1rem;padding:1.2rem;box-shadow:0 2px 8px rgba(6,95,70,0.07);transition:box-shadow 0.2s,background 0.2s;cursor:pointer;"
@@ -206,7 +214,10 @@
         </div>
       </div>
     </div>
-    <!-- CHI SIAMO -->
+    <!-- FINE SEZIONE QUADRATI DESCRITTIVI -->
+
+
+    <!-- INIZIO SEZIONE CHI SIAMO -->
     <div id="about" class="tab-content">
       <p>
         Siamo un'azienda agricola specializzata nella coltivazione e distribuzione di piante grasse e succulente.
@@ -269,7 +280,10 @@
         offrendo una vasta gamma di piante uniche e servizi personalizzati.
       </p>
     </div>
-    <!-- GALLERIA IMMAGINI -->
+    <!-- INIZIO SEZIONE CHI SIAMO -->
+
+
+    <!-- INIZIO SEZIONE GALLERIA IMMAGINI -->
     <div id="gallery" class="tab-content">
       <div class="gallery-categories">
         <button class="gallery-category-btn active" onclick="showGalleryCategory('grasse', this)">
@@ -329,7 +343,10 @@
         <img src="./IMMAGINI/COMPOSIZIONE_7.jpg" alt="Composizione 7" onclick="openModal(this.src)" />
       </div>
     </div>
-    <!-- CONTATTI -->
+    <!-- FINE SEZIONE GALLERIA IMMAGINI -->
+
+
+    <!-- INIZIO SEZIONE CONTATTI -->
     <div id="contact" class="tab-content">
       <div class="contact-info contact-flex">
         <div class="contact-details">
@@ -426,7 +443,9 @@
         </div>
       </div>
     </div>
-    <!-- INDIRIZZO -->
+    <!-- FINE SEZIONE CONTATTI -->
+
+    <!-- INIZIO SEZIONE INDIRIZZO -->
     <div id="location" class="tab-content">
       <div class="contact-info">
         <h2>Dove trovarci</h2>
@@ -459,7 +478,10 @@
       <button class="modal-btn right" onclick="nextImage(event)" aria-label="Successiva">&#8594;</button>
     </div>
   </div>
-  <!-- FOOTER -->
+  <!-- FINE SEZIONE INDIRIZZO -->
+
+
+  <!-- INIZIO SEZIONE FOOTER -->
   <footer>
     <div class="footer-container">
       <!-- Logo -->
@@ -590,7 +612,7 @@
         </div>
       </div>
     </div>
-    <!-- Selettore lingua compatto sotto social -->
+    <!-- SELEZIONE LINGUA -->
     <div class="footer-language-dropdown">
       <label for="language-select" class="language-label">Selezione lingua</label><br>
       <select id="language-select" onchange="location = this.value;">
@@ -602,7 +624,10 @@
       © 2025 Azienda Agricola Cactus Gioielli · Tutti i diritti riservati.
     </div>
   </footer>
-  <!-- BANNER COOKIE -->
+  <!-- FINE SEZIONE FOOTER -->
+
+
+  <!-- INIZIO SEZIONE BANNER COOKIE -->
   <div id="cookie-banner">
     <p>
       Questo sito utilizza cookie tecnici per il corretto funzionamento. 
@@ -615,6 +640,9 @@
       <button id="policy-cookies" onclick="window.location.href='cookiepolicy.html'">Politica sui cookie</button>
     </div>
   </div>
+  <!-- FINE SEZIONE BANNER COOKIE -->
+
+
   <!-- AGGIUNTA SCRIPT.JS -->
   <script src="./script.js"></script>
 </body>
