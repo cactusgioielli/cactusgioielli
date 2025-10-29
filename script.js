@@ -277,7 +277,7 @@ function scrollToTop() {
         behavior: 'smooth'
       });
     }
-            // Selettore lingua che mantiene la pagina corrente
+    // Selettore lingua che mantiene la pagina corrente
             document.addEventListener("DOMContentLoaded", function () {
                 const select = document.querySelector(".footer-language-dropdown select");
                 if (!select) return;
