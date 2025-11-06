@@ -957,7 +957,7 @@
     background: transparent;
     border: none;
     color: #fff;
-    font-size: 1.9rem;
+    font-size: 0rem;
     cursor: pointer;
     line-height: 1;
     padding: 0 0.4rem;
@@ -1030,3 +1030,4 @@
        __|  |  |__      
       (___/   \___)
  */
+
