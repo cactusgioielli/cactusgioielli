@@ -1020,7 +1020,7 @@
  .cookie-logo img {
      max-width: 2000px;
      /* 👈 dimensione controllata */
-     height: 110px;
+     height: 100px;
      filter: brightness(0.95);
      transition: transform 0.3s ease;
  }
@@ -1066,3 +1066,4 @@
        __|  |  |__      
       (___/   \___)
  */
+
