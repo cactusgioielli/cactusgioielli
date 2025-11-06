@@ -1012,6 +1012,23 @@
      background: #04996c;
  }
 
+ .cookie-logo {
+     text-align: center;
+     margin-top: 0px;
+ }
+
+ .cookie-logo img {
+     max-width: 2000px;
+     /* 👈 dimensione controllata */
+     height: 110px;
+     filter: brightness(0.95);
+     transition: transform 0.3s ease;
+ }
+
+ .cookie-logo img:hover {
+     transform: scale(1.05);
+ }
+
  /* MOBILE ADJUSTMENT */
  @media (max-width: 600px) {
      #cookie-banner {
@@ -1035,6 +1052,7 @@
          text-align: center;
      }
  }
+
  /* 
         _.-=-._       
       o~`  '  `~o     
