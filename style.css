@@ -68,7 +68,7 @@
      line-height: 1.4;
      padding: 0 1rem;
  }
-
+ 
  /* --- BARRA DI RICERCA --- */
  #search-form {
      position: absolute;
@@ -115,6 +115,7 @@
  #search-form button:hover {
      background: #065f46;
  }
+ */
 
  /* --- RESPONSIVE: SU MOBILE LA BARRA SALE SOPRA IL LOGO --- */
  @media (max-width: 768px) {
@@ -963,6 +964,7 @@
      }
  }
 
+
 #cookie-banner {
     position: fixed;
     bottom: 0;
@@ -972,13 +974,14 @@
     color: #fff;
     display: flex;
     align-items: center;
-    justify-content: center; /* centra il contenuto */
+    justify-content: center;
     gap: 1rem;
-    padding: 0.7rem 1rem;
+    padding: 0.8rem 1rem;
     box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.2);
     z-index: 9999;
-    flex-wrap: wrap;
     text-align: center;
+    flex-wrap: wrap;
+    box-sizing: border-box;
 }
 
 /* testo */
@@ -986,13 +989,16 @@
     margin: 0;
     font-size: 0.95rem;
     line-height: 1.4;
+    max-width: 600px;
+    flex: 1 1 100%;
 }
 
-/* container bottoni */
+/* contenitore bottoni */
 .cookie-buttons {
     display: flex;
     gap: 0.5rem;
-    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 /* bottoni */
@@ -1006,6 +1012,7 @@
     cursor: pointer;
     font-size: 0.9rem;
     transition: background 0.3s ease;
+    white-space: nowrap;
 }
 
 #cookie-banner button:hover {
@@ -1020,8 +1027,11 @@
     font-size: 1.4rem;
     cursor: pointer;
     line-height: 1;
-    padding: 0 0.3rem;
+    padding: 0 0.4rem;
     transition: color 0.3s ease;
+    position: absolute;
+    right: 10px;
+    top: 8px;
 }
 
 #cookie-banner .close-btn:hover {
@@ -1029,20 +1039,36 @@
 }
 
 /* MOBILE */
-@media (max-width: 600px) {
+@media (max-width: 700px) {
     #cookie-banner {
         flex-direction: column;
-        gap: 0.7rem;
+        align-items: center;
+        justify-content: center;
         text-align: center;
+        gap: 0.8rem;
+        padding: 1rem;
+    }
+
+    #cookie-banner p {
+        max-width: 90%;
+        font-size: 0.9rem;
+        margin: 0 auto;
     }
 
     .cookie-buttons {
         flex-direction: column;
         width: 100%;
+        align-items: center;
     }
 
     #cookie-banner button {
         width: 80%;
+        max-width: 300px;
+    }
+
+    #cookie-banner .close-btn {
+        right: 12px;
+        top: 10px;
     }
 }
 
