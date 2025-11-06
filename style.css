@@ -968,7 +968,7 @@
      bottom: 0;
      left: 0;
      width: 100%;
-     max-height: 50%;
+     max-height: 100%;
      background: #065f46;
      color: #fff;
      display: flex;
@@ -1066,4 +1066,5 @@
        __|  |  |__      
       (___/   \___)
  */
+
 
