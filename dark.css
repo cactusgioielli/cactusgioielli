@@ -389,7 +389,7 @@
      display: inline-block;
      width: 32px;
      height: 32px;
-     background: #555;
+     background: #313131;
      border-radius: 50%;
      text-align: center;
      line-height: 32px;
@@ -1019,8 +1019,6 @@
      opacity: 1;
      transform: translateY(0);
  }
-
-
  /* 
         _.-=-._       
       o~`  '  `~o     
