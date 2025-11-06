@@ -184,8 +184,7 @@
             <div style="font-weight:700;color:#065f46;font-size:1.18rem;margin-bottom:0.4em;">Service
               personalized
             </div>
-            <div style="color:#1f2937;font-size:1.05rem;">Consulting and tailor-made compositions for every
-              need.</div>
+            <div style="color:#1f2937;font-size:1.05rem;">Consulting and tailor-made compositions for every need.</div>
           </div>
         </div>
         <div style="margin-top:2.5rem;display:flex;flex-wrap:wrap;justify-content:center;gap:2.5rem;">
@@ -581,7 +580,6 @@
           </li>
           <li>
             <button id="reset-cookies" class="hero-btn secondary">Reset Cookies</button><br><br>
-            <a href="cookiepolicy-en.html" class="hero-btn secondary">Cookie Policy</a>
           </li>
         </ul>
       </div>
@@ -698,13 +696,24 @@
     </div>
 
     <!-- SELEZIONE LINGUA -->
-    <div class="footer-language-dropdown">
-      <label for="language-select" class="language-label">Language selection</label><br>
-      <select id="language-select" onchange="location = this.value;">
-        <option value="../index.html">🇮🇹 Italian</option>
-        <option value="index-en.html">🇬🇧 English</option>
-      </select>
-    </div>
+       <div class="footer-language-dropdown">
+  <div class="dropdown-group">
+    <label for="language-select" class="language-label">Language Selection</label>
+    <select id="language-select" onchange="location = this.value;">
+      <option value="index-en.html">🇬🇧 English</option>
+      <option value="../index.html">🇮🇹 Italiano</option>
+    </select>
+  </div>
+
+  <div class="dropdown-group">
+    <label for="theme-select" class="language-label">Theme Change</label>
+    <select id="theme-select" onchange="location = this.value;">
+      <option value="index-en.html">Light</option>
+      <option value="index_en_black.html">Dark</option>
+    </select>
+  </div>
+</div>
+
 
     <div class="footer-bottom">
       © 2025, Azienda Agricola Cactus Gioielli · All rights reserved.<br>
