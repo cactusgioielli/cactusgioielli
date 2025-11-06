@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Az. Agr. Cactus Gioielli - En </title>
+  <title>Az. Agr. Cactus Gioielli | En </title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
   <link rel="icon" href="../IMMAGINI/favicon.png" type="image/x-icon">
   <link rel="shortcut icon" href="../IMMAGINI/favicon.png" type="image/x-icon">
@@ -19,7 +19,7 @@
     <header>
       <div class="logo-container">
         <a href="#" onclick="showTab('home'); return false;">
-          <img src="../IMMAGINI/LOGO/LOGO_greenpng.png" alt="Logo Azienda Agricola Cactus">
+          <img src="../IMMAGINI/LOGO/LOGO_greenpng.png" alt="Logo Azienda Agricola Cactus" class="reveal">
         </a>
       </div>
       <form id="search-form" onsubmit="event.preventDefault(); searchGallery();">
@@ -66,7 +66,7 @@
     <!-- INIZIO SEZIONE INNOVATION -->
     <div id="home" class="tab-content">
       <section class="novita-section">
-        <h1 class="novita-titolo">Innovation</h1>
+        <h1 class="novita-titolo" class="reveal" >Innovation</h1>
         <div class="slideshow-container">
           <button class="slide-btn prev">&#10094;</button>
 
@@ -86,11 +86,11 @@
       <!-- FINE SEZIONE INNOVATION -->
 
       <!-- INIZIO SEZIONE "WHAT WE DO" -->
-      <div style="text-align:center;position:relative;">
+      <div class="reveal" style="text-align:center;position:relative;">
         <div
           style="position:relative;display:inline-block;width:100%;max-width:900px;overflow:hidden;border-radius:1.5rem;box-shadow:0 8px 32px rgba(6,95,70,0.13);margin-bottom:2.2rem;">
           <img src="../IMMAGINI/HOME.jpg" alt="Azienda Agricola Cactus - panoramica"
-            style="width:100%;height:520px;object-fit:cover;filter:brightness(0.93) saturate(1.08);transition:transform 0.5s;display:block;">
+            style="width:100%;height:520px;object-fit:cover;filter:brightness(0.93) saturate(1.08);transition:transform 0.5s;display:block;"class="reveal">
           <div style="
             position:absolute;
             left:0;top:0;width:100%;height:100%;
@@ -125,10 +125,10 @@
               pointer-events:auto;
               margin-top:2.5rem;
             ">
-              <h2
+              <h2 class="reveal"
                 style="color:#065f46;margin-bottom:0.7rem;text-shadow:none;font-size:2.1rem;font-weight:700;letter-spacing:1px;">
                 What do we do?</h2>
-              <p style="font-size:1.18rem;max-width:500px;margin:auto;text-shadow:none;">
+              <p style="font-size:1.18rem;max-width:500px;margin:auto;text-shadow:none;" class="reveal" >
                 We passionately grow and distribute cacti, succulents, and unique compositions.<br>
                 For over 30 years, we've been bringing greenery to homes and gardens throughout Campania
                 and beyond.
@@ -156,7 +156,7 @@
 
         <!-- INIZIO SEZIONE QUADRATINI DESCRITTIVI -->
         <div
-          style="margin:2.5rem auto 2.5rem auto;max-width:900px;display:flex;gap:2.5rem;justify-content:center;flex-wrap:wrap;">
+          style="margin:2.5rem auto 2.5rem auto;max-width:900px;display:flex;gap:2.5rem;justify-content:center;flex-wrap:wrap;" class="reveal">
           <div
             style="background:#f0fdf4;border-radius:1.2rem;box-shadow:0 2px 16px rgba(6,95,70,0.08);padding:2rem 1.5rem 1.5rem 1.5rem;flex:1 1 220px;min-width:220px;max-width:270px;text-align:center;transition:transform 0.22s, box-shadow 0.22s;cursor:pointer;border:1.5px solid #e0f2f1;">
             <svg fill="none" stroke="#04996c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -202,24 +202,24 @@
           <div
             style="flex:1 1 220px;max-width:320px;background:#e0f2f1;border-radius:1rem;padding:1.2rem;box-shadow:0 2px 8px rgba(6,95,70,0.07);transition:box-shadow 0.2s,background 0.2s;cursor:pointer;"
             onclick="showTab('gallery'); showGalleryCategory('grasse', document.querySelector('.gallery-category-btn'));">
-            <h3 style="color:#04996c;margin-top:0;font-size:1.25rem;letter-spacing:0.5px;">Cacti</h3>
+            <h3 style="color:#04996c;margin-top:0;font-size:1.25rem;letter-spacing:0.5px;"class="reveal">Cacti</h3>
             <p style="margin:0;">Large selection of cacti for collectors and enthusiasts.</p>
           </div>
           <div
             style="flex:1 1 220px;max-width:320px;background:#e0f2f1;border-radius:1rem;padding:1.2rem;box-shadow:0 2px 8px rgba(6,95,70,0.07);transition:box-shadow 0.2s,background 0.2s;cursor:pointer;"
             onclick="showTab('gallery'); showGalleryCategory('succulente', document.querySelectorAll('.gallery-category-btn')[1]);">
-            <h3 style="color:#04996c;margin-top:0;font-size:1.25rem;letter-spacing:0.5px;">Succulent</h3>
+            <h3 style="color:#04996c;margin-top:0;font-size:1.25rem;letter-spacing:0.5px;"class="reveal">Succulent</h3>
             <p style="margin:0;">The best varieties of succulent plants, resistant and decorative.</p>
           </div>
           <div
             style="flex:1 1 220px;max-width:320px;background:#e0f2f1;border-radius:1rem;padding:1.2rem;box-shadow:0 2px 8px rgba(6,95,70,0.07);transition:box-shadow 0.2s,background 0.2s;cursor:pointer;"
             onclick="showTab('gallery'); showGalleryCategory('composizione', document.querySelectorAll('.gallery-category-btn')[2]);">
-            <h3 style="color:#04996c;margin-top:0;font-size:1.25rem;letter-spacing:0.5px;">Compositions</h3>
+            <h3 style="color:#04996c;margin-top:0;font-size:1.25rem;letter-spacing:0.5px;"class="reveal">Compositions</h3>
             <p style="margin:0;">Customized arrangements for events, gifts, and green decor.</p>
           </div>
         </div>
         <!-- CITAZIONE FINALE -->
-        <div style="margin:2.5rem auto 0 auto;max-width:600px;text-align:center;">
+        <div style="margin:2.5rem auto 0 auto;max-width:600px;text-align:center;"class="reveal">
           <blockquote
             style="font-style:italic;color:#04996c;font-size:1.15rem;background:#f0fdf4;border-radius:1em;padding:1.2em 1.5em;box-shadow:0 2px 8px rgba(6,95,70,0.07);margin:0;">
             <svg width="1.5em" height="1.5em" fill="none" stroke="#04996c" stroke-width="2" stroke-linecap="round"
@@ -237,8 +237,8 @@
     <!-- FINE SEZIONE QUADRATINI DESCRITTIVI -->
 
     <!-- INIZIO SEZIONE ABOUT US -->
-    <div id="about" class="tab-content">
-      <p>
+    <div id="about" class="tab-content"class="reveal">
+      <p class="reveal">
         We are a farm specializing in the cultivation and distribution of succulent plants.
         Our mission is to provide high-quality products, grown with passion and respect for the environment.
       </p>
@@ -246,8 +246,8 @@
         <div class="timeline-event">
           <div class="timeline-dot"></div>
           <div class="timeline-content">
-            <span class="timeline-year">1990</span>
-            <p>The "Azienda Agricola Cactus" is born,
+            <span class="timeline-year"class="reveal">1990</span>
+            <p class="reveal">The "Azienda Agricola Cactus" is born,
               founded by the Gioielli family with the aim of bringing their passion for succulents
               throughout Campania.</p>
           </div>
@@ -255,16 +255,16 @@
         <div class="timeline-event">
           <div class="timeline-dot"></div>
           <div class="timeline-content">
-            <span class="timeline-year">2005</span>
-            <p>Production expansion and introduction of new succulent varieties, expanding the customer base
+            <span class="timeline-year"class="reveal">2005</span>
+            <p class="reveal">Production expansion and introduction of new succulent varieties, expanding the customer base
               beyond the region.</p>
           </div>
         </div>
         <div class="timeline-event">
           <div class="timeline-dot"></div>
           <div class="timeline-content">
-            <span class="timeline-year">2020</span>
-            <p>Innovation in cultivation processes with sustainable techniques and attention to the
+            <span class="timeline-year" class="reveal">2020</span>
+            <p class="reveal">Innovation in cultivation processes with sustainable techniques and attention to the
               environment.
             </p>
           </div>
@@ -272,41 +272,41 @@
         <div class="timeline-event">
           <div class="timeline-dot"></div>
           <div class="timeline-content">
-            <span class="timeline-year">2025</span>
-            <p>A new generation in the company, digitalization and openness to online sites and social
+            <span class="timeline-year"class="reveal">2025</span>
+            <p class="reveal">A new generation in the company, digitalization and openness to online sites and social
               media.</p>
           </div>
         </div>
       </div>
       <div class="about-team">
         <div class="about-team-member">
-          <img src="https://ui-avatars.com/api/?name=PG&background=e0f2f1&color=065f46" alt="Pasquale Gioielli" />
-          <div class="name">Pasquale Gioielli</div>
-          <div class="role">Founder</div>
-          <div class="desc">An expert grower, the company's historic soul and a point of reference for
+          <img src="https://ui-avatars.com/api/?name=PG&background=e0f2f1&color=065f46" alt="Pasquale Gioielli" class="reveal"/>
+          <div class="name"class="reveal">Pasquale Gioielli</div>
+          <div class="role"class="reveal">Founder</div>
+          <div class="desc"class="reveal">An expert grower, the company's historic soul and a point of reference for
             quality.</div>
         </div>
         <div class="about-team-member">
-          <img src="https://ui-avatars.com/api/?name=F%26V+G&background=e0f2f1&color=065f46" alt="Francesco Gioielli" />
-          <div class="name">Francesco Gioielli</div>
-          <div class="role">Production manager</div>
-          <div class="desc">Manages crops and coordinates innovation in production processes.</div>
+          <img src="https://ui-avatars.com/api/?name=F%26V+G&background=e0f2f1&color=065f46" alt="Francesco Gioielli" class="reveal"/>
+          <div class="name"class="reveal">Francesco Gioielli</div>
+          <div class="role"class="reveal">Production manager</div>
+          <div class="desc"class="reveal">Manages crops and coordinates innovation in production processes.</div>
         </div>
         <div class="about-team-member">
-          <img src="https://ui-avatars.com/api/?name=VG&background=e0f2f1&color=065f46" alt="Vincenzo Gioielli" />
-          <div class="name">Vincenzo Gioielli</div>
-          <div class="role">Communication & Digital</div>
-          <div class="desc">Manages online presence and relationships with customers and partners.</div>
+          <img src="https://ui-avatars.com/api/?name=VG&background=e0f2f1&color=065f46" alt="Vincenzo Gioielli" class="reveal"/>
+          <div class="name"class="reveal">Vincenzo Gioielli</div>
+          <div class="role"class="reveal">Communication & Digital</div>
+          <div class="desc"class="reveal">Manages online presence and relationships with customers and partners.</div>
         </div>
         <div class="about-team-member">
-          <img src="https://ui-avatars.com/api/?name=AG&background=e0f2f1&color=065f46" alt="Alessandro Gioielli" />
-          <div class="name">Alessandro Gioielli</div>
-          <div class="role">Digital Manager</div>
-          <div class="desc">Manages the company website, social media profiles,
+          <img src="https://ui-avatars.com/api/?name=AG&background=e0f2f1&color=065f46" alt="Alessandro Gioielli" class="reveal"/>
+          <div class="name"class="reveal">Alessandro Gioielli</div>
+          <div class="role"class="reveal">Digital Manager</div>
+          <div class="desc"class="reveal">Manages the company website, social media profiles,
             and coordinates the company’s online communication.</div>
         </div>
       </div>
-      <p>
+      <p class="reveal">
         With years of experience in the industry, we are committed to meeting our customers' needs,
         offering a wide range of unique plants and personalized services.
       </p>
@@ -381,9 +381,9 @@
     <div id="contact" class="tab-content">
       <div class="contact-info contact-flex">
         <div class="contact-details">
-          <h2>Contact</h2>
+          <h2 class="reveal">Contact</h2>
 
-          <p style="display:flex;gap:0.7em;flex-wrap:wrap;align-items:center;">
+          <p style="display:flex;gap:0.7em;flex-wrap:wrap;align-items:center;"class="reveal">
             <strong>
               <svg style="vertical-align:middle;margin-right:0.3em;" width="1.1em" height="1.1em" fill="none"
                 stroke="#04996c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
@@ -400,7 +400,7 @@
             </span>
           </p>
 
-          <p>
+          <p class="reveal">
             <strong>
               <svg style="vertical-align:middle;margin-right:0.3em;" width="1.1em" height="1.1em" fill="none"
                 stroke="#04996c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
@@ -413,7 +413,7 @@
             <a href="mailto:cactus.gioielli@gmail.com" style="margin-left:0.3em;">cactus.gioielli@gmail.com</a>
           </p>
 
-          <p>
+          <p class="reveal">
             <strong>
               <svg style="vertical-align:middle;margin-right:0.3em;" width="1.1em" height="1.1em" fill="none"
                 stroke="#04996c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
@@ -429,7 +429,7 @@
           </p>
 
           <!-- SEZIONE SOCIAL -->
-          <p style="display:flex;align-items:center;flex-wrap:wrap;gap:0.7em;margin-top:1rem;">
+          <p style="display:flex;align-items:center;flex-wrap:wrap;gap:0.7em;margin-top:1rem;" class="reveal">
             <svg style="vertical-align:middle;" width="1.1em" height="1.1em" fill="none" stroke="#04996c"
               stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
               <circle cx="12" cy="12" r="10" />
@@ -465,8 +465,8 @@
           <!-- FINE SEZIONE SOCIAL -->
         </div>
 
-        <div class="contact-hours">
-          <strong style="display:inline-flex;align-items:center;">
+        <div class="contact-hours" >
+          <strong style="display:inline-flex;align-items:center;" class="reveal">
             <svg style="vertical-align:middle;margin-right:0.3em;" width="1.1em" height="1.1em" fill="none"
               stroke="#04996c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
               <circle cx="12" cy="12" r="10" />
@@ -476,22 +476,22 @@
           </strong>
           <table style="width:100%;margin-top:0.5rem;border-collapse:collapse;font-size:1rem;">
             <tr>
-              <th style="text-align:left;padding:0.3rem 0.5rem;border-bottom:1px solid #e0f2f1;white-space:nowrap;">
+              <th style="text-align:left;padding:0.3rem 0.5rem;border-bottom:1px solid #e0f2f1;white-space:nowrap;"class="reveal">
                 <strong>Days</strong></th>
-              <th style="text-align:left;padding:0.3rem 0.5rem;border-bottom:1px solid #e0f2f1;white-space:nowrap;">
+              <th style="text-align:left;padding:0.3rem 0.5rem;border-bottom:1px solid #e0f2f1;white-space:nowrap;"class="reveal">
                 <strong>Hours</strong></th>
             </tr>
             <tr>
-              <td style="padding:0.3rem 0.5rem;white-space:nowrap;"><strong>Monday - Friday:</strong></td>
-              <td style="padding:0.3rem 0.5rem;white-space:nowrap;">08:00 – 13:00 | 14:00 – 17:00</td>
+              <td style="padding:0.3rem 0.5rem;white-space:nowrap;"class="reveal"><strong>Monday - Friday:</strong></td>
+              <td style="padding:0.3rem 0.5rem;white-space:nowrap;"class="reveal">08:00 – 13:00 | 14:00 – 17:00</td>
             </tr>
             <tr>
-              <td style="padding:0.3rem 0.5rem;white-space:nowrap;"><strong>Saturday:</strong></td>
-              <td style="padding:0.3rem 0.5rem;white-space:nowrap;">08:00 – 13:00</td>
+              <td style="padding:0.3rem 0.5rem;white-space:nowrap;"class="reveal"><strong>Saturday:</strong></td>
+              <td style="padding:0.3rem 0.5rem;white-space:nowrap;"class="reveal">08:00 – 13:00</td>
             </tr>
             <tr>
-              <td style="padding:0.3rem 0.5rem;white-space:nowrap;"><strong>Sunday:</strong></td>
-              <td style="padding:0.3rem 0.5rem;white-space:nowrap;"><strong>Closed</strong></td>
+              <td style="padding:0.3rem 0.5rem;white-space:nowrap;"class="reveal"><strong>Sunday:</strong></td>
+              <td style="padding:0.3rem 0.5rem;white-space:nowrap;"class="reveal"><strong>Closed</strong></td>
             </tr>
           </table>
         </div>
@@ -502,7 +502,7 @@
     <!-- INIZIO SEZIONE ADDRESS -->
     <div id="location" class="tab-content">
       <div class="contact-info">
-        <h2>Where to find us</h2>
+        <h2 class="reveal">Where to find us</h2>
         <p>
           <svg style="vertical-align:middle;margin-right:0.3em;" width="1.1em" height="1.1em" fill="none"
             stroke="#04996c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
@@ -748,6 +748,10 @@
 
   <!-- INIZIO SEZIONE BANNER COOKIE -->
   <div id="cookie-banner">
+    <div id="cookie-banner">
+      <div class="cookie-logo">
+        <img src="../IMMAGINI/LOGO/LOGO_whitepng2.png" alt="Logo Cactus Gioielli">
+      </div>
       <p>
         This site uses technical cookies for proper functioning.
         No profiling data is collected. Scroll down to reset your cookie preferences.
