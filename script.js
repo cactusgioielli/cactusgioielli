@@ -255,6 +255,7 @@ window.addEventListener('DOMContentLoaded', () => {
 // Mostra o nasconde il banner
 const banner = document.getElementById('cookie-banner');
 const acceptBtn = document.getElementById('accept-cookies');
+ const closeBtn = document.getElementById('close-banner');
 
 if (localStorage.getItem('cookiesAccepted')) {
     banner.style.display = 'none';
@@ -271,6 +272,9 @@ resetBtn.addEventListener('click', () => {
     localStorage.removeItem('cookiesAccepted');
     overlay.style.display = 'flex'; // mostra subito l'overlay
 });
+closeBtn.addEventListener('click', () => {
+    banner.style.display = 'none';
+  });
 // Funzione per scrollare a una posizione specifica (non in cima)
 function scrollToPosition(position) {
     window.scrollTo({
