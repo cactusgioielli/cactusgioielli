@@ -968,7 +968,7 @@
      bottom: 0;
      left: 0;
      width: 100%;
-     max-height: 100%;
+     max-height: 50%;
      background: #065f46;
      color: #fff;
      display: flex;
@@ -1053,6 +1053,18 @@
      }
  }
 
+ /* --- Effetto "reveal on scroll" --- */
+ .reveal {
+     opacity: 0;
+     transform: translateY(40px);
+     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+ }
+
+ .reveal.active {
+     opacity: 1;
+     transform: translateY(0);
+ }
+
  /* 
         _.-=-._       
       o~`  '  `~o     
@@ -1066,5 +1078,3 @@
        __|  |  |__      
       (___/   \___)
  */
-
-
