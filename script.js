@@ -273,48 +273,63 @@ resetBtn.addEventListener('click', () => {
 });
 // Funzione per scrollare a una posizione specifica (non in cima)
 function scrollToPosition(position) {
-  window.scrollTo({
-    top: 470,   // posizione in pixel desiderata
-    behavior: 'smooth'
-  });
+    window.scrollTo({
+        top: 470,   // posizione in pixel desiderata
+        behavior: 'smooth'
+    });
 }
 
 // Funzione per scrollare fino in cima
 function scrollToTop() {
-  window.scrollTo({
-    top: 0,          // in cima
-    behavior: 'smooth'
-  });
+    window.scrollTo({
+        top: 0,          // in cima
+        behavior: 'smooth'
+    });
 }
 
-    // Selettore lingua che mantiene la pagina corrente
-            document.addEventListener("DOMContentLoaded", function () {
-                const select = document.querySelector(".footer-language-dropdown select");
-                if (!select) return;
+// Selettore lingua che mantiene la pagina corrente
+document.addEventListener("DOMContentLoaded", function () {
+    const select = document.querySelector(".footer-language-dropdown select");
+    if (!select) return;
 
-                // Determina la lingua in base al nome file corrente
-                const path = window.location.pathname; // es: /index-en.html
-                if (path.includes("index-en.html")) {
-                    select.value = "index-en.html";
-                } else {
-                    select.value = "index.html";
-                }
+    // Determina la lingua in base al nome file corrente
+    const path = window.location.pathname; // es: /index-en.html
+    if (path.includes("index-en.html")) {
+        select.value = "index-en.html";
+    } else {
+        select.value = "index.html";
+    }
 
-                // Quando l'utente cambia lingua
-                select.addEventListener("change", function () {
-                    location.href = this.value;
-                });
-            });
-    /* 
-        _.-=-._       
-      o~`  '  `~o     
-     /    .-=-.  \    
-    |    /  _  \  |   
-    |   |  ( )  | |   By. Alessandro Gioielli :)
-     \   \     /  /    
-      `~-'`---'`-~'     
-         |  |  |        
-         |  |  |        
-       __|  |  |__      
-      (___/   \___)
- */
+    // Quando l'utente cambia lingua
+    select.addEventListener("change", function () {
+        location.href = this.value;
+    });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    const reveals = document.querySelectorAll(".reveal");
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("active");
+                observer.unobserve(entry.target); // per evitare ri-animazioni continue
+            }
+        });
+    }, { threshold: 0.2 });
+
+    reveals.forEach(el => observer.observe(el));
+});
+/*
+    _.-=-._       
+  o~`  '  `~o     
+ /    .-=-.  \    
+|    /  _  \  |   
+|   |  ( )  | |   By. Alessandro Gioielli :)
+ \   \     /  /    
+  `~-'`---'`-~'     
+     |  |  |        
+     |  |  |        
+   __|  |  |__      
+  (___/   \___)
+*/
