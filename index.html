@@ -17,9 +17,9 @@
   <div class="container">
     <!-- INIZIO SEZIONE HEADER -->
     <header>
-      <div class="logo-container">
+      <div class="logo-container" >
         <a href="#" onclick="showTab('home'); return false;">
-          <img src="./IMMAGINI/LOGO/LOGO_greenpng.png" alt="Logo Azienda Agricola Cactus">
+          <img src="./IMMAGINI/LOGO/LOGO_greenpng.png" alt="Logo Azienda Agricola Cactus" class="reveal" >
         </a>
       </div>
       <form id="search-form" onsubmit="event.preventDefault(); searchGallery();">
@@ -32,7 +32,7 @@
           </svg>
         </button>
       </form>
-      <p class="header-desc">
+      <p class="header-desc" class="reveal" >
         Produzione e distribuzione all'ingrosso di cactacee e succulente di alta qualità,
         con la realizzazione di eleganti composizioni personalizzate.
       </p>
@@ -66,7 +66,7 @@
     <!-- INIZIO SEZIONE NOVITA' & SLIDESHOW -->
     <div id="home" class="tab-content">
       <section class="novita-section">
-        <h1 class="novita-titolo">Novità</h1>
+        <h1 class="novita-titolo" class="reveal" >Novità</h1>
         <div class="slideshow-container">
           <button class="slide-btn prev">&#10094;</button>
 
@@ -86,11 +86,11 @@
       <!-- FINE SEZIONE NOVITA' & SLIDESHOW -->
 
       <!-- INIZIO SEZIONE "COSA FACCIAMO?" -->
-      <div style="text-align:center;position:relative;">
+      <div class="reveal" style="text-align:center;position:relative;">
         <div
           style="position:relative;display:inline-block;width:100%;max-width:900px;overflow:hidden;border-radius:1.5rem;box-shadow:0 8px 32px rgba(6,95,70,0.13);margin-bottom:2.2rem;">
           <img src="./IMMAGINI/HOME.jpg" alt="Azienda Agricola Cactus - panoramica"
-            style="width:100%;height:520px;object-fit:cover;filter:brightness(0.93) saturate(1.08);transition:transform 0.5s;display:block;">
+            style="width:100%;height:520px;object-fit:cover;filter:brightness(0.93) saturate(1.08);transition:transform 0.5s;display:block;" class="reveal" >
           <div style="
             position:absolute;
             left:0;top:0;width:100%;height:100%;
@@ -123,10 +123,10 @@
               align-items: center;
               pointer-events:auto;
               margin-top:2.5rem; ">
-              <h2
+              <h2 class="reveal"
                 style="color:#065f46;margin-bottom:0.7rem;text-shadow:none;font-size:2.1rem;font-weight:700;letter-spacing:1px;">
                 Cosa facciamo? </h2>
-              <p style="font-size:1.18rem;max-width:500px;margin:auto;text-shadow:none;">
+              <p style="font-size:1.18rem;max-width:500px;margin:auto;text-shadow:none;" class="reveal" >
                 Coltiviamo e distribuiamo con passione piante cactacee, succulente e composizioni uniche.<br>
                 Da oltre 30 anni portiamo il verde nelle case e nei giardini di tutta la Campania e oltre. </p>
               <!-- AGGIORNAMENTO DIV -->
@@ -151,7 +151,7 @@
 
         <!-- INIZIO SEZIONE QUADRATI DESCRITTIVI -->
         <div
-          style="margin:2.5rem auto 2.5rem auto;max-width:900px;display:flex;gap:2.5rem;justify-content:center;flex-wrap:wrap;">
+          style="margin:2.5rem auto 2.5rem auto;max-width:900px;display:flex;gap:2.5rem;justify-content:center;flex-wrap:wrap;" class="reveal" >
           <div
             style="background:#f0fdf4;border-radius:1.2rem;box-shadow:0 2px 16px rgba(6,95,70,0.08);padding:2rem 1.5rem 1.5rem 1.5rem;flex:1 1 220px;min-width:220px;max-width:270px;text-align:center;transition:transform 0.22s, box-shadow 0.22s;cursor:pointer;border:1.5px solid #e0f2f1;">
             <svg fill="none" stroke="#04996c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -190,25 +190,25 @@
         <div style="margin-top:2.5rem;display:flex;flex-wrap:wrap;justify-content:center;gap:2.5rem;">
           <div
             style="flex:1 1 220px;max-width:320px;background:#e0f2f1;border-radius:1rem;padding:1.2rem;box-shadow:0 2px 8px rgba(6,95,70,0.07);transition:box-shadow 0.2s,background 0.2s;cursor:pointer;"
-            onclick="showTab('gallery'); showGalleryCategory('grasse', document.querySelector('.gallery-category-btn'));">
-            <h3 style="color:#04996c;margin-top:0;font-size:1.25rem;letter-spacing:0.5px;">Cactacee</h3>
+            onclick="showTab('gallery'); showGalleryCategory('grasse', document.querySelector('.gallery-category-btn'));"class="reveal">
+            <h3 style="color:#04996c;margin-top:0;font-size:1.25rem;letter-spacing:0.5px;"class="reveal">Cactacee</h3>
             <p style="margin:0;">Ampia selezione di cactacee per collezionisti e appassionati.</p>
           </div>
           <div
             style="flex:1 1 220px;max-width:320px;background:#e0f2f1;border-radius:1rem;padding:1.2rem;box-shadow:0 2px 8px rgba(6,95,70,0.07);transition:box-shadow 0.2s,background 0.2s;cursor:pointer;"
-            onclick="showTab('gallery'); showGalleryCategory('succulente', document.querySelectorAll('.gallery-category-btn')[1]);">
-            <h3 style="color:#04996c;margin-top:0;font-size:1.25rem;letter-spacing:0.5px;">Succulente</h3>
+            onclick="showTab('gallery'); showGalleryCategory('succulente', document.querySelectorAll('.gallery-category-btn')[1]);"class="reveal">
+            <h3 style="color:#04996c;margin-top:0;font-size:1.25rem;letter-spacing:0.5px;"class="reveal">Succulente</h3>
             <p style="margin:0;">Le migliori varietà di piante succulente, resistenti e decorative.</p>
           </div>
           <div
             style="flex:1 1 220px;max-width:320px;background:#e0f2f1;border-radius:1rem;padding:1.2rem;box-shadow:0 2px 8px rgba(6,95,70,0.07);transition:box-shadow 0.2s,background 0.2s;cursor:pointer;"
-            onclick="showTab('gallery'); showGalleryCategory('composizione', document.querySelectorAll('.gallery-category-btn')[2]);">
-            <h3 style="color:#04996c;margin-top:0;font-size:1.25rem;letter-spacing:0.5px;">Composizioni</h3>
+            onclick="showTab('gallery'); showGalleryCategory('composizione', document.querySelectorAll('.gallery-category-btn')[2]);"class="reveal">
+            <h3 style="color:#04996c;margin-top:0;font-size:1.25rem;letter-spacing:0.5px;"class="reveal">Composizioni</h3>
             <p style="margin:0;">Composizioni personalizzate per eventi, regali e arredamento green.</p>
           </div>
         </div>
         <!-- CITAZIONE FINALE -->
-        <div style="margin:2.5rem auto 0 auto;max-width:600px;text-align:center;">
+        <div style="margin:2.5rem auto 0 auto;max-width:600px;text-align:center;"class="reveal">
           <blockquote
             style="font-style:italic;color:#04996c;font-size:1.15rem;background:#f0fdf4;border-radius:1em;padding:1.2em 1.5em;box-shadow:0 2px 8px rgba(6,95,70,0.07);margin:0;">
             <svg width="1.5em" height="1.5em" fill="none" stroke="#04996c" stroke-width="2" stroke-linecap="round"
@@ -227,7 +227,7 @@
 
 
     <!-- INIZIO SEZIONE CHI SIAMO -->
-    <div id="about" class="tab-content">
+    <div id="about" class="tab-content" class="reveal" >
       <p>
         Siamo un'azienda agricola specializzata nella coltivazione e distribuzione di piante grasse e succulente.
         La nostra missione è fornire prodotti di alta qualità, coltivati con passione e rispetto per l'ambiente.
@@ -236,63 +236,62 @@
         <div class="timeline-event">
           <div class="timeline-dot"></div>
           <div class="timeline-content">
-            <span class="timeline-year">1990</span>
-            <p>Nasce l'Azienda Agricola Cactus, fondata dalla famiglia Gioielli
+            <span class="timeline-year" class="reveal">1990</span>
+            <p class="reveal">Nasce l'Azienda Agricola Cactus, fondata dalla famiglia Gioielli
               con l'obiettivo di portare la passione per le piante grasse in tutta la Campania.</p>
           </div>
         </div>
         <div class="timeline-event">
           <div class="timeline-dot"></div>
           <div class="timeline-content">
-            <span class="timeline-year">2005</span>
-            <p>Espansione della produzione e introduzione di nuove varietà di succulente, ampliando la clientela anche
+            <span class="timeline-year" class="reveal">2005</span>
+            <p class="reveal">Espansione della produzione e introduzione di nuove varietà di succulente, ampliando la clientela anche
               fuori regione.</p>
           </div>
         </div>
         <div class="timeline-event">
           <div class="timeline-dot"></div>
           <div class="timeline-content">
-            <span class="timeline-year">2020</span>
-            <p>Innovazione nei processi di coltivazione con tecniche sostenibili e attenzione all'ambiente.
+            <span class="timeline-year" class="reveal">2020</span>
+            <p class="reveal">Innovazione nei processi di coltivazione con tecniche sostenibili e attenzione all'ambiente.
             </p>
           </div>
         </div>
         <div class="timeline-event">
           <div class="timeline-dot"></div>
           <div class="timeline-content">
-            <span class="timeline-year">2025</span>
-            <p>Nuova generazione in azienda, digitalizzazione e apertura ai siti online e social.</p>
+            <span class="timeline-year" class="reveal">2025</span>
+            <p class="reveal">Nuova generazione in azienda, digitalizzazione e apertura ai siti online e social.</p>
           </div>
         </div>
       </div>
       <div class="about-team">
         <div class="about-team-member">
-          <img src="https://ui-avatars.com/api/?name=PG&background=e0f2f1&color=065f46" alt="Pasquale Gioielli" />
-          <div class="name">Pasquale Gioielli</div>
-          <div class="role">Fondatore</div>
-          <div class="desc">Esperto coltivatore, anima storica dell’azienda e punto di riferimento per la qualità.</div>
+          <img src="https://ui-avatars.com/api/?name=PG&background=e0f2f1&color=065f46" alt="Pasquale Gioielli" class="reveal" />
+          <div class="name" class="reveal" >Pasquale Gioielli</div>
+          <div class="role" class="reveal" >Fondatore</div>
+          <div class="desc" class="reveal" >Esperto coltivatore, anima storica dell’azienda e punto di riferimento per la qualità.</div>
         </div>
         <div class="about-team-member">
-          <img src="https://ui-avatars.com/api/?name=F%26V+G&background=e0f2f1&color=065f46" alt="Francesco Gioielli" />
-          <div class="name">Francesco Gioielli</div>
-          <div class="role">Responsabile produzione</div>
-          <div class="desc">Gestisce le coltivazioni e coordina l’innovazione nei processi produttivi.</div>
+          <img src="https://ui-avatars.com/api/?name=F%26V+G&background=e0f2f1&color=065f46" alt="Francesco Gioielli" class="reveal" />
+          <div class="name" class="reveal" >Francesco Gioielli</div>
+          <div class="role" class="reveal" >Responsabile produzione</div>
+          <div class="desc" class="reveal" >Gestisce le coltivazioni e coordina l’innovazione nei processi produttivi.</div>
         </div>
-        <div class="about-team-member">
-          <img src="https://ui-avatars.com/api/?name=VG&background=e0f2f1&color=065f46" alt="Vincenzo Gioielli" />
-          <div class="name">Vincenzo Gioielli</div>
-          <div class="role">Comunicazione & Digital</div>
-          <div class="desc">Cura la presenza online e i rapporti con i clienti e partner.</div>
+        <div class="about-team-member" class="reveal" >
+          <img src="https://ui-avatars.com/api/?name=VG&background=e0f2f1&color=065f46" alt="Vincenzo Gioielli" class="reveal" />
+          <div class="name" class="reveal" >Vincenzo Gioielli</div>
+          <div class="role" class="reveal" >Comunicazione & Digital</div>
+          <div class="desc" class="reveal" >Cura la presenza online e i rapporti con i clienti e partner.</div>
         </div>
-        <div class="about-team-member">
-          <img src="https://ui-avatars.com/api/?name=AG&background=e0f2f1&color=065f46" alt="Alessandro Gioielli" />
-          <div class="name">Alessandro Gioielli</div>
-          <div class="role">Responsabile digitale</div>
-          <div class="desc">Gestisce il sito web, i profili social e coordina la comunicazione online dell’azienda.
-          </div>
+        <div class="about-team-member" class="reveal" >
+          <img src="https://ui-avatars.com/api/?name=AG&background=e0f2f1&color=065f46" alt="Alessandro Gioielli" class="reveal" />
+          <div class="name" class="reveal" >Alessandro Gioielli</div>
+          <div class="role" class="reveal" >Responsabile digitale</div>
+          <div class="desc" class="reveal" >Gestisce il sito web, i profili social e coordina la comunicazione online dell’azienda.</div>
         </div>
       </div>
-      <p>
+      <p class="reveal">
         Con anni di esperienza nel settore, ci impegniamo a soddisfare le esigenze dei nostri clienti,
         offrendo una vasta gamma di piante uniche e servizi personalizzati.
       </p>
@@ -369,9 +368,9 @@
     <div id="contact" class="tab-content">
       <div class="contact-info contact-flex">
         <div class="contact-details">
-          <h2>Contatti</h2>
+          <h2 class="reveal">Contatti</h2>
 
-          <p style="display:flex;gap:0.7em;flex-wrap:wrap;align-items:center;">
+          <p style="display:flex;gap:0.7em;flex-wrap:wrap;align-items:center;"class="reveal">
             <strong>
               <svg style="vertical-align:middle;margin-right:0.3em;" width="1.1em" height="1.1em" fill="none"
                 stroke="#04996c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
@@ -388,7 +387,7 @@
             </span>
           </p>
 
-          <p>
+          <p class="reveal">
             <strong>
               <svg style="vertical-align:middle;margin-right:0.3em;" width="1.1em" height="1.1em" fill="none"
                 stroke="#04996c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
@@ -401,7 +400,7 @@
             <a href="mailto:cactus.gioielli@gmail.com" style="margin-left:0.3em;">cactus.gioielli@gmail.com</a>
           </p>
 
-          <p>
+          <p class="reveal">
             <strong>
               <svg style="vertical-align:middle;margin-right:0.3em;" width="1.1em" height="1.1em" fill="none"
                 stroke="#04996c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
@@ -417,7 +416,7 @@
           </p>
 
           <!-- SEZIONE SOCIAL -->
-          <p style="display:flex;align-items:center;flex-wrap:wrap;gap:0.7em;margin-top:1rem;">
+          <p style="display:flex;align-items:center;flex-wrap:wrap;gap:0.7em;margin-top:1rem;" class="reveal">
             <svg style="vertical-align:middle;" width="1.1em" height="1.1em" fill="none" stroke="#04996c"
               stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
               <circle cx="12" cy="12" r="10" />
@@ -455,7 +454,7 @@
         </div>
 
         <div class="contact-hours">
-          <strong style="display:inline-flex;align-items:center;">
+          <strong style="display:inline-flex;align-items:center;" class="reveal">
             <svg style="vertical-align:middle;margin-right:0.3em;" width="1.1em" height="1.1em" fill="none"
               stroke="#04996c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
               <circle cx="12" cy="12" r="10" />
@@ -465,22 +464,22 @@
           </strong>
           <table style="width:100%;margin-top:0.5rem;border-collapse:collapse;font-size:1rem;">
             <tr>
-              <th style="text-align:left;padding:0.3rem 0.5rem;border-bottom:1px solid #e0f2f1;white-space:nowrap;">
+              <th style="text-align:left;padding:0.3rem 0.5rem;border-bottom:1px solid #e0f2f1;white-space:nowrap;" class="reveal">
                 <strong>Giorno</strong></th>
-              <th style="text-align:left;padding:0.3rem 0.5rem;border-bottom:1px solid #e0f2f1;white-space:nowrap;">
+              <th style="text-align:left;padding:0.3rem 0.5rem;border-bottom:1px solid #e0f2f1;white-space:nowrap;" class="reveal">
                 <strong>Orario</strong></th>
             </tr>
             <tr>
-              <td style="padding:0.3rem 0.5rem;white-space:nowrap;"><strong>Lunedì - Venerdì:</strong></td>
-              <td style="padding:0.3rem 0.5rem;white-space:nowrap;">08:00 – 13:00 | 14:00 – 17:00</td>
+              <td style="padding:0.3rem 0.5rem;white-space:nowrap;"class="reveal"><strong>Lunedì - Venerdì:</strong></td>
+              <td style="padding:0.3rem 0.5rem;white-space:nowrap;"class="reveal">08:00 – 13:00 | 14:00 – 17:00</td>
             </tr>
             <tr>
-              <td style="padding:0.3rem 0.5rem;white-space:nowrap;"><strong>Sabato:</strong></td>
-              <td style="padding:0.3rem 0.5rem;white-space:nowrap;">08:00 – 13:00</td>
+              <td style="padding:0.3rem 0.5rem;white-space:nowrap;"class="reveal"><strong>Sabato:</strong></td>
+              <td style="padding:0.3rem 0.5rem;white-space:nowrap;"class="reveal">08:00 – 13:00</td>
             </tr>
             <tr>
-              <td style="padding:0.3rem 0.5rem;white-space:nowrap;"><strong>Domenica:</strong></td>
-              <td style="padding:0.3rem 0.5rem;white-space:nowrap;"><strong>Chiuso</strong></td>
+              <td style="padding:0.3rem 0.5rem;white-space:nowrap;"class="reveal"><strong>Domenica:</strong></td>
+              <td style="padding:0.3rem 0.5rem;white-space:nowrap;"class="reveal"><strong>Chiuso</strong></td>
             </tr>
           </table>
         </div>
@@ -493,7 +492,7 @@
     <!-- INIZIO SEZIONE INDIRIZZO -->
     <div id="location" class="tab-content">
       <div class="contact-info">
-        <h2>Dove trovarci</h2>
+        <h2 class="reveal">Dove trovarci</h2>
         <p>
           <svg style="vertical-align:middle;margin-right:0.3em;" width="1.1em" height="1.1em" fill="none"
             stroke="#04996c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
