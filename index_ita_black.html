@@ -30,6 +30,10 @@
     <!-- FINE SEZIONE HEADER -->
 
     <!-- INIZIO SEZIONE TABS -->
+     <div class="tabs-wrapper">
+      <!-- Bottone hamburger (visibile solo su mobile) -->
+      <button class="hamburger">&#9776;</button>
+    <!-- TABS -->
     <div class="tabs">
       <button class="tab-button" id="home-btn" onclick="showTab('home')">
         <img src="./IMMAGINI/ICONA/ICONA_home.png" alt="home" style="width:16px; height:16px; vertical-align:middle;">
@@ -50,6 +54,7 @@
         <img src="./IMMAGINI/ICONA/ICONA_indirizzo.png" alt="indirizzo"
           style="width:16px; height:18px; vertical-align:middle;">
         Indirizzo</button>
+    </div>
     </div>
     <!-- FINE SEZIONE TABS -->
 
@@ -311,6 +316,7 @@
 
     <!-- INIZIO SEZIONE GALLERIA IMMAGINI -->
     <div id="gallery" class="tab-content">
+      <h2 style="color:#04996c" class="reveal" align="center"><strong>Galleria Foto</strong></h2><br>
       <div class="gallery-categories">
         <button class="gallery-category-btn active" onclick="showGalleryCategory('grasse', this)">
           <img src="./IMMAGINI/ICONA/ICONA_cactus.png" alt="home"
@@ -783,6 +789,25 @@
   </div>
   <!-- FINE SEZIONE BANNER COOKIE -->
   <!-- AGGIUNTA SCRIPT.JS -->
+   <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const hamburger = document.querySelector('.hamburger');
+      const tabs = document.querySelector('.tabs');
+      const tabButtons = document.querySelectorAll('.tabs .tab-button');
+
+      // Toggle menu hamburger
+      hamburger.addEventListener('click', () => {
+        tabs.classList.toggle('active');
+      });
+
+      // Chiudi menu quando clicchi su una tab
+      tabButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          tabs.classList.remove('active');
+        });
+      });
+    });
+  </script>
   <script src="./script.js"></script>
 </body>
 
