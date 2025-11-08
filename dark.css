@@ -92,7 +92,7 @@
 
  .tab-button.active,
  .tab-button:hover {
-     background: #065f46;
+     background: #065f45;
      color: #3f3f3f;
  }
 
@@ -146,7 +146,7 @@
   .tabs {
     display: none; /* tabs nascoste su mobile */
     flex-direction: column;
-    background: #065f46;
+    background: #3f3f3f;
     border-radius: 0.75rem;
     box-shadow: 0 2px 8px rgba(6, 95, 70, 0.06);
     padding: 0.5rem;
