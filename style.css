@@ -51,7 +51,7 @@
         object-fit: contain;
         border-radius: 1.5em;
         box-shadow: 0 8px 32px rgba(6, 95, 70, 0.13);
-        background: #fff;
+        background: #ffffff;
     }
 
     /* DESCRIZIONE */
@@ -117,6 +117,55 @@
         }
     }
 
+/* Stile di base delle tabs e hamburger */
+.tabs-wrapper {
+  position: relative;
+  text-align: center;
+}
+
+.hamburger {
+  display: none; /* nascosto su desktop */
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #065f46;
+  margin: 0 auto;
+}
+
+/* Tabs desktop */
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* Media query mobile */
+@media (max-width: 768px) {
+  .tabs {
+    display: none; /* tabs nascoste su mobile */
+    flex-direction: column;
+    background: #ffffff;
+    border-radius: 0.75rem;
+    box-shadow: 0 2px 8px rgba(6, 95, 70, 0.06);
+    padding: 0.5rem;
+    position: absolute;
+    top: 50px; /* sotto hamburger */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    z-index: 100;
+  }
+
+  .tabs.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block; /* mostra hamburger su mobile */
+  }
+}
+
     .gallery-categories {
         display: flex;
         gap: 1rem;
@@ -170,7 +219,7 @@
     }
 
     .contact-info {
-        background: linear-gradient(120deg, #f0fdf4 80%, #e0f2f1 100%);
+        background: linear-gradient(120deg, #fff 80%, #fff 100%);
         border: 1.5px solid #e0f2f1;
         box-shadow: 0 2px 16px rgba(6, 95, 70, 0.07);
         border-radius: 1.2rem;
@@ -425,36 +474,38 @@
     }
 
     .footer-language-dropdown {
-    margin-top: 1rem;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    gap: 2rem; /* distanza tra i due blocchi */
-    flex-wrap: wrap; /* così da adattarsi su schermi piccoli */
+        margin-top: 1rem;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        /* distanza tra i due blocchi */
+        flex-wrap: wrap;
+        /* così da adattarsi su schermi piccoli */
     }
 
     .dropdown-group {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .footer-language-dropdown .language-label {
-    display: block;
-    margin-bottom: 5px;
-    color: #f0f0f0 !important;
-    font-size: 0.9rem;
-    font-weight: bold;
+        display: block;
+        margin-bottom: 5px;
+        color: #f0f0f0 !important;
+        font-size: 0.9rem;
+        font-weight: bold;
     }
 
     .footer-language-dropdown select {
-    padding: 5px 10px;
-    border-radius: 5px;
-    border: none;
-    font-size: 0.85rem;
-    cursor: pointer;
-    background: #065f46;
-    color: #f0f0f0;
+        padding: 5px 10px;
+        border-radius: 5px;
+        border: none;
+        font-size: 0.85rem;
+        cursor: pointer;
+        background: #065f46;
+        color: #f0f0f0;
     }
 
 
@@ -1018,12 +1069,13 @@
         opacity: 1;
         transform: translateY(0);
     }
+
     /* 
            _.-=-._       
         o~`  '  `~o     
         /    .-=-.  \    
        |    /  _  \  |   
-       |   |  ( )  | |   By. Alessandro Gioielli :))
+       |   |  ( )  | |   By. Alessandro Gioielli :)
         \   \     /  /    
         `~-'`---'`-~'     
             |  |  |        
@@ -1031,4 +1083,3 @@
         __|  |  |__      
         (___/   \___)
     */
-
