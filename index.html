@@ -30,26 +30,37 @@
     <!-- FINE SEZIONE HEADER -->
 
     <!-- INIZIO SEZIONE TABS -->
-    <div class="tabs">
-      <button class="tab-button" id="home-btn" onclick="showTab('home')">
-        <img src="./IMMAGINI/ICONA/ICONA_home.png" alt="home" style="width:16px; height:16px; vertical-align:middle;">
-        Home</button>
-      <button class="tab-button" id="about-btn" onclick="showTab('about')">
-        <img src="./IMMAGINI/ICONA/ICONA_utente.png" alt="chisiamo"
-          style="width:16px; height:16px; vertical-align:middle;">
-        Chi siamo</button>
-      <button class="tab-button" id="gallery-btn" onclick="showTab('gallery')">
-        <img src="./IMMAGINI/ICONA/ICONA_cactus.png" alt="piante"
-          style="width:16px; height:18px; vertical-align:middle;">
-        Galleria</button>
-      <button class="tab-button" id="contact-btn" onclick="showTab('contact')">
-        <img src="./IMMAGINI/ICONA/ICONA_telefono.png" alt="contatti"
-          style="width:16px; height:18px; vertical-align:middle;">
-        Contatti</button>
-      <button class="tab-button" id="location-btn" onclick="showTab('location')">
-        <img src="./IMMAGINI/ICONA/ICONA_indirizzo.png" alt="indirizzo"
-          style="width:16px; height:18px; vertical-align:middle;">
-        Indirizzo</button>
+    <div class="tabs-wrapper">
+      <!-- Bottone hamburger (visibile solo su mobile) -->
+      <button class="hamburger">&#9776;</button>
+
+      <!-- Tabs -->
+      <div class="tabs">
+        <button class="tab-button" id="home-btn" onclick="showTab('home')">
+          <img src="./IMMAGINI/ICONA/ICONA_home.png" alt="home" style="width:16px; height:16px; vertical-align:middle;">
+          Home
+        </button>
+        <button class="tab-button" id="about-btn" onclick="showTab('about')">
+          <img src="./IMMAGINI/ICONA/ICONA_utente.png" alt="chisiamo"
+            style="width:16px; height:16px; vertical-align:middle;">
+          Chi siamo
+        </button>
+        <button class="tab-button" id="gallery-btn" onclick="showTab('gallery')">
+          <img src="./IMMAGINI/ICONA/ICONA_cactus.png" alt="piante"
+            style="width:16px; height:18px; vertical-align:middle;">
+          Galleria
+        </button>
+        <button class="tab-button" id="contact-btn" onclick="showTab('contact')">
+          <img src="./IMMAGINI/ICONA/ICONA_telefono.png" alt="contatti"
+            style="width:16px; height:18px; vertical-align:middle;">
+          Contatti
+        </button>
+        <button class="tab-button" id="location-btn" onclick="showTab('location')">
+          <img src="./IMMAGINI/ICONA/ICONA_indirizzo.png" alt="indirizzo"
+            style="width:16px; height:18px; vertical-align:middle;">
+          Indirizzo
+        </button>
+      </div>
     </div>
     <!-- FINE SEZIONE TABS -->
 
@@ -308,6 +319,7 @@
 
     <!-- INIZIO SEZIONE GALLERIA IMMAGINI -->
     <div id="gallery" class="tab-content">
+      <h2 class="reveal" align="center"><strong>Galleria Foto</strong></h2><br>
       <div class="gallery-categories">
         <button class="gallery-category-btn active" onclick="showGalleryCategory('grasse', this)">
           <img src="./IMMAGINI/ICONA/ICONA_cactus.png" alt="home"
@@ -322,50 +334,90 @@
             style="width:16px; height:16px; vertical-align:middle;"> Composizioni</button>
       </div>
       <div class="gallery gallery-grasse"> <!-- INIZIO GALLERIA CACTACEE -->
-        <img src="./IMMAGINI/CACTACEE/CACTACEA_1.jpeg" class="reveal" alt="Euphorbia Trigona" onclick="openModal(this.src)" />
-        <img src="./IMMAGINI/CACTACEE/CACTACEA_3.jpg" class="reveal" alt="Piante Cactacee 3" onclick="openModal(this.src)" />
-        <img src="./IMMAGINI/CACTACEE/CACTACEA_4.jpg" class="reveal" alt="Piante Cactacee 4" onclick="openModal(this.src)" />
-        <img src="./IMMAGINI/CACTACEE/CACTACEA_5.jpg" class="reveal" alt="Piante Cactacee 5" onclick="openModal(this.src)" />
-        <img src="./IMMAGINI/CACTACEE/CACTACEA_6.jpg" class="reveal" alt="Echino Cactus Grusonii" onclick="openModal(this.src)" />
-        <img src="./IMMAGINI/CACTACEE/CACTACEA_7.jpg" class="reveal" alt="Piante Cactacee 7" onclick="openModal(this.src)" />
-        <img src="./IMMAGINI/CACTACEE/CACTACEA_8.jpg" class="reveal" alt="Piante Cactacee 8" onclick="openModal(this.src)" />
-        <img src="./IMMAGINI/CACTACEE/CACTACEA_9.jpg" class="reveal" alt="Piante Cactacee 9" onclick="openModal(this.src)" />
-        <img src="./IMMAGINI/CACTACEE/CACTACEA_10.jpg" class="reveal" alt="Piante Cactacee 10" onclick="openModal(this.src)" />
-        <img src="./IMMAGINI/CACTACEE/CACTACEA_11.jpg" class="reveal" alt="Piante Cactacee 11" onclick="openModal(this.src)" />
-        <img src="./IMMAGINI/CACTACEE/CACTACEA_12.jpg" class="reveal" alt="Piante Cactacee 12" onclick="openModal(this.src)" />
-        <img src="./IMMAGINI/CACTACEE/CACTACEA_13.jpg" class="reveal" alt="Piante Cactacee 13" onclick="openModal(this.src)" />
-        <img src="./IMMAGINI/CACTACEE/CACTACEA_14.jpg" class="reveal" alt="Piante Cactacee 14" onclick="openModal(this.src)" />
-        <img src="./IMMAGINI/CACTACEE/CACTACEA_15.jpg" class="reveal" alt="Piante Cactacee 15" onclick="openModal(this.src)" />
-        <img src="./IMMAGINI/CACTACEE/CACTACEA_16.jpg" class="reveal" alt="Piante Cactacee 16" onclick="openModal(this.src)" />
-        <img src="./IMMAGINI/CACTACEE/CACTACEA_17.jpg" class="reveal" alt="Piante Cactacee 17" onclick="openModal(this.src)" />
-        <img src="./IMMAGINI/CACTACEE/CACTACEA_18.jpg" class="reveal" alt="Piante Cactacee 18" onclick="openModal(this.src)" />
-        <img src="./IMMAGINI/CACTACEE/CACTACEA_19.jpg" class="reveal" alt="Piante Cactacee 19" onclick="openModal(this.src)" />
-        <img src="./IMMAGINI/CACTACEE/CACTACEA_20.jpg" class="reveal" alt="Piante Cactacee 20" onclick="openModal(this.src)" />
-        <img src="./IMMAGINI/CACTACEE/CACTACEA_21.jpg" class="reveal" alt="Piante Cactacee 21" onclick="openModal(this.src)" />
-        <img src="./IMMAGINI/CACTACEE/CACTACEA_22.jpg" class="reveal" alt="Piante Cactacee 22" onclick="openModal(this.src)" />
-        <img src="./IMMAGINI/CACTACEE/CACTACEA_23.jpg" class="reveal" alt="Piante Cactacee 23" onclick="openModal(this.src)" />
-        <img src="./IMMAGINI/CACTACEE/CACTACEA_24.jpg" class="reveal" alt="Piante Cactacee 24" onclick="openModal(this.src)" />
-        <img src="./IMMAGINI/CACTACEE/CACTACEA_25.jpg" class="reveal" alt="Piante Cactacee 25" onclick="openModal(this.src)" />
+        <img src="./IMMAGINI/CACTACEE/CACTACEA_1.jpeg" class="reveal" alt="Euphorbia Trigona"
+          onclick="openModal(this.src)" />
+        <img src="./IMMAGINI/CACTACEE/CACTACEA_3.jpg" class="reveal" alt="Piante Cactacee 3"
+          onclick="openModal(this.src)" />
+        <img src="./IMMAGINI/CACTACEE/CACTACEA_4.jpg" class="reveal" alt="Piante Cactacee 4"
+          onclick="openModal(this.src)" />
+        <img src="./IMMAGINI/CACTACEE/CACTACEA_5.jpg" class="reveal" alt="Piante Cactacee 5"
+          onclick="openModal(this.src)" />
+        <img src="./IMMAGINI/CACTACEE/CACTACEA_6.jpg" class="reveal" alt="Echino Cactus Grusonii"
+          onclick="openModal(this.src)" />
+        <img src="./IMMAGINI/CACTACEE/CACTACEA_7.jpg" class="reveal" alt="Piante Cactacee 7"
+          onclick="openModal(this.src)" />
+        <img src="./IMMAGINI/CACTACEE/CACTACEA_8.jpg" class="reveal" alt="Piante Cactacee 8"
+          onclick="openModal(this.src)" />
+        <img src="./IMMAGINI/CACTACEE/CACTACEA_9.jpg" class="reveal" alt="Piante Cactacee 9"
+          onclick="openModal(this.src)" />
+        <img src="./IMMAGINI/CACTACEE/CACTACEA_10.jpg" class="reveal" alt="Piante Cactacee 10"
+          onclick="openModal(this.src)" />
+        <img src="./IMMAGINI/CACTACEE/CACTACEA_11.jpg" class="reveal" alt="Piante Cactacee 11"
+          onclick="openModal(this.src)" />
+        <img src="./IMMAGINI/CACTACEE/CACTACEA_12.jpg" class="reveal" alt="Piante Cactacee 12"
+          onclick="openModal(this.src)" />
+        <img src="./IMMAGINI/CACTACEE/CACTACEA_13.jpg" class="reveal" alt="Piante Cactacee 13"
+          onclick="openModal(this.src)" />
+        <img src="./IMMAGINI/CACTACEE/CACTACEA_14.jpg" class="reveal" alt="Piante Cactacee 14"
+          onclick="openModal(this.src)" />
+        <img src="./IMMAGINI/CACTACEE/CACTACEA_15.jpg" class="reveal" alt="Piante Cactacee 15"
+          onclick="openModal(this.src)" />
+        <img src="./IMMAGINI/CACTACEE/CACTACEA_16.jpg" class="reveal" alt="Piante Cactacee 16"
+          onclick="openModal(this.src)" />
+        <img src="./IMMAGINI/CACTACEE/CACTACEA_17.jpg" class="reveal" alt="Piante Cactacee 17"
+          onclick="openModal(this.src)" />
+        <img src="./IMMAGINI/CACTACEE/CACTACEA_18.jpg" class="reveal" alt="Piante Cactacee 18"
+          onclick="openModal(this.src)" />
+        <img src="./IMMAGINI/CACTACEE/CACTACEA_19.jpg" class="reveal" alt="Piante Cactacee 19"
+          onclick="openModal(this.src)" />
+        <img src="./IMMAGINI/CACTACEE/CACTACEA_20.jpg" class="reveal" alt="Piante Cactacee 20"
+          onclick="openModal(this.src)" />
+        <img src="./IMMAGINI/CACTACEE/CACTACEA_21.jpg" class="reveal" alt="Piante Cactacee 21"
+          onclick="openModal(this.src)" />
+        <img src="./IMMAGINI/CACTACEE/CACTACEA_22.jpg" class="reveal" alt="Piante Cactacee 22"
+          onclick="openModal(this.src)" />
+        <img src="./IMMAGINI/CACTACEE/CACTACEA_23.jpg" class="reveal" alt="Piante Cactacee 23"
+          onclick="openModal(this.src)" />
+        <img src="./IMMAGINI/CACTACEE/CACTACEA_24.jpg" class="reveal" alt="Piante Cactacee 24"
+          onclick="openModal(this.src)" />
+        <img src="./IMMAGINI/CACTACEE/CACTACEA_25.jpg" class="reveal" alt="Piante Cactacee 25"
+          onclick="openModal(this.src)" />
       </div>
       <div class="gallery gallery-succulente" style="display:none;"> <!-- INIZIO GALLERIA SUCCULENTE -->
-        <img src="./IMMAGINI/SUCCULENTE/SUCCULENTE_1.jpg" class="reveal" alt="Piante Succulente 1" onclick="openModal(this.src)" />
-        <img src="./IMMAGINI/SUCCULENTE/SUCCULENTE_2.png" class="reveal" alt="Piante Succulente 2" onclick="openModal(this.src)" />
-        <img src="./IMMAGINI/SUCCULENTE/SUCCULENTE_3.jpg" class="reveal" alt="Piante Succulente 3" onclick="openModal(this.src)" />
-        <img src="./IMMAGINI/SUCCULENTE/SUCCULENTE_4.jpg" class="reveal" alt="Piante Succulente 4" onclick="openModal(this.src)" />
-        <img src="./IMMAGINI/SUCCULENTE/SUCCULENTE_5.jpg" class="reveal" alt="Piante Succulente 5" onclick="openModal(this.src)" />
-        <img src="./IMMAGINI/SUCCULENTE/SUCCULENTE_6.jpg" class="reveal" alt="Piante Succulente 6" onclick="openModal(this.src)" />
-        <img src="./IMMAGINI/SUCCULENTE/SUCCULENTE_7.jpg" class="reveal" alt="Piante Succulente 7" onclick="openModal(this.src)" />
-        <img src="./IMMAGINI/SUCCULENTE/SUCCULENTE_8.jpg" class="reveal" alt="Piante Succulente 8" onclick="openModal(this.src)" />
-        <img src="./IMMAGINI/SUCCULENTE/SUCCULENTE_9.jpg" class="reveal" alt="Piante Succulente 9" onclick="openModal(this.src)" />
+        <img src="./IMMAGINI/SUCCULENTE/SUCCULENTE_1.jpg" class="reveal" alt="Piante Succulente 1"
+          onclick="openModal(this.src)" />
+        <img src="./IMMAGINI/SUCCULENTE/SUCCULENTE_2.png" class="reveal" alt="Piante Succulente 2"
+          onclick="openModal(this.src)" />
+        <img src="./IMMAGINI/SUCCULENTE/SUCCULENTE_3.jpg" class="reveal" alt="Piante Succulente 3"
+          onclick="openModal(this.src)" />
+        <img src="./IMMAGINI/SUCCULENTE/SUCCULENTE_4.jpg" class="reveal" alt="Piante Succulente 4"
+          onclick="openModal(this.src)" />
+        <img src="./IMMAGINI/SUCCULENTE/SUCCULENTE_5.jpg" class="reveal" alt="Piante Succulente 5"
+          onclick="openModal(this.src)" />
+        <img src="./IMMAGINI/SUCCULENTE/SUCCULENTE_6.jpg" class="reveal" alt="Piante Succulente 6"
+          onclick="openModal(this.src)" />
+        <img src="./IMMAGINI/SUCCULENTE/SUCCULENTE_7.jpg" class="reveal" alt="Piante Succulente 7"
+          onclick="openModal(this.src)" />
+        <img src="./IMMAGINI/SUCCULENTE/SUCCULENTE_8.jpg" class="reveal" alt="Piante Succulente 8"
+          onclick="openModal(this.src)" />
+        <img src="./IMMAGINI/SUCCULENTE/SUCCULENTE_9.jpg" class="reveal" alt="Piante Succulente 9"
+          onclick="openModal(this.src)" />
       </div>
       <div class="gallery gallery-composizione" style="display:none;"> <!-- INIZIO GALLERIA COMPOSIZIONI -->
-        <img src="./IMMAGINI/COMPOSIZIONI/COMPOSIZIONE_1.jpeg" class="reveal" alt="Composizione 1" onclick="openModal(this.src)" />
-        <img src="./IMMAGINI/COMPOSIZIONI/COMPOSIZIONE_2.png" class="reveal" alt="Composizione 2" onclick="openModal(this.src)" />
-        <img src="./IMMAGINI/COMPOSIZIONI/COMPOSIZIONE_3.jpeg" class="reveal" alt="Composizione 3" onclick="openModal(this.src)" />
-        <img src="./IMMAGINI/COMPOSIZIONI/COMPOSIZIONE_4.jpg" class="reveal" alt="Composizione 4" onclick="openModal(this.src)" />
-        <img src="./IMMAGINI/COMPOSIZIONI/COMPOSIZIONE_5.png" class="reveal" alt="Composizione 5" onclick="openModal(this.src)" />
-        <img src="./IMMAGINI/COMPOSIZIONI/COMPOSIZIONE_6.jpg" class="reveal" alt="Composizione 6" onclick="openModal(this.src)" />
-        <img src="./IMMAGINI/COMPOSIZIONI/COMPOSIZIONE_7.jpg" class="reveal" alt="Composizione 7" onclick="openModal(this.src)" />
+        <img src="./IMMAGINI/COMPOSIZIONI/COMPOSIZIONE_1.jpeg" class="reveal" alt="Composizione 1"
+          onclick="openModal(this.src)" />
+        <img src="./IMMAGINI/COMPOSIZIONI/COMPOSIZIONE_2.png" class="reveal" alt="Composizione 2"
+          onclick="openModal(this.src)" />
+        <img src="./IMMAGINI/COMPOSIZIONI/COMPOSIZIONE_3.jpeg" class="reveal" alt="Composizione 3"
+          onclick="openModal(this.src)" />
+        <img src="./IMMAGINI/COMPOSIZIONI/COMPOSIZIONE_4.jpg" class="reveal" alt="Composizione 4"
+          onclick="openModal(this.src)" />
+        <img src="./IMMAGINI/COMPOSIZIONI/COMPOSIZIONE_5.png" class="reveal" alt="Composizione 5"
+          onclick="openModal(this.src)" />
+        <img src="./IMMAGINI/COMPOSIZIONI/COMPOSIZIONE_6.jpg" class="reveal" alt="Composizione 6"
+          onclick="openModal(this.src)" />
+        <img src="./IMMAGINI/COMPOSIZIONI/COMPOSIZIONE_7.jpg" class="reveal" alt="Composizione 7"
+          onclick="openModal(this.src)" />
       </div>
     </div>
     <!-- FINE SEZIONE GALLERIA IMMAGINI -->
@@ -729,10 +781,11 @@
       P.IVA: <strong>09610581218</strong> - Via Madonna del Pantano 16, 80014 Giugliano in Campania (NA)<br>
     </div>
     <div class="footer-bottom">
-     <a href="politica_sui_cookie.html" style="color:#aaa; text-decoration:underline;">| Politica sui Cookie | </a>
-     <a href="https://www.tiktok.com/@cactusgioielli" style="color:#aaa; text-decoration:underline;"> Tiktok | </a>
-     <a href="https://www.facebook.com/share/1PHiXwUpu2/?mibextid=wwXIfr" style="color:#aaa; text-decoration:underline;"> Facebook | </a>
-     <a href="https://www.instagram.com/cactusgioiell" style="color:#aaa; text-decoration:underline;"> Instagram | </a>
+      <a href="politica_sui_cookie.html" style="color:#aaa; text-decoration:underline;">| Politica sui Cookie | </a>
+      <a href="https://www.tiktok.com/@cactusgioielli" style="color:#aaa; text-decoration:underline;"> Tiktok | </a>
+      <a href="https://www.facebook.com/share/1PHiXwUpu2/?mibextid=wwXIfr"
+        style="color:#aaa; text-decoration:underline;"> Facebook | </a>
+      <a href="https://www.instagram.com/cactusgioiell" style="color:#aaa; text-decoration:underline;"> Instagram | </a>
     </div>
   </footer>
   <!-- FINE SEZIONE FOOTER -->
@@ -769,6 +822,25 @@
   </div>
   <!-- FINE SEZIONE BANNER COOKIE -->
   <!-- AGGIUNTA SCRIPT.JS -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const hamburger = document.querySelector('.hamburger');
+      const tabs = document.querySelector('.tabs');
+      const tabButtons = document.querySelectorAll('.tabs .tab-button');
+
+      // Toggle menu hamburger
+      hamburger.addEventListener('click', () => {
+        tabs.classList.toggle('active');
+      });
+
+      // Chiudi menu quando clicchi su una tab
+      tabButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          tabs.classList.remove('active');
+        });
+      });
+    });
+  </script>
   <script src="./script.js"></script>
 </body>
 
