@@ -52,6 +52,7 @@
      border-radius: 1.5em;
      box-shadow: 0 8px 32px rgba(6, 95, 70, 0.13);
      background: #3f3f3f;
+     filter: brightness(1.08) saturate(1.15);
  }
 
  /* DESCRIZIONE */
@@ -116,6 +117,56 @@
          transform: translateY(0);
      }
  }
+
+/* Stile di base delle tabs e hamburger */
+.tabs-wrapper {
+  position: relative;
+  text-align: center;
+}
+
+.hamburger {
+  display: none; /* nascosto su desktop */
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #065f46;
+  margin: 0 auto;
+}
+
+/* Tabs desktop */
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* Media query mobile */
+@media (max-width: 768px) {
+  .tabs {
+    display: none; /* tabs nascoste su mobile */
+    flex-direction: column;
+    background: #065f46;
+    border-radius: 0.75rem;
+    box-shadow: 0 2px 8px rgba(6, 95, 70, 0.06);
+    padding: 0.5rem;
+    position: absolute;
+    top: 50px; /* sotto hamburger */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    z-index: 100;
+  }
+
+  .tabs.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block; /* mostra hamburger su mobile */
+  }
+}
+
 
  .gallery-categories {
      display: flex;
@@ -1031,4 +1082,3 @@
        __|  |  |__      
       (___/   \___)
  */
-
