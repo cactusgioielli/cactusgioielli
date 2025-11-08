@@ -52,7 +52,6 @@
      border-radius: 1.5em;
      box-shadow: 0 8px 32px rgba(6, 95, 70, 0.13);
      background: #3f3f3f;
-     filter: brightness(1.08) saturate(1.15);
  }
 
  /* DESCRIZIONE */
@@ -1032,3 +1031,4 @@
        __|  |  |__      
       (___/   \___)
  */
+
