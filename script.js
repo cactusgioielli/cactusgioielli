@@ -255,7 +255,7 @@ window.addEventListener('DOMContentLoaded', () => {
 // Mostra o nasconde il banner
 const banner = document.getElementById('cookie-banner');
 const acceptBtn = document.getElementById('accept-cookies');
- const closeBtn = document.getElementById('close-banner');
+const closeBtn = document.getElementById('close-banner');
 
 if (localStorage.getItem('cookiesAccepted')) {
     banner.style.display = 'none';
@@ -274,7 +274,7 @@ resetBtn.addEventListener('click', () => {
 });
 closeBtn.addEventListener('click', () => {
     banner.style.display = 'none';
-  });
+});
 // Funzione per scrollare a una posizione specifica (non in cima)
 function scrollToPosition(position) {
     window.scrollTo({
@@ -323,6 +323,31 @@ document.addEventListener("DOMContentLoaded", () => {
     }, { threshold: 0.2 });
 
     reveals.forEach(el => observer.observe(el));
+});
+src = "https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" >
+    // Inizializza EmailJS con il tuo "Public Key"
+    (function () {
+        emailjs.init({
+            publicKey: "INSERISCI_LA_TUA_PUBLIC_KEY"
+        });
+    })();
+document.getElementById('contact-form').addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    emailjs.sendForm('TUO_SERVICE_ID', 'TUO_TEMPLATE_ID', this)
+        .then(() => {
+            alert('✅ Messaggio inviato con successo!');
+        }, (error) => {
+            alert('❌ Errore durante l’invio: ' + JSON.stringify(error));
+        });
+});
+document.addEventListener("DOMContentLoaded", function() {
+    const hamburger = document.querySelector('.hamburger');
+    const tabs = document.querySelector('.tabs');
+
+    hamburger.addEventListener('click', () => {
+        tabs.classList.toggle('active'); // alterna la visibilità
+    });
 });
 /*
     _.-=-._       
