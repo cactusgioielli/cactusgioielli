@@ -341,6 +341,7 @@ document.getElementById('contact-form').addEventListener('submit', function (eve
             alert('❌ Errore durante l’invio: ' + JSON.stringify(error));
         });
 });
+// GESTIONE MENU HAMBURGER PER DISPOSITIVI MOBILI
 document.addEventListener("DOMContentLoaded", function () {
     const hamburger = document.querySelector('.hamburger');
     const tabs = document.querySelector('.tabs');
@@ -349,6 +350,33 @@ document.addEventListener("DOMContentLoaded", function () {
         tabs.classList.toggle('active'); // alterna la visibilità
     });
 });
+// FUNZIONE PER SCROLLARE IN MODO SMOOTH ALLA SEZIONE SUCCESSIVA
+ function smoothScrollToNext() {
+  const start = window.scrollY;
+  const target = start + window.innerHeight;
+  const duration = 1000; // durata animazione (ms)
+  const startTime = performance.now();
+
+  function easeInOutQuad(t) {
+    return t < 0.5
+      ? 2 * t * t
+      : -1 + (4 - 2 * t) * t;
+  }
+
+  function animateScroll(currentTime) {
+    const elapsed = currentTime - startTime;
+    const progress = Math.min(elapsed / duration, 1);
+    const ease = easeInOutQuad(progress);
+    const scrollY = start + (target - start) * ease;
+    window.scrollTo(0, scrollY);
+
+    if (elapsed < duration) {
+      requestAnimationFrame(animateScroll);
+    }
+  }
+
+  requestAnimationFrame(animateScroll);
+}
 /*
     _.-=-._       
   o~`  '  `~o     
