@@ -1265,7 +1265,7 @@
         transform: translateY(0);
     }
 
-body, html {
+    body, html {
     overflow-x: hidden;
 }
 
@@ -1282,4 +1282,3 @@ body, html {
         __|  |  |__      
         (___/   \___)
     */
-
