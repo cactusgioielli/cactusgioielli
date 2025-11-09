@@ -100,7 +100,7 @@
  /* LOGO sopra la scritta */
  /* LOGO */
  .hero-logo {
-     width: 280px;
+     width: 350px;
      /* più grande su desktop */
      max-width: 40vw;
      /* si adatta comunque se lo schermo è piccolo */
