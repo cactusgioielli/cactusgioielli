@@ -1265,6 +1265,10 @@
         transform: translateY(0);
     }
 
+body, html {
+    overflow-x: hidden;
+}
+
     /* 
            _.-=-._       
         o~`  '  `~o     
@@ -1278,3 +1282,4 @@
         __|  |  |__      
         (___/   \___)
     */
+
