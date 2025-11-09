@@ -32,6 +32,8 @@
     <!-- INIZIO SEZIONE TABS -->
     <div class="tabs-wrapper">
       <!-- Bottone hamburger (visibile solo su mobile) -->
+      <!-- Placeholder invisibile per osservare la posizione -->
+      <div class="hamburger-placeholder"></div>
       <button class="hamburger">&#9776;</button>
 
       <!-- Tabs -->
@@ -142,8 +144,8 @@
                     <path d="M5 22V17" />
                     <path d="M19 22V17" />
                     <path d="M7 19h10" />
-                    </svg>
-                    Galleria foto
+                  </svg>
+                  Galleria foto
                 </a>
               </div>
             </div>
@@ -826,19 +828,32 @@
     document.addEventListener("DOMContentLoaded", function () {
       const hamburger = document.querySelector('.hamburger');
       const tabs = document.querySelector('.tabs');
-      const tabButtons = document.querySelectorAll('.tabs .tab-button');
+      const placeholder = document.querySelector('.hamburger-placeholder');
 
-      // Toggle menu hamburger
+      // Toggle tabs
       hamburger.addEventListener('click', () => {
         tabs.classList.toggle('active');
       });
 
-      // Chiudi menu quando clicchi su una tab
-      tabButtons.forEach(button => {
-        button.addEventListener('click', () => {
-          tabs.classList.remove('active');
-        });
+      // Chiude menu dopo aver cliccato una tab
+      document.querySelectorAll('.tab-button').forEach(btn => {
+        btn.addEventListener('click', () => tabs.classList.remove('active'));
       });
+
+      // IntersectionObserver sul placeholder
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) {
+            // Placeholder fuori schermo → mostra mini-header
+            hamburger.classList.add('fixed');
+          } else {
+            // Placeholder visibile → nasconde mini-header
+            hamburger.classList.remove('fixed');
+          }
+        });
+      }, { threshold: 0 });
+
+      observer.observe(placeholder);
     });
   </script>
   <script src="./script.js"></script>
@@ -858,4 +873,3 @@
        __|  |  |__      
       (___/   \___)
  -->
-
