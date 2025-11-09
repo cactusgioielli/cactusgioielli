@@ -1273,10 +1273,9 @@
      transform: translateY(0);
  }
 
-body, html {
+ body, html {
     overflow-x: hidden;
 }
-
  /* 
         _.-=-._       
       o~`  '  `~o     
@@ -1290,4 +1289,3 @@ body, html {
        __|  |  |__      
       (___/   \___)
  */
-
