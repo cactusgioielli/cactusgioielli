@@ -118,81 +118,101 @@
      }
  }
 
-/* Stile di base delle tabs e hamburger */
+    /* Stile di base delle tabs e hamburger */
 .tabs-wrapper {
-  position: relative;
-  text-align: center;
+    position: relative;
+    text-align: center;
 }
 
 .hamburger {
-  display: none; /* nascosto su desktop */
-  font-size: 2rem;
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: #065f46;
-  margin: 0 auto;
+    display: none; /* nascosto su desktop */
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #065f46;
+    margin: 0 auto;
 }
 
 .hamburger-placeholder {
-  height: 1px;  /* piccolo spazio */
-  width: 100%;
+    height: 1px; /* piccolo spazio */
+    width: 100%;
 }
 
 /* Tabs visibili sempre quando active */
 .tabs {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
 }
 
 /* Media query mobile */
 @media (max-width: 768px) {
-  .tabs {
-    display: none;
-    flex-direction: column;
-    background: #3f3f3f;
-    border-radius: 0.75rem;
-    box-shadow: 0 2px 8px rgba(6, 95, 70, 0.06);
-    padding: 0.5rem;
-    position: absolute; /* cambia da fixed a absolute */
-    top: 100%;          /* subito sotto l'hamburger */
-    left: 50%;
-    transform: translateX(-50%);
-    width: 90%;
-    z-index: 9999;
-  }
+
+    .tabs {
+        display: none;
+        flex-direction: column;
+        background: #3f3f3f;
+        border-radius: 0.75rem;
+        box-shadow: 0 2px 8px rgba(6, 95, 70, 0.06);
+        padding: 0.5rem;
+        position: absolute; /* cambia da fixed a absolute */
+        top: 100%;          /* subito sotto l'hamburger */
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90%;
+        z-index: 9999;
+    }
 
     .tabs.active {
-    display: flex;
-  }
+        display: flex;
+    }
 
-  .hamburger {
-    display: block; /* mostra hamburger su mobile */
-  }
+    .hamburger {
+        display: block; /* mostra hamburger su mobile */
+    }
+
+    /* Mini-header: hamburger fisso + tabs sotto */
+    .hamburger.fixed + .tabs {
+        position: fixed;
+        top: 50px; /* sotto la barra fissa */
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+/* Desktop (min-width: 769px) */
+@media (min-width: 769px) {
+    .hamburger {
+        display: none; /* hamburger nascosto su desktop */
+    }
+    .tabs {
+        display: flex !important; /* sempre visibili */
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none;
+        flex-direction: row;
+        background: none;
+        box-shadow: none;
+        gap: 1rem;
+        padding: 0;
+    }
 }
 
 .hamburger.fixed {
-  position: fixed;
-  top: 0;
-  left: 0;              /* parte dal bordo sinistro */
-  width: 100vw;          /* tutta larghezza della finestra */
-  background: #3f3f3f;
-  padding: 0.5rem 1rem;
-  text-align: center;
-  border-bottom: 1px solid #065f46; /* linea sottile */
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  z-index: 9999;
-  border-radius: 0;       /* senza angoli arrotondati */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw; /* tutta larghezza della finestra */
+    background: #3f3f3f;
+    padding: 0.5rem 1rem;
+    text-align: center;
+    border-bottom: 1px solid #065f46; /* linea sottile */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    z-index: 9999;
+    border-radius: 0; /* senza angoli arrotondati */
 }
-
- /* Se hamburger è fisso (mini-header) */
-  .hamburger.fixed + .tabs {
-    position: fixed;    /* posizione fissa sotto mini-header */
-    top: 50px;          /* sotto la barra fissa */
-    left: 50%;
-    transform: translateX(-50%);
-  }
 
 
  .gallery-categories {
