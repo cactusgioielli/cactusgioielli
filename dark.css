@@ -253,6 +253,20 @@
      /* senza angoli arrotondati */
  }
 
+ .mini-logo {
+        display: none;
+        height: 30px;
+        position: absolute;
+        /* relativo all'hamburger */
+        top: 50%;
+        left: 10px;
+        transform: translateY(-50%);
+    }
+
+    .hamburger.fixed .mini-logo {
+        display: block;
+    }
+
 
  .gallery-categories {
      display: flex;
