@@ -1326,6 +1326,19 @@
      overflow-x: hidden;
  }
 
+ /* Aggiusta altezza tabs solo per desktop */
+ @media (min-width: 769px) {
+     .tabs-wrapper {
+         position: relative;
+     }
+
+     .tabs {
+         position: relative;
+         top: -20px;
+         /* alza le tabs */
+     }
+ }
+
  /* 
         _.-=-._       
       o~`  '  `~o     
