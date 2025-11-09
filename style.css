@@ -187,6 +187,253 @@
         /* invisibile ma rilevabile */
     }
 
+    /* Wrapper principali */
+    .quadrati-wrapper {
+        margin: 2.5rem auto;
+        max-width: 900px;
+        display: flex;
+        gap: 2.5rem;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .categorie-wrapper {
+        margin-top: 2.5rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2.5rem;
+    }
+
+    .citazione-wrapper {
+        margin: 2.5rem auto 0 auto;
+        max-width: 600px;
+        text-align: center;
+    }
+
+    /* Quadrati principali */
+    .quadrato {
+        background: #f0fdf4;
+        border-radius: 1.2rem;
+        box-shadow: 0 2px 16px rgba(6, 95, 70, 0.08);
+        padding: 2rem 1.5rem 1.5rem;
+        flex: 1 1 220px;
+        min-width: 220px;
+        max-width: 270px;
+        text-align: center;
+        transition: transform 0.22s, box-shadow 0.22s;
+        border: 1.5px solid #e0f2f1;
+    }
+
+    /* Icone quadrati */
+    .quadrato-icon {
+        fill: none;
+        stroke: #04996c;
+        stroke-width: 2;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        margin-bottom: 0.7em;
+        width: 2.1em;
+        height: 2.1em;
+    }
+
+    /* Titolo e descrizione quadrati */
+    .quadrato-titolo {
+        font-weight: 700;
+        color: #065f46;
+        font-size: 1.18rem;
+        margin-bottom: 0.4em;
+    }
+
+    .quadrato-desc {
+        color: #1f2937;
+        font-size: 1.05rem;
+    }
+
+    /* Categorie */
+    .categoria {
+        flex: 1 1 220px;
+        max-width: 320px;
+        background: #e0f2f1;
+        border-radius: 1rem;
+        padding: 1.2rem;
+        box-shadow: 0 2px 8px rgba(6, 95, 70, 0.07);
+        transition: box-shadow 0.2s, background 0.2s;
+        cursor: pointer;
+    }
+
+    .categoria-titolo {
+        text-align: center;
+        color: #04996c;
+        margin-top: 0;
+        font-size: 1.25rem;
+        letter-spacing: 0.5px;
+    }
+
+    .categoria-desc {
+        margin: 0;
+    }
+
+    /* Citazione */
+    .citazione {
+        font-style: italic;
+        color: #04996c;
+        font-size: 1.15rem;
+        background: #f0fdf4;
+        border-radius: 1em;
+        padding: 1.2em 1.5em;
+        box-shadow: 0 2px 8px rgba(6, 95, 70, 0.07);
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5em;
+    }
+
+    .citazione-icon {
+        width: 1.5em;
+        height: 1.5em;
+        fill: none;
+        stroke: #04996c;
+        stroke-width: 2;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        vertical-align: middle;
+    }
+
+    /* COSA FACCIAMO*/
+    .cosa-facciamo-wrapper {
+        text-align: center;
+        position: relative;
+    }
+
+    .cosa-facciamo-container {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        max-width: 900px;
+        overflow: hidden;
+        border-radius: 1.5rem;
+        box-shadow: 0 8px 32px rgba(6, 95, 70, 0.13);
+        margin-bottom: 2.2rem;
+    }
+
+    .cosa-facciamo-img {
+        width: 100%;
+        height: 520px;
+        object-fit: cover;
+        filter: brightness(0.93) saturate(1.08);
+        transition: transform 0.5s;
+        display: block;
+    }
+
+    .cosa-facciamo-overlay {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(120deg, rgba(6, 95, 70, 0.10) 0%, rgba(4, 153, 108, 0.07) 100%);
+        border-radius: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        pointer-events: none;
+    }
+
+    .cosa-facciamo-badge {
+        position: absolute;
+        top: 1.3rem;
+        left: 1.3rem;
+        background: #04996c;
+        color: #fff;
+        font-weight: 700;
+        font-size: 1.08rem;
+        padding: 0.5em 1.2em;
+        border-radius: 1.2em;
+        box-shadow: 0 2px 8px rgba(4, 153, 108, 0.13);
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5em;
+        z-index: 2;
+    }
+
+    .cosa-facciamo-badge svg {
+        width: 1.2em;
+        height: 1.2em;
+        fill: none;
+        stroke: #fff;
+        stroke-width: 2;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+    }
+
+    .cosa-facciamo-content {
+        background: rgba(255, 255, 255, 0.9);
+        color: #065f46;
+        border-radius: 1rem;
+        padding: 1.3rem 1.2rem 1.2rem 1.2rem;
+        max-width: 80%;
+        width: 80%;
+        box-sizing: border-box;
+        box-shadow: 0 2px 16px rgba(6, 95, 70, 0.10);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        pointer-events: auto;
+        margin-top: 2.5rem;
+    }
+
+    .cosa-facciamo-content h2 {
+        color: #065f46;
+        margin-bottom: 0.7rem;
+        text-shadow: none;
+        font-size: 2.1rem;
+        font-weight: 700;
+        letter-spacing: 1px;
+    }
+
+    .cosa-facciamo-content p {
+        font-size: 1.18rem;
+        max-width: 500px;
+        margin: auto;
+        text-shadow: none;
+    }
+
+    .hero-buttons {
+        margin-top: 1.5rem;
+    }
+
+    .hero-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5em;
+        background: #04996c;
+        color: #fff;
+        font-weight: 600;
+        padding: 0.6em 1.2em;
+        border-radius: 0.8em;
+        text-decoration: none;
+        transition: background 0.3s, transform 0.2s;
+    }
+
+    .hero-btn svg {
+        width: 1.1em;
+        height: 1.1em;
+        fill: none;
+        stroke: currentColor;
+        stroke-width: 2;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+    }
+
+    .hero-btn:hover {
+        background: #037a5f;
+        transform: translateY(-2px);
+    }
+
 
     /* STILE TABS */
     .tabs {
