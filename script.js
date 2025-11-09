@@ -341,7 +341,7 @@ document.getElementById('contact-form').addEventListener('submit', function (eve
             alert('❌ Errore durante l’invio: ' + JSON.stringify(error));
         });
 });
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     const hamburger = document.querySelector('.hamburger');
     const tabs = document.querySelector('.tabs');
 
