@@ -278,7 +278,7 @@ closeBtn.addEventListener('click', () => {
 // Funzione per scrollare a una posizione specifica (non in cima)
 function scrollToPosition(position) {
     window.scrollTo({
-        top: 470,   // posizione in pixel desiderata
+        top: 910,   // posizione in pixel desiderata
         behavior: 'smooth'
     });
 }
@@ -351,32 +351,48 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 // FUNZIONE PER SCROLLARE IN MODO SMOOTH ALLA SEZIONE SUCCESSIVA
- function smoothScrollToNext() {
-  const start = window.scrollY;
-  const target = start + window.innerHeight;
-  const duration = 1000; // durata animazione (ms)
-  const startTime = performance.now();
+// FUNZIONE PER SCROLLARE IN MODO SMOOTH ALLA SEZIONE SUCCESSIVA CON OFFSET
+function smoothScrollToNext(offset = 0) {
+    const start = window.scrollY;
+    const target = start + window.innerHeight - offset; // sottrai l'offset per l'hamburger
+    const duration = 1000; // durata animazione (ms)
+    const startTime = performance.now();
 
-  function easeInOutQuad(t) {
-    return t < 0.5
-      ? 2 * t * t
-      : -1 + (4 - 2 * t) * t;
-  }
-
-  function animateScroll(currentTime) {
-    const elapsed = currentTime - startTime;
-    const progress = Math.min(elapsed / duration, 1);
-    const ease = easeInOutQuad(progress);
-    const scrollY = start + (target - start) * ease;
-    window.scrollTo(0, scrollY);
-
-    if (elapsed < duration) {
-      requestAnimationFrame(animateScroll);
+    function easeInOutQuad(t) {
+        return t < 0.5
+            ? 2 * t * t
+            : -1 + (4 - 2 * t) * t;
     }
-  }
 
-  requestAnimationFrame(animateScroll);
+    function animateScroll(currentTime) {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        const ease = easeInOutQuad(progress);
+        const scrollY = start + (target - start) * ease;
+        window.scrollTo(0, scrollY);
+
+        if (elapsed < duration) {
+            requestAnimationFrame(animateScroll);
+        }
+    }
+
+    requestAnimationFrame(animateScroll);
 }
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".tab-button").forEach(tab => {
+        tab.addEventListener("click", function () {
+            const targetId = this.id.replace("-btn", "");
+
+            // Chiama showTab
+            showTab(targetId);
+
+            // Scroll dopo un piccolo delay (50ms)
+            setTimeout(() => {
+                smoothScrollToNext(70); // 70px di offset per l'hamburger
+            }, 50);
+        });
+    });
+});
 /*
     _.-=-._       
   o~`  '  `~o     
