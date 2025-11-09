@@ -187,6 +187,226 @@
      /* invisibile ma rilevabile */
  }
 
+ /* Wrapper principale */
+ .quadrati-wrapper {
+     margin: 2.5rem auto;
+     max-width: 900px;
+     display: flex;
+     gap: 2.5rem;
+     justify-content: center;
+     flex-wrap: wrap;
+ }
+
+ /* Singolo quadrato */
+ .quadrato {
+     background: #383838;
+     border-radius: 1.2rem;
+     box-shadow: 0 2px 16px #04996c;
+     padding: 2rem 1.5rem 1.5rem;
+     flex: 1 1 220px;
+     min-width: 220px;
+     max-width: 270px;
+     text-align: center;
+     transition: transform 0.22s, box-shadow 0.22s;
+     border: 1.5px solid #383838;
+ }
+
+ .quadrato-icon {
+     fill: none;
+     stroke: #04996c;
+     stroke-width: 2;
+     stroke-linecap: round;
+     stroke-linejoin: round;
+     margin-bottom: 0.7em;
+     width: 2.1em;
+     height: 2.1em;
+ }
+
+ .quadrato-title {
+     font-weight: 700;
+     color: #04996c;
+     font-size: 1.18rem;
+     margin-bottom: 0.4em;
+ }
+
+ .quadrato-text {
+     color: #04996c;
+     font-size: 1.05rem;
+ }
+
+ /* Wrapper categorie */
+ .categorie-wrapper {
+     margin-top: 2.5rem;
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: center;
+     gap: 2.5rem;
+ }
+
+ .categoria {
+     flex: 1 1 220px;
+     max-width: 320px;
+     background: #383838;
+     border-radius: 1rem;
+     padding: 1.2rem;
+     box-shadow: 0 2px 8px #04996c;
+     transition: box-shadow 0.2s, background 0.2s;
+     cursor: pointer;
+ }
+
+ .categoria h3 {
+     color: #04996c;
+     margin-top: 0;
+     font-size: 1.25rem;
+     letter-spacing: 0.5px;
+ }
+
+ .categoria p {
+     color: #04996c;
+     margin: 0;
+ }
+
+ /* Citazione finale */
+ .citazione-wrapper {
+     margin: 2.5rem auto 0 auto;
+     max-width: 600px;
+     text-align: center;
+ }
+
+ .citazione-wrapper blockquote {
+     font-style: italic;
+     color: #04996c;
+     font-size: 1.15rem;
+     background: #383838;
+     border-radius: 1em;
+     padding: 1.2em 1.5em;
+     box-shadow: 0 2px 8px #04996c;
+     margin: 0;
+ }
+
+ .citazione-wrapper svg {
+     width: 1.5em;
+     height: 1.5em;
+     fill: none;
+     stroke: #04996c;
+     stroke-width: 2;
+     stroke-linecap: round;
+     stroke-linejoin: round;
+     vertical-align: middle;
+     margin-right: 0.5em;
+ }
+
+ /*COSA FACCIAMO*/
+ /* SEZIONE "COSA FACCIAMO?" */
+ .cosa-facciamo {
+     text-align: center;
+     position: relative;
+ }
+
+ .cosa-facciamo-container {
+     position: relative;
+     display: inline-block;
+     width: 100%;
+     max-width: 900px;
+     overflow: hidden;
+     border-radius: 1.5rem;
+     box-shadow: 0 8px 32px rgba(6, 95, 70, 0.13);
+     margin-bottom: 2.2rem;
+ }
+
+ .cosa-facciamo-img {
+     width: 100%;
+     height: 520px;
+     object-fit: cover;
+     filter: brightness(0.93) saturate(1.08);
+     transition: transform 0.5s;
+     display: block;
+ }
+
+ .cosa-facciamo-overlay {
+     position: absolute;
+     left: 0;
+     top: 0;
+     width: 100%;
+     height: 100%;
+     background: linear-gradient(120deg, rgba(6, 95, 70, 0.10) 0%, rgba(4, 153, 108, 0.07) 100%);
+     border-radius: 1.5rem;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     color: #fff;
+     pointer-events: none;
+ }
+
+ .cosa-facciamo-badge {
+     position: absolute;
+     top: 1.3rem;
+     left: 1.3rem;
+     background: #04996c;
+     color: #383838;
+     font-weight: 700;
+     font-size: 1.08rem;
+     padding: 0.5em 1.2em;
+     border-radius: 1.2em;
+     box-shadow: 0 2px 8px rgba(4, 153, 108, 0.13);
+     display: inline-flex;
+     align-items: center;
+     gap: 0.5em;
+     z-index: 2;
+ }
+
+ .cosa-facciamo-text {
+     background: #383838;
+     color: #065f46;
+     border-radius: 1rem;
+     padding: 1.3rem 1.2rem 1.2rem 1.2rem;
+     max-width: 80%;
+     width: 80%;
+     box-sizing: border-box;
+     box-shadow: 0 2px 16px rgba(6, 95, 70, 0.10);
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     pointer-events: auto;
+     margin-top: 2.5rem;
+ }
+
+ .cosa-facciamo-text h2 {
+     color: #04996c;
+     margin-bottom: 0.7rem;
+     text-shadow: none;
+     font-size: 2.1rem;
+     font-weight: 700;
+     letter-spacing: 1px;
+ }
+
+ .cosa-facciamo-text p {
+     color: #04996c;
+     font-size: 1.18rem;
+     max-width: 500px;
+     margin: auto;
+     text-shadow: none;
+ }
+
+ /* Pulsante galleria */
+ .hero-buttons .hero-btn {
+     display: inline-flex;
+     align-items: center;
+     gap: 0.5em;
+     background: #065f46;
+     color: #fff;
+     padding: 0.7em 1.2em;
+     border-radius: 0.8rem;
+     text-decoration: none;
+     font-weight: 600;
+     transition: background 0.3s;
+ }
+
+ .hero-buttons .hero-btn:hover {
+     background: #04996c;
+ }
+
  /* Stile delle tabs */
  .tabs {
      display: flex;
