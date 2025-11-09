@@ -34,7 +34,12 @@
       <!-- Placeholder invisibile per osservare la posizione -->
       <div class="hamburger-placeholder"></div>
       <!-- Bottone hamburger (visibile solo su mobile) -->
-      <button class="hamburger">&#9776;</button>
+      <button class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
       <!-- TABS -->
       <div class="tabs">
         <button class="tab-button" id="home-btn" onclick="showTab('home')">
@@ -842,14 +847,18 @@
       const tabs = document.querySelector('.tabs');
       const placeholder = document.querySelector('.hamburger-placeholder');
 
-      // Toggle tabs
+      // Toggle tabs e hamburger → X
       hamburger.addEventListener('click', () => {
         tabs.classList.toggle('active');
+        hamburger.classList.toggle('active'); // aggiunta della X
       });
 
       // Chiude menu dopo aver cliccato una tab
       document.querySelectorAll('.tab-button').forEach(btn => {
-        btn.addEventListener('click', () => tabs.classList.remove('active'));
+        btn.addEventListener('click', () => {
+          tabs.classList.remove('active');
+          hamburger.classList.remove('active'); // torna hamburger normale
+        });
       });
 
       // IntersectionObserver sul placeholder
@@ -864,7 +873,6 @@
           }
         });
       }, { threshold: 0 });
-
       observer.observe(placeholder);
     });
   </script>
@@ -885,4 +893,3 @@
        __|  |  |__      
       (___/   \___)
  -->
-
