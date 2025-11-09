@@ -118,100 +118,133 @@
     }
 
     /* Stile di base delle tabs e hamburger */
-.tabs-wrapper {
-    position: relative;
-    text-align: center;
-}
-
-.hamburger {
-    display: none; /* nascosto su desktop */
-    font-size: 2rem;
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: #065f46;
-    margin: 0 auto;
-}
-
-.hamburger-placeholder {
-    height: 1px; /* piccolo spazio */
-    width: 100%;
-}
-
-/* Tabs visibili sempre quando active */
-.tabs {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-}
-
-/* Media query mobile */
-@media (max-width: 768px) {
-
-    .tabs {
-        display: none;
-        flex-direction: column;
-        background: #ffffff;
-        border-radius: 0.75rem;
-        box-shadow: 0 2px 8px rgba(6, 95, 70, 0.06);
-        padding: 0.5rem;
-        position: absolute; /* cambia da fixed a absolute */
-        top: 100%;          /* subito sotto l'hamburger */
-        left: 50%;
-        transform: translateX(-50%);
-        width: 90%;
-        z-index: 9999;
-    }
-
-    .tabs.active {
-        display: flex;
-    }
-
-    .hamburger {
-        display: block; /* mostra hamburger su mobile */
-    }
-
-    /* Mini-header: hamburger fisso + tabs sotto */
-    .hamburger.fixed + .tabs {
-        position: fixed;
-        top: 50px; /* sotto la barra fissa */
-        left: 50%;
-        transform: translateX(-50%);
-    }
-}
-
-/* Desktop (min-width: 769px) */
-@media (min-width: 769px) {
-    .hamburger {
-        display: none; /* hamburger nascosto su desktop */
-    }
-    .tabs {
-        display: flex !important; /* sempre visibili */
+    .tabs-wrapper {
         position: relative;
-        top: auto;
-        left: auto;
-        transform: none;
-        flex-direction: row;
-        background: none;
-        box-shadow: none;
-        gap: 1rem;
-        padding: 0;
+        text-align: center;
     }
-}
 
-.hamburger.fixed {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw; /* tutta larghezza della finestra */
-    background: #ffffff;
-    padding: 0.5rem 1rem;
-    text-align: center;
-    border-bottom: 1px solid #e5e7eb; /* linea sottile */
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    z-index: 9999;
-    border-radius: 0; /* senza angoli arrotondati */
-}
+    .hamburger {
+        display: none;
+        /* nascosto su desktop */
+        font-size: 2rem;
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: #065f46;
+        margin: 0 auto;
+    }
+
+    .hamburger span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        background-color: #065f46;
+        transition: all 0.3s ease;
+    }
+
+    .hamburger.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    .hamburger-placeholder {
+        height: 1px;
+        /* piccolo spazio */
+        width: 100%;
+    }
+
+    /* Tabs visibili sempre quando active */
+    .tabs {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    /* Media query mobile */
+    @media (max-width: 768px) {
+
+        .tabs {
+            display: none;
+            flex-direction: column;
+            background: #ffffff;
+            border-radius: 0.75rem;
+            box-shadow: 0 2px 8px rgba(6, 95, 70, 0.06);
+            padding: 0.5rem;
+            position: absolute;
+            /* cambia da fixed a absolute */
+            top: 100%;
+            /* subito sotto l'hamburger */
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%;
+            z-index: 9999;
+        }
+
+        .tabs.active {
+            display: flex;
+        }
+
+        .hamburger {
+            display: block;
+            /* mostra hamburger su mobile */
+        }
+
+        /* Mini-header: hamburger fisso + tabs sotto */
+        .hamburger.fixed+.tabs {
+            position: fixed;
+            top: 50px;
+            /* sotto la barra fissa */
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+
+    /* Desktop (min-width: 769px) */
+    @media (min-width: 769px) {
+        .hamburger {
+            display: none;
+            /* hamburger nascosto su desktop */
+        }
+
+        .tabs {
+            display: flex !important;
+            /* sempre visibili */
+            position: relative;
+            top: auto;
+            left: auto;
+            transform: none;
+            flex-direction: row;
+            background: none;
+            box-shadow: none;
+            gap: 1rem;
+            padding: 0;
+        }
+    }
+
+    .hamburger.fixed {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        /* tutta larghezza della finestra */
+        background: #ffffff;
+        padding: 0.5rem 1rem;
+        text-align: center;
+        border-bottom: 1px solid #e5e7eb;
+        /* linea sottile */
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        z-index: 9999;
+        border-radius: 0;
+        /* senza angoli arrotondati */
+    }
 
 
     .gallery-categories {
