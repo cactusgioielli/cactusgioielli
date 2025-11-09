@@ -15,64 +15,75 @@
 
 <body>
   <section class="hero-fullscreen">
-  <img src="./IMMAGINI/SEDE.jpg" alt="Sfondo Azienda Agricola Cactus" class="hero-fullscreen-img">
+    <img src="./IMMAGINI/SEDE.jpg" alt="Sfondo Azienda Agricola Cactus" class="hero-fullscreen-img">
 
-  <div class="hero-fullscreen-overlay">
-    <div class="hero-content">
-      <!-- LOGO -->
-      <img src="./IMMAGINI/LOGO/LOGO_whitepng.png" alt="Logo Azienda Agricola Cactus" class="hero-logo">
+    <div class="hero-fullscreen-overlay">
+      <div class="hero-content">
+        <!-- LOGO -->
+        <img src="./IMMAGINI/LOGO/LOGO_whitepng.png" alt="Logo Azienda Agricola Cactus" class="hero-logo">
 
-      <!-- TESTO -->
-      <p class="hero-fullscreen-text">
-        Produzione e distribuzione all'ingrosso di cactacee e succulente di alta qualità,
-        con la realizzazione di eleganti composizioni personalizzate.
-      </p>
+        <!-- TESTO -->
+        <p class="hero-fullscreen-text">
+          Produzione e distribuzione all'ingrosso di cactacee e succulente di alta qualità,
+          con la realizzazione di eleganti composizioni personalizzate.
+        </p>
+      </div>
     </div>
-  </div>
 
-  <!-- FRECCIA SCORRIMENTO -->
-  <div class="scroll-down" onclick="smoothScrollToNext()">
-    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none"
-      stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-      class="feather feather-chevron-down">
-      <polyline points="6 9 12 15 18 9"></polyline>
-    </svg>
-  </div>
-</section>
+    <!-- FRECCIA SCORRIMENTO -->
+    <div class="scroll-down" onclick="smoothScrollToNext()">
+      <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="white"
+        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down">
+        <polyline points="6 9 12 15 18 9"></polyline>
+      </svg>
+    </div>
+  </section>
+  <div id="scroll-anchor"></div>
   <div class="container">
     <!-- INIZIO SEZIONE TABS -->
     <div class="tabs-wrapper">
       <!-- Placeholder invisibile per osservare la posizione -->
       <div class="hamburger-placeholder"></div>
-      <!-- Bottone hamburger (visibile solo su mobile) -->
-      <button class="hamburger" id="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
-        <img src="./IMMAGINI/LOGO/LOGO_greenpng2.png" alt="Logo" class="mini-logo">
-      </button>
 
-      <!-- TABS -->
+      <!-- Contenitore mini header -->
+      <div class="mini-header">
+        <a href="#" class="mini-logo-link" onclick="showTab('home'); return false;">
+          <img src="../IMMAGINI/LOGO/LOGO_greenpng2.png" alt="Logo" class="mini-logo">
+        </a>
+
+        <button class="hamburger" onclick="this.classList.toggle('active')">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+      <!-- Tabs -->
       <div class="tabs">
         <button class="tab-button" id="home-btn" onclick="showTab('home')">
           <img src="./IMMAGINI/ICONA/ICONA_home.png" alt="home" style="width:16px; height:16px; vertical-align:middle;">
-          Home</button>
+          Home
+        </button>
         <button class="tab-button" id="about-btn" onclick="showTab('about')">
           <img src="./IMMAGINI/ICONA/ICONA_utente.png" alt="chisiamo"
             style="width:16px; height:16px; vertical-align:middle;">
-          Chi siamo</button>
+          Chi siamo
+        </button>
         <button class="tab-button" id="gallery-btn" onclick="showTab('gallery')">
           <img src="./IMMAGINI/ICONA/ICONA_cactus.png" alt="piante"
             style="width:16px; height:18px; vertical-align:middle;">
-          Galleria</button>
+          Galleria
+        </button>
         <button class="tab-button" id="contact-btn" onclick="showTab('contact')">
           <img src="./IMMAGINI/ICONA/ICONA_telefono.png" alt="contatti"
             style="width:16px; height:18px; vertical-align:middle;">
-          Contatti</button>
+          Contatti
+        </button>
         <button class="tab-button" id="location-btn" onclick="showTab('location')">
           <img src="./IMMAGINI/ICONA/ICONA_indirizzo.png" alt="indirizzo"
             style="width:16px; height:18px; vertical-align:middle;">
-          Indirizzo</button>
+          Indirizzo
+        </button>
       </div>
     </div>
     <!-- FINE SEZIONE TABS -->
@@ -857,35 +868,72 @@
     document.addEventListener("DOMContentLoaded", function () {
       const hamburger = document.querySelector('.hamburger');
       const tabs = document.querySelector('.tabs');
-      const placeholder = document.querySelector('.hamburger-placeholder');
 
-      // Toggle tabs e hamburger → X
+      // Toggle tabs
       hamburger.addEventListener('click', () => {
         tabs.classList.toggle('active');
-        hamburger.classList.toggle('active'); // aggiunta della X
+        hamburger.classList.toggle('active');
       });
 
       // Chiude menu dopo aver cliccato una tab
       document.querySelectorAll('.tab-button').forEach(btn => {
         btn.addEventListener('click', () => {
           tabs.classList.remove('active');
-          hamburger.classList.remove('active'); // torna hamburger normale
+          hamburger.classList.remove('active');
         });
       });
+    });
 
-      // IntersectionObserver sul placeholder
-      const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-          if (!entry.isIntersecting) {
-            // Placeholder fuori schermo → mostra mini-header
-            hamburger.classList.add('fixed');
-          } else {
-            // Placeholder visibile → nasconde mini-header
-            hamburger.classList.remove('fixed');
-          }
-        });
-      }, { threshold: 0 });
-      observer.observe(placeholder);
+    // Seleziona tutti i bottoni con la classe tab-button
+    // Funzione di scroll smooth personalizzata
+    function smoothScrollTo(targetY, duration = 600) {
+      const startY = window.scrollY;
+      const distance = targetY - startY;
+      let startTime = null;
+
+      function easeInOutQuad(t) {
+        return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
+      }
+
+      function animation(currentTime) {
+        if (!startTime) startTime = currentTime;
+        const timeElapsed = currentTime - startTime;
+        const progress = Math.min(timeElapsed / duration, 1);
+        const eased = easeInOutQuad(progress);
+
+        window.scrollTo(0, startY + (distance * eased));
+
+        if (timeElapsed < duration) {
+          requestAnimationFrame(animation);
+        }
+      }
+
+      requestAnimationFrame(animation);
+    }
+
+    // Event listener per tutte le tab
+    const tabButtons = document.querySelectorAll('.tab-button');
+
+    tabButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const tabName = button.id.split('-')[0]; // es. "home-btn" -> "home"
+
+        // Mostra la tab
+        showTab(tabName);
+
+        const anchor = document.getElementById('scroll-anchor');
+        if (anchor) {
+          // Doppio requestAnimationFrame per aggiornamento DOM
+          requestAnimationFrame(() => {
+            requestAnimationFrame(() => {
+              const anchorTop = anchor.offsetTop;
+              if (window.scrollY < anchorTop) {
+                smoothScrollTo(anchorTop, 700); // durata in ms, più lunga = più fluido
+              }
+            });
+          });
+        }
+      });
     });
   </script>
   <script src="./script.js"></script>
