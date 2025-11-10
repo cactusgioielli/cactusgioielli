@@ -11,6 +11,7 @@
   <link rel="apple-touch-icon" href="./IMMAGINI/favicon-apple.png">
   <!-- AGGIUNTA STYLE ESTERNO -->
   <link rel="stylesheet" href="./dark.css">
+  <link rel="stylesheet" href="./cosa-facciamo_dark.css">
 </head>
 
 <body>
@@ -48,7 +49,7 @@
       <!-- Contenitore mini header -->
       <div class="mini-header">
         <a href="#" class="mini-logo-link" onclick="showTab('home'); return false;">
-          <img src="./IMMAGINI/LOGO/LOGO_greenpng2.png" alt="Logo" class="mini-logo">
+          <img src="../IMMAGINI/LOGO/LOGO_greenpng2.png" alt="Logo" class="mini-logo">
         </a>
 
         <button class="hamburger">
@@ -111,23 +112,13 @@
       <!-- FINE SEZIONE NOVITA' & SLIDESHOW -->
 
       <!-- INIZIO SEZIONE "COSA FACCIAMO?" -->
-      <div class="reveal" style="text-align:center;position:relative;">
-        <div
-          style="position:relative;display:inline-block;width:100%;max-width:900px;overflow:hidden;border-radius:1.5rem;box-shadow:0 8px 32px rgba(6,95,70,0.13);margin-bottom:2.2rem;">
-          <img src="./IMMAGINI/HOME.jpg" alt="Azienda Agricola Cactus - panoramica"
-            style="width:100%;height:520px;object-fit:cover;filter:brightness(0.93) saturate(1.08);transition:transform 0.5s;display:block;"
-            class="reveal">
-          <div style="
-            position:absolute;
-            left:0;top:0;width:100%;height:100%;
-            background:linear-gradient(120deg,rgba(6,95,70,0.10) 0%,rgba(4,153,108,0.07) 100%);
-            border-radius:1.5rem;
-            display:flex;flex-direction:column;justify-content:center;align-items:center;
-            color:#fff;
-            pointer-events:none; ">
+      <div class="reveal section-cosa-facciamo">
+        <div class="cosa-facciamo-container">
+          <img src="./IMMAGINI/HOME.jpg" alt="Azienda Agricola Cactus - panoramica" class="cosa-facciamo-img reveal">
+
+          <div class="cosa-facciamo-overlay">
             <!-- BADGE: DA OLTRE 30 ANNI -->
-            <span
-              style="color:#04996c;position:absolute;top:1.3rem;left:1.3rem;background:#04996c;color:#383838;font-weight:700;font-size:1.08rem;padding:0.5em 1.2em;border-radius:1.2em;box-shadow:0 2px 8px rgba(4,153,108,0.13);display:inline-flex;align-items:center;gap:0.5em;z-index:2;">
+            <span class="badge-anni">
               <svg width="1.2em" height="1.2em" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"
                 stroke-linejoin="round" viewBox="0 0 24 24">
                 <circle cx="12" cy="12" r="10" />
@@ -135,30 +126,16 @@
               </svg>
               Da oltre 30 anni
             </span>
-            <div style="
-              background: #383838;
-              color: #065f46;
-              border-radius: 1rem;
-              padding: 1.3rem 1.2rem 1.2rem 1.2rem;
-              max-width: 80%;
-              width: 80%;
-              box-sizing: border-box;
-              box-shadow: 0 2px 16px rgba(6,95,70,0.10);
-              display: flex;
-              flex-direction: column;
-              align-items: center;
-              pointer-events:auto;
-              margin-top:2.5rem; ">
-              <h2 class="reveal"
-                style="color:#04996c;margin-bottom:0.7rem;text-shadow:none;font-size:2.1rem;font-weight:700;letter-spacing:1px;">
-                Cosa facciamo? </h2>
-              <p style="color:#04996c;font-size:1.18rem;max-width:500px;margin:auto;text-shadow:none;" class="reveal">
+
+            <div class="cosa-facciamo-box">
+              <h2 class="reveal">Cosa facciamo?</h2>
+              <p class="reveal">
                 Coltiviamo e distribuiamo con passione piante cactacee, succulente e composizioni uniche.<br>
-                Da oltre 30 anni portiamo il verde nelle case e nei giardini di tutta la Campania e oltre. </p>
-              <!-- AGGIORNAMENTO DIV -->
+                Da oltre 30 anni portiamo il verde nelle case e nei giardini di tutta la Campania e oltre.
+              </p>
+
               <div class="hero-buttons">
                 <a href="#" onclick="scrollToPosition(); showTab('gallery');return false;" class="hero-btn">
-                  <!-- Icona cactus -->
                   <svg width="1.1em" height="1.1em" fill="none" stroke="currentColor" stroke-width="2"
                     stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
                     <path d="M12 22V10" />
