@@ -241,7 +241,7 @@
      }
  }
 
- /* Wrapper generale */
+/* Wrapper generale */
 .tabs-wrapper {
     position: relative;
     text-align: center;
@@ -271,6 +271,27 @@
     height: 40px;
     display: block;
     z-index: 10001;
+}
+
+/* Tabs dentro mini-header */
+.tabs {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+
+/* Mobile: nascondi tabs inizialmente */
+@media (max-width: 768px) {
+    .tabs {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+    .tabs.active {
+        display: flex; /* mostrata quando hamburger attivo */
+    }
 }
 
 .mini-logo-link img {
@@ -339,7 +360,7 @@
 
 /* Placeholder sotto header per evitare sovrapposizione contenuto */
 .hamburger-placeholder {
-    height: 120px; /* 60px mini-header + 60px tabs */
+    height: 20px; /* 60px mini-header + 60px tabs */
     width: 100%;
 }
 
@@ -367,26 +388,22 @@
 
 
 
-    /* Desktop */
-    @media (min-width: 769px) {
-        .hamburger {
-            display: none;
-        }
-
-        .tabs {
-            display: flex !important;
-            position: relative;
-            flex-direction: row;
-            background: none;
-            box-shadow: none;
-            gap: 1rem;
-            padding: 0;
-        }
-
-        .mini-logo {
-            display: none;
-        }
+/* Tabs desktop centrali */
+@media (min-width: 769px) {
+    .tabs {
+        display: flex !important;
+        flex-direction: row;
+        gap: 1rem;
+        width: auto;
+        background: none;
+        box-shadow: none;
+        padding: 0;
+        margin-top: 80px; /* abbassa leggermente le tabs */
     }
+    .hamburger {
+        display: none; /* nascosto desktop */
+    }
+}
 
 
  .gallery-categories {
