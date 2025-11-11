@@ -241,180 +241,152 @@
      }
  }
 
- /* Stile di base delle tabs e hamburger */
- .tabs-wrapper {
-     position: relative;
-     text-align: center;
- }
+ /* Wrapper generale */
+.tabs-wrapper {
+    position: relative;
+    text-align: center;
+}
 
- .hamburger {
-     display: none;
-     font-size: 2rem;
-     background: none;
-     border: none;
-     cursor: pointer;
-     color: #065f46;
-     margin: 0 auto;
- }
+/* Mini-header fisso per tutti i dispositivi */
+.mini-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed; /* diventa fisso */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: #3f3f3f;
+    border-bottom: 1px solid #065f46;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    padding: 0 1rem;
+    z-index: 10000;
+}
 
- .hamburger span {
-     display: block;
-     width: 25px;
-     height: 3px;
-     margin: 5px auto;
-     background-color: #065f46;
-     transition: all 0.3s ease;
- }
+/* Logo a sinistra */
+.mini-logo-link {
+    position: absolute;
+    left: 1rem;
+    height: 40px;
+    display: block;
+    z-index: 10001;
+}
 
- .hamburger.active span:nth-child(1) {
-     transform: rotate(45deg) translate(5px, 5px);
- }
+.mini-logo-link img {
+    height: 100%;
+    display: block;
+}
 
- .hamburger.active span:nth-child(2) {
-     opacity: 0;
- }
+/* Hamburger (visibile solo su mobile) */
+.hamburger {
+    display: none;
+}
 
- .hamburger.active span:nth-child(3) {
-     transform: rotate(-45deg) translate(5px, -5px);
- }
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        cursor: pointer;
+        background: none;
+        border: none;
+        width: 40px;
+        height: 32px;
+        position: relative;
+        z-index: 10002;
+    }
 
- .hamburger-placeholder {
-     height: 1px;
-     width: 100%;
- }
+    .hamburger span {
+        display: block;
+        width: 100%;
+        height: 4px;
+        background-color: #065f46;
+        margin: 4px 0;
+        border-radius: 2px;
+        transition: all 0.3s ease;
+        transform-origin: center;
+    }
 
- .tabs {
-     display: flex;
-     justify-content: center;
-     gap: 1rem;
- }
+    .hamburger.active span:nth-child(1) {
+        transform: rotate(45deg) translate(0, 12px);
+    }
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+    .hamburger.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(0, -12px);
+    }
+}
 
- /* Media query mobile */
- @media (max-width: 768px) {
+/* Tabs desktop + mobile */
+.tabs {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    position: fixed; /* fisse sotto mini-header */
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    flex-direction: row;
+    background: #3f3f3f;
+    border-radius: 0.75rem;
+    box-shadow: 0 2px 8px rgba(6, 95, 70, 0.06);
+    padding: 0.5rem;
+    z-index: 9999;
+}
 
-     /* Header fisso e flex per hamburger centrato */
-     .mini-header {
-         display: flex;
-         align-items: center;
-         justify-content: center;
-         /* hamburger centrato */
-         position: fixed;
-         top: 0;
-         left: 0;
-         width: 100%;
-         height: 60px;
-         background: #3f3f3f;
-         border-bottom: 1px solid #065f46;
-         box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-         padding: 0 1rem;
-         z-index: 10000;
-     }
+/* Placeholder sotto header per evitare sovrapposizione contenuto */
+.hamburger-placeholder {
+    height: 120px; /* 60px mini-header + 60px tabs */
+    width: 100%;
+}
 
-     /* Logo a sinistra dentro link */
-     .mini-logo-link {
-         position: absolute;
-         /* rimane fuori dal flusso flex */
-         left: 1rem;
-         height: 40px;
-         /* dimensione desiderata */
-         display: block;
-         z-index: 10001;
-     }
+/* Mobile: tabs in colonna e inizialmente nascoste */
+@media (max-width: 768px) {
+    .tabs {
+        flex-direction: column;
+        display: none;
+    }
+    .tabs.active {
+        display: flex;
+    }
+}
 
-     .mini-logo-link img {
-         height: 100%;
-         display: block;
-     }
-
-     /* Hamburger centrato */
-     .hamburger {
-         display: flex;
-         flex-direction: column;
-         justify-content: center;
-         cursor: pointer;
-         background: none;
-         border: none;
-         width: 40px;
-         height: 32px;
-         position: relative;
-         z-index: 10002;
-     }
-
-     /* Linee hamburger */
-     .hamburger span {
-         display: block;
-         width: 100%;
-         height: 4px;
-         background-color: #065f46;
-         margin: 4px 0;
-         border-radius: 2px;
-         transition: all 0.3s ease;
-         transform-origin: center;
-     }
-
-     /* Hamburger trasformato in X */
-     .hamburger.active span:nth-child(1) {
-         transform: rotate(45deg) translate(0, 12px);
-     }
-
-     .hamburger.active span:nth-child(2) {
-         opacity: 0;
-     }
-
-     .hamburger.active span:nth-child(3) {
-         transform: rotate(-45deg) translate(0, -12px);
-     }
- }
-
-
- /* Tabs sempre sotto hamburger */
- .tabs {
-     position: fixed;
-     top: 60px;
-     /* sotto l’hamburger fisso */
-     left: 50%;
-     transform: translateX(-50%);
-     width: 90%;
-     flex-direction: column;
-     background: #3f3f3f;
-     border-radius: 0.75rem;
-     box-shadow: 0 2px 8px rgba(6, 95, 70, 0.06);
-     padding: 0.5rem;
-     z-index: 9999;
-     display: none;
- }
-
- .tabs.active {
-     display: flex;
- }
-
- /* Placeholder per creare spazio sotto l’hamburger fisso */
- .hamburger-placeholder {
-     height: 60px;
-     width: 100%;
- }
+/* Desktop: tabs sempre visibili in riga */
+@media (min-width: 769px) {
+    .tabs {
+        display: flex !important;
+        flex-direction: row;
+        background: none;
+        box-shadow: none;
+        padding: 0;
+    }
+}
 
 
- /* Desktop */
- @media (min-width: 769px) {
-     .hamburger {
-         display: none;
-     }
 
-     .tabs {
-         display: flex !important;
-         position: relative;
-         flex-direction: row;
-         background: none;
-         box-shadow: none;
-         gap: 1rem;
-         padding: 0;
-     }
+    /* Desktop */
+    @media (min-width: 769px) {
+        .hamburger {
+            display: none;
+        }
 
-     .mini-logo {
-         display: none;
-     }
- }
+        .tabs {
+            display: flex !important;
+            position: relative;
+            flex-direction: row;
+            background: none;
+            box-shadow: none;
+            gap: 1rem;
+            padding: 0;
+        }
+
+        .mini-logo {
+            display: none;
+        }
+    }
 
 
  .gallery-categories {
