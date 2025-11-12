@@ -749,6 +749,50 @@
         color: #f0f0f0;
     }
 
+/* --- Correzione layout footer per schermi mobili e tablet grandi --- */
+@media (max-width: 1024px) {
+    .footer-container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start; /* tutto a sinistra */
+        text-align: left;
+    }
+
+    .footer-container > * {
+        width: 100%;
+    }
+
+    .footer-logo {
+        order: -1; /* logo sopra a tutto */
+        width: 100%;
+        text-align: center; /* logo centrato */
+        margin-bottom: 2rem;
+    }
+
+    .footer-social {
+        justify-content: flex-start; /* social a sinistra */
+    }
+
+    /* Selettore lingua centrato con dropdown affiancati */
+    .footer-language-dropdown {
+        display: flex;
+        justify-content: center; /* centrato orizzontalmente */
+        align-items: center;
+        flex-direction: row; /* affiancati */
+        flex-wrap: wrap;
+        gap: 2rem; /* spazio tra i due */
+        text-align: center;
+        margin-top: 1.5rem;
+        width: 100%;
+    }
+
+    .dropdown-group {
+        align-items: center;
+        text-align: center;
+    }
+}
+
+
 
     @media (max-width: 768px) {
         header h1 {
@@ -1343,6 +1387,3 @@
         __|  |  |__      
         (___/   \___)
     */
-
-
-
