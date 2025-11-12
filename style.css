@@ -274,6 +274,24 @@
     z-index: 10001;
 }
 
+/* Telefono SVG a destra prima dell’hamburger */
+.phone-icon {
+    position: absolute;
+    right: 3.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+    border-radius: 50%;
+    padding: 0.4rem;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.phone-icon:hover {
+    background: #d1fae5;
+    transform: scale(1.1);
+}
+
 /* Tabs dentro mini-header */
 .tabs {
     display: flex;
