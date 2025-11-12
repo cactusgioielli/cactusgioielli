@@ -15,7 +15,7 @@
   <meta name="author" content="Azienda Agricola Cactus Gioielli">
   <meta name="robots" content="index, follow">
   <title>Azienda Agricola Cactus Gioielli | Cacti and succulent plants in Giugliano in Campania</title>
-  <link rel="canonical" href="https://cactusgioielli.it/index-en.html">
+  <link rel="canonical" href="https://cactusgioielli.it/index_en_black.html">
   <link rel="alternate" hreflang="it" href="https://cactusgioielli.github.io/cactusgioielli/index.html"/>
   <link rel="alternate" hreflang="en" href="https://cactusgioielli.github.io/cactusgioielli/index-en.html"/>
   <link rel="alternate" hreflang="x-default" href="https://cactusgioielli.github.io/cactusgioielli/">
@@ -25,10 +25,10 @@
   <link rel="shortcut icon" href="./IMMAGINI/favicon.png" type="image/x-icon">
   <link rel="apple-touch-icon" href="./IMMAGINI/favicon-apple.png">
   <!-- AGGIUNTA STYLE ESTERNO -->
-  <link rel="preload" href="./style.css" as="style">
-  <link rel="preload" href="./cosa-facciamo.css" as="style">
-  <link rel="stylesheet" href="./style.css">
-  <link rel="stylesheet" href="./cosa-facciamo.css">
+  <link rel="preload" href="./dark.css" as="style">
+  <link rel="preload" href="./cosa-facciamo_dark.css" as="style">
+  <link rel="stylesheet" href="./dark.css">
+  <link rel="stylesheet" href="./cosa-facciamo_dark.css">
 </head>
 
 <body>
@@ -44,11 +44,10 @@
         <!-- TESTO -->
         <p class="hero-fullscreen-text">
           Production and wholesale distribution of high-quality cacti and succulents,
-          creating elegant, customized compositions and favors.
+          creating elegant, customized  and favors.
         </p>
       </div>
     </div>
-    <!-- FINE SEDE + LOGO + SCRITTA -->
 
     <!-- FRECCIA SCORRIMENTO -->
     <div class="scroll-down" onclick="smoothScrollToNext()">
@@ -59,9 +58,8 @@
     </div>
   </section>
   <div id="scroll-anchor"></div>
-  <!-- FINE SEDE + LOGO + SCRITTA -->
   <div class="container">
-     <!-- INIZIO SEZIONE TABS -->
+    <!-- INIZIO SEZIONE TABS -->
     <div class="tabs-wrapper">
       <!-- Placeholder invisibile per osservare la posizione -->
       <div class="hamburger-placeholder"></div>
@@ -70,6 +68,14 @@
   <a href="#" class="mini-logo-link" onclick="showTab('home'); return false;">
     <img src="./IMMAGINI/LOGO/LOGO_greenpng2.png" alt="Logo" class="mini-logo">
   </a>
+
+  <!-- Selettore lingua -->
+  <div class="mini-language-dropdown">
+    <select id="language-select" onchange="location = this.value;">
+      <option value="index_en_black.html">🇬🇧 En</option>
+      <option value="index_ita_black.html">🇮🇹 Ita</option>
+    </select>
+  </div>
 
   <div class="tabs-wrapper"> <!-- wrapper per centrare le tabs -->
     <div class="tabs">
@@ -112,12 +118,13 @@
 </div></div>
     <!-- FINE SEZIONE TABS -->
 
-    <!-- INIZIO SEZIONE INNOVATION -->
+    <!-- INIZIO SEZIONE NOVITA' & SLIDESHOW -->
     <div id="home" class="tab-content">
       <section class="novita-section">
         <h1 class="novita-titolo" class="reveal">Innovation</h1>
         <div class="slideshow-container">
           <button class="slide-btn prev">&#10094;</button>
+
           <div class="slideshow">
             <div class="slide"><img src="./IMMAGINI/CACTACEE/CACTACEA_1.jpeg" alt="Novità 1"></div>
             <div class="slide"><img src="./IMMAGINI/SUCCULENTE/SUCCULENTE_2.png" alt="Novità 2"></div>
@@ -127,10 +134,11 @@
             <div class="slide"><img src="./IMMAGINI/SUCCULENTE/SUCCULENTE_7.jpg" alt="Novità 6"></div>
             <div class="slide"><img src="./IMMAGINI/CACTACEE/CACTACEA_7.jpg" alt="Novità 7"></div>
           </div>
+
           <button class="slide-btn next">&#10095;</button>
         </div>
       </section>
-      <!-- FINE SEZIONE INNOVATION -->
+      <!-- FINE SEZIONE NOVITA' & SLIDESHOW -->
 
       <!-- INIZIO SEZIONE "COSA FACCIAMO?" -->
       <div class="section-cosa-facciamo">
@@ -149,7 +157,7 @@
             <div class="cosa-facciamo-box">
               <h2>What do we do?</h2>
               <p>
-                We passionately grow and distribute cacti, succulents, unique compositions and favors.<br>
+                We passionately grow and distribute cacti, succulents, and unique compositions and favors.<br>
                 For over 30 years, we've been bringing greenery to homes and gardens throughout Campania and beyond.
               </p>
               <div class="hero-buttons">
@@ -170,75 +178,74 @@
         </div>
         <!-- FINE SEZIONE "COSA FACCIAMO?" -->
 
-        <!-- INIZIO SEZIONE QUADRATINI DESCRITTIVI -->
+        <!-- INIZIO SEZIONE QUADRATI DESCRITTIVI -->
         <div
           style="margin:2.5rem auto 2.5rem auto;max-width:900px;display:flex;gap:2.5rem;justify-content:center;flex-wrap:wrap;"
           class="reveal">
           <div
-            style="background:#f0fdf4;border-radius:1.2rem;box-shadow:0 2px 16px rgba(6,95,70,0.08);padding:2rem 1.5rem 1.5rem 1.5rem;flex:1 1 220px;min-width:220px;max-width:270px;text-align:center;transition:transform 0.22s, box-shadow 0.22s;border:1.5px solid #e0f2f1;">
+            style="background:#383838;;border-radius:1.2rem;box-shadow:0 2px 16px #04996c;padding:2rem 1.5rem 1.5rem 1.5rem;flex:1 1 220px;min-width:220px;max-width:270px;text-align:center;transition:transform 0.22s, box-shadow 0.22s;border:1.5px solid #383838;">
             <svg fill="none" stroke="#04996c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
               viewBox="0 0 24 24" style="margin-bottom:0.7em;width:2.1em;height:2.1em;">
               <path d="M12 2l2 7h7l-5.5 4 2 7-5.5-4-5.5 4 2-7L3 9h7z" />
             </svg>
-            <div style="font-weight:700;color:#065f46;font-size:1.18rem;margin-bottom:0.4em;">Quality
-              guaranteed</div>
-            <div style="color:#1f2937;font-size:1.05rem;">Only the best plants, grown with care and
-              attention.
+            <div style="font-weight:700;color:#04996c;font-size:1.18rem;margin-bottom:0.4em;">Quality guaranteed</div>
+            <div style="color:#04996c;font-size:1.05rem;">Only the best plants, grown with care and attention.
             </div>
           </div>
           <div
-            style="background:#f0fdf4;border-radius:1.2rem;box-shadow:0 2px 16px rgba(6,95,70,0.08);padding:2rem 1.5rem 1.5rem 1.5rem;flex:1 1 220px;min-width:220px;max-width:270px;text-align:center;transition:transform 0.22s, box-shadow 0.22s;border:1.5px solid #e0f2f1;">
+            style="background:#383838;border-radius:1.2rem;box-shadow:0 2px 16px #04996c;padding:2rem 1.5rem 1.5rem 1.5rem;flex:1 1 220px;min-width:220px;max-width:270px;text-align:center;transition:transform 0.22s, box-shadow 0.22s;border:1.5px solid #383838;">
             <svg fill="none" stroke="#04996c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
               viewBox="0 0 24 24" style="margin-bottom:0.7em;width:2.1em;height:2.1em;">
               <circle cx="12" cy="12" r="10" />
               <path d="M12 6v6l4 2" />
             </svg>
-            <div style="font-weight:700;color:#065f46;font-size:1.18rem;margin-bottom:0.4em;">Experience &
-              Passion
+            <div style="font-weight:700;color:#04996c;font-size:1.18rem;margin-bottom:0.4em;">Experience & Passion
             </div>
-            <div style="color:#1f2937;font-size:1.05rem;">For generations, we have passed on our passion for
-              greenery.
+            <div style="color:#04996c;font-size:1.05rem;">For generations, we have passed on our passion for greenery.
             </div>
           </div>
           <div
-            style="background:#f0fdf4;border-radius:1.2rem;box-shadow:0 2px 16px rgba(6,95,70,0.08);padding:2rem 1.5rem 1.5rem 1.5rem;flex:1 1 220px;min-width:220px;max-width:270px;text-align:center;transition:transform 0.22s, box-shadow 0.22s;border:1.5px solid #e0f2f1;">
+            style="background:#383838;border-radius:1.2rem;box-shadow:0 2px 16px #04996c;padding:2rem 1.5rem 1.5rem 1.5rem;flex:1 1 220px;min-width:220px;max-width:270px;text-align:center;transition:transform 0.22s, box-shadow 0.22s;border:1.5px solid #383838;">
             <svg fill="none" stroke="#04996c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
               viewBox="0 0 24 24" style="margin-bottom:0.7em;width:2.1em;height:2.1em;">
               <rect x="2" y="7" width="20" height="14" rx="4" ry="4" />
               <path d="M16 3v4" />
               <path d="M8 3v4" />
             </svg>
-            <div style="font-weight:700;color:#065f46;font-size:1.18rem;margin-bottom:0.4em;">Service
-              personalized
+            <div style="font-weight:700;color:#04996c;font-size:1.18rem;margin-bottom:0.4em;">Service personalized
             </div>
-            <div style="color:#1f2937;font-size:1.05rem;">Consulting, tailor-made compositions and favors for every need.</div>
+            <div style="color:#04996c;font-size:1.05rem;">Consulting, tailor-made compositions and favors for every need.</div>
           </div>
         </div>
         <div style="margin-top:2.5rem;display:flex;flex-wrap:wrap;justify-content:center;gap:2.5rem;">
           <div
-            style="flex:1 1 220px;max-width:320px;background:#e0f2f1;border-radius:1rem;padding:1.2rem;box-shadow:0 2px 8px rgba(6,95,70,0.07);transition:box-shadow 0.2s,background 0.2s;cursor:pointer;"
-            onclick="showTab('gallery'); showGalleryCategory('grasse', document.querySelector('.gallery-category-btn'));">
+            style="flex:1 1 220px;max-width:320px;background:#383838;border-radius:1rem;padding:1.2rem;box-shadow:0 2px 8px #04996c;transition:box-shadow 0.2s,background 0.2s;cursor:pointer;"
+            onclick="showTab('gallery'); showGalleryCategory('grasse', document.querySelector('.gallery-category-btn'));"
+            class="reveal">
             <h3 style="color:#04996c;margin-top:0;font-size:1.25rem;letter-spacing:0.5px;" class="reveal">Cacti</h3>
-            <p style="margin:0;">Large selection of cacti for collectors and enthusiasts.</p>
+            <p style="color:#04996c;margin:0;">Large selection of cacti for collectors and enthusiasts.</p>
           </div>
           <div
-            style="flex:1 1 220px;max-width:320px;background:#e0f2f1;border-radius:1rem;padding:1.2rem;box-shadow:0 2px 8px rgba(6,95,70,0.07);transition:box-shadow 0.2s,background 0.2s;cursor:pointer;"
-            onclick="showTab('gallery'); showGalleryCategory('succulente', document.querySelectorAll('.gallery-category-btn')[1]);">
-            <h3 style="color:#04996c;margin-top:0;font-size:1.25rem;letter-spacing:0.5px;" class="reveal">Succulent</h3>
-            <p style="margin:0;">The best varieties of succulent plants, resistant and decorative.</p>
+            style="flex:1 1 220px;max-width:320px;background:#383838;border-radius:1rem;padding:1.2rem;box-shadow:0 2px 8px #04996c;transition:box-shadow 0.2s,background 0.2s;cursor:pointer;"
+            onclick="showTab('gallery'); showGalleryCategory('succulente', document.querySelectorAll('.gallery-category-btn')[1]);"
+            class="reveal">
+            <h3 style="color:#04996c;margin-top:0;font-size:1.25rem;letter-spacing:0.5px;" class="reveal">Succulent
+            </h3>
+            <p style="color:#04996c;margin:0;">The best varieties of succulent plants, resistant and decorative.</p>
           </div>
           <div
-            style="flex:1 1 220px;max-width:320px;background:#e0f2f1;border-radius:1rem;padding:1.2rem;box-shadow:0 2px 8px rgba(6,95,70,0.07);transition:box-shadow 0.2s,background 0.2s;cursor:pointer;"
-            onclick="showTab('gallery'); showGalleryCategory('composizione', document.querySelectorAll('.gallery-category-btn')[2]);">
+            style="flex:1 1 220px;max-width:320px;background:#383838;border-radius:1rem;padding:1.2rem;box-shadow:0 2px 8px #04996c;transition:box-shadow 0.2s,background 0.2s;cursor:pointer;"
+            onclick="showTab('gallery'); showGalleryCategory('composizione', document.querySelectorAll('.gallery-category-btn')[2]);"
+            class="reveal">
             <h3 style="color:#04996c;margin-top:0;font-size:1.25rem;letter-spacing:0.5px;" class="reveal">Compositions & Favors
             </h3>
-            <p style="margin:0;">Customized compositions and favors for events, gifts, and green decor.</p>
+            <p style="color:#04996c;margin:0;">Customized compositions and favors for events, gifts, and green decor.</p>
           </div>
         </div>
         <!-- CITAZIONE FINALE -->
         <div style="margin:2.5rem auto 0 auto;max-width:600px;text-align:center;" class="reveal">
           <blockquote
-            style="font-style:italic;color:#04996c;font-size:1.15rem;background:#f0fdf4;border-radius:1em;padding:1.2em 1.5em;box-shadow:0 2px 8px rgba(6,95,70,0.07);margin:0;">
+            style="font-style:italic;color:#04996c;font-size:1.15rem;background:#383838;border-radius:1em;padding:1.2em 1.5em;box-shadow:0 2px 8px #04996c;margin:0;">
             <svg width="1.5em" height="1.5em" fill="none" stroke="#04996c" stroke-width="2" stroke-linecap="round"
               stroke-linejoin="round" viewBox="0 0 24 24" style="vertical-align:middle;margin-right:0.5em;">
               <path d="M9 17c0-4.418 3.582-8 8-8" />
@@ -251,12 +258,15 @@
         </div>
       </div>
     </div>
-    <!-- FINE SEZIONE QUADRATINI DESCRITTIVI -->
+    <!-- FINE SEZIONE QUADRATI DESCRITTIVI -->
 
-    <!-- INIZIO SEZIONE ABOUT US -->
+
+
+
+    <!-- INIZIO SEZIONE CHI SIAMO -->
     <div id="about" class="tab-content" class="reveal">
-      <h2 class="reveal"><strong>Who we are</strong></h2>
-      <p class="reveal">
+      <h2 style="color:#04996c" ;class="reveal"><strong>Who we are</strong></h2>
+      <p style="color:#04996c" ; class="reveal">
         We are a farm specializing in the cultivation and distribution of succulent plants.
         Our mission is to provide high-quality products, grown with passion and respect for the environment.
       </p>
@@ -265,7 +275,7 @@
           <div class="timeline-dot"></div>
           <div class="timeline-content">
             <span class="timeline-year" class="reveal">1990</span>
-            <p class="reveal">The "Azienda Agricola Cactus" is born,
+            <p style="color:#04996c" ; class="reveal">The "Azienda Agricola Cactus" is born,
               founded by the Gioielli family with the aim of bringing their passion for succulents
               throughout Campania.</p>
           </div>
@@ -274,9 +284,9 @@
           <div class="timeline-dot"></div>
           <div class="timeline-content">
             <span class="timeline-year" class="reveal">2005</span>
-            <p class="reveal">Production expansion and introduction of new succulent varieties, expanding the
-              customer
-              base
+            <p style="color:#04996c" ; class="reveal">Production expansion and introduction of new succulent
+              varieties,
+              expanding the customer base
               beyond the region.</p>
           </div>
         </div>
@@ -284,7 +294,9 @@
           <div class="timeline-dot"></div>
           <div class="timeline-content">
             <span class="timeline-year" class="reveal">2020</span>
-            <p class="reveal">Innovation in cultivation processes with sustainable techniques and attention to the
+            <p style="color:#04996c" ; class="reveal">Innovation in cultivation processes with sustainable
+              techniques
+              and attention to the
               environment.
             </p>
           </div>
@@ -293,8 +305,9 @@
           <div class="timeline-dot"></div>
           <div class="timeline-content">
             <span class="timeline-year" class="reveal">2025</span>
-            <p class="reveal">A new generation in the company, digitalization and openness to online sites and
-              social
+            <p style="color:#04996c" ; class="reveal">A new generation in the company, digitalization and openness
+              to
+              online sites and social
               media.</p>
           </div>
         </div>
@@ -314,9 +327,10 @@
             class="reveal" />
           <div class="name" class="reveal">Francesco Gioielli</div>
           <div class="role" class="reveal">Production manager</div>
-          <div class="desc" class="reveal">Manages crops and coordinates innovation in production processes.</div>
+          <div class="desc" class="reveal">Manages crops and coordinates innovation in production processes.
+          </div>
         </div>
-        <div class="about-team-member">
+        <div class="about-team-member" class="reveal">
           <img src="https://ui-avatars.com/api/?name=VG&background=e0f2f1&color=065f46" alt="Vincenzo Gioielli"
             class="reveal" />
           <div class="name" class="reveal">Vincenzo Gioielli</div>
@@ -324,7 +338,7 @@
           <div class="desc" class="reveal">Manages online presence and relationships with customers and partners.
           </div>
         </div>
-        <div class="about-team-member">
+        <div class="about-team-member" class="reveal">
           <img src="https://ui-avatars.com/api/?name=AG&background=e0f2f1&color=065f46" alt="Alessandro Gioielli"
             class="reveal" />
           <div class="name" class="reveal">Alessandro Gioielli</div>
@@ -333,28 +347,29 @@
             and coordinates the company’s online communication.</div>
         </div>
       </div>
-      <p class="reveal">
+      <p style="color:#04996c" ; class="reveal">
         With years of experience in the industry, we are committed to meeting our customers' needs,
         offering a wide range of unique plants and personalized services.
       </p>
     </div>
-    <!-- FINE SEZIONE ABOUT US -->
+    <!-- FINE SEZIONE CHI SIAMO -->
+
 
     <!-- INIZIO SEZIONE GALLERIA IMMAGINI -->
     <div id="gallery" class="tab-content">
-      <h2 class="reveal" align="center"><strong>Photo Gallery</strong></h2><br>
+      <h2 style="color:#04996c" class="reveal" align="center"><strong>Photo Gallery</strong></h2><br>
       <div class="gallery-categories">
         <button class="gallery-category-btn active" onclick="showGalleryCategory('grasse', this)">
           <img src="./IMMAGINI/ICONA/ICONA_cactus.png" alt="home"
-            style="width:16px; height:16px; vertical-align:middle;">
+            style="color:#04996c; width:16px; height:16px; vertical-align:middle;">
           Cacti</button>
         <button class="gallery-category-btn" onclick="showGalleryCategory('succulente', this)">
           <img src="./IMMAGINI/ICONA/ICONA_cactus.png" alt="home"
-            style="width:16px; height:16px; vertical-align:middle;">
+            style="color:#04996c; width:16px; height:16px; vertical-align:middle;">
           Succulent</button>
         <button class="gallery-category-btn" onclick="showGalleryCategory('composizione', this)">
           <img src="./IMMAGINI/ICONA/ICONA_composizioni.png" alt="home"
-            style="width:16px; height:16px; vertical-align:middle;"> Compositions & Favors</button>
+            style="color:#04996c; width:16px; height:16px; vertical-align:middle;"> Compositions & Favors</button>
       </div>
       <div class="gallery gallery-grasse"> <!-- INIZIO GALLERIA CACTACEE -->
         <img src="./IMMAGINI/CACTACEE/CACTACEA_1.jpeg" class="reveal" alt="Euphorbia Trigona"
@@ -445,13 +460,14 @@
     </div>
     <!-- FINE SEZIONE GALLERIA IMMAGINI -->
 
+
     <!-- INIZIO SEZIONE CONTATTI -->
     <div id="contact" class="tab-content">
       <div class="contact-info contact-flex">
         <div class="contact-details">
-          <h2 class="reveal">Contact</h2>
+          <h2 style="color:#04996c" class="reveal">Contact</h2>
 
-          <p style="display:flex;gap:0.7em;flex-wrap:wrap;align-items:center;" class="reveal">
+          <p style="color:#065f46; display:flex;gap:0.7em;flex-wrap:wrap;align-items:center;" class="reveal">
             <strong>
               <svg style="vertical-align:middle;margin-right:0.3em;" width="1.1em" height="1.1em" fill="none"
                 stroke="#04996c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
@@ -461,28 +477,29 @@
               Phone:
             </strong>
             <span style="white-space:nowrap;display:inline-flex;align-items:center;">
-              <span style="font-weight:bold;color:#04996c;">Francesco:</span>&nbsp;&nbsp;<a href="tel:+393332117337" > +39 333 211 7337</a>
+              <span style="font-weight:bold;color:#04996c;">Francesco:</span><span style="font-weight:bold;color:#04996c;">&nbsp;&nbsp;<a href="tel:+393332117337" > +39 333 211 7337</a></span>
             </span>
             <span style="white-space:nowrap;display:inline-flex;align-items:center;">
-              <span style="font-weight:bold;color:#04996c;">Vincenzo:</span>&nbsp;&nbsp;<a href="tel:+393351504792" > +39 335 150 4792</a>
+              <span style="font-weight:bold;color:#04996c;">Vincenzo:</span><span style="font-weight:bold;color:#04996c;">&nbsp;&nbsp;<a href="tel:+393351504792" > +39 335 150 4792</a></span>
             </span>
           </p>
 
-          <p class="reveal">
+          <p style="color:#065f46;" class="reveal">
             <strong>
-              <svg style="vertical-align:middle;margin-right:0.3em;" width="1.1em" height="1.1em" fill="none"
+              <svg style="vertical-align: middle; margin-right: 0.3em;" width="1.1em" height="1.1em" fill="none"
                 stroke="#04996c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-                <path d="M4 4h16v16H4z" fill="#fff" stroke="none" />
-                <path d="M22 6l-10 7L2 6" />
-                <rect x="2" y="6" width="20" height="12" rx="2" ry="2" />
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4
+                     c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2zm0 0l8 7 8-7" />
               </svg>
               Email:
             </strong>
-            <a href="mailto:cactus.gioielli@gmail.com" style="margin-left:0.3em;">cactus.gioielli@gmail.com</a> |
-            <a href="mailto:info@cactusgioielli.it" style="margin-left:0.3em;">info@cactusgioielli.it</a>
+            <a href="mailto:cactus.gioielli@gmail.com"
+              style="color:#04996c; margin-left:0.3em;">cactus.gioielli@gmail.com</a> |
+            <a href="mailto:info@cactusgioielli.it"
+              style="color:#04996c; margin-left:0.3em;">info@cactusgioielli.it</a>
           </p>
 
-          <p class="reveal">
+          <p style="color:#065f46;" class="reveal">
             <strong>
               <svg style="vertical-align:middle;margin-right:0.3em;" width="1.1em" height="1.1em" fill="none"
                 stroke="#04996c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
@@ -491,14 +508,15 @@
               </svg>
               Address:
             </strong>
-            <a href="#" style="color:#065f46; text-decoration:underline; cursor:pointer; margin-left:0.3em;"
+            <a href="#" style="color:#04996c; text-decoration:underline; cursor:pointer; margin-left:0.3em;"
               onclick="showTab('location'); return false;">
               Via Madonna del Pantano 16, 80014 Giugliano in Campania (NA)
             </a>
           </p>
 
           <!-- SEZIONE SOCIAL -->
-          <p style="display:flex;align-items:center;flex-wrap:wrap;gap:0.7em;margin-top:1rem;" class="reveal">
+          <p style="color:#065f46; display:flex;align-items:center;flex-wrap:wrap;gap:0.7em;margin-top:1rem;"
+            class="reveal">
             <svg style="vertical-align:middle;" width="1.1em" height="1.1em" fill="none" stroke="#04996c"
               stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
               <circle cx="12" cy="12" r="10" />
@@ -540,10 +558,11 @@
             </a>
           </p>
           <!-- FINE SEZIONE SOCIAL -->
+
         </div>
 
         <div class="contact-hours">
-          <strong style="display:inline-flex;align-items:center;" class="reveal">
+          <strong style="color:#065f46;display:inline-flex;align-items:center;" class="reveal">
             <svg style="vertical-align:middle;margin-right:0.3em;" width="1.1em" height="1.1em" fill="none"
               stroke="#04996c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
               <circle cx="12" cy="12" r="10" />
@@ -553,40 +572,52 @@
           </strong>
           <table style="width:100%;margin-top:0.5rem;border-collapse:collapse;font-size:1rem;">
             <tr>
-              <th style="text-align:left;padding:0.3rem 0.5rem;border-bottom:1px solid #000000;white-space:nowrap;"
+              <th
+                style="color:#065f46;text-align:left;padding:0.3rem 0.5rem;border-bottom:1px solid #04996c;white-space:nowrap;"
                 class="reveal">
                 <strong>Days</strong>
               </th>
-              <th style="text-align:left;padding:0.3rem 0.5rem;border-bottom:1px solid #000000;white-space:nowrap;"
+              <th
+                style="color:#065f46;text-align:left;padding:0.3rem 0.5rem;border-bottom:1px solid #04996c;white-space:nowrap;"
                 class="reveal">
                 <strong>Hours</strong>
               </th>
             </tr>
             <tr>
-              <td style="padding:0.3rem 0.5rem;white-space:nowrap;" class="reveal"><strong>Monday - Friday:</strong>
+              <td style="color:#04996c;padding:0.3rem 0.5rem;white-space:nowrap;" class="reveal"><strong>Monday -
+                  Friday:</strong>
               </td>
-              <td style="padding:0.3rem 0.5rem;white-space:nowrap;" class="reveal"><strong>08:00 – 13:00 | 14:00 – 17:00</strong>
-              </td>
+              <td style="color:#04996c;padding:0.3rem 0.5rem;white-space:nowrap;" class="reveal">08:00 – 13:00 |
+                14:00 –
+                17:00</td>
             </tr>
             <tr>
-              <td style="padding:0.3rem 0.5rem;white-space:nowrap;" class="reveal"><strong>Saturday:</strong></td>
-              <td style="padding:0.3rem 0.5rem;white-space:nowrap;" class="reveal"><strong>08:00 – 13:00</strong></td>
+              <td style="color:#04996c;padding:0.3rem 0.5rem;white-space:nowrap;" class="reveal">
+                <strong>Saturday:</strong>
+              </td>
+              <td style="color:#04996c;padding:0.3rem 0.5rem;white-space:nowrap;" class="reveal">08:00 – 13:00</td>
             </tr>
             <tr>
-              <td style="padding:0.3rem 0.5rem;white-space:nowrap;" class="reveal"><strong>Sunday:</strong></td>
-              <td style="padding:0.3rem 0.5rem;white-space:nowrap;" class="reveal"><strong>Closed</strong></td>
+              <td style="color:#04996c;padding:0.3rem 0.5rem;white-space:nowrap;" class="reveal">
+                <strong>Sunday:</strong>
+              </td>
+              <td style="color:#04996c;padding:0.3rem 0.5rem;white-space:nowrap;" class="reveal">
+                <strong>Closed</strong>
+              </td>
             </tr>
           </table>
         </div>
       </div>
     </div>
-    <!-- FINE SEZIONE CONTACT -->
+    <!-- FINE SEZIONE CONTATTI -->
 
-    <!-- INIZIO SEZIONE ADDRESS -->
+
+
+    <!-- INIZIO SEZIONE INDIRIZZO -->
     <div id="location" class="tab-content">
       <div class="contact-info">
-        <h2 class="reveal">Where to find us</h2>
-        <p>
+        <h2 style="color:#04996c" class="reveal">Where to find us</h2>
+        <p style="color:#04996c">
           <svg style="vertical-align:middle;margin-right:0.3em;" width="1.1em" height="1.1em" fill="none"
             stroke="#04996c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
             <path d="M21 10.5c0 7.5-9 12-9 12s-9-4.5-9-12a9 9 0 1 1 18 0z" />
@@ -615,7 +646,8 @@
       <button class="modal-btn right" onclick="nextImage(event)" aria-label="Successiva">&#8594;</button>
     </div>
   </div>
-  <!-- FINE SEZIONE ADDRESS -->
+  <!-- FINE SEZIONE INDIRIZZO -->
+
 
   <!-- INIZIO SEZIONE FOOTER -->
   <footer>
@@ -623,7 +655,7 @@
       <!-- LOGO PNG -->
       <div class="footer-logo">
         <a href="#" onclick="scrollToTop(); return false;">
-        <img src="./IMMAGINI/LOGO/LOGO_whitepng.png" alt="Logo Cactus Gioielli"></a>
+        <img src="./IMMAGINI/LOGO/LOGO_greenpng.png" alt="Logo Cactus Gioielli"></a>
       </div>
 
       <!-- FOOTER: LINK UTILI -->
@@ -673,7 +705,7 @@
             </a>
           </li>
           <li>
-            <button id="reset-cookies" class="hero-btn secondary">Reset Cookies</button><br><br>
+            <button id="reset-cookies" class="hero-btn secondary">Reset Cookies</button>
           </li>
         </ul>
       </div>
@@ -701,7 +733,7 @@
                 <span style="font-weight: bold; color: #04996c;">Francesco:</span><a href="tel:+393332117337" > +39 333 211 7337</a>
               </span>
               <span style="display: block; white-space: nowrap; margin-top: 6px;">
-                <span style="font-weight: bold; color: #04996c;">Vincenzo:</span><a href="tel:+393332117337" > +39 333 211 7337</a>
+                <span style="font-weight: bold; color: #04996c;">Vincenzo:</span><a href="tel:+393351504792" > +39 335 150 4792</a>
               </span>
             </div>
           </li>
@@ -717,10 +749,10 @@
               Email:
             </strong>
             <div style="margin-top: 4px;">
-              <a href="mailto:cactus.gioielli@gmail.com" style="color: #ddd; text-decoration: none;">
+              <a href="mailto:cactus.gioielli@gmail.com" style="color: #04996c; text-decoration: none;">
                 cactus.gioielli@gmail.com
               </a> |
-               <a href="mailto:info@cactusgioielli.it" style="color: #ddd; text-decoration: none;">
+              <a href="mailto:info@cactusgioielli.it" style="color: #04996c; text-decoration: none;">
                 info@cactusgioielli.it
               </a>
             </div>
@@ -734,7 +766,7 @@
             </svg>
             Address: <br>
           </strong>
-          <a href="#" style="color:#ffffff; text-decoration:underline; cursor:pointer; margin-left:0.3em;"
+          <a href="#" style="color:#04996c; text-decoration:underline; cursor:pointer; margin-left:0.3em;"
             onclick="scrollToPosition(); showTab('location'); return false;">
             Via Madonna del Pantano 16, 80014 Giugliano in Campania (NA)
           </a>
@@ -746,7 +778,7 @@
       <div>
         <h3>Follow us on Social Media</h3>
         <div class="footer-social">
-            <a href="https://www.tiktok.com/@cactusgioielli" target="_blank" aria-label="TikTok">
+          <a href="https://www.tiktok.com/@cactusgioielli" target="_blank" aria-label="TikTok">
               <svg width="1.8em" height="1.8em" fill="#04996c" viewBox="0 0 24 24">
                 <path
                   d="M12 2c1.19 0 2.39 0 3.58 0 .26 1.52 1.34 2.78 2.78 3.25.55.19 1.14.25 1.72.27v3.46c-1.14-.04-2.29-.34-3.29-.92-.46-.27-.87-.6-1.25-.96-.01 2.64.01 5.28-.01 7.91-.04 1.26-.48 2.54-1.31 3.5-.86 1.02-2.13 1.67-3.43 1.84-1.2.17-2.46-.07-3.51-.66-1.05-.58-1.89-1.54-2.33-2.66-.49-1.22-.55-2.64-.17-3.91.39-1.31 1.29-2.47 2.49-3.14 1.12-.63 2.48-.84 3.76-.62v3.51c-.59-.19-1.29-.13-1.82.21-.52.33-.89.91-.94 1.53-.08.66.19 1.36.7 1.79.55.48 1.39.62 2.06.33.61-.26 1.01-.87 1.1-1.52.02-2.64.01-5.29.01-7.93V2z" />
@@ -783,8 +815,8 @@
 
         <!-- ORARIO DI APERTURA -->
         <div style="margin-top: 50px;">
-          <h3>Opening hours</h3>
-          <p style="margin: 6px 0; color: #ddd;">
+          <h3>Opening Hours:</h3>
+          <p style="margin: 6px 0; color: #04996c;">
             <svg style="vertical-align: middle; margin-right: 6px;" width="20" height="20" fill="none" stroke="#04996c"
               stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
               <circle cx="12" cy="12" r="10" />
@@ -804,16 +836,16 @@
       <div class="dropdown-group">
         <label for="language-select" class="language-label">Language Selection</label>
         <select id="language-select" onchange="location = this.value;">
-          <option value="index-en.html">🇬🇧 English</option>
-          <option value="index.html">🇮🇹 Italiano</option>
+          <option value="index.html">🇬🇧 English</option>🇬🇧
+          <option value="index_ita_black.html">🇮🇹 Italiano</option>🇮🇹
         </select>
       </div>
 
       <div class="dropdown-group">
         <label for="theme-select" class="language-label">Theme Change</label>
         <select id="theme-select" onchange="location = this.value;">
+          <option value="index_ita_black.html">Dark</option>
           <option value="index-en.html">Light</option>
-          <option value="index_en_black.html">Dark</option>
         </select>
       </div>
     </div>
@@ -822,17 +854,16 @@
     <div class="footer-bottom">
       © 2025, Azienda Agricola Cactus Gioielli · All rights reserved.<br>
       P.IVA: <strong>09610581218</strong> - Via Madonna del Pantano 16, 80014 Giugliano in Campania (NA)<br>
-      Powered by: <strong>Alessandro Gioielli</strong>
-      <div class="footer-bottom">
-        <a href="cookiepolicy-en.html" style="color:#aaa; text-decoration:underline;">| Cookie Policy | </a>
-        <a href="https://www.tiktok.com/@cactusgioielli" style="color:#aaa; text-decoration:underline;"> Tiktok |
-        </a>
-        <a href="https://www.facebook.com/share/1PHiXwUpu2/?mibextid=wwXIfr"
-          style="color:#aaa; text-decoration:underline;"> Facebook | </a>
-        <a href="https://www.instagram.com/cactusgioiell" style="color:#aaa; text-decoration:underline;"> Instagram
-          |
-        </a>
-      </div>
+    </div>
+    <div class="footer-bottom">
+      <a href="cookiepolicy-en_black.html" style="color:#04996c; text-decoration:underline;">| Cookie Policy | </a>
+      <a href="https://www.tiktok.com/@cactusgioielli" style="color:#04996c; text-decoration:underline;"> Tiktok |
+      </a>
+      <a href="https://www.facebook.com/share/1PHiXwUpu2/?mibextid=wwXIfr"
+        style="color:#04996c; text-decoration:underline;"> Facebook | </a>
+      <a href="https://www.instagram.com/cactusgioiell" style="color:#04996c; text-decoration:underline;"> Instagram
+        |
+      </a>
     </div>
   </footer>
   <!-- FINE SEZIONE FOOTER -->
@@ -841,7 +872,7 @@
   <div class="mini-footer" style="background:#04120f; border-top:1px solid rgba(4,153,108,0.08); padding:10px 0;">
     <div
       style="display:flex; justify-content:center; align-items:center; gap:10px; flex-wrap:wrap; color:#cfdad6; font-size:14px;">
-      <span>Powered by: <strong style="color:#ffffff;">Alessandro Gioielli</strong></span>
+      <span>Powered by: <strong style="color:#04996c;">Alessandro Gioielli</strong></span>
       <a href="https://www.instagram.com/_alessandrogioielli_" target="_blank" aria-label="Instagram"
         style="display:flex; align-items:center; gap:6px; text-decoration:none; color:inherit;">
         <svg width="18" height="18" fill="#04996c" viewBox="0 0 24 24" style="vertical-align:middle;">
@@ -864,12 +895,10 @@
   <div id="cookie-banner">
     <p>We use cookies to improve your experience on the site.</p>
     <button id="accept-cookies">Ok</button>
-    <button onclick="window.location.href='cookiepolicy-en.html'">Cookie Policy</button>
+    <button onclick="window.location.href='cookiepolicy-en_black.html'">Cookie Policy</button>
     <button class="close-btn" id="close-banner">&times;</button>
   </div>
   <!-- FINE SEZIONE BANNER COOKIE -->
-
-
   <!-- AGGIUNTA SCRIPT.JS -->
   <script>
     document.addEventListener("DOMContentLoaded", function () {
