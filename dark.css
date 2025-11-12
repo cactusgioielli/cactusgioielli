@@ -273,7 +273,6 @@
     z-index: 10001;
 }
 
-/* Telefono SVG a destra prima dell’hamburger */
 .phone-icon {
     position: absolute;
     right: 3.5rem;
@@ -283,12 +282,21 @@
     background: #3f3f3f;
     border-radius: 50%;
     padding: 0.4rem;
-    transition: background 0.2s ease, transform 0.2s ease;
+    transition: background 0.2s ease, transform 0.2s ease, stroke 0.2s ease;
+}
+
+.phone-icon svg {
+    stroke: #065f46;
+    transition: stroke 0.2s ease;
 }
 
 .phone-icon:hover {
-    background: #04996c;
+    background: #065f46; /* verde principale */
     transform: scale(1.1);
+}
+
+.phone-icon:hover svg {
+    stroke: #3f3f3f; /* icona bianca */
 }
 
 /* Tabs dentro mini-header */
