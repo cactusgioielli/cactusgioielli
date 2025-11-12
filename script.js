@@ -276,19 +276,45 @@ closeBtn.addEventListener('click', () => {
     banner.style.display = 'none';
 });
 // Funzione per scrollare a una posizione specifica (non in cima)
-function scrollToPosition(position) {
-    window.scrollTo({
-        top: 910,   // posizione in pixel desiderata
-        behavior: 'smooth'
-    });
+function scrollToPosition(position = 820, duration = 800) {
+    const start = window.scrollY;
+    const distance = position - start;
+    const startTime = performance.now();
+
+    function animateScroll(currentTime) {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        const ease = 1 - Math.pow(1 - progress, 3); // easing dolce
+
+        window.scrollTo(0, start + distance * ease);
+
+        if (progress < 1) {
+            requestAnimationFrame(animateScroll);
+        }
+    }
+
+    requestAnimationFrame(animateScroll);
 }
 
 // Funzione per scrollare fino in cima
-function scrollToTop() {
-    window.scrollTo({
-        top: 0,          // in cima
-        behavior: 'smooth'
-    });
+function scrollToTop(duration = 800) {
+    const start = window.scrollY;
+    const startTime = performance.now();
+
+    function animateScroll(currentTime) {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        // easing con effetto "smooth" più dolce
+        const ease = 1 - Math.pow(1 - progress, 3); 
+
+        window.scrollTo(0, start * (1 - ease));
+
+        if (progress < 1) {
+            requestAnimationFrame(animateScroll);
+        }
+    }
+
+    requestAnimationFrame(animateScroll);
 }
 
 // Selettore lingua che mantiene la pagina corrente
