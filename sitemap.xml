@@ -3,22 +3,23 @@
 
   <!-- Pagine principali - Italiano / Chiaro -->
   <url>
-    <loc>https://cactusgioielli.github.io/cactusgioielli/index.html</loc>
+    <loc>https://cactusgioielli.it/index.html</loc>
   </url>
 
   <!-- Pagine principali - Inglese / Chiaro -->
   <url>
-    <loc>https://cactusgioielli.github.io/cactusgioielli/index-en.html</loc>
+    <loc>https://cactusgioielli.it/index-en.html</loc>
   </url>
 
   <!-- Pagine principali - Italiano / Scuro -->
   <url>
-    <loc>https://cactusgioielli.github.io/cactusgioielli/index_ita_black.html</loc>
+    <loc>https://cactusgioielli.it/index_ita_black.html</loc>
   </url>
 
   <!-- Pagine principali - Inglese / Scuro -->
   <url>
-    <loc>https://cactusgioielli.github.io/cactusgioielli/index_en_black.html</loc>
+    <loc>https://cactusgioielli.it/index_en_black.html</loc>
   </url>
+
 
 </urlset>
