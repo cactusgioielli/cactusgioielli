@@ -485,10 +485,6 @@
  }
 
  .contact-info {
-     background: linear-gradient(120deg, #383838 80%, #383838 100%);
-     border: 1.5px solid #3f3f3f;
-     box-shadow: 0 2px 16px rgba(6, 95, 70, 0.07);
-     border-radius: 1.2rem;
      padding: 2.2rem 2rem;
      max-width: 750px;
      /* aumentato da 600px */
@@ -498,6 +494,8 @@
  }
 
  .contact-info h2 {
+    color: #000000;
+    text-align: center;
      margin-top: 0;
      font-size: 1.75rem;
  }
