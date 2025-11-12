@@ -390,6 +390,32 @@
     }
 }
 
+/* Solo Safari mobile */
+@media (max-width: 768px) and (hover: none) and (pointer: coarse) {
+  @supports (-webkit-touch-callout: none) {
+    .mini-language-dropdown {
+        position: absolute;
+        right: 6rem; /* spostato più a destra solo su Safari */
+        top: 50%;
+        transform: translateY(-50%);
+        margin: 0;
+        width: auto;
+        text-align: right;
+        z-index: 15; /* sopra hamburger */
+    }
+
+    .mini-language-dropdown select {
+        padding: 4px 8px;
+        border-radius: 5px;
+        border: none;
+        font-size: 0.8rem;
+        background: #065f46;
+        color: #fff;
+        cursor: pointer;
+    }
+  }
+}
+
 /* Tabs desktop + mobile */
 .tabs {
     display: flex;
