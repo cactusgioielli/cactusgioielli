@@ -332,6 +332,27 @@
 }
 
 @media (max-width: 768px) {
+ /* Mini-language dropdown a destra, accanto al telefono */
+    .mini-language-dropdown {
+        position: absolute;
+        right: 4.5rem; /* distanza tra telefono e selettore */
+        top: 50%;
+        transform: translateY(-50%);
+        margin: 0;
+        width: auto;
+        text-align: right;
+    }
+
+    .mini-language-dropdown select {
+        padding: 4px 8px;
+        border-radius: 5px;
+        border: none;
+        font-size: 0.8rem;
+        background: #065f46;
+        color: #fff;
+        cursor: pointer;
+    }
+
     .hamburger {
         display: flex;
         flex-direction: column;
@@ -433,6 +454,24 @@
     .hamburger {
         display: none; /* nascosto desktop */
     }
+}
+
+/* Selettore lingua mini-header */
+.mini-language-dropdown {
+    position: absolute;
+    right: 8rem; /* tra tabs e telefono */
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.mini-language-dropdown select {
+    padding: 4px 8px;
+    border-radius: 5px;
+    border: none;
+    font-size: 0.8rem;
+    background: #065f46;
+    color: #fff;
+    cursor: pointer;
 }
 
 
