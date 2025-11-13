@@ -79,7 +79,7 @@
       <div class="hamburger-placeholder"></div>
 
       <div class="mini-header">
-        <a href="#" class="mini-logo-link" onclick="showTab('home'); return false;">
+        <a href="#" class="mini-logo-link" onclick="scrollToPosition(); showTab('home'); return false;">
           <img src="./IMMAGINI/LOGO/LOGO_greenpng2.png" alt="Logo" class="mini-logo">
         </a>
 
@@ -93,27 +93,27 @@
 
         <div class="tabs-wrapper"> <!-- wrapper per centrare le tabs -->
           <div class="tabs">
-            <button class="tab-button" id="home-btn" onclick="showTab('home')">
+            <button class="tab-button" id="home-btn" onclick="scrollToPosition(); showTab('home')">
               <img src="./IMMAGINI/ICONA/ICONA_home.png" alt="home"
                 style="width:16px; height:16px; vertical-align:middle;">
               Home
             </button>
-            <button class="tab-button" id="about-btn" onclick="showTab('about')">
+            <button class="tab-button" id="about-btn" onclick="scrollToPosition(); showTab('about')">
               <img src="./IMMAGINI/ICONA/ICONA_utente.png" alt="chisiamo"
                 style="width:16px; height:16px; vertical-align:middle;">
               Chi siamo
             </button>
-            <button class="tab-button" id="gallery-btn" onclick="showTab('gallery')">
+            <button class="tab-button" id="gallery-btn" onclick="scrollToPosition(); showTab('gallery')">
               <img src="./IMMAGINI/ICONA/ICONA_cactus.png" alt="piante"
                 style="width:16px; height:18px; vertical-align:middle;">
               Galleria
             </button>
-            <button class="tab-button" id="contact-btn" onclick="showTab('contact')">
+            <button class="tab-button" id="contact-btn" onclick="scrollToPosition(); showTab('contact')">
               <img src="./IMMAGINI/ICONA/ICONA_telefono.png" alt="contatti"
                 style="width:16px; height:18px; vertical-align:middle;">
               Contatti
             </button>
-            <button class="tab-button" id="location-btn" onclick="showTab('location')">
+            <button class="tab-button" id="location-btn" onclick="scrollToPosition(); showTab('location')">
               <img src="./IMMAGINI/ICONA/ICONA_indirizzo.png" alt="indirizzo"
                 style="width:16px; height:18px; vertical-align:middle;">
               Indirizzo
@@ -933,33 +933,6 @@
         });
       });
     });
-
-    // Seleziona tutti i bottoni con la classe tab-button
-    // Funzione di scroll smooth personalizzata
-    function smoothScrollTo(targetY, duration = 600) {
-      const startY = window.scrollY;
-      const distance = targetY - startY;
-      let startTime = null;
-
-      function easeInOutQuad(t) {
-        return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
-      }
-
-      function animation(currentTime) {
-        if (!startTime) startTime = currentTime;
-        const timeElapsed = currentTime - startTime;
-        const progress = Math.min(timeElapsed / duration, 1);
-        const eased = easeInOutQuad(progress);
-
-        window.scrollTo(0, startY + (distance * eased));
-
-        if (timeElapsed < duration) {
-          requestAnimationFrame(animation);
-        }
-      }
-
-      requestAnimationFrame(animation);
-    }
 
     // Event listener per tutte le tab
     const tabButtons = document.querySelectorAll('.tab-button');
