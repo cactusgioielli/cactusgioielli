@@ -1323,6 +1323,52 @@
  }
 
 
+  .map-container {
+        width: 85vw;
+        /* leggermente più stretta */
+        max-width: 1200px;
+        /* limite massimo su schermi molto grandi */
+        height: 550px;
+        /* buona altezza su desktop */
+        margin: 2.5rem auto;
+        border-radius: 1rem;
+        overflow: hidden;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .map-container iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+
+    /* Tablet */
+    @media (max-width: 1024px) {
+        .map-container {
+            width: 90vw;
+            height: 420px;
+        }
+    }
+
+    /* Mobile */
+    @media (max-width: 768px) {
+        .map-container {
+            width: 95vw;
+            height: 350px;
+        }
+    }
+
+    /* Schermi molto piccoli */
+    @media (max-width: 480px) {
+        .map-container {
+            width: 100%;
+            height: 300px;
+        }
+    }
+
  #cookie-banner {
      position: fixed;
      bottom: 0;
