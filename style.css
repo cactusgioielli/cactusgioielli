@@ -242,167 +242,268 @@
         }
     }
 
- /* Wrapper generale */
-.tabs-wrapper {
-    position: relative;
-    text-align: center;
-}
-
-/* Mini-header fisso per tutti i dispositivi */
-.mini-header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: fixed; /* diventa fisso */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 60px;
-    background: #ffffff;
-    border-bottom: 1px solid #e5e7eb;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    padding: 0 1rem;
-    z-index: 10000;
-}
-
-/* Logo a sinistra */
-.mini-logo-link {
-    position: absolute;
-    left: 1rem;
-    height: 40px;
-    display: block;
-    z-index: 10001;
-}
-
-.phone-icon {
-    position: absolute;
-    right: 3.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #ffffff;
-    border-radius: 50%;
-    padding: 0.4rem;
-    transition: background 0.2s ease, transform 0.2s ease, stroke 0.2s ease;
-}
-
-.phone-icon svg {
-    stroke: #065f46;
-    transition: stroke 0.2s ease;
-}
-
-.phone-icon:hover {
-    background: #065f46; /* verde principale */
-    transform: scale(1.1);
-}
-
-.phone-icon:hover svg {
-    stroke: #ffffff; /* icona bianca */
-}
-
-/* Tabs dentro mini-header */
-.tabs {
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 100%;
-}
-
-/* Mobile: nascondi tabs inizialmente */
-@media (max-width: 768px) {
-    .tabs {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-    }
-    .tabs.active {
-        display: flex; /* mostrata quando hamburger attivo */
-    }
-}
-
-.mini-logo-link img {
-    height: 100%;
-    display: block;
-}
-
-/* Hamburger (visibile solo su mobile) */
-.hamburger {
-    display: none;
-}
-
-@media (max-width: 768px) {
- .mini-language-dropdown {
-        position: absolute;
-        right: 4.5rem; /* aumenta da 4.5rem a 6rem per spostarlo più a destra */
-        top: 50%;
-        transform: translateY(-50%);
-        margin: 0;
-        width: auto;
-        text-align: right;
-        z-index: 15; /* assicurati che sia sopra l'hamburger */
+    /* Wrapper generale */
+    .tabs-wrapper {
+        position: relative;
+        text-align: center;
     }
 
-    .mini-language-dropdown select {
-        padding: 4px 8px;
-        border-radius: 5px;
-        border: none;
-        font-size: 0.8rem;
-        background: #065f46;
-        color: #fff;
-        cursor: pointer;
-    }
-
-    .hamburger {
+    /* Mini-header fisso per tutti i dispositivi */
+    .mini-header {
         display: flex;
-        flex-direction: column;
-        justify-content: center;
         align-items: center;
-        cursor: pointer;
-        background: none;
-        border: none;
-        width: 40px;
-        height: 32px;
-        position: absolute;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        z-index: 10002;
-    }
-
-    .hamburger span {
-        display: block;
+        justify-content: center;
+        position: fixed;
+        /* diventa fisso */
+        top: 0;
+        left: 0;
         width: 100%;
-        height: 4px;
-        background-color: #065f46;
-        margin: 4px 0;
-        border-radius: 2px;
-        transition: all 0.3s ease;
-        transform-origin: center;
+        height: 60px;
+        background: #ffffff;
+        border-bottom: 1px solid #e5e7eb;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        padding: 0 1rem;
+        z-index: 10000;
     }
 
-    .hamburger.active span:nth-child(1) {
-        transform: rotate(45deg) translate(0, 12px);
+    /* Logo a sinistra */
+    .mini-logo-link {
+        position: absolute;
+        left: 1rem;
+        height: 40px;
+        display: block;
+        z-index: 10001;
     }
-    .hamburger.active span:nth-child(2) {
-        opacity: 0;
-    }
-    .hamburger.active span:nth-child(3) {
-        transform: rotate(-45deg) translate(0, -12px);
-    }
-}
 
-/* Solo Safari mobile */
-@media (max-width: 768px) and (hover: none) and (pointer: coarse) {
-  @supports (-webkit-touch-callout: none) {
+    .phone-icon {
+        position: absolute;
+        right: 3.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #ffffff;
+        border-radius: 50%;
+        padding: 0.4rem;
+        transition: background 0.2s ease, transform 0.2s ease, stroke 0.2s ease;
+    }
+
+    .phone-icon svg {
+        stroke: #065f46;
+        transition: stroke 0.2s ease;
+    }
+
+    .phone-icon:hover {
+        background: #065f46;
+        /* verde principale */
+        transform: scale(1.1);
+    }
+
+    .phone-icon:hover svg {
+        stroke: #ffffff;
+        /* icona bianca */
+    }
+
+    /* Tabs dentro mini-header */
+    .tabs {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+    }
+
+    /* Mobile: nascondi tabs inizialmente */
+    @media (max-width: 768px) {
+        .tabs {
+            display: none;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        .tabs.active {
+            display: flex;
+            /* mostrata quando hamburger attivo */
+        }
+    }
+
+    .mini-logo-link img {
+        height: 100%;
+        display: block;
+    }
+
+    /* Hamburger (visibile solo su mobile) */
+    .hamburger {
+        display: none;
+    }
+
+    @media (max-width: 768px) {
+        .mini-language-dropdown {
+            position: absolute;
+            right: 4.5rem;
+            /* aumenta da 4.5rem a 6rem per spostarlo più a destra */
+            top: 50%;
+            transform: translateY(-50%);
+            margin: 0;
+            width: auto;
+            text-align: right;
+        }
+
+        .mini-language-dropdown select {
+            padding: 4px 8px;
+            border-radius: 5px;
+            border: none;
+            font-size: 0.8rem;
+            background: #065f46;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .hamburger {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            background: none;
+            border: none;
+            width: 40px;
+            height: 32px;
+            position: absolute;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 10002;
+        }
+
+        .hamburger span {
+            display: block;
+            width: 100%;
+            height: 4px;
+            background-color: #065f46;
+            margin: 4px 0;
+            border-radius: 2px;
+            transition: all 0.3s ease;
+            transform-origin: center;
+        }
+
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(0, 12px);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(0, -12px);
+        }
+    }
+
+    /* Solo Safari mobile */
+    @media (max-width: 768px) and (hover: none) and (pointer: coarse) {
+        @supports (-webkit-touch-callout: none) {
+            .mini-language-dropdown {
+                position: absolute;
+                right: 6rem;
+                /* spostato più a destra solo su Safari */
+                top: 50%;
+                transform: translateY(-50%);
+                margin: 0;
+                width: auto;
+                text-align: right;
+                z-index: 15;
+                /* sopra hamburger */
+            }
+
+            .mini-language-dropdown select {
+                padding: 4px 8px;
+                border-radius: 5px;
+                border: none;
+                font-size: 0.8rem;
+                background: #065f46;
+                color: #fff;
+                cursor: pointer;
+            }
+        }
+    }
+
+    /* Tabs desktop + mobile */
+    .tabs {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        position: fixed;
+        /* fisse sotto mini-header */
+        top: 60px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90%;
+        flex-direction: row;
+        background: #ffffff;
+        border-radius: 0.75rem;
+        box-shadow: 0 2px 8px rgba(6, 95, 70, 0.06);
+        padding: 0.5rem;
+        z-index: 9999;
+    }
+
+    /* Placeholder sotto header per evitare sovrapposizione contenuto */
+    .hamburger-placeholder {
+        height: 20px;
+        /* 60px mini-header + 60px tabs */
+        width: 100%;
+    }
+
+    /* Mobile: tabs in colonna e inizialmente nascoste */
+    @media (max-width: 768px) {
+        .tabs {
+            flex-direction: column;
+            display: none;
+        }
+
+        .tabs.active {
+            display: flex;
+        }
+    }
+
+    /* Desktop: tabs sempre visibili in riga */
+    @media (min-width: 769px) {
+        .tabs {
+            display: flex !important;
+            flex-direction: row;
+            background: none;
+            box-shadow: none;
+            padding: 0;
+        }
+    }
+
+
+
+    /* Tabs desktop centrali */
+    @media (min-width: 769px) {
+        .tabs {
+            display: flex !important;
+            flex-direction: row;
+            gap: 1rem;
+            width: auto;
+            background: none;
+            box-shadow: none;
+            padding: 0;
+            margin-top: 80px;
+            /* abbassa leggermente le tabs */
+        }
+
+        .hamburger {
+            display: none;
+            /* nascosto desktop */
+        }
+    }
+
+    /* Selettore lingua mini-header */
     .mini-language-dropdown {
         position: absolute;
-        right: 6rem; /* spostato più a destra solo su Safari */
+        right: 8rem;
+        /* tra tabs e telefono */
         top: 50%;
         transform: translateY(-50%);
-        margin: 0;
-        width: auto;
-        text-align: right;
-        z-index: 15; /* sopra hamburger */
     }
 
     .mini-language-dropdown select {
@@ -414,91 +515,6 @@
         color: #fff;
         cursor: pointer;
     }
-  }
-}
-
-/* Tabs desktop + mobile */
-.tabs {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    position: fixed; /* fisse sotto mini-header */
-    top: 60px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 90%;
-    flex-direction: row;
-    background: #ffffff;
-    border-radius: 0.75rem;
-    box-shadow: 0 2px 8px rgba(6, 95, 70, 0.06);
-    padding: 0.5rem;
-    z-index: 9999;
-}
-
-/* Placeholder sotto header per evitare sovrapposizione contenuto */
-.hamburger-placeholder {
-    height: 20px; /* 60px mini-header + 60px tabs */
-    width: 100%;
-}
-
-/* Mobile: tabs in colonna e inizialmente nascoste */
-@media (max-width: 768px) {
-    .tabs {
-        flex-direction: column;
-        display: none;
-    }
-    .tabs.active {
-        display: flex;
-    }
-}
-
-/* Desktop: tabs sempre visibili in riga */
-@media (min-width: 769px) {
-    .tabs {
-        display: flex !important;
-        flex-direction: row;
-        background: none;
-        box-shadow: none;
-        padding: 0;
-    }
-}
-
-
-
-/* Tabs desktop centrali */
-@media (min-width: 769px) {
-    .tabs {
-        display: flex !important;
-        flex-direction: row;
-        gap: 1rem;
-        width: auto;
-        background: none;
-        box-shadow: none;
-        padding: 0;
-        margin-top: 80px; /* abbassa leggermente le tabs */
-    }
-    .hamburger {
-        display: none; /* nascosto desktop */
-    }
-}
-
-/* Selettore lingua mini-header */
-.mini-language-dropdown {
-    position: absolute;
-    right: 8rem; /* tra tabs e telefono */
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.mini-language-dropdown select {
-    padding: 4px 8px;
-    border-radius: 5px;
-    border: none;
-    font-size: 0.8rem;
-    background: #065f46;
-    color: #fff;
-    cursor: pointer;
-}
 
 
     .gallery-categories {
@@ -564,13 +580,14 @@
 
     .contact-info h2 {
         color: #000000;
-        text-align: center;
+        text-align: left;
         margin-top: 0;
         font-size: 1.75rem;
     }
 
     .contact-info p {
         margin: 0.5rem 0;
+        text-align: left;
     }
 
     .contact-info a {
@@ -841,48 +858,118 @@
         color: #f0f0f0;
     }
 
-/* --- Correzione layout footer per schermi mobili e tablet grandi --- */
-@media (max-width: 1024px) {
-    .footer-container {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start; /* tutto a sinistra */
-        text-align: left;
+    /* --- Correzione layout footer per schermi mobili e tablet grandi --- */
+    @media (max-width: 1024px) {
+        .footer-container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            /* tutto a sinistra */
+            text-align: left;
+        }
+
+        .footer-container>* {
+            width: 100%;
+        }
+
+        .footer-logo {
+            order: -1;
+            /* logo sopra a tutto */
+            width: 100%;
+            text-align: center;
+            /* logo centrato */
+            margin-bottom: 2rem;
+        }
+
+        .footer-social {
+            justify-content: flex-start;
+            /* social a sinistra */
+        }
+
+        /* Selettore lingua centrato con dropdown affiancati */
+        .footer-language-dropdown {
+            display: flex;
+            justify-content: center;
+            /* centrato orizzontalmente */
+            align-items: center;
+            flex-direction: row;
+            /* affiancati */
+            flex-wrap: wrap;
+            gap: 2rem;
+            /* spazio tra i due */
+            text-align: center;
+            margin-top: 1.5rem;
+            width: 100%;
+        }
+
+        .dropdown-group {
+            align-items: center;
+            text-align: center;
+        }
     }
 
-    .footer-container > * {
+    .map-container {
+        width: 85vw;
+        /* leggermente più stretta */
+        max-width: 1200px;
+        /* limite massimo su schermi molto grandi */
+        height: 550px;
+        /* buona altezza su desktop */
+        margin: 2.5rem auto;
+        border-radius: 1rem;
+        overflow: hidden;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .map-container iframe {
         width: 100%;
+        height: 100%;
+        border: none;
     }
 
-    .footer-logo {
-        order: -1; /* logo sopra a tutto */
-        width: 100%;
-        text-align: center; /* logo centrato */
-        margin-bottom: 2rem;
+    /* Tablet */
+    @media (max-width: 1024px) {
+        .map-container {
+            width: 90vw;
+            height: 420px;
+        }
     }
 
-    .footer-social {
-        justify-content: flex-start; /* social a sinistra */
+    /* Mobile */
+    @media (max-width: 768px) {
+        .map-container {
+            width: 95vw;
+            height: 350px;
+        }
     }
 
-    /* Selettore lingua centrato con dropdown affiancati */
-    .footer-language-dropdown {
-        display: flex;
-        justify-content: center; /* centrato orizzontalmente */
-        align-items: center;
-        flex-direction: row; /* affiancati */
-        flex-wrap: wrap;
-        gap: 2rem; /* spazio tra i due */
-        text-align: center;
-        margin-top: 1.5rem;
-        width: 100%;
+    /* Schermi molto piccoli */
+    @media (max-width: 480px) {
+        .map-container {
+            width: 100%;
+            height: 300px;
+        }
     }
 
-    .dropdown-group {
-        align-items: center;
-        text-align: center;
+
+    .close-map {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background: rgba(255, 255, 255, 0.9);
+        border: none;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: #04996c;
+        z-index: 1001;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
     }
-}
 
 
 
@@ -1229,7 +1316,7 @@
     .novita-section {
         text-align: center;
         padding: 20px 0;
-        background-color: #ffffff; 
+        background-color: #ffffff;
         margin-bottom: 0;
     }
 
