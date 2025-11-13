@@ -276,7 +276,7 @@ closeBtn.addEventListener('click', () => {
     banner.style.display = 'none';
 });
 // Funzione per scrollare a una posizione specifica (non in cima)
-function scrollToPosition(position = 820, duration = 1500) {
+function scrollToPosition(position = 850, duration = 800) {
     const start = window.scrollY;
     const distance = position - start;
     const startTime = performance.now();
