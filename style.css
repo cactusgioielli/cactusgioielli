@@ -96,32 +96,47 @@
     }
 
     /* LOGO sopra la scritta */
-    /* LOGO */
     .hero-logo {
-        width: 350px;
-        /* più grande su desktop */
+        width: 400px;
+        /* grande su desktop */
         max-width: 40vw;
-        /* si adatta comunque se lo schermo è piccolo */
-        margin-bottom: 0rem;
+        margin-bottom: -5rem;
         filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.35));
-        transition: width 0.3s ease;
+        transition: width 0.3s ease, left 0.3s ease;
+        position: relative;
+        left: var(--hero-logo-left-desktop);
+        /* desktop usa questa */
     }
 
-    /* Tablet e mobile */
+    /* Variabili per lo spostamento orizzontale del logo */
+    :root {
+        --hero-logo-left-desktop: -23px;
+        /* Desktop */
+        --hero-logo-left-mobile: -7px;
+        /* Mobile */
+        --hero-logo-width-desktop: 350px;
+        --hero-logo-width-mobile: 350px;
+    }
+
+    /* Tablet e smartphone */
     @media (max-width: 768px) {
         .hero-logo {
-            width: 180px;
-            /* nuovo width */
-            max-width: 90vw;
-            /* permetti di crescere fino al 90% dello schermo */
+            width: var(--hero-logo-width-mobile);
+            /* ora la variabile funziona davvero */
+            left: var(--hero-logo-left-mobile);
+            /* rimuovere max-width o impostare un valore grande per non bloccare il width */
+            max-width: 100%;
+            margin-bottom: -2rem;
         }
     }
 
-    @media (max-width: 768px) {
+    /* Smartphone piccolo */
+    @media (max-width: 480px) {
         .hero-logo {
-            width: 150px;
-            /* perfetto su smartphone */
-            max-width: 70vw;
+            width: var(--hero-logo-width-mobile);
+            /* stessa variabile mobile */
+            max-width: 100%;
+            margin-bottom: 5rem;
         }
     }
 
@@ -1566,4 +1581,3 @@
         __|  |  |__      
         (___/   \___)
     */
-
