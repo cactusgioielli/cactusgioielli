@@ -75,55 +75,72 @@
  }
 
  /* Overlay e centramento contenuto */
- .hero-fullscreen-overlay {
-     position: absolute;
-     top: 0;
-     left: 0;
-     width: 100%;
-     height: 100%;
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     background: rgba(0, 0, 0, 0.3);
-     backdrop-filter: blur(3px);
-     text-align: center;
- }
+    .hero-fullscreen-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(0, 0, 0, 0.3);
+        backdrop-filter: blur(3px);
+        text-align: center;
+    }
 
- /* Contenuto centrato */
- .hero-content {
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-     justify-content: center;
- }
+    /* Contenuto centrato */
+    .hero-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
 
- /* LOGO sopra la scritta */
- /* LOGO */
- .hero-logo {
-     width: 350px;
-     /* più grande su desktop */
-     max-width: 40vw;
-     /* si adatta comunque se lo schermo è piccolo */
-     margin-bottom: 1rem;
-     filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.35));
-     transition: width 0.3s ease;
- }
+    /* LOGO sopra la scritta */
+    .hero-logo {
+        width: 400px;
+        /* grande su desktop */
+        max-width: 40vw;
+        margin-bottom: -5rem;
+        filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.35));
+        transition: width 0.3s ease, left 0.3s ease;
+        position: relative;
+        left: var(--hero-logo-left-desktop);
+        /* desktop usa questa */
+    }
 
- /* Tablet e mobile */
- @media (max-width: 1024px) {
-     .hero-logo {
-         width: 200px;
-         max-width: 45vw;
-     }
- }
+    /* Variabili per lo spostamento orizzontale del logo */
+    :root {
+        --hero-logo-left-desktop: -23px;
+        /* Desktop */
+        --hero-logo-left-mobile: -7px;
+        /* Mobile */
+        --hero-logo-width-desktop: 350px;
+        --hero-logo-width-mobile: 350px;
+    }
 
- @media (max-width: 768px) {
-     .hero-logo {
-         width: 150px;
-         /* perfetto su smartphone */
-         max-width: 70vw;
-     }
- }
+    /* Tablet e smartphone */
+    @media (max-width: 768px) {
+        .hero-logo {
+            width: var(--hero-logo-width-mobile);
+            /* ora la variabile funziona davvero */
+            left: var(--hero-logo-left-mobile);
+            /* rimuovere max-width o impostare un valore grande per non bloccare il width */
+            max-width: 100%;
+            margin-bottom: -2rem;
+        }
+    }
+
+    /* Smartphone piccolo */
+    @media (max-width: 480px) {
+        .hero-logo {
+            width: var(--hero-logo-width-mobile);
+            /* stessa variabile mobile */
+            max-width: 100%;
+            margin-bottom: 5rem;
+        }
+    }
 
  /* TESTO */
  .hero-fullscreen-text {
@@ -268,7 +285,7 @@
 .mini-logo-link {
     position: absolute;
     left: 1rem;
-    height: 55px;
+    height: 40px;
     display: block;
     z-index: 10001;
 }
@@ -1510,6 +1527,127 @@
      }
  }
 
+/* --- SEZIONE "COSA FACCIAMO?" --- */
+
+.section-cosa-facciamo {
+    text-align: center;
+    position: relative;
+}
+
+.cosa-facciamo-container {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    max-width: 900px;
+    overflow: hidden;
+    border-radius: 1.5rem;
+    box-shadow: 0 8px 32px rgba(6, 95, 70, 0.13);
+    margin-bottom: 2.2rem;
+}
+
+/* Immagine principale */
+.cosa-facciamo-img {
+    width: 100%;
+    height: 520px;
+    object-fit: cover;
+    filter: brightness(0.93) saturate(1.08);
+    transition: transform 0.5s;
+    display: block;
+}
+
+/* Overlay trasparente con gradiente */
+.cosa-facciamo-overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, rgba(6, 95, 70, 0.10) 0%, rgba(4, 153, 108, 0.07) 100%);
+    border-radius: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    pointer-events: none;
+}
+
+/* Badge “Da oltre 30 anni” */
+.badge-anni {
+    position: absolute;
+    top: 1.3rem;
+    left: 1.3rem;
+    background: #04996c;
+    color: #383838;
+    font-weight: 700;
+    font-size: 1.08rem;
+    padding: 0.5em 1.2em;
+    border-radius: 1.2em;
+    box-shadow: 0 2px 8px rgba(4, 153, 108, 0.13);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5em;
+    z-index: 2;
+}
+
+/* Box bianco centrale */
+.cosa-facciamo-box {
+    background: #383838;
+    color: #04996c;
+    border-radius: 1rem;
+    padding: 1.3rem 1.2rem 1.2rem 1.2rem;
+    max-width: 80%;
+    width: 80%;
+    box-sizing: border-box;
+    box-shadow: 0 2px 16px rgba(6, 95, 70, 0.10);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    pointer-events: auto;
+    margin-top: 2.5rem;
+}
+
+/* Titolo */
+.cosa-facciamo-box h2 {
+    color: #04996c;
+    margin-bottom: 0.7rem;
+    text-shadow: none;
+    font-size: 2.1rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* Testo */
+.cosa-facciamo-box p {
+    font-size: 1.18rem;
+    max-width: 500px;
+    margin: auto;
+    text-shadow: none;
+}
+
+/* Pulsante “Galleria foto” */
+.hero-buttons {
+    margin-top: 1rem;
+}
+
+.hero-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4em;
+    background: #04996c;
+    color: 383838;
+    text-decoration: none;
+    padding: 0.6em 1.2em;
+    border-radius: 0.8em;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.hero-btn:hover {
+    background: #036b4c;
+}
+
+
  /* 
         _.-=-._       
       o~`  '  `~o     
@@ -1523,4 +1661,3 @@
        __|  |  |__      
       (___/   \___)
  */
-
