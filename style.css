@@ -515,7 +515,7 @@
     /* Selettore lingua mini-header */
     .mini-language-dropdown {
         position: absolute;
-        right: 8rem;
+        right: 7.4rem;
         /* tra tabs e telefono */
         top: 50%;
         transform: translateY(-50%);
