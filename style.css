@@ -136,7 +136,7 @@
             width: var(--hero-logo-width-mobile);
             /* stessa variabile mobile */
             max-width: 100%;
-            margin-bottom: 5rem;
+            margin-bottom: rem;
         }
     }
 
@@ -188,7 +188,7 @@
     /* Responsività */
     @media (max-width: 768px) {
         .hero-logo {
-            width: 140px;
+            width: 250px;
         }
 
         .hero-fullscreen-text {
