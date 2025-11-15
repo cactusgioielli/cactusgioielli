@@ -1623,7 +1623,7 @@
   display: none;
   flex-direction: column;
   gap: 0.5rem;
-  z-index: 9999;
+  z-index: 9998;
   animation: fadeIn 0.2s ease;
 }
 
@@ -1695,3 +1695,4 @@
         __|  |  |__      
         (___/   \___)
     */
+
