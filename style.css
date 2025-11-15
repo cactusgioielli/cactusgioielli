@@ -1597,7 +1597,7 @@
   justify-content: center;
   box-shadow: 0 4px 15px rgba(0,0,0,0.25);
   cursor: pointer;
-  z-index: 9999;
+  z-index: 9998;
   transition: transform 0.2s ease;
 }
 
@@ -1623,7 +1623,7 @@
   display: none;
   flex-direction: column;
   gap: 0.5rem;
-  z-index: 9998;
+  z-index: 9999;
   animation: fadeIn 0.2s ease;
 }
 
@@ -1695,4 +1695,3 @@
         __|  |  |__      
         (___/   \___)
     */
-
