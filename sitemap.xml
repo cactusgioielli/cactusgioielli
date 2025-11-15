@@ -8,18 +8,19 @@
 
   <!-- Pagine principali - Inglese / Chiaro -->
   <url>
-    <loc>https://cactusgioielli.it/index-en.html</loc>
+    <loc>https://cactusgioielli.it/en.html</loc>
   </url>
 
   <!-- Pagine principali - Italiano / Scuro -->
   <url>
-    <loc>https://cactusgioielli.it/index_ita_black.html</loc>
+    <loc>https://cactusgioielli.it/dark-ita.html</loc>
   </url>
 
   <!-- Pagine principali - Inglese / Scuro -->
   <url>
-    <loc>https://cactusgioielli.it/index_en_black.html</loc>
+    <loc>https://cactusgioielli.it/dark-en.html</loc>
   </url>
 
 
 </urlset>
+
