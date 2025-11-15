@@ -946,6 +946,32 @@
     });
   </script>
   <script src="./script.js"></script>
+  <script> // SCRIPT WTZ 
+    function toggleWA() {
+      document.getElementById("wa-popup").classList.toggle("show");
+    }
+
+    // Chiude cliccando fuori
+    document.addEventListener("click", function (e) {
+      const popup = document.getElementById("wa-popup");
+      const button = document.querySelector(".wa-button");
+      if (!popup.contains(e.target) && !button.contains(e.target)) {
+        popup.classList.remove("show");
+      }
+    });
+  </script>
+  <!-- AGGIUNTA POP UP WTZ -->
+  <div class="wa-wrapper">
+    <div class="wa-popup" id="wa-popup">
+      <p>Hai bisogno di aiuto?</p>
+      <a href="https://wa.me/393351504792" target="_blank">💬 Scrivici su WhatsApp</a>
+    </div>
+
+    <div class="wa-button" onclick="toggleWA()">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+    </div>
+  </div>
+  <!-- FINE POP UP WTZ -->
 </body>
 
 </html>
@@ -962,5 +988,3 @@
        __|  |  |__      
       (___/   \___)
  -->
-
-
