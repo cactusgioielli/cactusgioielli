@@ -219,47 +219,52 @@
      /* invisibile ma rilevabile */
  }
 
- /* Stile delle tabs */
- .tabs {
-     display: flex;
-     gap: 1rem;
-     justify-content: center;
-     background: #3f3f3f;
-     border-radius: 0.75rem;
-     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
-     padding: 0.5rem 0.5rem 0.5rem 0.5rem;
-     margin-bottom: 2.5rem;
- }
+ /* STILE TABS */
+    .tabs {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        background: #3f3f3f;
+        border-radius: 0.75rem;
+        box-shadow: 0 2px 8px rgba(6, 95, 70, 0.06);
+        padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+        margin-bottom: 2.5rem;
+    }
 
- .tab-button {
-     background: #3f3f3f;
-     border: 0px solid #065f46;
-     color: #04996c;
-     padding: 0.5rem;
-     border-radius: 0.5rem;
-     font-weight: 600;
-     cursor: pointer;
-     transition: background 0.3s ease, color 0.3s ease;
-     letter-spacing: 0.5px;
-     font-size: 1.05rem;
-     box-shadow: 0 1px 4px rgba(6, 95, 70, 0.04);
- }
+    .tab-button {
+        background: #3f3f3f;
+        border: 0px solid #065f46;
+        /* di default nessun bordo visibile */
+        color: #04996c;
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+        font-weight: 600;
+        cursor: pointer;
+        /* aggiunto border alla transizione */
+        letter-spacing: 0.5px;
+        font-size: 1.05rem;
+        box-shadow: 0 1px 4px rgba(6, 95, 70, 0.04);
+    }
 
- .tab-button.active,
- .tab-button:hover {
-     background: #065f45;
-     color: #3f3f3f;
- }
 
- .tab-content {
-     display: none;
-     animation: fadeIn 0.3s ease-in-out;
- }
+    .tab-button.active{
+        background: #065f46;
+        color: #3f3f3f;
+    }
+    .tab-button:hover {
+        border: 2px solid #065f46;
+        /* bordo attivo al passaggio del mouse */
+    }
 
- .tab-content.active {
-     display: block;
-     animation: fadeInUp 0.5s;
- }
+    .tab-content {
+        display: none;
+        animation: fadeIn 0.3s ease-in-out;
+    }
+
+    .tab-content.active {
+        display: block;
+        animation: fadeInUp 0.5s;
+    }
 
  @keyframes fadeInUp {
      from {
@@ -1799,4 +1804,3 @@
        __|  |  |__      
       (___/   \___)
  */
-
