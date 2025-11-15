@@ -1583,6 +1583,105 @@
         }
     }
 
+    /* Bottone WhatsApp fisso */
+.wa-button {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  background: #25D366;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+  cursor: pointer;
+  z-index: 9999;
+  transition: transform 0.2s ease;
+}
+
+.wa-button:hover {
+  transform: scale(1.1);
+}
+
+.wa-button img {
+  width: 32px;
+  height: 32px;
+}
+
+/* Popup */
+.wa-popup {
+  position: fixed;
+  bottom: 5.5rem;
+  right: 1.5rem;
+  background: #ffffff;
+  padding: 1rem 1.2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  width: 220px;
+  display: none;
+  flex-direction: column;
+  gap: 0.5rem;
+  z-index: 9999;
+  animation: fadeIn 0.2s ease;
+}
+
+.wa-popup p {
+  margin: 0;
+  color: #1a1a1a;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.wa-popup a {
+  background: #25D366;
+  color: white;
+  text-align: center;
+  padding: 0.5rem 0.8rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.wa-popup.show {
+  display: flex;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Ridimensionamento per schermi piccoli */
+@media (max-width: 768px) {
+  .wa-button {
+    width: 45px;
+    height: 45px;
+  }
+
+  .wa-button img {
+    width: 26px;
+    height: 26px;
+  }
+
+  .wa-popup {
+    width: 180px;
+    padding: 0.8rem 1rem;
+    bottom: 4.5rem; /* più vicino al pulsante */
+  }
+
+  .wa-popup a {
+    padding: 0.4rem 0.6rem;
+    font-size: 13px;
+  }
+
+  .wa-popup p {
+    font-size: 13px;
+  }
+}
+
     /* 
            _.-=-._       
         o~`  '  `~o     
