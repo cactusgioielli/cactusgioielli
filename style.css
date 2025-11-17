@@ -166,6 +166,41 @@
         border-radius: 1rem;
     }
 
+    .immagine-con-velo-e-testo {
+  position: relative;    /* Necessario per sovrapporre velo e testo */
+  width: 100%;
+  height: 250px;         /* Altezza ridotta */
+  overflow: hidden;
+}
+
+.immagine-con-velo-e-testo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.immagine-con-velo-e-testo .velo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);  /* Velo scuro */
+}
+
+.immagine-con-velo-e-testo .testo-centrato {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);  /* Centra perfettamente */
+  color: white;                       /* Testo leggibile sul velo */
+  font-size: 2em;
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
+}
+
     /* Freccia */
     .scroll-down {
         position: absolute;
@@ -245,10 +280,11 @@
     }
 
 
-    .tab-button.active{
+    .tab-button.active {
         background: #065f46;
         color: white;
     }
+
     .tab-button:hover {
         border: 0.5px solid #065f46;
         /* bordo attivo al passaggio del mouse */
