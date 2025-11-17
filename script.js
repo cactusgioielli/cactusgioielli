@@ -1,14 +1,3 @@
-function showTab(tab) {
-    document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
-    document.querySelectorAll('.tab-button').forEach(b => b.classList.remove('active'));
-    document.getElementById(tab).classList.add('active');
-    document.getElementById(tab + '-btn').classList.add('active');
-    // Reset search on tab change
-    if (document.getElementById('search-input')) {
-        document.getElementById('search-input').value = '';
-        resetGallerySearch();
-    }
-}
 let galleryImages = [];
 let currentIndex = 0;
 function updateModalCounter() {
@@ -305,7 +294,7 @@ function scrollToTop(duration = 2000) {
         const elapsed = currentTime - startTime;
         const progress = Math.min(elapsed / duration, 1);
         // easing con effetto "smooth" più dolce
-        const ease = 1 - Math.pow(1 - progress, 3); 
+        const ease = 1 - Math.pow(1 - progress, 3);
 
         window.scrollTo(0, start * (1 - ease));
 
@@ -419,6 +408,59 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
+// --- Testi in inglese e italiano ---
+const texts = {
+  it: {
+    title: "Home",
+    home: "Home",
+    about: "Chi siamo",
+    gallery: "Galleria",
+    contact: "Contatti",
+    address: "Indirizzo",
+    welcome: "Benvenuto!",
+    intro: "Questo è il sito della nostra azienda."
+  },
+  en: {
+    title: "Home",
+    home: "Home",
+    about: "About us",
+    gallery: "Gallery",
+    contact: "Contact",
+    address: "Address",
+    welcome: "Welcome!",
+    intro: "This is our company website."
+  }
+};
+
+// --- Selezione lingua tramite localStorage o URL ---
+const urlParams = new URLSearchParams(window.location.search);
+let lang = urlParams.get("lang") || localStorage.getItem("lang") || "it";
+
+// --- Funzione per applicare la lingua ---
+function setLanguage(l) {
+  document.querySelectorAll("[data-i18n]").forEach(el => {
+    const key = el.getAttribute("data-i18n");
+    if (texts[l][key]) el.textContent = texts[l][key];
+  });
+  localStorage.setItem("lang", l);
+}
+
+// --- Event listener per dropdown lingua (se ce l'hai) ---
+const langSelect = document.getElementById("language-select");
+if (langSelect) {
+  langSelect.value = lang;
+  langSelect.addEventListener("change", () => {
+    setLanguage(langSelect.value);
+  });
+}
+
+
+// --- Applica lingua al caricamento della pagina ---
+setLanguage(lang);
+
+
+
 /*
     _.-=-._       
   o~`  '  `~o     
@@ -432,4 +474,3 @@ document.addEventListener("DOMContentLoaded", function () {
    __|  |  |__      
   (___/   \___)
 */
-
