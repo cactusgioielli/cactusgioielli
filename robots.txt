@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+# Nessun blocco, indicizzazione totale
+
+Sitemap: https://cactusgioielli.it/sitemap.xml
