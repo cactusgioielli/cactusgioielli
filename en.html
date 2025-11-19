@@ -290,44 +290,30 @@
       <div class="divider-line"></div>
 
       <!-- Icona luogo -->
-      <svg width="40" height="40" viewBox="0 0 64 64"
-  fill="none" xmlns="http://www.w3.org/2000/svg">
-  <!-- Scudo -->
-  <path
-    d="M32 6L16 12V30C16 41 22.5 50.5 32 54C41.5 50.5 48 41 48 30V12L32 6Z"
-    stroke="#065F46" stroke-width="2.5" stroke-linejoin="round"/>
-  <!-- Check di garanzia -->
-  <path
-    d="M24 31L30 37L40 25"
-    stroke="#04996C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"
-  />
-  <!-- Foglia -->
-  <path
-    d="M32 14C35 11.5 38.5 10 42 10C40.5 13.5 38 16 35 17.5C32.5 18.8 30 19 28 19"
-    stroke="#04996C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-  />
-</svg>
+      <svg width="40" height="40" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- Scudo -->
+        <path d="M32 6L16 12V30C16 41 22.5 50.5 32 54C41.5 50.5 48 41 48 30V12L32 6Z" stroke="#065F46"
+          stroke-width="2.5" stroke-linejoin="round" />
+        <!-- Check di garanzia -->
+        <path d="M24 31L30 37L40 25" stroke="#04996C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+        <!-- Foglia -->
+        <path d="M32 14C35 11.5 38.5 10 42 10C40.5 13.5 38 16 35 17.5C32.5 18.8 30 19 28 19" stroke="#04996C"
+          stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
       <h3 style="margin: 0; font-size: 18px; color:#065f46;">
         WHAT WE GUARANTEE
       </h3>
       <!-- Icona luogo -->
-      <svg width="40" height="40" viewBox="0 0 64 64"
-  fill="none" xmlns="http://www.w3.org/2000/svg">
-  <!-- Scudo -->
-  <path
-    d="M32 6L16 12V30C16 41 22.5 50.5 32 54C41.5 50.5 48 41 48 30V12L32 6Z"
-    stroke="#065F46" stroke-width="2.5" stroke-linejoin="round"/>
-  <!-- Check di garanzia -->
-  <path
-    d="M24 31L30 37L40 25"
-    stroke="#04996C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"
-  />
-  <!-- Foglia -->
-  <path
-    d="M32 14C35 11.5 38.5 10 42 10C40.5 13.5 38 16 35 17.5C32.5 18.8 30 19 28 19"
-    stroke="#04996C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-  />
-</svg>
+      <svg width="40" height="40" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- Scudo -->
+        <path d="M32 6L16 12V30C16 41 22.5 50.5 32 54C41.5 50.5 48 41 48 30V12L32 6Z" stroke="#065F46"
+          stroke-width="2.5" stroke-linejoin="round" />
+        <!-- Check di garanzia -->
+        <path d="M24 31L30 37L40 25" stroke="#04996C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+        <!-- Foglia -->
+        <path d="M32 14C35 11.5 38.5 10 42 10C40.5 13.5 38 16 35 17.5C32.5 18.8 30 19 28 19" stroke="#04996C"
+          stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
 
       <div class="divider-line"></div>
 
@@ -340,46 +326,110 @@
     </div>
   </div>
 
+  <!-- CSS: forza 5 elementi sulla stessa riga -->
+  <style>
+    .quad-container {
+      display: flex;
+      justify-content: center;
+      gap: 1.6rem;
+      flex-wrap: nowrap;
+      /* Desktop: tutti in riga */
+    }
+
+    .quad-box {
+      background: #ffffff;
+      border-radius: 1.2rem;
+      box-shadow: 0 2px 16px rgba(6, 95, 70, 0.08);
+      padding: 2rem 1.2rem 1.2rem 1.2rem;
+      text-align: center;
+      transition: transform .22s, box-shadow .22s;
+      border: 1.5px solid #e0f2f1;
+      flex: 1;
+      min-width: 150px;
+      max-width: 220px;
+    }
+
+    /* 📱 MOBILE: 1 elemento per riga */
+    @media (max-width: 700px) {
+      .quad-container {
+        flex-wrap: wrap;
+        /* Adesso possono andare a capo */
+        gap: 1.8rem;
+      }
+
+      .quad-box {
+        flex: 1 1 100%;
+        /* Occupa tutta la riga */
+        max-width: 100%;
+        min-width: 100%;
+        padding: 1.6rem 1rem;
+      }
+    }
+  </style>
+
   <!-- INIZIO SEZIONE QUADRATI DESCRITTIVI -->
-  <div
-    style="margin:2.5rem auto 2.5rem auto;max-width:900px;display:flex;gap:2.5rem;justify-content:center;flex-wrap:wrap;"
-    class="reveal">
-    <div
-      style="background:#ffffff;border-radius:1.2rem;box-shadow:0 2px 16px rgba(6,95,70,0.08);padding:2rem 1.5rem 1.5rem 1.5rem;flex:1 1 220px;min-width:220px;max-width:270px;text-align:center;transition:transform 0.22s, box-shadow 0.22s;border:1.5px solid #e0f2f1;">
-      <svg fill="none" stroke="#04996c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-        viewBox="0 0 24 24" style="margin-bottom:0.7em;width:2.1em;height:2.1em;">
-        <path d="M12 2l2 7h7l-5.5 4 2 7-5.5-4-5.5 4 2-7L3 9h7z" />
-      </svg>
-      <div style="font-weight:700;color:#065f46;font-size:1.18rem;margin-bottom:0.4em;">Quality guaranteed</div>
-      <div style="color:#1f2937;font-size:1.05rem;">Only the best plants, grown with care and attention.
+  <div style="margin:2.5rem auto;max-width:1300px;" class="reveal">
+
+    <div class="quad-container">
+
+      <!-- QUADRATO 1 -->
+      <div class="quad-box">
+        <svg fill="none" stroke="#04996c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+          viewBox="0 0 24 24" style="margin-bottom:0.7em;width:2em;height:2em;">
+          <path d="M12 2l2 7h7l-5.5 4 2 7-5.5-4-5.5 4 2-7L3 9h7z" />
+        </svg>
+        <div style="font-weight:700;color:#065f46;font-size:1.15rem;margin-bottom:0.4em;">Quality guaranteed</div>
+        <div style="color:#1f2937;font-size:1rem;">Only the best plants, grown with care and attention.</div>
       </div>
-    </div>
-    <div
-      style="background:#ffffff;border-radius:1.2rem;box-shadow:0 2px 16px rgba(6,95,70,0.08);padding:2rem 1.5rem 1.5rem 1.5rem;flex:1 1 220px;min-width:220px;max-width:270px;text-align:center;transition:transform 0.22s, box-shadow 0.22s;border:1.5px solid #e0f2f1;">
-      <svg fill="none" stroke="#04996c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-        viewBox="0 0 24 24" style="margin-bottom:0.7em;width:2.1em;height:2.1em;">
-        <circle cx="12" cy="12" r="10" />
-        <path d="M12 6v6l4 2" />
-      </svg>
-      <div style="font-weight:700;color:#065f46;font-size:1.18rem;margin-bottom:0.4em;">Experience & Passion
+
+      <!-- QUADRATO 2 -->
+      <div class="quad-box">
+        <svg fill="none" stroke="#04996c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+          viewBox="0 0 24 24" style="margin-bottom:0.7em;width:2em;height:2em;">
+          <circle cx="12" cy="12" r="10" />
+          <path d="M12 6v6l4 2" />
+        </svg>
+        <div style="font-weight:700;color:#065f46;font-size:1.15rem;margin-bottom:0.4em;">Experience & Passion</div>
+        <div style="color:#1f2937;font-size:1rem;">For generations, we have passed on our passion for greenery.</div>
       </div>
-      <div style="color:#1f2937;font-size:1.05rem;">For generations, we have passed on our passion for greenery.
+
+      <!-- QUADRATO 3 -->
+      <div class="quad-box">
+        <svg fill="none" stroke="#04996c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+          viewBox="0 0 24 24" style="margin-bottom:0.7em;width:2em;height:2em;">
+          <rect x="2" y="7" width="20" height="14" rx="4" ry="4" />
+          <path d="M16 3v4" />
+          <path d="M8 3v4" />
+        </svg>
+        <div style="font-weight:700;color:#065f46;font-size:1.15rem;margin-bottom:0.4em;">Service personalized</div>
+        <div style="color:#1f2937;font-size:1rem;">Consulting, tailor-made compositions and favors for every need.</div>
       </div>
-    </div>
-    <div
-      style="background:#ffffff;border-radius:1.2rem;box-shadow:0 2px 16px rgba(6,95,70,0.08);padding:2rem 1.5rem 1.5rem 1.5rem;flex:1 1 220px;min-width:220px;max-width:270px;text-align:center;transition:transform 0.22s, box-shadow 0.22s;border:1.5px solid #e0f2f1;">
-      <svg fill="none" stroke="#04996c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-        viewBox="0 0 24 24" style="margin-bottom:0.7em;width:2.1em;height:2.1em;">
-        <rect x="2" y="7" width="20" height="14" rx="4" ry="4" />
-        <path d="M16 3v4" />
-        <path d="M8 3v4" />
-      </svg>
-      <div style="font-weight:700;color:#065f46;font-size:1.18rem;margin-bottom:0.4em;">Service personalized
+
+      <!-- QUADRATO 4 -->
+      <div class="quad-box">
+        <svg fill="none" stroke="#04996c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+          viewBox="0 0 24 24" style="margin-bottom:0.7em;width:2em;height:2em;">
+          <path d="M4 14c2-7 9-10 14-8-1 5-4 12-12 14-1-3 1-6 4-8 3-2 6-2 8-1" />
+        </svg>
+        <div style="font-weight:700;color:#065f46;font-size:1.15rem;margin-bottom:0.4em;">Natural growth</div>
+        <div style="color:#1f2937;font-size:1rem;">Sustainable and responsible cultivation.</div>
       </div>
-      <div style="color:#1f2937;font-size:1.05rem;">Consulting, tailor-made compositions and favors for every need.
+
+      <!-- QUADRATO 5 -->
+      <div class="quad-box">
+        <svg fill="none" stroke="#04996c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+          viewBox="0 0 24 24" style="margin-bottom:0.7em;width:2em;height:2em;">
+          <circle cx="9" cy="21" r="1" />
+          <circle cx="20" cy="21" r="1" />
+          <path d="M1 1h4l2.7 12.4a2 2 0 0 0 2 1.6h9.6a2 2 0 0 0 2-1.6L23 6H6" />
+        </svg>
+        <div style="font-weight:700;color:#065f46;font-size:1.15rem;margin-bottom:0.4em;">Simple purchase</div>
+        <div style="color:#1f2937;font-size:1rem;">Quick orders and dedicated assistance.</div>
       </div>
+
     </div>
   </div>
+  <!-- FINE SEZIONE -->
   <!-- CITAZIONE FINALE -->
   <div style="margin:2.5rem auto 0 auto;max-width:600px;text-align:center;" class="reveal">
     <blockquote
@@ -791,8 +841,3 @@
        __|  |  |__      
       (___/   \___)
  -->
-
-
-
-
-
