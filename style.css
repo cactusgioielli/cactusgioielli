@@ -1921,6 +1921,7 @@ html {
         font-size: 1.1rem;
         bottom: 12px;
         left: 12px;
+        z-index: 1000;
     }
 }
 
@@ -2145,3 +2146,4 @@ html {
         __|  |  |__      
         (___/   \___)
     */
+
