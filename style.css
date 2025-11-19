@@ -1817,6 +1817,321 @@ html {
     }
 }
 
+/* ===============================
+   SEZIONE 4 FOTO A SCHERMO INTERO
+   =============================== */
+
+.quad-gallery {
+    margin-top: 15px;
+    display: flex;
+    width: 100%;
+    height: 50vh;
+    /* a tutto schermo su desktop */
+    overflow: hidden;
+    margin-bottom: 5px;
+}
+
+.quad-item {
+    position: relative;
+    flex: 1;
+    overflow: hidden;
+    border-right: 1px solid white;
+}
+
+.quad-item:last-child {
+    border-right: none;
+}
+
+/* Immagini */
+.quad-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .5s ease;
+}
+
+.quad-item:hover img {
+    transform: scale(1.08);
+}
+
+/* Velo */
+.quad-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    transition: .3s ease;
+}
+
+.quad-item:hover .quad-overlay {
+    background: rgba(0, 0, 0, 0.60);
+}
+
+/* Testo */
+.quad-text {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    font-size: 1.7rem;
+    font-weight: 700;
+    z-index: 2;
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+}
+
+/* ===============================
+   TABLET
+   =============================== */
+@media (max-width: 900px) {
+
+    .quad-gallery {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .quad-item {
+        width: 100%;
+        aspect-ratio: 16 / 8;
+        /* FOTO MOLTO PIÙ PICCOLE */
+        border-right: 0;
+        border-bottom: 1px solid white;
+    }
+
+    .quad-item:last-child {
+        border-bottom: none;
+    }
+
+    .quad-text {
+        font-size: 1.3rem;
+        bottom: 15px;
+        left: 15px;
+    }
+}
+
+/* ===============================
+   SMARTPHONE
+   =============================== */
+@media (max-width: 600px) {
+
+    .quad-item {
+        aspect-ratio: 16 / 10;
+        /* ULTERIORE RIDUZIONE */
+    }
+
+    .quad-text {
+        font-size: 1.1rem;
+        bottom: 12px;
+        left: 12px;
+    }
+}
+
+/* ===============================
+   PICCOLISSIMI (iPhone SE, Android mini)
+   =============================== */
+@media (max-width: 420px) {
+
+    .quad-item {
+        aspect-ratio: 16 / 12;
+        /* ANCORA PIÙ PICCOLE */
+    }
+
+    .quad-text {
+        font-size: 1rem;
+    }
+}
+
+/* ===============================
+   SEZIONE ESPERIENZA & SERIETÀ
+   =============================== */
+
+.exp-section {
+    margin-top: -100px;
+    width: 100%;
+    max-width: 1400px;
+    /* CENTRA TUTTA LA SEZIONE */
+    margin-inline: auto;
+    /* centra orizzontalmente */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 5%;
+    gap: 80px;
+}
+
+/* --- TEXT AREA (sinistra) --- */
+.exp-left {
+    flex: 1;
+    max-width: 480px;
+    margin-left: 0;
+    /* eliminato margine che spingeva tutto a sinistra */
+    color: #043d2d;
+}
+
+.exp-left h2 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.exp-left p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.exp-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #04996c;
+    color: white;
+    padding: 14px 28px;
+    font-size: 1.15rem;
+    border-radius: 10px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: .3s ease;
+}
+
+.exp-btn:hover {
+    background: #037e58;
+}
+
+/* --- FOTO (destra) --- */
+.exp-right {
+    flex: 1.2;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-right: 0;
+    /* eliminato per centratura */
+}
+
+/* FOTO GRANDE — FLUIDA */
+.exp-img-big {
+    width: 100%;
+    max-width: 760px;
+    aspect-ratio: 3 / 2;
+    /* mantiene proporzione */
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* RIGA SOTTO — FLUIDA */
+.exp-img-row {
+    width: 100%;
+    max-width: 760px;
+    display: flex;
+    gap: 10px;
+}
+
+/* FOTO PICCOLE — FLUIDE */
+.small-img {
+    flex: 1;
+    aspect-ratio: 16 / 10;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* IMMAGINI INTERNE */
+.exp-img img,
+.small-img img,
+.exp-img-big img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* ============================================
+      RESPONSIVE — TABLET & MOBILE
+   ============================================ */
+
+/* --- TABLET --- */
+@media (max-width: 992px) {
+
+    .exp-section {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 60px 0;
+        gap: 40px;
+        max-width: 100%;
+    }
+
+    .exp-left {
+        text-align: center;
+        margin: 0 auto;
+        max-width: 90%;
+    }
+
+    .exp-left h2 {
+        font-size: 2.4rem;
+    }
+
+    .exp-left p {
+        font-size: 1.15rem;
+    }
+
+    .exp-right {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .exp-img-big {
+        width: 100%;
+        max-width: 100%;
+        aspect-ratio: 16 / 9;
+        border-bottom: 2px solid white;
+    }
+
+    .exp-img-row {
+        width: 100%;
+        max-width: 100%;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .small-img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16 / 9;
+        border: none;
+        border-bottom: 2px solid white;
+    }
+}
+
+/* --- SMARTPHONE --- */
+@media (max-width: 600px) {
+
+    .exp-left {
+        max-width: 90%;
+        text-align: center;
+    }
+
+    .exp-left h2 {
+        font-size: 2rem;
+    }
+
+    .exp-left p {
+        font-size: 1rem;
+    }
+
+    .exp-img-big {
+        aspect-ratio: 16 / 10;
+    }
+
+    .small-img {
+        aspect-ratio: 16 / 10;
+    }
+}
+
+
+
 /* 
            _.-=-._       
         o~`  '  `~o     
