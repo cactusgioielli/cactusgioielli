@@ -265,12 +265,12 @@
 
       <div class="exp-img-row">
         <div class="exp-img small-img">
-          <img src="IMMAGINI/CHISIAMO.jpeg" alt="">
+          <img src="IMMAGINI/CONTATTI.jpeg" alt="">
         </div>
 
 
         <div class="exp-img small-img">
-          <img src="IMMAGINI/CONTATTI.jpeg" alt="">
+          <img src="IMMAGINI/ALTO.PNG" alt="">
         </div>
       </div>
     </div>
@@ -327,55 +327,45 @@
   </div>
 
   <!-- CSS: forza 5 elementi sulla stessa riga -->
- <style>
-  .quad-container {
-    display: flex;
-    justify-content: center;
-    gap: 1.6rem;
-    flex-wrap: nowrap; /* Desktop: 5 su una riga */
-  }
-
-  .quad-box {
-    background:#ffffff;
-    border-radius:1.2rem;
-    box-shadow:0 2px 16px rgba(6,95,70,0.08);
-    padding:2rem 1.2rem 1.2rem 1.2rem;
-    text-align:center;
-    transition:transform .22s, box-shadow .22s;
-    border:1.5px solid #e0f2f1;
-    flex:1;
-    min-width:150px;
-    max-width:220px;
-  }
-
-  /* 📱 MOBILE: 1 per riga */
-  @media (max-width: 700px) {
+  <style>
     .quad-container {
-      flex-wrap: wrap;
-    }
-    .quad-box {
-      flex: 1 1 100%;
-      max-width: 100%;
-      min-width: 100%;
-      padding:1.6rem 1rem;
-    }
-  }
-
-  /* 📱📲 TABLET: 3 sopra + 2 sotto */
-  @media (min-width: 701px) and (max-width: 1024px) {
-    .quad-container {
-      flex-wrap: wrap;          /* li mandiamo a capo */
+      display: flex;
       justify-content: center;
-      gap: 1.8rem;
+      gap: 1.6rem;
+      flex-wrap: nowrap;
+      /* Desktop: tutti in riga */
     }
 
     .quad-box {
-      flex: 1 1 calc(33.33% - 1.8rem);  /* 3 per riga */
-      max-width: calc(33.33% - 1.8rem);
-      min-width: calc(33.33% - 1.8rem);
+      background: #ffffff;
+      border-radius: 1.2rem;
+      box-shadow: 0 2px 16px rgba(6, 95, 70, 0.08);
+      padding: 2rem 1.2rem 1.2rem 1.2rem;
+      text-align: center;
+      transition: transform .22s, box-shadow .22s;
+      border: 1.5px solid #e0f2f1;
+      flex: 1;
+      min-width: 150px;
+      max-width: 220px;
     }
-  }
-</style>
+
+    /* 📱 MOBILE: 1 elemento per riga */
+    @media (max-width: 700px) {
+      .quad-container {
+        flex-wrap: wrap;
+        /* Adesso possono andare a capo */
+        gap: 1.8rem;
+      }
+
+      .quad-box {
+        flex: 1 1 100%;
+        /* Occupa tutta la riga */
+        max-width: 100%;
+        min-width: 100%;
+        padding: 1.6rem 1rem;
+      }
+    }
+  </style>
 
   <!-- INIZIO SEZIONE QUADRATI DESCRITTIVI -->
   <div style="margin:2.5rem auto;max-width:1300px;" class="reveal">
@@ -851,4 +841,3 @@
        __|  |  |__      
       (___/   \___)
  -->
-
