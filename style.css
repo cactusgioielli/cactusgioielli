@@ -1912,31 +1912,38 @@ html {
    =============================== */
 @media (max-width: 600px) {
 
-    .quad-item {
-        aspect-ratio: 16 / 10;
-        /* ULTERIORE RIDUZIONE */
+    .quad-overlay {
+        background: rgba(0, 0, 0, 0.30);
+        /* MENO SCURO → TESTO PIÙ VISIBILE */
     }
 
     .quad-text {
-        font-size: 1.1rem;
-        bottom: 12px;
-        left: 12px;
+        font-size: 1.35rem;
+        /* TESTO PIÙ GRANDE */
+        bottom: 20px;
+        /* PIÙ IN ALTO, NON SI SCHIACCIA SUL MARGINE */
+        left: 15px;
         z-index: 1000;
+    }
+
+    .quad-item {
+        aspect-ratio: 16 / 10;
     }
 }
 
 /* ===============================
-   PICCOLISSIMI (iPhone SE, Android mini)
+   PICCOLISSIMI (iPhone SE)
    =============================== */
 @media (max-width: 420px) {
 
-    .quad-item {
-        aspect-ratio: 16 / 12;
-        /* ANCORA PIÙ PICCOLE */
+    .quad-overlay {
+        background: rgba(0, 0, 0, 0.28);
+        /* ANCORA PIÙ LEGGERO */
     }
 
     .quad-text {
-        font-size: 1rem;
+        font-size: 1.25rem;
+        bottom: 18px;
     }
 }
 
@@ -2146,4 +2153,3 @@ html {
         __|  |  |__      
         (___/   \___)
     */
-
