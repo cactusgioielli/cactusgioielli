@@ -30,13 +30,6 @@
     <changefreq>weekly</changefreq>
   </url>
 
-  <url>
-    <loc>https://cactusgioielli.it/indirizzo.html</loc>
-    <priority>0.7</priority>
-    <lastmod>2025-11-17</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-
   <!-- SITO EN -->
   <url>
     <loc>https://cactusgioielli.it/en.html</loc>
@@ -65,12 +58,5 @@
     <lastmod>2025-11-17</lastmod>
     <changefreq>weekly</changefreq>
   </url>
-
-  <url>
-    <loc>https://cactusgioielli.it/address.html</loc>
-    <priority>0.6</priority>
-    <lastmod>2025-11-17</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-
+  
 </urlset>
