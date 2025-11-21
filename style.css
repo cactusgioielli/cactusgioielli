@@ -1828,7 +1828,7 @@ html {
     height: 50vh;
     /* a tutto schermo su desktop */
     overflow: hidden;
-    margin-bottom: 5px;
+    margin-bottom: 1px;
 }
 
 .quad-item {
@@ -2215,7 +2215,7 @@ html {
     width: 100%;
     height: 25vh;
     background:
-        linear-gradient(135deg, rgba(255,255,255,0.08), rgba(255,255,255,0) 40%),
+        linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0) 40%),
         linear-gradient(135deg, #043d2d, #065f46 45%, #0b6f54);
     display: flex;
     align-items: center;
@@ -2223,6 +2223,76 @@ html {
     padding: 0 2rem;
     text-align: center;
     position: relative;
+}
+
+/* ==== HERO STATS ==== */
+.stats-hero {
+    width: 100%;
+    height: 35vh;
+    /* Regola l’altezza */
+    position: relative;
+    overflow: hidden;
+    margin-top: 2rem;
+    margin-bottom: rem;
+    /* Regola quanto vuoi */
+}
+
+.stats-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Adatta la foto allo spazio */
+    opacity: 0.85;
+}
+
+.stat-number::after {
+    content: "+";
+    font-weight: 800;
+    margin-left: 3px;
+}
+
+.stats-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20rem;
+    background: rgba(0, 0, 0, 0.45);
+    /* Velo scuro più visibile */
+    text-align: center;
+
+}
+
+.stats-box h3 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #ffffff;
+    margin: 0;
+}
+
+.stats-box p {
+    color: #e8e8e8;
+    font-size: 1rem;
+    margin-top: 0.3rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .stats-hero {
+        height: 45vh;
+    }
+
+    .stats-overlay {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .stats-box h3 {
+        font-size: 2rem;
+    }
 }
 
 /* 
