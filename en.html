@@ -447,6 +447,30 @@
         </div>
     </div>
     <!-- FINE SEZIONE -->
+
+<!-- ==== SEZIONE CONTATORE SU IMMAGINE FULL WIDTH ==== -->
+  <section class="stats-hero">
+    <img src="IMMAGINI/GALLERIA.jpeg" alt="Background" class="stats-bg">
+
+    <div class="stats-overlay">
+      <div class="stats-box">
+        <h3 class="stat-number reveal" data-target="200">0</h3>
+        <p>Variety of plants</p>
+      </div>
+
+      <div class="stats-box">
+        <h3 class="stat-number reveal" data-target="100000">0</h3>
+        <p>Plants produced every year</p>
+      </div>
+
+      <div class="stats-box">
+        <h3 class="stat-number reveal" data-target="30">0</h3>
+        <p>Years of experience</p>
+      </div>
+    </div>
+  </section>
+  <!-- ==== FINE SEZIONE CONTATORE SU IMMAGINE FULL WIDTH ==== -->
+
     <!-- SEZIONE CITAZIONE FULLSCREEN -->
     <section class="quote-fullscreen reveal">
         <div class="quote-container">
@@ -461,6 +485,8 @@
     </div>
     </div>
     <!-- FINE SEZIONE QUADRATI DESCRITTIVI -->
+
+    
 
     <!-- Divisore elegante con frecce verso il basso (RESPONSIVE) -->
     <div class="divider-wrapper">
@@ -837,6 +863,47 @@
         });
     </script>
     <script src="./script.js"></script>
+
+     <script> // SCRIPT CONTATORE
+    document.addEventListener("DOMContentLoaded", function () {
+
+    const counters = document.querySelectorAll('.stat-number');
+    if (!counters.length) return;
+
+    const animateCounters = () => {
+        counters.forEach(counter => {
+            const target = parseInt(counter.getAttribute("data-target"));
+            let count = 0;
+            const speed = target / 160;
+
+            const update = () => {
+                count += speed;
+                counter.textContent = Math.floor(count);
+
+                if (count < target) {
+                    requestAnimationFrame(update);
+                } else {
+                    counter.textContent = target;
+                }
+            };
+
+            update();
+        });
+    };
+
+    const section = document.querySelector('.stats-hero');
+    if (!section) return;
+
+    const observer = new IntersectionObserver((entries) => {
+        if (entries[0].isIntersecting) {
+            animateCounters();
+            observer.disconnect(); // parte solo 1 volta
+        }
+    }, { threshold: 0.8 }); // attiva quando metà sezione è visibile
+
+    observer.observe(section);
+}); // FINE SCRIPT CONTATORE
+  </script> 
 
     <!-- AGGIUNTA POP UP WTZ -->
     <div class="wa-wrapper">
