@@ -2263,7 +2263,7 @@ html {
     position: relative;
     overflow: hidden;
     margin-top: 2rem;
-    margin-bottom: rem;
+    margin-bottom: 0.5rem;
     /* Regola quanto vuoi */
 }
 
