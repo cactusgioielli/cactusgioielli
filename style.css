@@ -591,12 +591,14 @@ header p {
     cursor: pointer;
 }
 
-
+/* ===========================
+   CATEGORIE GALLERIA
+   =========================== */
 .gallery-categories {
     display: flex;
     gap: 1rem;
     justify-content: center;
-    margin-bottom: 1.5rem;
+    margin: 1.5rem auto 2rem;
     flex-wrap: wrap;
 }
 
@@ -604,45 +606,106 @@ header p {
     background: #e0f2f1;
     color: #065f46;
     border: 1.5px solid #065f46;
-    border-radius: 0.5rem;
-    padding: 0.5rem 1.2rem;
+    border-radius: 0.55rem;
+    padding: 0.55rem 1.4rem;
     font-weight: 600;
     cursor: pointer;
-    transition: background 0.2s, color 0.2s;
+    transition: 0.25s ease;
     font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.gallery-category-btn img {
+    width: 18px;
+    height: 18px;
 }
 
 .gallery-category-btn.active,
 .gallery-category-btn:hover {
     background: #065f46;
     color: #fff;
+    transform: translateY(-2px);
 }
 
+/* ===========================
+   GALLERIA FOTO 4 GRANDI
+   =========================== */
+
 .gallery {
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 1.5rem;
-    align-items: stretch;
+    gap: 1rem;
+
+    /* 👉 Foto più grandi (300px invece di 260) */
+    grid-template-columns: repeat(4, minmax(300px, 1fr));
+
+    justify-content: center;
+    justify-items: center;
 }
 
 .gallery img {
     width: 100%;
-    height: 240px;
+    max-width: 300px;
+    /* 👉 aumenta dimensione reale delle immagini */
+    aspect-ratio: 1/1;
     object-fit: cover;
-    border-radius: 0.75rem;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-    cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s;
-    box-shadow: 0 2px 12px rgba(6, 95, 70, 0.08);
+    border-radius: 0.9rem;
+
     background: #f0fdf4;
-    display: block;
+    box-shadow: 0 2px 12px rgba(6, 95, 70, 0.08);
+    transition: 0.35s ease;
+    cursor: pointer;
 }
 
 .gallery img:hover {
-    transform: scale(1.08) rotate(-1deg);
-    box-shadow: 0 8px 32px rgba(6, 95, 70, 0.18);
+    transform: scale(1.06);
+    box-shadow: 0 8px 30px rgba(6, 95, 70, 0.22);
     filter: brightness(1.08);
 }
+
+
+/* ===========================
+   RESPONSIVE
+   =========================== */
+
+/* Tablet: 3 foto */
+@media (max-width: 1024px) {
+    .gallery {
+        grid-template-columns: repeat(3, minmax(240px, 1fr));
+    }
+}
+
+/* Smartphone: 2 foto */
+@media (max-width: 768px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.2rem;
+    }
+
+    .gallery img {
+        aspect-ratio: 4/5;
+    }
+}
+
+/* Smartphone piccoli: 1 foto */
+@media (max-width: 480px) {
+    .gallery {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .gallery img {
+        aspect-ratio: 1/1;
+    }
+}
+
+
+
 
 .contact-info {
     padding: 2.2rem 2rem;
