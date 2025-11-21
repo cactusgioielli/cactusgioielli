@@ -2279,6 +2279,27 @@ html {
     letter-spacing: 1px;
 }
 
+/* ===== TABLET (1024px e giù) ===== */
+@media (max-width: 1024px) {
+    .stats-hero {
+        height: 40vh;
+    }
+
+    .stats-overlay {
+        gap: 3rem;
+        /* meno spazio tra i box */
+    }
+
+    .stats-box h3 {
+        font-size: 2.2rem;
+    }
+
+    .stats-box p {
+        font-size: 0.95rem;
+    }
+}
+
+
 /* MOBILE */
 @media (max-width: 768px) {
     .stats-hero {
