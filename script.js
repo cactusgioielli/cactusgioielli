@@ -198,49 +198,54 @@ function resetGallerySearch() {
     });
 }
 
+// SLIDE
+document.addEventListener("DOMContentLoaded", () => {
 
-window.addEventListener('DOMContentLoaded', () => {
-    const slideshow = document.querySelector('.slideshow');
-    const slides = document.querySelectorAll('.slide');
-    const prevBtn = document.querySelector('.prev');
-    const nextBtn = document.querySelector('.next');
+    const container = document.querySelector(".slideshow-container.mostra-5");
+    if (!container) return;
 
-    if (!slideshow || slides.length === 0) return;
+    const track = container.querySelector(".slideshow");
+    const slides = Array.from(track.querySelectorAll(".slide"));
 
+    // DUPLICA SLIDE per loop infinito
+    slides.forEach(s => {
+        const clone = s.cloneNode(true);
+        track.appendChild(clone);
+    });
+
+    const allSlides = Array.from(track.querySelectorAll(".slide"));
     let index = 0;
 
-    function slidesPerView() {
-        if (window.innerWidth <= 600) return 1;
-        if (window.innerWidth <= 1024) return 2;
-        return 3;
+    function updateSlide(noTrans = false) {
+        const slideWidth = allSlides[0].offsetWidth;
+
+        if (noTrans) {
+            track.style.transition = "none";
+        } else {
+            track.style.transition = "transform 0.5s ease";
+        }
+
+        track.style.transform = `translateX(-${index * slideWidth}px)`;
     }
 
-    function updateSlidePosition() {
-        const visible = slidesPerView();
-        const movePercent = index * (100 / visible);
-        slideshow.style.transform = `translateX(-${movePercent}%)`;
-    }
-
-    nextBtn.addEventListener('click', () => {
-        const visible = slidesPerView();
-        if (index < slides.length - visible) index++;
-        updateSlidePosition();
-    });
-
-    prevBtn.addEventListener('click', () => {
-        if (index > 0) index--;
-        updateSlidePosition();
-    });
-
-    // Scorrimento automatico
+    // AUTOPLAY ogni 3 secondi
     setInterval(() => {
-        const visible = slidesPerView();
-        index = (index + 1) % (slides.length - visible + 1);
-        updateSlidePosition();
-    }, 4000);
+        index++;
+        updateSlide();
 
-    window.addEventListener('resize', updateSlidePosition);
+        // quando arrivi a metà (fine prima copia), reset invisibile
+        if (index >= allSlides.length / 2) {
+            setTimeout(() => {
+                index = 0;
+                updateSlide(true);
+            }, 500);
+        }
+    }, 3000);
+
+    updateSlide(true);
 });
+// FINE SLIDE
+
 // Mostra o nasconde il banner
 const banner = document.getElementById('cookie-banner');
 const acceptBtn = document.getElementById('accept-cookies');
@@ -411,26 +416,26 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // --- Testi in inglese e italiano ---
 const texts = {
-  it: {
-    title: "Home",
-    home: "Home",
-    about: "Chi siamo",
-    gallery: "Galleria",
-    contact: "Contatti",
-    address: "Indirizzo",
-    welcome: "Benvenuto!",
-    intro: "Questo è il sito della nostra azienda."
-  },
-  en: {
-    title: "Home",
-    home: "Home",
-    about: "About us",
-    gallery: "Gallery",
-    contact: "Contact",
-    address: "Address",
-    welcome: "Welcome!",
-    intro: "This is our company website."
-  }
+    it: {
+        title: "Home",
+        home: "Home",
+        about: "Chi siamo",
+        gallery: "Galleria",
+        contact: "Contatti",
+        address: "Indirizzo",
+        welcome: "Benvenuto!",
+        intro: "Questo è il sito della nostra azienda."
+    },
+    en: {
+        title: "Home",
+        home: "Home",
+        about: "About us",
+        gallery: "Gallery",
+        contact: "Contact",
+        address: "Address",
+        welcome: "Welcome!",
+        intro: "This is our company website."
+    }
 };
 
 // --- Selezione lingua tramite localStorage o URL ---
@@ -439,27 +444,59 @@ let lang = urlParams.get("lang") || localStorage.getItem("lang") || "it";
 
 // --- Funzione per applicare la lingua ---
 function setLanguage(l) {
-  document.querySelectorAll("[data-i18n]").forEach(el => {
-    const key = el.getAttribute("data-i18n");
-    if (texts[l][key]) el.textContent = texts[l][key];
-  });
-  localStorage.setItem("lang", l);
+    document.querySelectorAll("[data-i18n]").forEach(el => {
+        const key = el.getAttribute("data-i18n");
+        if (texts[l][key]) el.textContent = texts[l][key];
+    });
+    localStorage.setItem("lang", l);
 }
 
 // --- Event listener per dropdown lingua (se ce l'hai) ---
 const langSelect = document.getElementById("language-select");
 if (langSelect) {
-  langSelect.value = lang;
-  langSelect.addEventListener("change", () => {
-    setLanguage(langSelect.value);
-  });
+    langSelect.value = lang;
+    langSelect.addEventListener("change", () => {
+        setLanguage(langSelect.value);
+    });
 }
 
 
 // --- Applica lingua al caricamento della pagina ---
 setLanguage(lang);
 
+// ANIMAZIONE NUMERI
+const counters = document.querySelectorAll('.stat-number');
 
+const animateCounters = () => {
+    counters.forEach(counter => {
+        const target = +counter.getAttribute("data-target");
+        let count = 0;
+        const speed = target / 80;
+
+        const update = () => {
+            count += speed;
+            counter.textContent = Math.floor(count);
+
+            if (count < target) {
+                requestAnimationFrame(update);
+            } else {
+                counter.textContent = target;
+            }
+        };
+
+        update();
+    });
+};
+
+// Avvia animazione quando la sezione entra in viewport
+const observer = new IntersectionObserver(entries => {
+    if (entries[0].isIntersecting) {
+        animateCounters();
+        observer.disconnect();
+    }
+});
+
+observer.observe(document.querySelector('.stats-hero'));
 
 /*
     _.-=-._       
