@@ -1459,96 +1459,64 @@ footer {
 }
 
 .novita-titolo {
+    text-align: center;
     font-size: 1.9em;
     font-weight: 800;
     color: #065f46;
     margin-bottom: 10px;
     text-transform: uppercase;
-    letter-spacing: 20px;
+    letter-spacing: 15px;
 }
 
-.slideshow-container {
-    position: relative;
-    width: 90%;
-    max-width: 150000px;
-    margin: auto;
-    overflow: hidden;
-    border-radius: 15px;
-}
 
 .slideshow {
     display: flex;
+    width: max-content;
+    /* 🔥 si espande quanto serve */
     transition: transform 0.5s ease-in-out;
 }
 
+
+
 .slide {
-    min-width: calc(100% / 3);
-    box-sizing: border-box;
+    min-width: calc(100vw / 3);
+    /* 🔥 larghezza identica a quando erano 3 */
     padding: 10px;
+    box-sizing: border-box;
 }
 
 .slide img {
     width: 100%;
-    height: 300px;
+    height: 325px;
+    /* 🔥 prima era 300px */
     object-fit: cover;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(6, 95, 70, 0.15);
+    border-radius: 16px;
+    /* leggermente più elegante */
+    box-shadow: 0 4px 14px rgba(6, 95, 70, 0.18);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.slide img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
-}
 
-.slide-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(6, 95, 70, 0.7);
-    color: #fff;
-    border: none;
-    padding: 12px 16px;
-    cursor: pointer;
-    border-radius: 50%;
-    font-size: 20px;
-    transition: background-color 0.3s ease;
-    z-index: 2;
-}
+@media (max-width: 768px) {
 
-.slide-btn:hover {
-    background-color: rgba(6, 95, 70, 0.9);
-}
-
-.prev {
-    left: 15px;
-}
-
-.next {
-    right: 15px;
-}
-
-/* --- Responsive --- */
-@media (max-width: 1024px) {
-    .slide {
-        min-width: calc(100% / 2);
+    .slideshow {
+        display: flex;
+        width: 100%;
+        /* torna normale */
     }
-}
 
-@media (max-width: 600px) {
     .slide {
         min-width: 100%;
+        /* 1 immagine alla volta */
+        padding: 8px;
     }
 
     .slide img {
         height: 240px;
-    }
-
-    .novita-titolo {
-        font-size: 1.6em;
+        /* più proporzionata per mobile */
+        border-radius: 12px;
     }
 }
-
 
 #cookie-banner {
     position: fixed;
