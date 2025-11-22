@@ -1772,6 +1772,20 @@ html {
     margin: 24px 0;
 }
 
+.divider-wrapper3 {
+    width: 100%;
+    text-align: center;
+    margin: 24px 0;
+    margin-top: -30px;
+}
+
+.divider-wrapper2 {
+    width: 100%;
+    text-align: center;
+    margin: 24px 0;
+    margin-top: -30px;
+}
+
 .divider-inner {
     display: inline-flex;
     align-items: center;
@@ -2202,7 +2216,6 @@ html {
     padding: 0 2rem;
     text-align: center;
     position: relative;
-    margin-top: 0.2rem;
 }
 
 /* Testo bianco */
@@ -2264,7 +2277,7 @@ html {
     position: relative;
     overflow: hidden;
     margin-top: 2rem;
-    margin-bottom: 0.2rem;
+    margin-bottom: rem;
     /* Regola quanto vuoi */
 }
 
@@ -2360,4 +2373,3 @@ html {
         __|  |  |__      
         (___/   \___)
     */
-
