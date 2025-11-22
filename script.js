@@ -38,110 +38,182 @@ document.addEventListener("DOMContentLoaded", () => { //CARICAMENTO
 });
 
 
+/*
+    ===============================
+    MODAL MODERNIZZATA (SAFE MODE)
+    ===============================
+*/
+
 let galleryImages = [];
 let currentIndex = 0;
+
+// --- Aggiorna contatore ---
 function updateModalCounter() {
     const counter = document.getElementById('modal-counter');
-    if (galleryImages.length > 0 && typeof currentIndex === 'number') {
+    if (!counter) return;
+
+    if (galleryImages.length > 0) {
         counter.textContent = (currentIndex + 1) + ' / ' + galleryImages.length;
         counter.style.display = '';
     } else {
         counter.style.display = 'none';
     }
 }
+
+// --- Apri modal ---
 function openModal(src) {
-    // Trova la gallery di appartenenza (Cactacee, Succulente, Composizioni)
+    const modal = document.getElementById('image-modal');
+    const modalImg = document.getElementById('modal-img');
+    if (!modal || !modalImg) return;
+
+    // trova immagine cliccata
     let imgEl = null;
     document.querySelectorAll('.gallery img').forEach(img => {
         if (img.src === src || img.getAttribute('src') === src) imgEl = img;
     });
-    let parentGallery = null;
-    if (imgEl) {
-        parentGallery = imgEl.closest('.gallery');
-    }
-    if (parentGallery) {
-        galleryImages = Array.from(parentGallery.querySelectorAll('img'));
-    } else {
-        galleryImages = Array.from(document.querySelectorAll('.gallery img'));
-    }
+
+    // trova gallery corretta
+    let parentGallery = imgEl ? imgEl.closest('.gallery') : null;
+
+    galleryImages = parentGallery
+        ? Array.from(parentGallery.querySelectorAll('img'))
+        : Array.from(document.querySelectorAll('.gallery img'));
+
+    // normalizza URL
     function normalize(url) {
-        try { return new URL(url, window.location.href).href; } catch { return url; }
+        try { return new URL(url, window.location.href).href; }
+        catch { return url; }
     }
+
     const normalizedSrc = normalize(src);
     currentIndex = galleryImages.findIndex(img => normalize(img.src) === normalizedSrc);
+
+    // fallback ricerca file
     if (currentIndex === -1) {
         const srcFile = src.split('/').pop();
         currentIndex = galleryImages.findIndex(img => img.src.split('/').pop() === srcFile);
     }
+
     if (currentIndex === -1) return;
+
     showModalImage();
-    document.getElementById('image-modal').classList.add('active');
+
+    modal.classList.add('active');
     document.addEventListener('keydown', handleModalKey);
-    // Aggiungi stato alla history per abilitare il tasto indietro
+
     history.pushState({ lightbox: true }, '', '#lightbox');
     updateModalCounter();
 }
+
+// --- Mostra immagine ---
 function showModalImage() {
     const modalImg = document.getElementById('modal-img');
-    if (galleryImages[currentIndex]) {
-        modalImg.src = galleryImages[currentIndex].src;
-        modalImg.alt = galleryImages[currentIndex].alt || '';
-    }
+    if (!modalImg) return;
+
+    modalImg.classList.remove('slide-left', 'slide-right');
+
+    modalImg.src = galleryImages[currentIndex].src;
+    modalImg.alt = galleryImages[currentIndex].alt || '';
+
     updateModalCounter();
 }
+
+// --- Chiudi modal ---
 function closeModal() {
-    document.getElementById('image-modal').classList.remove('active');
+    const modal = document.getElementById('image-modal');
+    const counter = document.getElementById('modal-counter');
+
+    if (modal) modal.classList.remove('active');
+    if (counter) counter.style.display = 'none';
+
     document.removeEventListener('keydown', handleModalKey);
-    // Se siamo nello stato lightbox, torna indietro nella history
+
     if (window.location.hash === '#lightbox') {
         setTimeout(() => history.back(), 0);
     }
-    // Nascondi il contatore
-    document.getElementById('modal-counter').style.display = 'none';
 }
+
+// --- Slide next/prev ---
+function changeModalImage(direction) {
+    const modalImg = document.getElementById('modal-img');
+    if (!modalImg) return;
+
+    // animazione uscita
+    modalImg.classList.remove('slide-left', 'slide-right');
+    modalImg.classList.add(direction === 'next' ? 'slide-left' : 'slide-right');
+
+    setTimeout(() => {
+        if (direction === 'next') {
+            currentIndex = (currentIndex + 1) % galleryImages.length;
+        } else {
+            currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
+        }
+
+        modalImg.classList.remove('slide-left', 'slide-right');
+        showModalImage();
+    }, 280);
+}
+
+// compatibilità con HTML esistente
 function prevImage(e) {
     if (e) e.stopPropagation();
-    currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
-    showModalImage();
+    changeModalImage('prev');
 }
+
 function nextImage(e) {
     if (e) e.stopPropagation();
-    currentIndex = (currentIndex + 1) % galleryImages.length;
-    showModalImage();
+    changeModalImage('next');
 }
+
+// --- Keyboard ---
 function handleModalKey(e) {
     if (e.key === 'ArrowLeft') prevImage();
     if (e.key === 'ArrowRight') nextImage();
     if (e.key === 'Escape') closeModal();
 }
-window.onload = () => {
-    const loadingOverlay = document.querySelector('.loading-overlay');
-    if (loadingOverlay) {
-        loadingOverlay.style.display = 'none';
+
+// --- Click fuori per chiudere ---
+window.addEventListener('DOMContentLoaded', () => {
+    const modal = document.getElementById('image-modal');
+    const modalContent = document.getElementById('modal-content-wrapper');
+
+    if (modal && modalContent) {
+        modal.addEventListener('mousedown', function (e) {
+            if (!modalContent.contains(e.target)) {
+                closeModal();
+            }
+        });
     }
-    showTab('home'); // Mostra la scheda Home all'avvio
-};
-// Gestisci il tasto indietro del browser per chiudere il lightbox
-window.addEventListener('popstate', function (event) {
+
+    // --- Swipe Mobile ---
+    const modalImg = document.getElementById('modal-img');
+    if (modalImg) {
+        let startX = 0;
+
+        modalImg.addEventListener('touchstart', e => {
+            startX = e.touches[0].clientX;
+        });
+
+        modalImg.addEventListener('touchend', e => {
+            const endX = e.changedTouches[0].clientX;
+            if (startX - endX > 50) nextImage();
+            if (endX - startX > 50) prevImage();
+        });
+    }
+});
+
+// --- Tasto indietro chiude modal ---
+window.addEventListener('popstate', function () {
     const modal = document.getElementById('image-modal');
     if (modal && modal.classList.contains('active')) {
         modal.classList.remove('active');
         document.removeEventListener('keydown', handleModalKey);
     }
 });
-// Gestione click fuori dal popup per chiudere e tornare indietro
-window.addEventListener('DOMContentLoaded', () => {
-    const modal = document.getElementById('image-modal');
-    const modalContent = document.getElementById('modal-content-wrapper');
-    if (modal) {
-        modal.addEventListener('mousedown', function (e) {
-            // Se il click è fuori dal popup centrale (foto e frecce)
-            if (!modalContent.contains(e.target)) {
-                closeModal();
-            }
-        });
-    }
-});
+
+
+
+
 function showGalleryCategory(cat, btn) {
     document.querySelectorAll('.gallery-category-btn').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
@@ -186,12 +258,6 @@ function searchGallery() {
             } else if (parentGallery.parentElement && parentGallery.parentElement.id === 'composizioni') {
                 showTab('composizioni');
             }
-            setTimeout(() => {
-                // Scrolla e apri la foto
-                foundImg.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                openModal(foundImg.src);
-            }, 200);
-            return;
         }
     }
     // Default: filtra nella sezione attuale e mostra messaggio se nessun risultato
