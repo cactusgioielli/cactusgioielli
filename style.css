@@ -194,7 +194,21 @@ header p {
 
 .immagine-con-velo-e-testo .testo-centrato {
     position: absolute;
-    top: 50%;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* Centra perfettamente */
+    color: white;
+    /* Testo leggibile sul velo */
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+}
+
+.testo-centrato2 {
+    position: absolute;
+    top: 58%;
     left: 50%;
     transform: translate(-50%, -50%);
     /* Centra perfettamente */
