@@ -54,7 +54,9 @@
 
   <!-- CSS -->
   <link rel="preload" href="./style.css" as="style">
+  <link rel="preload" href="./cosa-facciamo.css" as="style">
   <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./cosa-facciamo.css">
 
   <!-- SCHEMA MARKUP -->
   <script type="application/ld+json">
@@ -134,6 +136,21 @@
 </head>
 
 <body>
+   <!-- CARICAMENTO -->
+  <div id="preloader">
+  <div class="preloader-content">
+    <img src="IMMAGINI/LOGO/LOGO_greenpng.png" class="preloader-logo" alt="Logo">
+
+    <div class="loading-bar">
+      <div class="loading-progress" id="loadingProgress"></div>
+    </div>
+
+    <p id="loadText" style="margin-top:10px;font-size:14px;color:#065f46;">
+      0%
+    </p>
+  </div>
+</div>
+  <!-- FINE CARICAMENTO -->
   <!-- INIZIO SEZIONE FOTO FULLSCREEN -->
   <section class="hero-fullscreen">
     <img src="./IMMAGINI/SEDE.jpg" alt="Sfondo Azienda Agricola Cactus" class="hero-fullscreen-img">
@@ -925,5 +942,3 @@
        __|  |  |__      
       (___/   \___)
  -->
-
-
