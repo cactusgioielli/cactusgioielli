@@ -2370,14 +2370,14 @@ html {
     justify-content: center;
     align-items: center;
     gap: 20rem;
-    background: rgba(0, 0, 0, 0.45);
+    background: rgba(0, 0, 0, 0.65);
     /* Velo scuro più visibile */
     text-align: center;
 
 }
 
 .stats-box h3 {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     font-weight: 800;
     color: #ffffff;
     margin: 0;
@@ -2403,7 +2403,7 @@ html {
     }
 
     .stats-box h3 {
-        font-size: 2.2rem;
+        font-size: 3.0rem;
     }
 
     .stats-box p {
@@ -2424,7 +2424,7 @@ html {
     }
 
     .stats-box h3 {
-        font-size: 2rem;
+        font-size: 3.0rem;
     }
 }
 
