@@ -1,3 +1,42 @@
+document.addEventListener("DOMContentLoaded", () => {
+    const progressBar = document.getElementById("loadingProgress");
+    const loadText = document.getElementById("loadText");
+    const preloader = document.getElementById("preloader");
+
+    // Trova tutte le risorse principali
+    const imgs = Array.from(document.images);
+    const total = imgs.length;
+    let loaded = 0;
+
+    // Se non ci sono immagini, chiudi subito
+    if (total === 0) {
+        progressBar.style.width = "100%";
+        loadText.textContent = "100%";
+        setTimeout(() => preloader.classList.add("hide"), 300);
+        return;
+    }
+
+    imgs.forEach(img => {
+        const imageClone = new Image();
+        imageClone.onload = imageClone.onerror = () => {
+            loaded++;
+            let percent = Math.floor((loaded / total) * 100);
+
+            progressBar.style.width = percent + "%";
+            loadText.textContent = percent + "%";
+
+            if (loaded === total) {
+                setTimeout(() => {
+                    preloader.classList.add("hide");
+                }, 300);
+            }
+        };
+        imageClone.src = img.src;
+    });
+});
+
+
+
 let galleryImages = [];
 let currentIndex = 0;
 function updateModalCounter() {
