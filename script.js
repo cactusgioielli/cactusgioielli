@@ -1,6 +1,6 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => { //CARICAMENTO
     const progressBar = document.getElementById("loadingProgress");
-    const loadText = document.getElementById("loadText");
+    const percentValue = document.getElementById("percentValue");
     const preloader = document.getElementById("preloader");
 
     // Trova tutte le risorse principali
@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Se non ci sono immagini, chiudi subito
     if (total === 0) {
         progressBar.style.width = "100%";
-        loadText.textContent = "100%";
+        percentValue.textContent = "100%";
         setTimeout(() => preloader.classList.add("hide"), 300);
         return;
     }
@@ -22,9 +22,11 @@ document.addEventListener("DOMContentLoaded", () => {
             loaded++;
             let percent = Math.floor((loaded / total) * 100);
 
+            // Aggiorna barra + percentuale
             progressBar.style.width = percent + "%";
-            loadText.textContent = percent + "%";
+            percentValue.textContent = percent + "%";
 
+            // Quando tutto è caricato → chiudi preloader
             if (loaded === total) {
                 setTimeout(() => {
                     preloader.classList.add("hide");
@@ -34,7 +36,6 @@ document.addEventListener("DOMContentLoaded", () => {
         imageClone.src = img.src;
     });
 });
-
 
 
 let galleryImages = [];
@@ -550,4 +551,3 @@ observer.observe(document.querySelector('.stats-hero'));
    __|  |  |__      
   (___/   \___)
 */
-
