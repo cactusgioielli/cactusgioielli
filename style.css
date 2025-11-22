@@ -743,9 +743,6 @@ body {
     }
 }
 
-
-
-
 .contact-info {
     padding: 2.2rem 2rem;
     max-width: 750px;
@@ -1175,18 +1172,6 @@ footer {
     .timeline {
         padding-left: 18px;
     }
-
-    .about-team {
-        flex-direction: column;
-        align-items: center;
-        gap: 1rem;
-    }
-
-    .about-team-member {
-        width: 90%;
-        max-width: 300px;
-    }
-
     .contact-info {
         font-size: 0.97rem;
         padding: 1.1rem 0.5rem;
@@ -1334,6 +1319,24 @@ footer {
 .about-team-member .desc {
     font-size: 0.93rem;
     color: #1f2937;
+}
+
+@media (max-width: 768px) {
+
+    .about-team {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem 0.7rem; /* spazio verticale | orizzontale */
+        justify-items: center;
+        width: 100%;
+    }
+
+    .about-team-member {
+        width: 100% !important;
+        max-width: 150px !important;  /* 🔥 più piccole, non si toccano più */
+        flex: none !important;
+        margin-top: -9px;
+    }
 }
 
 .hero-btn {
