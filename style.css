@@ -23,9 +23,20 @@
 }
 
 @keyframes pulse {
-  0% { transform: scale(1); opacity: .9; }
-  50% { transform: scale(1.07); opacity: 1; }
-  100% { transform: scale(1); opacity: .9; }
+    0% {
+        transform: scale(1);
+        opacity: .9;
+    }
+
+    50% {
+        transform: scale(1.07);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: .9;
+    }
 }
 
 /* Barra esterna */
@@ -65,45 +76,6 @@ body {
     padding: 2rem;
     padding-bottom: 5rem;
 }
-
-header {
-    position: relative;
-    text-align: center;
-    margin-bottom: 2rem;
-    background-color: #ffffff;
-}
-
-header h1 {
-    font-size: 3rem;
-    color: #065f46;
-    margin: 0;
-    padding-bottom: 0.5rem;
-    border-bottom: 3px solid #065f46;
-    display: inline-block;
-}
-
-header p {
-    margin-top: 0.75rem;
-    font-size: 1.2rem;
-    font-weight: 500;
-    color: #065f46cc;
-    font-style: italic;
-}
-
-/* LOGO */
-.logo-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.logo-container img {
-    height: 320px;
-    width: 88vw;
-    max-width: 1050px;
-    object-fit: contain;
-}
-
 
 /* IMMAGINE HERO FULLSCREEN */
 .hero-fullscreen {
@@ -1113,80 +1085,8 @@ footer {
     }
 }
 
-.map-container {
-    width: 85vw;
-    /* leggermente più stretta */
-    max-width: 1200px;
-    /* limite massimo su schermi molto grandi */
-    height: 550px;
-    /* buona altezza su desktop */
-    margin: 2.5rem auto;
-    border-radius: 1rem;
-    overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.map-container iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
-}
-
-/* Tablet */
-@media (max-width: 1024px) {
-    .map-container {
-        width: 90vw;
-        height: 420px;
-    }
-}
-
-/* Mobile */
-@media (max-width: 768px) {
-    .map-container {
-        width: 95vw;
-        height: 350px;
-    }
-}
-
-/* Schermi molto piccoli */
-@media (max-width: 480px) {
-    .map-container {
-        width: 100%;
-        height: 300px;
-    }
-}
-
-
-.close-map {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    background: rgba(255, 255, 255, 0.9);
-    border: none;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    font-size: 1.5rem;
-    cursor: pointer;
-    color: #04996c;
-    z-index: 1001;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-}
-
-
 
 @media (max-width: 768px) {
-    header h1 {
-        font-size: 2rem;
-    }
-
-    header p {
-        font-size: 1rem;
-    }
-
     .tabs {
         flex-wrap: wrap;
         gap: 0.5rem;
@@ -1249,99 +1149,6 @@ footer {
 
     .contact-hours td {
         font-size: 0.98em;
-    }
-
-    /* Migliora i bottoni della home */
-    #home .tab-content a[onclick*="showTab('gallery')"],
-    #home .tab-content a[onclick*="showTab('composizioni')"] {
-        font-size: 1.08rem !important;
-        font-weight: 700 !important;
-        letter-spacing: 0.5px;
-        padding: 1.1em 1.2em !important;
-        background: #04996c !important;
-        color: #fff !important;
-        border: 2px solid #065f46;
-        box-shadow: 0 2px 8px rgba(6, 95, 70, 0.13);
-        text-shadow: 0 1px 2px #065f4633;
-    }
-
-    #home .tab-content a[onclick*="showTab('gallery')"]:hover,
-    #home .tab-content a[onclick*="showTab('composizioni')"]:hover {
-        background: #065f46 !important;
-        color: #fff !important;
-    }
-
-    #home .tab-content div[style*="margin-top:1.5rem"] {
-        flex-wrap: wrap !important;
-        flex-direction: column !important;
-        align-items: stretch !important;
-        gap: 0.7em !important;
-        width: 100% !important;
-        box-sizing: border-box !important;
-    }
-
-    #home .tab-content a[onclick*="showTab('gallery')"],
-    #home .tab-content a[onclick*="showTab('composizioni')"] {
-        width: 100% !important;
-        min-width: 0 !important;
-        max-width: 100% !important;
-        margin-bottom: 0.7em !important;
-        white-space: normal !important;
-        word-break: break-word;
-        text-align: center !important;
-        display: flex !important;
-        justify-content: center;
-        align-items: center;
-        box-sizing: border-box !important;
-        overflow: visible !important;
-        padding-left: 0.5em !important;
-        padding-right: 0.5em !important;
-    }
-
-    /* Bottoni hero uno sopra l'altro su mobile */
-    #home .tab-content div[style*="margin-top:1.5rem"][style*="display:flex"] {
-        flex-direction: column !important;
-        gap: 0.8em !important;
-        align-items: stretch !important;
-    }
-
-    #home .tab-content div[style*="margin-top:1.5rem"][style*="display:flex"] a {
-        width: 100% !important;
-        justify-content: center !important;
-        text-align: center !important;
-        font-size: 1.08rem !important;
-        white-space: normal !important;
-    }
-
-    #home .tab-content div[style*="position:relative"][style*="max-width:900px"] {
-        /* Centra il box bianco nella foto anche su mobile */
-        display: flex !important;
-        justify-content: center !important;
-        align-items: center !important;
-        min-height: 320px !important;
-        /* Evita che il box bianco tocchi il bordo inferiore della foto */
-        padding-bottom: 0 !important;
-    }
-
-    #home .tab-content div[style*="background: rgba(255,255,255,0.90);"] {
-        margin-top: 1.2rem !important;
-        margin-bottom: 1.2rem !important;
-        max-width: 98vw !important;
-        width: 98vw !important;
-        left: 50% !important;
-        transform: translateX(-50%) !important;
-        position: relative !important;
-        box-sizing: border-box !important;
-    }
-
-    .hero-buttons {
-        flex-direction: column;
-        align-items: center;
-        gap: 0.7em;
-        width: 100%;
-        max-width: 98vw;
-        margin-left: auto;
-        margin-right: auto;
     }
 
     .hero-btn {
@@ -1463,16 +1270,6 @@ footer {
 .about-team-member .desc {
     font-size: 0.93rem;
     color: #1f2937;
-}
-
-
-
-.hero-buttons {
-    margin-top: 1.5rem;
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-    justify-content: center;
 }
 
 .hero-btn {
