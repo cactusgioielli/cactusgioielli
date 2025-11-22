@@ -798,6 +798,10 @@ body {
     line-height: 1.6;
 }
 
+/* ==============================
+   MODAL MODERNO CON GLASSMORPHISM
+   ============================== */
+
 .modal {
     display: none;
     position: fixed;
@@ -805,14 +809,18 @@ body {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    background: rgba(0, 0, 0, 0.55);
     justify-content: center;
     align-items: center;
     z-index: 99999;
+    opacity: 0;
+    transition: opacity .25s ease-in-out;
 }
 
 .modal.active {
     display: flex;
+    opacity: 1;
 }
 
 .modal-content-wrapper {
@@ -822,71 +830,115 @@ body {
     justify-content: center;
     width: 100vw;
     height: 100vh;
+    animation: zoomFade .3s ease;
+}
+
+@keyframes zoomFade {
+    from {
+        transform: scale(.95);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 
 .modal-img {
-    max-width: 90vw;
-    max-height: 90vh;
-    border-radius: 0.5rem;
+    max-width: 92vw;
+    max-height: 92vh;
+    border-radius: 1rem;
     display: block;
     margin: auto;
     z-index: 1;
-    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
     background: #fff;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
+    transition: transform .25s ease;
 }
 
+.modal-img:hover {
+    transform: scale(1.02);
+}
+
+/* ==============================
+   BOTTONI MODERNIZZATI
+   ============================== */
+
 .modal-btn {
-    background: rgba(255, 255, 255, 0.8);
-    border: none;
-    font-size: 2.5rem;
+    background: rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(6px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    font-size: 2.4rem;
     color: #065f46;
-    padding: 0.2em 0.5em;
+    width: 3.2rem;
+    height: 3.2rem;
     border-radius: 50%;
     cursor: pointer;
-    transition: background 0.2s;
+    transition: .2s ease;
     user-select: none;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    z-index: 2;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
 }
 
 .modal-btn.left {
-    left: 10vw;
+    left: 4vw;
 }
 
 .modal-btn.right {
-    right: 10vw;
+    right: 4vw;
+}
+
+.modal-btn:hover {
+    background: rgba(255, 255, 255, 0.9);
+    transform: translateY(-50%) scale(1.12);
 }
 
 .modal-btn:active {
     background: #e0f2f1;
+    transform: translateY(-50%) scale(0.95);
 }
+
+/* ==============================
+   BOTTONE CHIUSURA MODERNO
+   ============================== */
 
 .modal-close-btn {
     position: absolute;
-    top: 2.5vh;
+    top: 3vh;
     right: 3vw;
-    background: rgba(255, 255, 255, 0.9);
-    border: none;
-    font-size: 2.2rem;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(6px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    font-size: 1.9rem;
     color: #065f46;
     border-radius: 50%;
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 3rem;
+    height: 3rem;
     cursor: pointer;
-    z-index: 10;
+    z-index: 200;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
-    transition: background 0.2s;
+    transition: .25s ease;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.18);
 }
 
 .modal-close-btn:hover {
-    background: #e0f2f1;
+    background: rgba(255, 255, 255, 0.92);
+    transform: scale(1.15);
 }
+
+.modal-close-btn:active {
+    transform: scale(0.92);
+}
+
 
 ::-webkit-scrollbar {
     width: 12px;
