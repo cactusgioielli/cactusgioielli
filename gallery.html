@@ -5,7 +5,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <meta name="description" content="Photo Gallery of Azienda Agricola Cactus Gioieli: succulents, arrangements, party favors, and collectible plants. Explore all our creations.">
+    <meta name="description"
+        content="Photo Gallery of Azienda Agricola Cactus Gioieli: succulents, arrangements, party favors, and collectible plants. Explore all our creations.">
 
     <!-- OPEN GRAPH -->
     <meta property="og:title" content="Azienda Agricola Cactus Gioielli">
@@ -327,12 +328,22 @@
     <div id="image-modal" class="modal">
         <div class="modal-content-wrapper" id="modal-content-wrapper">
             <button class="modal-close-btn" onclick="closeModal()" aria-label="Chiudi">&times;</button>
-            <button class="modal-btn left" onclick="prevImage(event)" aria-label="Precedente">&#8592;</button>
+            <div class="modal-btn left" onclick="prevImage(event)">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#065f46" stroke-width="2.4"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M15 5l-7 7 7 7" />
+                </svg>
+            </div>
             <img id="modal-img" class="modal-img" src="" alt="Immagine ingrandita" />
             <div id="modal-counter"
                 style="position:absolute;bottom:2.5vh;left:50%;transform:translateX(-50%);background:rgba(255,255,255,0.85);color:#065f46;font-weight:600;padding:0.3em 1.1em;border-radius:1.2em;font-size:1.1rem;box-shadow:0 2px 8px rgba(6,95,70,0.09);z-index:5;pointer-events:none;user-select:none;min-width:60px;text-align:center;letter-spacing:1px;display:none;">
             </div>
-            <button class="modal-btn right" onclick="nextImage(event)" aria-label="Successiva">&#8594;</button>
+            <div class="modal-btn right" onclick="nextImage(event)">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#065f46" stroke-width="2.4"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M9 5l7 7-7 7" />
+                </svg>
+            </div>
         </div>
     </div>
 
@@ -671,6 +682,3 @@
        __|  |  |__      
       (___/   \___)
  -->
-
-
-
