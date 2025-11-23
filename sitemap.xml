@@ -1,62 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <!-- SITO ITA -->
+  <!-- ITALIANO -->
   <url>
-    <loc>https://cactusgioielli.it/index.html</loc>
+    <loc>https://cactusgioielli.it/</loc>
+    <lastmod>2025-11-23</lastmod>
+    <changefreq>daily</changefreq>
     <priority>1.0</priority>
-    <lastmod>2025-11-17</lastmod>
-    <changefreq>weekly</changefreq>
   </url>
 
   <url>
-    <loc>https://cactusgioielli.it/chisiamo.html</loc>
-    <priority>0.8</priority>
-    <lastmod>2025-11-17</lastmod>
+    <loc>https://cactusgioielli.it/chisiamo/</loc>
+    <lastmod>2025-11-23</lastmod>
     <changefreq>weekly</changefreq>
-  </url>
-
-  <url>
-    <loc>https://cactusgioielli.it/galleria.html</loc>
-    <priority>0.8</priority>
-    <lastmod>2025-11-17</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-
-  <url>
-    <loc>https://cactusgioielli.it/contatti.html</loc>
-    <priority>0.7</priority>
-    <lastmod>2025-11-17</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-
-  <!-- SITO EN -->
-  <url>
-    <loc>https://cactusgioielli.it/en.html</loc>
     <priority>0.9</priority>
-    <lastmod>2025-11-17</lastmod>
-    <changefreq>weekly</changefreq>
   </url>
 
   <url>
-    <loc>https://cactusgioielli.it/aboutus.html</loc>
+    <loc>https://cactusgioielli.it/galleria/</loc>
+    <lastmod>2025-11-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://cactusgioielli.it/contatti/</loc>
+    <lastmod>2025-11-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- ENGLISH -->
+  <url>
+    <loc>https://cactusgioielli.it/en/</loc>
+    <lastmod>2025-11-23</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://cactusgioielli.it/aboutus/</loc>
+    <lastmod>2025-11-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://cactusgioielli.it/gallery/</loc>
+    <lastmod>2025-11-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://cactusgioielli.it/contact/</loc>
+    <lastmod>2025-11-23</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-    <lastmod>2025-11-17</lastmod>
-    <changefreq>weekly</changefreq>
   </url>
 
-  <url>
-    <loc>https://cactusgioielli.it/gallery.html</loc>
-    <priority>0.7</priority>
-    <lastmod>2025-11-17</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-
-  <url>
-    <loc>https://cactusgioielli.it/contacts.html</loc>
-    <priority>0.6</priority>
-    <lastmod>2025-11-17</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  
 </urlset>
