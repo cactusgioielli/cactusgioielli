@@ -321,6 +321,7 @@ body {
     letter-spacing: 0.5px;
     font-size: 1.05rem;
     box-shadow: 0 1px 4px rgba(6, 95, 70, 0.04);
+    text-transform: uppercase;
 }
 
 
@@ -2508,3 +2509,4 @@ html {
         __|  |  |__      
         (___/   \___)
     */
+
