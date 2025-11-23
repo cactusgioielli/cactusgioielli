@@ -630,6 +630,61 @@ body {
     cursor: pointer;
 }
 
+/* --- SCHERMI PICCOLISSIMI: rimuovi selettore lingua SOLO qui --- */
+@media (max-width: 360px) {
+    .mini-language-dropdown {
+        display: none !important;
+    }
+
+    /* Mini-header tutto più compatto */
+    .mini-header {
+        height: 50px;
+        padding: 0 0.4rem;
+    }
+
+    .mini-logo-link {
+        height: 42px;
+        left: 0.3rem;
+    }
+
+    /* Hamburger centrato e più piccolo */
+    .hamburger {
+        width: 30px;
+        height: 24px;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .hamburger span {
+        height: 3px;
+        margin: 3px 0;
+    }
+
+    /* Telefono più compatto */
+    .phone-icon {
+        right: 0.3rem;
+        width: 30px;
+        height: 30px;
+        padding: 0.25rem;
+    }
+
+    .phone-icon svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    /* Tabs menu in colonna più stretto */
+    .tabs {
+        width: 95%;
+    }
+
+    .tabs a {
+        font-size: 0.85rem !important;
+        padding: 0.45rem 0.6rem !important;
+    }
+}
+
 /* ===========================
    CATEGORIE GALLERIA
    =========================== */
@@ -2320,6 +2375,33 @@ html {
     padding: 0 2rem;
     text-align: center;
     position: relative;
+}
+
+/* Telefoni molto piccoli */
+@media (max-width: 380px) {
+    .quote-fullscreen {
+        padding: 0 1rem;
+        /* più stretta ai lati */
+    }
+
+    .quote-fullscreen blockquote {
+        font-size: 1rem;
+        /* testo più piccolo */
+        line-height: 1.4;
+        /* migliore leggibilità */
+        max-width: 100%;
+        /* evita overflow */
+        margin: 0;
+        /* elimina margini laterali */
+        word-wrap: break-word;
+        /* forza a capo se necessario */
+    }
+
+    .quote-container {
+        margin-right: 0;
+        /* centratura perfetta */
+        gap: 0.8rem;
+    }
 }
 
 /* ==== HERO STATS ==== */
