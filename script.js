@@ -37,6 +37,39 @@ document.addEventListener("DOMContentLoaded", () => { //CARICAMENTO
     });
 });
 
+document.addEventListener("scroll", () => {
+    const header = document.querySelector(".mini-header");
+    const tabs = document.querySelector(".tabs");
+    const lang = document.querySelector(".mini-language-dropdown");
+    const phone = document.querySelector(".phone-icon");
+
+    if (window.scrollY > 50) {
+        header.classList.remove("no-scroll");
+        header.classList.add("scrolled");
+
+        tabs.classList.remove("no-scroll");
+        tabs.classList.add("scrolled");
+
+        lang.classList.remove("no-scroll");
+        lang.classList.add("scrolled");
+
+        phone.classList.remove("no-scroll");
+        phone.classList.add("scrolled");
+    } else {
+        header.classList.add("no-scroll");
+        header.classList.remove("scrolled");
+
+        tabs.classList.add("no-scroll");
+        tabs.classList.remove("scrolled");
+
+        lang.classList.add("no-scroll");
+        lang.classList.remove("scrolled");
+
+        phone.classList.add("no-scroll");
+        phone.classList.remove("scrolled");
+    }
+});
+
 
 /*
     ===============================
@@ -604,6 +637,8 @@ const observer = new IntersectionObserver(entries => {
 
 observer.observe(document.querySelector('.stats-hero'));
 
+
+
 /*
     _.-=-._       
   o~`  '  `~o     
@@ -617,4 +652,3 @@ observer.observe(document.querySelector('.stats-hero'));
    __|  |  |__      
   (___/   \___)
 */
-
