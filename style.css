@@ -2497,6 +2497,162 @@ html {
     }
 }
 
+/* SOVRASCRIZIONE */
+/* ===========================
+   HEADER TRASPARENTE / SCROLL
+   =========================== */
+.mini-header.no-scroll {
+    background: transparent !important;
+    border-bottom: none !important;
+    box-shadow: none !important;
+}
+
+.mini-header.scrolled {
+    background: #ffffff !important;
+    border-bottom: 1px solid #e5e7eb !important;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* ===========================
+   LOGO DINAMICO
+   =========================== */
+.mini-header.no-scroll #logo-dynamic {
+    content: url("https://cactusgioielli.it/IMMAGINI/LOGO/LOGO_whitepng.png");
+}
+
+.mini-header.scrolled #logo-dynamic {
+    content: url("https://cactusgioielli.it/IMMAGINI/LOGO/LOGO_greenpng.png");
+}
+
+/* LOGO PIÙ GRANDE */
+.mini-logo-link img.mini-logo,
+#logo-dynamic {
+    margin-top: -35px;
+    height: 130px !important;
+}
+
+@media (max-width: 768px) {
+
+    .mini-logo-link img.mini-logo,
+    #logo-dynamic {
+        margin-top: -18px;
+        height: 100px !important;
+    }
+}
+
+/* ===========================
+   TABS – NO SCROLL
+   =========================== */
+.tabs.no-scroll .tab-button {
+    background: transparent !important;
+    color: #ffffff !important;
+    border: 1px solid transparent;
+    box-shadow: none !important;
+}
+
+.tabs.no-scroll .tab-button:hover {
+    background: rgba(255, 255, 255, 0.18) !important;
+    border: 1px solid rgba(255, 255, 255, 0.35) !important;
+    color: #ffffff !important;
+}
+
+/* TABS – SCROLL */
+.tabs.scrolled .tab-button {
+    background: #ffffff !important;
+    color: #065f46 !important;
+    box-shadow: 0 1px 4px rgba(6, 95, 70, 0.04) !important;
+}
+
+/* MOBILE: TABS TRASPARENTI */
+@media (max-width: 768px) {
+    .tabs.no-scroll {
+        background: transparent !important;
+        box-shadow: none !important;
+    }
+}
+
+/* ===========================
+   SELETTORE LINGUA
+   =========================== */
+.mini-language-dropdown.no-scroll select {
+    background: rgba(255, 255, 255, 0.12) !important;
+    color: #ffffff !important;
+    border: 1px solid rgba(255, 255, 255, 0.46) !important;
+}
+
+.mini-language-dropdown.scrolled select {
+    background: #065f46 !important;
+    color: #ffffff !important;
+    border: none !important;
+}
+
+/* MOBILE LINGUA */
+@media (max-width: 768px) {
+    .mini-language-dropdown.no-scroll select {
+        background: rgba(255, 255, 255, 0.15) !important;
+        border: 1px solid rgba(255, 255, 255, 0.35) !important;
+    }
+}
+
+/* ===========================
+   TELEFONO
+   =========================== */
+.phone-icon.no-scroll {
+    background: transparent !important;
+}
+
+.phone-icon.no-scroll svg {
+    stroke: #ffffff !important;
+}
+
+.phone-icon.scrolled {
+    background: #ffffff !important;
+}
+
+.phone-icon.scrolled svg {
+    stroke: #065f46 !important;
+}
+
+/* MOBILE TELEFONO */
+@media (max-width: 768px) {
+    .phone-icon.no-scroll svg {
+        stroke: #ffffff !important;
+    }
+}
+
+/* ===========================
+   HAMBURGER MENU
+   =========================== */
+.mini-header.no-scroll .hamburger span {
+    background-color: #ffffff !important;
+}
+
+.mini-header.scrolled .hamburger span {
+    background-color: #065f46 !important;
+}
+
+/* Correzione visibilità opzioni nel menu lingua */
+.mini-language-dropdown select option {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+}
+
+/* ===========================
+   ACTIVE TAB – NO SCROLL
+   =========================== */
+.tabs.no-scroll .tab-button.active {
+    background: rgba(255, 255, 255, 0.28) !important;
+    border: 1px solid rgba(255, 255, 255, 0.45) !important;
+    color: #ffffff !important;
+    backdrop-filter: blur(4px);
+}
+
+.tabs.scrolled .tab-button.active {
+    background: #065f46 !important;
+    color: #ffffff !important;
+    border: 1px solid #065f46 !important;
+}
+
 /* 
            _.-=-._       
         o~`  '  `~o     
@@ -2510,4 +2666,3 @@ html {
         __|  |  |__      
         (___/   \___)
     */
-
