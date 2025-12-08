@@ -145,51 +145,48 @@
     <div class="container">
         <!-- INIZIO SEZIONE TABS -->
         <div class="tabs-wrapper">
-            <!-- Placeholder invisibile per osservare la posizione -->
+
+            <!-- Placeholder invisibile per evitare che il contenuto salga sotto l’header -->
             <div class="hamburger-placeholder"></div>
 
-            <div class="mini-header">
-                <a href="https://cactusgioielli.it" class="mini-logo-link" return false;>
-                    <img src="../IMMAGINI/LOGO/LOGO_greenpng2.png" alt="Logo" class="mini-logo">
+            <!-- HEADER -->
+            <div class="mini-header no-scroll">
+
+                <!-- LOGO DINAMICO -->
+                <a href="#" class="mini-logo-link" onclick="scrollToPosition(); showTab('home'); return false;">
+                    <img id="logo-dynamic" src="https://cactusgioielli.it/IMMAGINI/LOGO/LOGO_greenpng2.png" alt="Logo"
+                        class="mini-logo">
                 </a>
 
-                <!-- Selettore lingua -->
-                <div class="mini-language-dropdown">
+                <!-- SELETTORE LINGUA -->
+                <div class="mini-language-dropdown no-scroll">
                     <select id="language-select" onchange="location = this.value;">
                         <option value="index.html">🇮🇹 Ita</option>
                         <option value="https://cactusgioielli.it/aboutus/">🇬🇧 En</option>
                     </select>
                 </div>
 
-                <div class="tabs-wrapper"> <!-- wrapper per centrare le tabs -->
-                    <div class="tabs">
+                <!-- WRAPPER TABS -->
+                <div class="tabs-wrapper">
+                    <div class="tabs no-scroll">
                         <a href="https://cactusgioielli.it" class="tab-button" style="text-decoration: none;">
-                            <img src="https://cactusgioielli.it/IMMAGINI/ICONA/ICONA_home.png" alt="home"
-                                style="width:16px; height:16px; vertical-align:middle;">
                             Home
                         </a>
-                        <a href="https://cactusgioielli.it/chisiamo/" class="tab-button active" style="text-decoration: none;">
-                            <img src="https://cactusgioielli.it//IMMAGINI/ICONA/ICONA_utente.png" alt="chisiamo"
-                                style="width:16px; height:16px; vertical-align:middle;">
+                        <a href="https://cactusgioielli.it/chisiamo/" class="tab-button active"
+                            style="text-decoration: none;">
                             Chi Siamo
                         </a>
                         <a href="https://cactusgioielli.it/galleria/" class="tab-button" style="text-decoration: none;">
-                            <img src="https://cactusgioielli.it/IMMAGINI/ICONA/ICONA_cactus.png" alt="piante"
-                                style="width:16px; height:18px; vertical-align:middle;">
                             Galleria
                         </a>
                         <a href="https://cactusgioielli.it/contatti/" class="tab-button" style="text-decoration: none;">
-                            <img src="https://cactusgioielli.it/IMMAGINI/ICONA/ICONA_telefono.png" alt="contatti"
-                                style="width:16px; height:18px; vertical-align:middle;">
                             Contatti
                         </a>
                     </div>
                 </div>
 
-
-
-                <!-- SVG telefono (link cliccabile) -->
-                <a href="tel:+393332117337" class="phone-icon" title="Chiama ora">
+                <!-- ICONA TELEFONO -->
+                <a href="tel:+393332117337" class="phone-icon no-scroll" title="Chiama ora">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
                         stroke="#065f46" width="22" height="22">
                         <path stroke-linecap="round" stroke-linejoin="round"
@@ -197,11 +194,13 @@
                     </svg>
                 </a>
 
+                <!-- HAMBURGER -->
                 <button class="hamburger">
                     <span></span>
                     <span></span>
                     <span></span>
                 </button>
+
             </div>
         </div>
         <!-- FINE SEZIONE TABS -->
@@ -363,7 +362,8 @@
             <!-- LOGO PNG -->
             <div class="footer-logo">
                 <a href="#" onclick="scrollToTop(); return false;">
-                    <img src="https://cactusgioielli.it/IMMAGINI/LOGO/LOGO_whitepng.png" alt="Logo Cactus Gioielli"> </a>
+                    <img src="https://cactusgioielli.it/IMMAGINI/LOGO/LOGO_whitepng.png" alt="Logo Cactus Gioielli">
+                </a>
             </div>
 
             <!-- FOOTER: LINK UTILI -->
@@ -475,8 +475,7 @@
                         Indirizzo: <br>
                     </strong>
                     <a href="https://cactusgioielli.it/contatti/"
-                        style="color:#ddd; text-decoration:underline; cursor:pointer; margin-left:0.3em;" return
-                        false;>
+                        style="color:#ddd; text-decoration:underline; cursor:pointer; margin-left:0.3em;" return false;>
                         Via Madonna del Pantano 16, 80014 Giugliano in Campania (NA)
                     </a>
                 </ul>
@@ -557,7 +556,8 @@
             P.IVA: <strong>09610581218</strong> - Via Madonna del Pantano 16, 80014 Giugliano in Campania (NA)<br>
         </div>
         <div class="footer-bottom">
-            <a href="https://cactusgioielli.it/politicacookie/" style="color:#aaa; text-decoration:underline;">| Politica sui Cookie | </a>
+            <a href="https://cactusgioielli.it/politicacookie/" style="color:#aaa; text-decoration:underline;">|
+                Politica sui Cookie | </a>
             <a href="https://www.tiktok.com/@cactusgioielli" style="color:#aaa; text-decoration:underline;"> Tiktok |
             </a>
             <a href="https://www.facebook.com/cactusgioielli" style="color:#aaa; text-decoration:underline;"> Facebook |
@@ -662,7 +662,7 @@
             }
         });
     </script>
-    <script src="../script.js"></script>
+    <script src="https://cactusgioielli.it/script.js"></script>
 
     <!-- AGGIUNTA POP UP WTZ -->
     <div class="wa-wrapper">
@@ -693,8 +693,3 @@
       (___/   \___)
 
  -->
-
-
-
-
-
