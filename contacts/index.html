@@ -143,52 +143,48 @@
     <div class="container">
         <!-- INIZIO SEZIONE TABS -->
         <div class="tabs-wrapper">
-            <!-- Placeholder invisibile per osservare la posizione -->
+
+            <!-- Placeholder invisibile per evitare che il contenuto salga sotto l’header -->
             <div class="hamburger-placeholder"></div>
 
-            <div class="mini-header">
-                <a href="https://cactusgioielli.it/en/" class="mini-logo-link" ; return false;>
-                    <img src="https://cactusgioielli.it/IMMAGINI/LOGO/LOGO_greenpng2.png" alt="Logo" class="mini-logo">
+            <!-- HEADER -->
+            <div class="mini-header no-scroll">
+
+                <!-- LOGO DINAMICO -->
+                <a href="#" class="mini-logo-link" onclick="scrollToPosition(); showTab('home'); return false;">
+                    <img id="logo-dynamic" src="https://cactusgioielli.it/IMMAGINI/LOGO/LOGO_greenpng2.png" alt="Logo"
+                        class="mini-logo">
                 </a>
 
-                <!-- Selettore lingua -->
-                <div class="mini-language-dropdown">
+                <!-- SELETTORE LINGUA -->
+                <div class="mini-language-dropdown no-scroll">
                     <select id="language-select" onchange="location = this.value;">
                         <option value="index.html">🇬🇧 En</option>
                         <option value="https://cactusgioielli.it/contatti/">🇮🇹 Ita</option>
                     </select>
                 </div>
 
-                <div class="tabs-wrapper"> <!-- wrapper per centrare le tabs -->
-                    <div class="tabs">
+                <!-- WRAPPER TABS -->
+                <div class="tabs-wrapper">
+                    <div class="tabs no-scroll">
                         <a href="https://cactusgioielli.it/en/" class="tab-button" style="text-decoration: none;">
-                            <img src="https://cactusgioielli.it/IMMAGINI/ICONA/ICONA_home.png" alt="home"
-                                style="width:16px; height:16px; vertical-align:middle;">
                             Home
                         </a>
                         <a href="https://cactusgioielli.it/aboutus/" class="tab-button" style="text-decoration: none;">
-                            <img src="https://cactusgioielli.it/IMMAGINI/ICONA/ICONA_utente.png" alt="chisiamo"
-                                style="width:16px; height:16px; vertical-align:middle;">
-                            About Us
+                            About us
                         </a>
                         <a href="https://cactusgioielli.it/gallery/" class="tab-button" style="text-decoration: none;">
-                            <img src="https://cactusgioielli.it/IMMAGINI/ICONA/ICONA_cactus.png" alt="piante"
-                                style="width:16px; height:18px; vertical-align:middle;">
                             Photo Gallery
                         </a>
                         <a href="https://cactusgioielli.it/contacts/" class="tab-button active"
                             style="text-decoration: none;">
-                            <img src="https://cactusgioielli.it/IMMAGINI/ICONA/ICONA_telefono.png" alt="contatti"
-                                style="width:16px; height:18px; vertical-align:middle;">
                             Contacts
                         </a>
                     </div>
                 </div>
 
-
-
-                <!-- SVG telefono (link cliccabile) -->
-                <a href="tel:+393332117337" class="phone-icon" title="Chiama ora">
+                <!-- ICONA TELEFONO -->
+                <a href="tel:+393332117337" class="phone-icon no-scroll" title="Chiama ora">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
                         stroke="#065f46" width="22" height="22">
                         <path stroke-linecap="round" stroke-linejoin="round"
@@ -196,11 +192,13 @@
                     </svg>
                 </a>
 
+                <!-- HAMBURGER -->
                 <button class="hamburger">
                     <span></span>
                     <span></span>
                     <span></span>
                 </button>
+
             </div>
         </div>
         <!-- FINE SEZIONE TABS -->
