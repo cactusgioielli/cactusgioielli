@@ -2550,6 +2550,28 @@ html {
     box-shadow: none !important;
 }
 
+/* ---- EFFETTO APPLE GLASS SOLO SU MOBILE ---- */
+@media (max-width: 768px) {
+
+    .tabs.no-scroll {
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        /* Safari */
+        background: rgba(255, 255, 255, 0.12);
+        border-radius: 16px;
+    }
+
+    .tabs.no-scroll .tab-button {
+        background: rgba(255, 255, 255, 0.08) !important;
+        color: #ffffff !important;
+        border: 1px solid rgba(255, 255, 255, 0.35);
+        box-shadow: none !important;
+        backdrop-filter: blur(6px);
+        -webkit-backdrop-filter: blur(6px);
+        border-radius: 12px;
+    }
+}
+
 .tabs.no-scroll .tab-button:hover {
     background: rgba(255, 255, 255, 0.18) !important;
     border: 1px solid rgba(255, 255, 255, 0.35) !important;
@@ -2651,6 +2673,39 @@ html {
     background: #065f46 !important;
     color: #ffffff !important;
     border: 1px solid #065f46 !important;
+}
+
+/* =====================================================
+   🔥 FIX FINALE: EFFETTO VETRO SU TUTTO IL MENU MOBILE
+   QUANDO L'HEADER È TRASPARENTE (NO-SCROLL)
+   ===================================================== */
+@media (max-width: 768px) {
+
+    /* prende QUALSIASI pannello menu che compare dopo l’header */
+    .mini-header.no-scroll~.mobile-menu,
+    .mini-header.no-scroll~.menu,
+    .mini-header.no-scroll~.menu-container,
+    .mini-header.no-scroll~.nav-menu,
+    .mini-header.no-scroll~.hamburger-menu,
+    .mini-header.no-scroll~.menu-panel {
+        background: rgba(255, 255, 255, 0.20) !important;
+        backdrop-filter: blur(12px) !important;
+        -webkit-backdrop-filter: blur(12px) !important;
+        border-radius: 18px !important;
+    }
+}
+
+/* ============================================
+   MOBILE – EFFETTO VETRO PER IL MENU HAMBURGER
+   ============================================ */
+@media (max-width: 768px) {
+    .mini-header.no-scroll~.tabs-wrapper .tabs.active {
+        background: rgba(255, 255, 255, 0.18) !important;
+        backdrop-filter: blur(12px) !important;
+        -webkit-backdrop-filter: blur(12px) !important;
+        border-radius: 18px;
+        padding: 20px 0;
+    }
 }
 
 /* 
